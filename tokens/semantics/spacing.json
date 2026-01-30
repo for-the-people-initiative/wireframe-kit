@@ -8,5 +8,17 @@
     "l": { "value": "{spacing.6}", "type": "dimension", "description": "26px" },
     "xl": { "value": "{spacing.7}", "type": "dimension", "description": "42px" },
     "2xl": { "value": "{spacing.8}", "type": "dimension", "description": "68px" }
+  },
+  "inset": {
+    "2xs": { "value": "{spacing.1}", "type": "dimension", "description": "Inset (padding) 2px" },
+    "xs": { "value": "{spacing.2}", "type": "dimension", "description": "Inset (padding) 4px" },
+    "s": { "value": "{spacing.3}", "type": "dimension", "description": "Inset (padding) 6px" },
+    "m": { "value": "{spacing.5}", "type": "dimension", "description": "Inset (padding) 16px" },
+    "l": { "value": "{spacing.6}", "type": "dimension", "description": "Inset (padding) 26px" },
+    "xl": { "value": "{spacing.7}", "type": "dimension", "description": "Inset (padding) 42px" }
+  },
+  "inline": {
+    "xs": { "value": "{spacing.2}", "type": "dimension", "description": "Inline (horizontal) gap 4px" },
+    "s": { "value": "{spacing.3}", "type": "dimension", "description": "Inline (horizontal) gap 6px" }
   }
 }

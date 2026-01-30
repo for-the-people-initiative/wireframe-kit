@@ -73,6 +73,14 @@
   --space-l: 26px; /* 26px */
   --space-xl: 42px; /* 42px */
   --space-2xl: 68px; /* 68px */
+  --inset-2xs: 2px; /* Inset (padding) 2px */
+  --inset-xs: 4px; /* Inset (padding) 4px */
+  --inset-s: 6px; /* Inset (padding) 6px */
+  --inset-m: 16px; /* Inset (padding) 16px */
+  --inset-l: 26px; /* Inset (padding) 26px */
+  --inset-xl: 42px; /* Inset (padding) 42px */
+  --inline-xs: 4px; /* Inline (horizontal) gap 4px */
+  --inline-s: 6px; /* Inline (horizontal) gap 6px */
   --accordion-header-padding: 16px; /* Header padding */
   --accordion-header-background-default: #11162d; /* Header background */
   --accordion-header-background-hover: rgba(255, 255, 255, 0.05); /* Header hover background - semi-transparent for dark mode */

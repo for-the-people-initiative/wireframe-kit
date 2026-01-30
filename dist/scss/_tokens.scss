@@ -95,6 +95,18 @@ $space-l: var(--space-l); // 26px
 $space-xl: var(--space-xl); // 42px
 $space-2xl: var(--space-2xl); // 68px
 
+// Inset
+$inset-2xs: var(--inset-2xs); // Inset (padding) 2px
+$inset-xs: var(--inset-xs); // Inset (padding) 4px
+$inset-s: var(--inset-s); // Inset (padding) 6px
+$inset-m: var(--inset-m); // Inset (padding) 16px
+$inset-l: var(--inset-l); // Inset (padding) 26px
+$inset-xl: var(--inset-xl); // Inset (padding) 42px
+
+// Inline
+$inline-xs: var(--inline-xs); // Inline (horizontal) gap 4px
+$inline-s: var(--inline-s); // Inline (horizontal) gap 6px
+
 // Accordion
 $accordion-header-padding: var(--accordion-header-padding); // Header padding
 $accordion-header-background-default: var(--accordion-header-background-default); // Header background
