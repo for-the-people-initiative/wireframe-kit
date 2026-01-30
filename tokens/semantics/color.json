@@ -7,7 +7,6 @@
     "muted": { "value": "{navy.950}", "type": "color", "description": "Subtle/recessed background" },
     "inverse": { "value": "{neutral.0}", "type": "color", "description": "Light surface for contrast (tooltips)" },
     "accent": { "value": "{amber.900}", "type": "color", "description": "Warm accent surface for cards" },
-    "raised": { "value": "{navy.600}", "type": "color", "description": "Raised surface (dropdowns, popovers, menus) — Layer 3" },
     "gradient": {
       "start": { "value": "{navy.950}", "type": "color", "description": "Gradient background start (top)" },
       "end": { "value": "{navy.800}", "type": "color", "description": "Gradient background end (bottom)" }
@@ -78,12 +77,5 @@
     "secondary": { "value": "{orange.500}", "type": "color", "description": "Secondary brand color (CTA)" },
     "accent": { "value": "{amber.400}", "type": "color", "description": "Accent brand color" },
     "subtle": { "value": "{navy.700}", "type": "color", "description": "Subtle brand background" }
-  },
-  "elevation": {
-    "0": { "surface": "{surface.canvas}", "border": "none", "shadow": "none", "description": "Layer 0 — Page background" },
-    "1": { "surface": "{surface.panel}", "border": "{border.subtle}", "shadow": "{shadow.xs}", "description": "Layer 1 — Cards, sidebars, sections" },
-    "2": { "surface": "{surface.elevated}", "border": "{border.default}", "shadow": "{shadow.s}", "description": "Layer 2 — Nested cards, form sections" },
-    "3": { "surface": "{surface.raised}", "border": "{border.strong}", "shadow": "{shadow.m}", "description": "Layer 3 — Dropdowns, popovers, tooltips" },
-    "4": { "surface": "{surface.elevated}", "border": "{border.strong}", "shadow": "{shadow.xl}", "description": "Layer 4 — Modals, dialogs, command palette" }
   }
 }
