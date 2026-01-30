@@ -59,8 +59,8 @@ defineOptions({ name: 'FtpImage' });
 
 const props = withDefaults(defineProps<ImageProps>(), {
   alt: "",
-  width: null,
-  height: null,
+  width: undefined,
+  height: undefined,
   preview: false,
 });
 
@@ -98,12 +98,12 @@ const closePreview = () => {
   emit("hide");
 };
 
-const onLoad = (event) => {
+const onLoad = (event: Event) => {
   isLoaded.value = true;
   emit("load", event);
 };
 
-const onError = (event) => {
+const onError = (event: Event) => {
   hasError.value = true;
   emit("error", event);
 };

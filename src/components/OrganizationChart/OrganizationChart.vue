@@ -33,7 +33,7 @@ import { ref, watch, h, defineComponent } from "vue";
 
 const props = withDefaults(defineProps<OrganizationChartProps>(), {
   value: null,
-  selectionMode: null,
+  selectionMode: undefined,
   selectedKeys: () => ({}),
   expandedKeys: () => ({}),
   collapsible: false,
@@ -62,7 +62,7 @@ watch(
   { deep: true }
 );
 
-const onNodeSelect = (event) => {
+const onNodeSelect = (event: any) => {
   const { node, selected } = event;
   const key = node.key || node.label;
   const newSelectedKeys = { ...props.selectedKeys };
@@ -82,7 +82,7 @@ const onNodeSelect = (event) => {
   emit("update:selectedKeys", newSelectedKeys);
 };
 
-const onNodeToggle = (event) => {
+const onNodeToggle = (event: any) => {
   const { node, expanded } = event;
   const key = node.key || node.label;
   const newExpandedKeys = { ...internalExpandedKeys.value };
@@ -111,31 +111,31 @@ const OrganizationChartNode = defineComponent({
   emits: ["node-select", "node-toggle"],
   setup(nodeProps, { emit: nodeEmit, slots }) {
     const hasChildren = () =>
-      nodeProps.node.children && nodeProps.node.children.length > 0;
+      nodeProps.node!.children && nodeProps.node!.children.length > 0;
 
     const isExpanded = () => {
-      const key = nodeProps.node.key || nodeProps.node.label;
-      return nodeProps.expandedKeys[key] !== false;
+      const key = nodeProps.node!.key || nodeProps.node!.label;
+      return nodeProps.expandedKeys![key] !== false;
     };
 
     const isSelected = () => {
-      const key = nodeProps.node.key || nodeProps.node.label;
-      return !!nodeProps.selectedKeys[key];
+      const key = nodeProps.node!.key || nodeProps.node!.label;
+      return !!nodeProps.selectedKeys![key];
     };
 
     const onNodeClick = () => {
       if (nodeProps.selectionMode) {
         nodeEmit("node-select", {
-          node: nodeProps.node,
+          node: nodeProps.node!,
           selected: !isSelected(),
         });
       }
     };
 
-    const onToggleClick = (e) => {
+    const onToggleClick = (e: MouseEvent) => {
       e.stopPropagation();
       nodeEmit("node-toggle", {
-        node: nodeProps.node,
+        node: nodeProps.node!,
         expanded: !isExpanded(),
       });
     };
@@ -162,8 +162,8 @@ const OrganizationChartNode = defineComponent({
         },
         [
           slots.default
-            ? slots.default({ node: nodeProps.node })
-            : h("span", nodeProps.node.label),
+            ? slots.default({ node: nodeProps.node! })
+            : h("span", nodeProps.node!.label),
         ]
       );
 
@@ -200,13 +200,13 @@ const OrganizationChartNode = defineComponent({
         h(
           "div",
           { class: "organization-chart__children" },
-          nodeProps.node.children.map((child, index) =>
+          nodeProps.node!.children.map((child: any, index: any) =>
             h(OrganizationChartNode, {
               key: child.key || index,
               node: child,
               selectionMode: nodeProps.selectionMode,
-              selectedKeys: nodeProps.selectedKeys,
-              expandedKeys: nodeProps.expandedKeys,
+              selectedKeys: nodeProps.selectedKeys!,
+              expandedKeys: nodeProps.expandedKeys!,
               "onNode-select": (e) => nodeEmit("node-select", e),
               "onNode-toggle": (e) => nodeEmit("node-toggle", e),
             })

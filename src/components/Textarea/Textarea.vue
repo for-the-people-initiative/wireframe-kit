@@ -25,7 +25,7 @@ defineOptions({ name: 'FtpTextarea' });
 const props = withDefaults(defineProps<TextareaProps>(), {
   modelValue: "",
   rows: 3,
-  cols: null,
+  cols: undefined,
   placeholder: "",
   isDisabled: false,
   isInvalid: false,
@@ -34,8 +34,8 @@ const props = withDefaults(defineProps<TextareaProps>(), {
 
 const emit = defineEmits(["update:modelValue", "input"]);
 
-const textareaRef = ref(null);
-let resizeObserver = null;
+const textareaRef = ref<HTMLTextAreaElement | null>(null);
+let resizeObserver: ResizeObserver | null = null;
 
 const resize = () => {
   if (!textareaRef.value || !props.autoResize) return;
@@ -45,8 +45,8 @@ const resize = () => {
   textarea.style.height = `${textarea.scrollHeight}px`;
 };
 
-const onInput = (event) => {
-  const value = event.target.value;
+const onInput = (event: Event) => {
+  const value = (event.target as HTMLTextAreaElement).value;
   emit("update:modelValue", value);
   emit("input", { value, originalEvent: event });
 

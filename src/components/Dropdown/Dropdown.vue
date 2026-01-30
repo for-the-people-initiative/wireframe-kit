@@ -126,24 +126,24 @@ const props = withDefaults(defineProps<DropdownProps>(), {
 
 const emit = defineEmits(["update:modelValue", "change", "show", "hide", "filter"]);
 
-const containerRef = ref(null);
-const triggerRef = ref(null);
-const panelRef = ref(null);
-const filterInputRef = ref(null);
+const containerRef = ref<HTMLElement | null>(null);
+const triggerRef = ref<HTMLElement | null>(null);
+const panelRef = ref<HTMLElement | null>(null);
+const filterInputRef = ref<HTMLElement | null>(null);
 
 const isOpen = ref(false);
 const filterValue = ref("");
 const focusedIndex = ref(-1);
 const panelStyle = ref({});
 
-const getOptionLabel = (option) => {
+const getOptionLabel = (option: any) => {
   if (typeof option === "string" || typeof option === "number") {
     return option;
   }
   return option[props.optionLabel];
 };
 
-const getOptionValue = (option) => {
+const getOptionValue = (option: any) => {
   if (typeof option === "string" || typeof option === "number") {
     return option;
   }
@@ -160,7 +160,7 @@ const displayValue = computed(() => {
   return selectedOption ? getOptionLabel(selectedOption) : props.placeholder;
 });
 
-const filteredOptions = computed(() => {
+const filteredOptions = computed((): any[] => {
   if (!filterValue.value) {
     return props.options;
   }
@@ -171,11 +171,11 @@ const filteredOptions = computed(() => {
   });
 });
 
-const isSelected = (option) => {
+const isSelected = (option: any) => {
   return props.modelValue === getOptionValue(option);
 };
 
-const selectOption = (option) => {
+const selectOption = (option: any) => {
   if (props.isDisabled || option.disabled) return;
 
   const value = getOptionValue(option);
@@ -239,7 +239,7 @@ const toggle = () => {
   }
 };
 
-const onTriggerKeydown = (event) => {
+const onTriggerKeydown = (event: KeyboardEvent) => {
   if (event.key === "ArrowDown" || event.key === "ArrowUp") {
     event.preventDefault();
     if (!isOpen.value) {
@@ -253,12 +253,12 @@ const onTriggerKeydown = (event) => {
   }
 };
 
-const onFilterInput = (event) => {
+const onFilterInput = (event: Event) => {
   focusedIndex.value = 0;
   emit("filter", { value: filterValue.value, originalEvent: event });
 };
 
-const onFilterKeydown = (event) => {
+const onFilterKeydown = (event: KeyboardEvent) => {
   if (event.key === "ArrowDown") {
     event.preventDefault();
     focusedIndex.value = Math.min(focusedIndex.value + 1, filteredOptions.value.length - 1);
@@ -279,8 +279,8 @@ const onFilterKeydown = (event) => {
   }
 };
 
-const onClickOutside = (event) => {
-  if (!containerRef.value?.contains(event.target) && !panelRef.value?.contains(event.target)) {
+const onClickOutside = (event: MouseEvent) => {
+  if (!containerRef.value?.contains(event.target as Node) && !panelRef.value?.contains(event.target as Node)) {
     close();
   }
 };

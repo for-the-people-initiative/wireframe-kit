@@ -231,7 +231,7 @@ const activeSubitem = ref(null);
 
 const additionalClasses = computed(() => [].filter(Boolean).join(" "));
 
-const onItemMouseEnter = (index, item) => {
+const onItemMouseEnter = (index: any, item: any) => {
   if (!item.disabled && item.items && item.items.length > 0) {
     activeItem.value = index;
   }
@@ -245,7 +245,7 @@ const onItemMouseLeave = () => {
   }, 100);
 };
 
-const onSubitemMouseEnter = (index, item) => {
+const onSubitemMouseEnter = (index: any, item: any) => {
   if (!item.disabled && item.items && item.items.length > 0) {
     activeSubitem.value = index;
   }
@@ -255,7 +255,7 @@ const onSubitemMouseLeave = () => {
   // Keep submenu open when hovering
 };
 
-const onItemClick = (event, item) => {
+const onItemClick = (event: MouseEvent, item: any) => {
   if (item.disabled) {
     event.preventDefault();
     return;
@@ -274,7 +274,7 @@ const onItemClick = (event, item) => {
   }
 };
 
-const onItemKeydown = (event, index, item) => {
+const onItemKeydown = (event: KeyboardEvent, index: any, item: any) => {
   switch (event.key) {
     case "ArrowDown":
       event.preventDefault();

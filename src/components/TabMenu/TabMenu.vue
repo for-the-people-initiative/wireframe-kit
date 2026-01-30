@@ -91,7 +91,7 @@ watch(() => props.activeIndex, () => {
   updateInkbar();
 });
 
-const onTabClick = (event, item, index) => {
+const onTabClick = (event: MouseEvent | KeyboardEvent, item: any, index: any) => {
   if (item.disabled) {
     event.preventDefault();
     return;
@@ -105,7 +105,7 @@ const onTabClick = (event, item, index) => {
   emit("tab-change", { originalEvent: event, item, index });
 };
 
-const onTabKeydown = (event, index) => {
+const onTabKeydown = (event: KeyboardEvent, index: any) => {
   const itemCount = props.model.length;
 
   switch (event.key) {
@@ -165,10 +165,10 @@ const onTabKeydown = (event, index) => {
   }
 };
 
-const focusTab = (index) => {
+const focusTab = (index: any) => {
   const tabs = document.querySelectorAll(".tabmenu__link");
   if (tabs[index]) {
-    tabs[index].focus();
+    (tabs[index] as HTMLElement).focus();
   }
 };
 </script>

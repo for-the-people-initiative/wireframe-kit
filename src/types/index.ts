@@ -12,13 +12,18 @@ export type Orientation = 'horizontal' | 'vertical'
 export type SelectionMode = 'single' | 'multiple' | 'checkbox'
 
 export interface MenuItem {
+  key?: string | number
   label?: string
   icon?: string
   url?: string
+  target?: string
   command?: (event: { originalEvent: Event; item: MenuItem }) => void
   items?: MenuItem[]
   disabled?: boolean
   separator?: boolean
+  active?: boolean
+  badge?: string | number
+  description?: string
   [key: string]: unknown
 }
 
@@ -159,6 +164,7 @@ export interface AtmosphericBackgroundProps {
 // ============================================================
 
 export interface AutoCompleteProps {
+  ariaDescribedby?: string
   modelValue?: string | number | object | unknown[] | null
   suggestions?: unknown[]
   optionLabel?: string
@@ -207,6 +213,7 @@ export interface AvatarEmits {
 // ============================================================
 
 export interface BadgeProps {
+  ariaLabel?: string
   value?: string | number | null
   size?: Size
   severity?: 'primary' | 'success' | 'warning' | 'danger' | 'info'
@@ -298,6 +305,7 @@ export interface CardProps {
 // ============================================================
 
 export interface CarouselProps {
+  ariaLabel?: string
   items?: unknown[]
   numVisible?: number
   numScroll?: number
@@ -447,7 +455,7 @@ export interface ConfirmDialogEmits {
 // ============================================================
 
 export interface ConfirmPopupProps {
-  target?: object | string | null
+  target?: HTMLElement | string | null
   message?: string
   acceptLabel?: string
   rejectLabel?: string
@@ -561,10 +569,12 @@ export interface DividerProps {
 // ============================================================
 
 export interface DockItem {
+  key?: string | number
   label?: string
   icon?: string
   command?: (event: { originalEvent: Event; item: DockItem }) => void
   disabled?: boolean
+  active?: boolean
   [key: string]: unknown
 }
 
@@ -606,6 +616,7 @@ export interface DrawerEmits {
 // ============================================================
 
 export interface DropdownProps {
+  ariaDescribedby?: string
   modelValue?: string | number | object | null
   options?: unknown[]
   optionLabel?: string
@@ -663,7 +674,7 @@ export interface FieldSetEmits {
 // ============================================================
 
 export interface FileUploadProps {
-  accept?: string | null
+  accept?: string
   multiple?: boolean
   maxFileSize?: number | null
   maxFiles?: number | null
@@ -690,7 +701,7 @@ export interface GalleriaItem {
 }
 
 export interface GalleriaProps {
-  items?: (string | GalleriaItem)[]
+  items?: any[]
   activeIndex?: number
   fullscreen?: boolean
   showThumbnails?: boolean
@@ -715,8 +726,8 @@ export interface GalleriaEmits {
 export interface ImageProps {
   src: string
   alt?: string
-  width?: number | string | null
-  height?: number | string | null
+  width?: number | string
+  height?: number | string
   preview?: boolean
 }
 
@@ -734,7 +745,7 @@ export interface ImageEmits {
 export interface ImageCompareProps {
   initialPosition?: number
   ariaLabel?: string
-  ariaLabelledBy?: string | null
+  ariaLabelledBy?: string
 }
 
 export interface ImageCompareEmits {
@@ -906,6 +917,7 @@ export interface InputSwitchEmits {
 // ============================================================
 
 export interface InputTextProps {
+  ariaDescribedby?: string
   modelValue?: string | number
   type?: 'text' | 'password' | 'email' | 'tel' | 'url' | 'search' | 'number'
   placeholder?: string
@@ -1064,7 +1076,7 @@ export interface MultiSelectEmits {
 // ============================================================
 
 export interface OrderListProps {
-  modelValue?: unknown[]
+  modelValue?: any[]
   header?: string
   dataKey?: string | null
   itemKey?: string | null
@@ -1083,7 +1095,7 @@ export interface OrderListEmits {
 
 export interface OrganizationChartProps {
   value?: object | null
-  selectionMode?: 'single' | 'multiple' | null
+  selectionMode?: 'single' | 'multiple'
   selectedKeys?: Record<string, boolean>
   expandedKeys?: Record<string, boolean>
   collapsible?: boolean
@@ -1269,6 +1281,7 @@ export interface RadioButtonEmits {
 // ============================================================
 
 export interface RatingProps {
+  ariaLabel?: string
   modelValue?: number | null
   stars?: number
   readonly?: boolean
@@ -1296,7 +1309,7 @@ export interface RowProps {
 // ============================================================
 
 export interface ScrollPanelProps {
-  style?: object | string
+  style?: Record<string, string | number> | string
   step?: number
 }
 
@@ -1319,6 +1332,7 @@ export interface ScrollTopEmits {
 // ============================================================
 
 export interface SelectProps {
+  ariaDescribedby?: string
   modelValue?: string | number | boolean | object | null
   options?: unknown[]
   optionLabel?: string
@@ -1394,6 +1408,8 @@ export interface SkeletonProps {
 // ============================================================
 
 export interface SliderProps {
+  ariaLabel?: string
+  ariaDescribedby?: string
   modelValue?: number
   min?: number
   max?: number
@@ -1565,9 +1581,10 @@ export interface TerminalEmits {
 // ============================================================
 
 export interface TextareaProps {
+  ariaDescribedby?: string
   modelValue?: string
   rows?: number | string
-  cols?: number | string | null
+  cols?: number | string
   placeholder?: string
   isDisabled?: boolean
   isInvalid?: boolean

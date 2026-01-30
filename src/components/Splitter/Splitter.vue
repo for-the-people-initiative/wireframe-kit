@@ -26,14 +26,14 @@ const props = withDefaults(defineProps<SplitterProps>(), {
 const emit = defineEmits(["resizestart", "resize", "resizeend"]);
 
 // Panel management
-const panels = ref([]);
-const panelSizes = ref([]);
+const panels = ref<any[]>([]);
+const panelSizes = ref<(number | null)[]>([]);
 const isResizing = ref(false);
-const currentGutterIndex = ref(null);
+const currentGutterIndex = ref<number | null>(null);
 const startPos = ref(0);
-const startSizes = ref([]);
+const startSizes = ref<number[]>([]);
 
-const registerPanel = (panel) => {
+const registerPanel = (panel: any) => {
   const index = panels.value.length;
   panels.value.push(panel);
 
@@ -48,21 +48,21 @@ const registerPanel = (panel) => {
   return index;
 };
 
-const unregisterPanel = (index) => {
+const unregisterPanel = (index: any) => {
   panels.value.splice(index, 1);
   panelSizes.value.splice(index, 1);
 };
 
-const getPanelSize = (index) => {
+const getPanelSize = (index: any) => {
   return panelSizes.value[index];
 };
 
 // Resize logic
-const onGutterMouseDown = (event, index) => {
+const onGutterMouseDown = (event: MouseEvent, index: any) => {
   isResizing.value = true;
   currentGutterIndex.value = index;
   startPos.value = props.layout === "horizontal" ? event.pageX : event.pageY;
-  startSizes.value = [...panelSizes.value];
+  startSizes.value = [...panelSizes.value] as number[];
 
   emit("resizestart", { originalEvent: event, sizes: panelSizes.value });
 
@@ -72,10 +72,10 @@ const onGutterMouseDown = (event, index) => {
   document.body.style.userSelect = "none";
 };
 
-const onMouseMove = (event) => {
+const onMouseMove = (event: MouseEvent) => {
   if (!isResizing.value) return;
 
-  const splitterElement = event.target.closest(".splitter") || document.querySelector(".splitter");
+  const splitterElement = (event.target as HTMLElement).closest(".splitter") || document.querySelector(".splitter");
   if (!splitterElement) return;
 
   const rect = splitterElement.getBoundingClientRect();
@@ -87,8 +87,8 @@ const onMouseMove = (event) => {
   const delta = currentPos - startPos.value;
   const deltaPercent = (delta / availableSize) * 100;
 
-  const prevIndex = currentGutterIndex.value;
-  const nextIndex = currentGutterIndex.value + 1;
+  const prevIndex = currentGutterIndex.value!;
+  const nextIndex = currentGutterIndex.value! + 1;
 
   let newPrevSize = startSizes.value[prevIndex] + deltaPercent;
   let newNextSize = startSizes.value[nextIndex] - deltaPercent;
@@ -104,13 +104,13 @@ const onMouseMove = (event) => {
     newNextSize = minSize;
   }
 
-  panelSizes.value[prevIndex] = newPrevSize;
-  panelSizes.value[nextIndex] = newNextSize;
+  (panelSizes.value as number[])[prevIndex] = newPrevSize;
+  (panelSizes.value as number[])[nextIndex] = newNextSize;
 
   emit("resize", { originalEvent: event, sizes: [...panelSizes.value] });
 };
 
-const onMouseUp = (event) => {
+const onMouseUp = (event: MouseEvent) => {
   isResizing.value = false;
   currentGutterIndex.value = null;
 
@@ -129,7 +129,7 @@ const onMouseUp = (event) => {
 
 const saveState = () => {
   const storage = props.stateStorage === "local" ? localStorage : sessionStorage;
-  storage.setItem(props.stateKey, JSON.stringify(panelSizes.value));
+  storage.setItem(props.stateKey!, JSON.stringify(panelSizes.value));
 };
 
 const restoreState = () => {
@@ -150,7 +150,7 @@ const restoreState = () => {
 // Initialize default sizes once all panels are registered
 const initializeSizes = () => {
   const nullCount = panelSizes.value.filter((s) => s === null).length;
-  const usedPercent = panelSizes.value.reduce((sum, s) => sum + (s || 0), 0);
+  const usedPercent = panelSizes.value.reduce((sum, s) => (sum ?? 0) + (s || 0), 0)!;
   const remainingPercent = 100 - usedPercent;
   const defaultSize = nullCount > 0 ? remainingPercent / nullCount : 0;
 

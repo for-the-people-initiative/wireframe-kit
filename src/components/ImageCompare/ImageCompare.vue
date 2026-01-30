@@ -42,15 +42,15 @@ defineOptions({ name: 'FtpImageCompare' });
 const props = withDefaults(defineProps<ImageCompareProps>(), {
   initialPosition: 50,
   ariaLabel: "Image comparison slider",
-  ariaLabelledBy: null,
+  ariaLabelledBy: undefined,
 });
 
 const emit = defineEmits(["change"]);
 
 const position = ref(props.initialPosition);
 
-const onSlide = (event) => {
-  position.value = Number(event.target.value);
+const onSlide = (event: Event) => {
+  position.value = Number((event.target as HTMLInputElement).value);
   emit("change", position.value);
 };
 

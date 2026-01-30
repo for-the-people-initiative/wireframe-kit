@@ -179,15 +179,15 @@ const emit = defineEmits([
 ]);
 
 const autocompleteId = `autocomplete-${Math.random().toString(36).substring(2, 9)}`;
-const containerRef = ref(null);
-const inputRef = ref(null);
+const containerRef = ref<HTMLElement | null>(null);
+const inputRef = ref<HTMLInputElement | null>(null);
 const dropdownRef = ref(null);
 const query = ref("");
 const isOpen = ref(false);
 const isFocused = ref(false);
 const highlightedIndex = ref(-1);
 const dropdownStyle = ref({});
-let debounceTimer = null;
+let debounceTimer: ReturnType<typeof setTimeout> | null = null;
 
 const selectedItems = computed(() => {
   if (!props.multiple) return [];
@@ -211,19 +211,19 @@ const filteredSuggestions = computed(() => {
   return props.suggestions;
 });
 
-const getOptionLabel = (option) => {
+const getOptionLabel = (option: any) => {
   if (option === null || option === undefined) return "";
   if (typeof option === "string" || typeof option === "number") return option;
   return option[props.optionLabel] || "";
 };
 
-const getOptionValue = (option) => {
+const getOptionValue = (option: any) => {
   if (option === null || option === undefined) return option;
   if (typeof option === "string" || typeof option === "number") return option;
   return option[props.optionValue] ?? option;
 };
 
-const isSelected = (suggestion) => {
+const isSelected = (suggestion: any) => {
   if (props.multiple) {
     return selectedItems.value.some(
       (item) => getOptionValue(item) === getOptionValue(suggestion)
@@ -273,7 +273,7 @@ const onInput = () => {
   }
 };
 
-const onFocus = (event) => {
+const onFocus = (event: FocusEvent) => {
   isFocused.value = true;
   emit("focus", { originalEvent: event });
 
@@ -283,13 +283,13 @@ const onFocus = (event) => {
   }
 };
 
-const onBlur = (event) => {
+const onBlur = (event: FocusEvent) => {
   isFocused.value = false;
   closeDropdown();
   emit("blur", { originalEvent: event });
 };
 
-const onKeydown = (event) => {
+const onKeydown = (event: KeyboardEvent) => {
   switch (event.key) {
     case "ArrowDown":
       event.preventDefault();
@@ -323,7 +323,7 @@ const onKeydown = (event) => {
   }
 };
 
-const selectSuggestion = (suggestion) => {
+const selectSuggestion = (suggestion: any) => {
   if (props.multiple) {
     const newValue = [...selectedItems.value, suggestion];
     emit("update:modelValue", newValue);
@@ -337,7 +337,7 @@ const selectSuggestion = (suggestion) => {
   }
 };
 
-const removeItem = (index) => {
+const removeItem = (index: any) => {
   const removed = selectedItems.value[index];
   const newValue = selectedItems.value.filter((_, i) => i !== index);
   emit("update:modelValue", newValue);

@@ -38,7 +38,7 @@ const additionalClasses = computed(() => {
 });
 
 const containerStyle = computed(() => {
-  const style = {};
+  const style: Record<string, string> = {};
 
   if (props.width) {
     style.width = props.width;

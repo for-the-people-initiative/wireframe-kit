@@ -53,7 +53,7 @@ const TreeNode = {
     childrenField: String,
   },
   emits: ["select", "toggle"],
-  setup(props, { emit }) {
+  setup(props: any, { emit }: { emit: any }) {
     const hasChildren = computed(() => {
       const children = props.node[props.childrenField];
       return children && children.length > 0;
@@ -67,7 +67,7 @@ const TreeNode = {
       return props.selectedKeys.has(props.node[props.keyField]);
     });
 
-    const onToggle = (event) => {
+    const onToggle = (event: Event) => {
       event.stopPropagation();
       emit("toggle", props.node);
     };
@@ -76,7 +76,7 @@ const TreeNode = {
       emit("select", props.node);
     };
 
-    const onKeydown = (event) => {
+    const onKeydown = (event: KeyboardEvent) => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
         onSelect();
@@ -138,7 +138,7 @@ const TreeNode = {
       if (hasChildren.value && isExpanded.value) {
         const nodeChildren = props.node[props.childrenField];
         children.push(h("div", { class: "tree__children", role: "group" },
-          nodeChildren.map((child) =>
+          nodeChildren.map((child: any) =>
             h(TreeNode, {
               key: child[props.keyField],
               node: child,
@@ -149,8 +149,8 @@ const TreeNode = {
               labelField: props.labelField,
               keyField: props.keyField,
               childrenField: props.childrenField,
-              onSelect: (n) => emit("select", n),
-              onToggle: (n) => emit("toggle", n),
+              onSelect: (n: any) => emit("select", n),
+              onToggle: (n: any) => emit("toggle", n),
             })
           )
         ));
@@ -182,7 +182,7 @@ watch(() => props.expandedKeys, (newKeys) => {
   expandedKeysInternal.value = new Set(newKeys);
 }, { deep: true });
 
-const getNodeKey = (node) => node[props.keyField];
+const getNodeKey = (node: any) => node[props.keyField];
 
 const selectedKeysSet = computed(() => {
   if (props.modelValue === null || props.modelValue === undefined) {
@@ -194,11 +194,11 @@ const selectedKeysSet = computed(() => {
   return new Set([props.modelValue]);
 });
 
-const filterNodes = (nodes, searchTerm) => {
-  const result = [];
+const filterNodes = (nodes: any, searchTerm: any) => {
+  const result: any[] = [];
   const search = searchTerm.toLowerCase();
 
-  nodes.forEach((node) => {
+  nodes.forEach((node: any) => {
     const label = String(node[props.labelField]).toLowerCase();
     const children = node[props.childrenField];
 
@@ -223,7 +223,7 @@ const filteredNodes = computed(() => {
   return filterNodes(props.nodes, filterValue.value);
 });
 
-const onNodeSelect = (node) => {
+const onNodeSelect = (node: any) => {
   if (props.isDisabled || !props.selectionMode) return;
 
   const key = node[props.keyField];
@@ -247,7 +247,7 @@ const onNodeSelect = (node) => {
   }
 };
 
-const onNodeToggle = (node) => {
+const onNodeToggle = (node: any) => {
   const key = node[props.keyField];
   const newExpanded = new Set(expandedKeysInternal.value);
 

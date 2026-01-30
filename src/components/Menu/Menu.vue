@@ -54,9 +54,9 @@ const props = withDefaults(defineProps<MenuProps>(), {
 
 const emit = defineEmits(["item-click", "show", "hide"]);
 
-const menuRef = ref(null);
+const menuRef = ref<HTMLElement | null>(null);
 const isVisible = ref(false);
-const triggerElement = ref(null);
+const triggerElement = ref<HTMLElement | null>(null);
 const position = ref({ top: 0, left: 0 });
 const initialScrollY = ref(0);
 
@@ -74,7 +74,7 @@ const popupStyle = computed(() => {
   };
 });
 
-const onItemClick = (event, item) => {
+const onItemClick = (event: MouseEvent | KeyboardEvent, item: any) => {
   if (item.disabled) return;
 
   emit("item-click", {
@@ -94,7 +94,7 @@ const onItemClick = (event, item) => {
   }
 };
 
-const show = (event) => {
+const show = (event: any) => {
   if (!props.popup) return;
 
   triggerElement.value = event.currentTarget || event.target;
@@ -121,7 +121,7 @@ const hide = () => {
   window.removeEventListener("scroll", onWindowScroll, true);
 };
 
-const toggle = (event) => {
+const toggle = (event: Event) => {
   if (isVisible.value) {
     hide();
   } else {
@@ -129,12 +129,12 @@ const toggle = (event) => {
   }
 };
 
-const calculatePosition = (event) => {
+const calculatePosition = (event: any) => {
   const triggerRect = event.currentTarget?.getBoundingClientRect() || {
-    top: event.clientY,
-    bottom: event.clientY,
-    left: event.clientX,
-    right: event.clientX,
+    top: event.clientY ?? 0,
+    bottom: event.clientY ?? 0,
+    left: event.clientX ?? 0,
+    right: event.clientX ?? 0,
   };
 
   const padding = 8;
@@ -184,18 +184,18 @@ const calculatePosition = (event) => {
   });
 };
 
-const onDocumentClick = (event) => {
+const onDocumentClick = (event: MouseEvent) => {
   if (
     menuRef.value &&
-    !menuRef.value.contains(event.target) &&
+    !menuRef.value.contains(event.target as Node) &&
     triggerElement.value !== event.target &&
-    !triggerElement.value?.contains(event.target)
+    !triggerElement.value?.contains(event.target as Node)
   ) {
     hide();
   }
 };
 
-const onDocumentKeydown = (event) => {
+const onDocumentKeydown = (event: KeyboardEvent) => {
   if (event.key === "Escape") {
     hide();
   }

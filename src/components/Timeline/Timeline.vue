@@ -35,7 +35,7 @@
 <style src="./Timeline.scss"></style>
 
 <script setup lang="ts">
-import type { TimelineProps } from '../../types';
+import type { TimelineProps, TimelineEvent } from '../../types';
 import { computed } from "vue";
 
 defineOptions({ name: 'FtpTimeline' });
@@ -45,14 +45,14 @@ const props = withDefaults(defineProps<TimelineProps>(), {
   layout: "vertical",
 });
 
-const colorMap = {
+const colorMap: Record<string, string> = {
   primary: "var(--timeline-colors-primary)",
   success: "var(--timeline-colors-success)",
   warning: "var(--timeline-colors-warning)",
   danger: "var(--timeline-colors-danger)",
 };
 
-function getMarkerStyle(event) {
+function getMarkerStyle(event: TimelineEvent) {
   if (event.color) {
     const color = colorMap[event.color] || event.color;
     return { "--timeline-marker-color": color };
@@ -60,7 +60,7 @@ function getMarkerStyle(event) {
   return {};
 }
 
-function getItemClasses(index) {
+function getItemClasses(index: any) {
   const classes = [];
   if (props.align === "alternate") {
     classes.push(index % 2 === 0 ? "timeline__item--left" : "timeline__item--right");

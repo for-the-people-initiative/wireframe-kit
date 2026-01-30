@@ -63,7 +63,7 @@ const props = withDefaults(defineProps<InputNumberProps>(), {
 
 const emit = defineEmits(["update:modelValue", "change"]);
 
-const inputRef = ref(null);
+const inputRef = ref<HTMLInputElement | null>(null);
 
 const displayValue = computed(() => {
   if (props.modelValue === null || props.modelValue === undefined) {
@@ -85,7 +85,7 @@ const isAtMax = computed(() => {
   return props.modelValue !== null && props.modelValue >= props.max;
 });
 
-const parseValue = (value) => {
+const parseValue = (value: any) => {
   if (!value || value === "") return null;
   // Handle locale-specific parsing
   const cleanedValue = value
@@ -95,7 +95,7 @@ const parseValue = (value) => {
   return isNaN(parsed) ? null : parsed;
 };
 
-const clampValue = (value) => {
+const clampValue = (value: any) => {
   if (value === null) return null;
   let result = value;
   if (props.min !== null && result < props.min) result = props.min;
@@ -103,22 +103,22 @@ const clampValue = (value) => {
   return result;
 };
 
-const updateValue = (value) => {
+const updateValue = (value: any) => {
   const clamped = clampValue(value);
   emit("update:modelValue", clamped);
   emit("change", { value: clamped });
 };
 
-const onInput = (event) => {
+const onInput = (event: Event) => {
   // Allow typing, don't update immediately
 };
 
-const onBlur = (event) => {
-  const parsed = parseValue(event.target.value);
+const onBlur = (event: FocusEvent) => {
+  const parsed = parseValue((event.target as HTMLInputElement).value);
   updateValue(parsed);
 };
 
-const onKeydown = (event) => {
+const onKeydown = (event: KeyboardEvent) => {
   if (event.key === "ArrowUp") {
     event.preventDefault();
     increment();
@@ -126,7 +126,7 @@ const onKeydown = (event) => {
     event.preventDefault();
     decrement();
   } else if (event.key === "Enter") {
-    const parsed = parseValue(event.target.value);
+    const parsed = parseValue((event.target as HTMLInputElement).value);
     updateValue(parsed);
   }
 };

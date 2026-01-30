@@ -91,11 +91,11 @@ const props = withDefaults(defineProps<ToastProps>(), {
   showProgress: true,
 });
 
-const toasts = ref([]);
+const toasts = ref<any[]>([]);
 let toastIdCounter = 0;
 const timeoutIds = new Map();
 
-function add(toast) {
+function add(toast: any) {
   const id = ++toastIdCounter;
   const newToast = {
     id,
@@ -118,7 +118,7 @@ function add(toast) {
   return id;
 }
 
-function removeToast(id) {
+function removeToast(id: any) {
   const timeoutId = timeoutIds.get(id);
   if (timeoutId) {
     clearTimeout(timeoutId);
@@ -130,7 +130,7 @@ function removeToast(id) {
   }
 }
 
-function removeGroup(group) {
+function removeGroup(group: any) {
   toasts.value.filter((t) => t.group === group).forEach((t) => {
     const timeoutId = timeoutIds.get(t.id);
     if (timeoutId) {

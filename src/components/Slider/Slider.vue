@@ -49,13 +49,13 @@ const trackStyle = computed(() => ({
   "--slider-fill-percentage": `${percentage.value}%`,
 }));
 
-const onInput = (event) => {
-  const value = parseFloat(event.target.value);
+const onInput = (event: Event) => {
+  const value = parseFloat((event.target as HTMLInputElement).value);
   emit("update:modelValue", value);
 };
 
-const onChange = (event) => {
-  const value = parseFloat(event.target.value);
+const onChange = (event: Event) => {
+  const value = parseFloat((event.target as HTMLInputElement).value);
   emit("change", { value, originalEvent: event });
 };
 

@@ -106,14 +106,14 @@ const props = withDefaults(defineProps<ContextMenuProps>(), {
 const emit = defineEmits(["show", "hide", "item-click"]);
 
 const isVisible = ref(false);
-const menuRef = ref(null);
+const menuRef = ref<HTMLElement | null>(null);
 const position = ref({ x: 0, y: 0 });
 const placement = ref("below");
 const arrowOffset = ref(0);
-const activeSubmenu = ref(null);
-const triggerElement = ref(null);
+const activeSubmenu = ref<any>(null);
+const triggerElement = ref<HTMLElement | null>(null);
 const initialScrollY = ref(0);
-let submenuTimeout = null;
+let submenuTimeout: ReturnType<typeof setTimeout> | null = null;
 
 const menuClasses = computed(() => [
   props.popup && "context-menu--popup",
@@ -129,7 +129,7 @@ const arrowStyle = computed(() => ({
   left: `${arrowOffset.value}px`,
 }));
 
-function show(event) {
+function show(event: any) {
   if (event) {
     event.preventDefault();
     event.stopPropagation();
@@ -184,7 +184,7 @@ function hide() {
   window.removeEventListener("scroll", onWindowScroll, true);
 }
 
-function toggle(event) {
+function toggle(event: Event) {
   if (isVisible.value) {
     hide();
   } else {
@@ -192,7 +192,7 @@ function toggle(event) {
   }
 }
 
-function calculatePopupPosition(event) {
+function calculatePopupPosition(event: any) {
   const target = event?.currentTarget || event?.target;
   const triggerRect = target?.getBoundingClientRect() || {
     top: event?.clientY || 0,
@@ -291,7 +291,7 @@ function adjustPosition() {
   position.value = { x, y };
 }
 
-function onItemClick(item, event) {
+function onItemClick(item: any, event: any) {
   if (item.disabled) {
     event.stopPropagation();
     return;
@@ -311,8 +311,8 @@ function onItemClick(item, event) {
   hide();
 }
 
-function onItemMouseEnter(item, event) {
-  clearTimeout(submenuTimeout);
+function onItemMouseEnter(item: any, event: any) {
+  clearTimeout(submenuTimeout!);
 
   if (item.items?.length && !item.disabled) {
     submenuTimeout = setTimeout(() => {
@@ -324,17 +324,17 @@ function onItemMouseEnter(item, event) {
 }
 
 function onItemMouseLeave() {
-  clearTimeout(submenuTimeout);
+  clearTimeout(submenuTimeout!);
   submenuTimeout = setTimeout(() => {
     activeSubmenu.value = null;
   }, 200);
 }
 
-function onDocumentClick(event) {
-  if (isVisible.value && menuRef.value && !menuRef.value.contains(event.target)) {
+function onDocumentClick(event: MouseEvent) {
+  if (isVisible.value && menuRef.value && !menuRef.value.contains(event.target as Node)) {
     // In popup mode, also check if click is on trigger
     if (props.popup && triggerElement.value) {
-      if (triggerElement.value === event.target || triggerElement.value.contains(event.target)) {
+      if (triggerElement.value === event.target || triggerElement.value.contains(event.target as Node)) {
         return;
       }
     }
@@ -342,13 +342,13 @@ function onDocumentClick(event) {
   }
 }
 
-function onDocumentContextMenu(event) {
+function onDocumentContextMenu(event: Event) {
   if (props.global) {
     show(event);
   }
 }
 
-function onEscapeKey(event) {
+function onEscapeKey(event: KeyboardEvent) {
   if (event.key === "Escape" && isVisible.value) {
     hide();
   }
@@ -371,7 +371,7 @@ onUnmounted(() => {
   document.removeEventListener("keydown", onEscapeKey);
   document.removeEventListener("contextmenu", onDocumentContextMenu);
   window.removeEventListener("scroll", onWindowScroll, true);
-  clearTimeout(submenuTimeout);
+  clearTimeout(submenuTimeout!);
 });
 
 // Expose methods for external use

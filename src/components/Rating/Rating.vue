@@ -80,7 +80,7 @@ const hoverValue = ref(0);
 
 const currentValue = computed(() => props.modelValue ?? 0);
 
-const onStarClick = (value) => {
+const onStarClick = (value: any) => {
   if (props.readonly || props.isDisabled) return;
 
   // Toggle behavior: clicking the same value deselects
@@ -95,7 +95,7 @@ const onCancelClick = () => {
   emit("change", { value: null });
 };
 
-const onStarKeydown = (event, star) => {
+const onStarKeydown = (event: KeyboardEvent, star: any) => {
   if (props.readonly || props.isDisabled) return;
   let newValue = star;
   switch (event.key) {
@@ -116,7 +116,7 @@ const onStarKeydown = (event, star) => {
   emit("change", { value: newValue });
 };
 
-const onStarHover = (value) => {
+const onStarHover = (value: any) => {
   if (props.readonly || props.isDisabled) return;
   hoverValue.value = value;
 };

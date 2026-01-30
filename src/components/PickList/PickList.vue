@@ -132,44 +132,44 @@ const props = withDefaults(defineProps<PickListProps>(), {
 
 const emit = defineEmits(["update:source", "update:target", "move-to-target", "move-to-source"]);
 
-const sourceSelection = ref([]);
-const targetSelection = ref([]);
+const sourceSelection = ref<any[]>([]);
+const targetSelection = ref<any[]>([]);
 
 const sourceItems = computed(() => props.source);
 const targetItems = computed(() => props.target);
 
-const getItemKey = (item, index) => {
+const getItemKey = (item: any, index: any) => {
   if (props.dataKey && typeof item === "object") {
     return item[props.dataKey];
   }
   return index;
 };
 
-const getItemLabel = (item) => {
+const getItemLabel = (item: any) => {
   if (typeof item === "string" || typeof item === "number") {
     return item;
   }
   return item[props.labelKey];
 };
 
-const getItemValue = (item) => {
+const getItemValue = (item: any) => {
   if (props.dataKey && typeof item === "object") {
     return item[props.dataKey];
   }
   return item;
 };
 
-const isSourceSelected = (item) => {
+const isSourceSelected = (item: any) => {
   const value = getItemValue(item);
   return sourceSelection.value.some((s) => getItemValue(s) === value);
 };
 
-const isTargetSelected = (item) => {
+const isTargetSelected = (item: any) => {
   const value = getItemValue(item);
   return targetSelection.value.some((s) => getItemValue(s) === value);
 };
 
-const toggleSourceSelection = (item) => {
+const toggleSourceSelection = (item: any) => {
   if (props.isDisabled) return;
   const value = getItemValue(item);
   const index = sourceSelection.value.findIndex((s) => getItemValue(s) === value);
@@ -180,7 +180,7 @@ const toggleSourceSelection = (item) => {
   }
 };
 
-const toggleTargetSelection = (item) => {
+const toggleTargetSelection = (item: any) => {
   if (props.isDisabled) return;
   const value = getItemValue(item);
   const index = targetSelection.value.findIndex((s) => getItemValue(s) === value);

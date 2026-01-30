@@ -70,19 +70,19 @@ const props = withDefaults(defineProps<ConfirmPopupProps>(), {
 const emit = defineEmits(["accept", "reject"]);
 
 const isVisible = ref(false);
-const popupRef = ref(null);
+const popupRef = ref<HTMLElement | null>(null);
 const popupStyle = ref({});
-const targetElement = ref(null);
+const targetElement = ref<HTMLElement | null>(null);
 
 const messageId = `confirm-popup-message-${Math.random().toString(36).substr(2, 9)}`;
 
 const positionClass = computed(() => `confirm-popup--${props.position}`);
 
-function show(event) {
+function show(event: Event) {
   if (event?.currentTarget) {
-    targetElement.value = event.currentTarget;
+    targetElement.value = event.currentTarget as HTMLElement;
   } else if (typeof props.target === "string") {
-    targetElement.value = document.querySelector(props.target);
+    targetElement.value = document.querySelector(props.target) as HTMLElement | null;
   } else if (props.target) {
     targetElement.value = props.target;
   }
@@ -144,9 +144,9 @@ function updatePosition() {
   };
 }
 
-function handleClickOutside(event) {
-  if (isVisible.value && popupRef.value && !popupRef.value.contains(event.target)) {
-    if (targetElement.value && targetElement.value.contains(event.target)) {
+function handleClickOutside(event: MouseEvent) {
+  if (isVisible.value && popupRef.value && !popupRef.value.contains(event.target as Node)) {
+    if (targetElement.value && targetElement.value.contains(event.target as Node)) {
       return;
     }
     reject();

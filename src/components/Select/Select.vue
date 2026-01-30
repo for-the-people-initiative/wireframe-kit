@@ -64,8 +64,8 @@ const emit = defineEmits(["update:modelValue", "change"]);
 
 const selectRef = ref(null);
 
-const normalizedOptions = computed(() => {
-  return props.options.map((option) => {
+const normalizedOptions = computed((): any[] => {
+  return props.options.map((option: any) => {
     if (typeof option === "string" || typeof option === "number") {
       return { label: option, value: option };
     }
@@ -77,8 +77,8 @@ const normalizedOptions = computed(() => {
   });
 });
 
-const onChange = (event) => {
-  const value = event.target.value;
+const onChange = (event: Event) => {
+  const value = (event.target as HTMLSelectElement).value;
   emit("update:modelValue", value);
   emit("change", { value, originalEvent: event });
 };

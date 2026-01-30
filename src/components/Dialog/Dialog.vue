@@ -100,7 +100,7 @@ const props = withDefaults(defineProps<DialogProps>(), {
 
 const emit = defineEmits(["update:visible", "show", "hide"]);
 
-const dialogRef = ref(null);
+const dialogRef = ref<HTMLElement | null>(null);
 const headerId = useId();
 
 // Drag state
@@ -124,7 +124,7 @@ const onOverlayClick = () => {
   }
 };
 
-const onEscapeKey = (event) => {
+const onEscapeKey = (event: KeyboardEvent) => {
   if (props.closeOnEscape && props.visible) {
     event.preventDefault();
     close();
@@ -134,7 +134,7 @@ const onEscapeKey = (event) => {
 // Bug #1: Focus trap
 const FOCUSABLE_SELECTOR = 'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
-const onKeyDown = (event) => {
+const onKeyDown = (event: KeyboardEvent) => {
   if (event.key !== 'Tab' || !props.modal || !dialogRef.value) return;
 
   const focusableElements = [...dialogRef.value.querySelectorAll(FOCUSABLE_SELECTOR)];
@@ -143,8 +143,8 @@ const onKeyDown = (event) => {
     return;
   }
 
-  const firstEl = focusableElements[0];
-  const lastEl = focusableElements[focusableElements.length - 1];
+  const firstEl = (focusableElements[0] as HTMLElement);
+  const lastEl = (focusableElements[focusableElements.length - 1] as HTMLElement);
 
   if (event.shiftKey) {
     if (document.activeElement === firstEl || !dialogRef.value.contains(document.activeElement)) {
@@ -167,7 +167,7 @@ const removeDragListeners = () => {
 };
 
 // Dragging functionality
-const onDragStart = (event) => {
+const onDragStart = (event: MouseEvent) => {
   if (!props.draggable || !dialogRef.value) return;
 
   isDragging.value = true;
@@ -181,7 +181,7 @@ const onDragStart = (event) => {
   document.addEventListener("mouseup", onDragEnd);
 };
 
-const onDragMove = (event) => {
+const onDragMove = (event: MouseEvent) => {
   if (!isDragging.value) return;
 
   dialogPosition.value = {
@@ -217,7 +217,7 @@ watch(
       if (dialogRef.value) {
         const focusable = dialogRef.value.querySelector(FOCUSABLE_SELECTOR);
         if (focusable) {
-          focusable.focus();
+          (focusable as HTMLElement).focus();
         } else {
           dialogRef.value.setAttribute('tabindex', '-1');
           dialogRef.value.focus();

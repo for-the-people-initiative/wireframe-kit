@@ -55,20 +55,20 @@ const props = withDefaults(defineProps<OverlayPanelProps>(), {
 const emit = defineEmits(["update:visible", "show", "hide"]);
 
 const internalVisible = ref(false);
-const panelRef = ref(null);
+const panelRef = ref<HTMLElement | null>(null);
 const panelStyle = ref({});
-let targetElement = null;
+let targetElement: HTMLElement | null = null;
 
 // Support both controlled (v-model) and uncontrolled modes
 const isVisible = computed(() => {
   return props.visible !== undefined ? props.visible : internalVisible.value;
 });
 
-function show(event) {
+function show(event: Event) {
   if (event?.currentTarget) {
-    targetElement = event.currentTarget;
+    targetElement = event.currentTarget as HTMLElement;
   } else if (event?.target) {
-    targetElement = event.target;
+    targetElement = event.target as HTMLElement;
   }
 
   if (props.visible !== undefined) {
@@ -89,7 +89,7 @@ function hide() {
   emit("hide");
 }
 
-function toggle(event) {
+function toggle(event: Event) {
   if (isVisible.value) {
     hide();
   } else {
@@ -130,9 +130,9 @@ function updatePosition() {
   };
 }
 
-function handleClickOutside(event) {
-  if (props.dismissable && isVisible.value && panelRef.value && !panelRef.value.contains(event.target)) {
-    if (targetElement && targetElement.contains(event.target)) {
+function handleClickOutside(event: MouseEvent) {
+  if (props.dismissable && isVisible.value && panelRef.value && !panelRef.value.contains(event.target as Node)) {
+    if (targetElement && targetElement.contains(event.target as Node)) {
       return;
     }
     hide();
@@ -151,7 +151,7 @@ function handleResize() {
   }
 }
 
-function handleEscape(event) {
+function handleEscape(event: KeyboardEvent) {
   if (props.dismissable && isVisible.value && event.key === "Escape") {
     hide();
   }

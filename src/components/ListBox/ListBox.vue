@@ -105,21 +105,21 @@ const emit = defineEmits(["update:modelValue", "change", "filter"]);
 const filterValue = ref("");
 const focusedIndex = ref(-1);
 
-const getOptionLabel = (option) => {
+const getOptionLabel = (option: any) => {
   if (typeof option === "string" || typeof option === "number") {
     return option;
   }
   return option[props.optionLabel];
 };
 
-const getOptionValue = (option) => {
+const getOptionValue = (option: any) => {
   if (typeof option === "string" || typeof option === "number") {
     return option;
   }
   return option[props.optionValue];
 };
 
-const filteredOptions = computed(() => {
+const filteredOptions = computed((): any[] => {
   if (!filterValue.value) {
     return props.options;
   }
@@ -130,7 +130,7 @@ const filteredOptions = computed(() => {
   });
 });
 
-const isSelected = (option) => {
+const isSelected = (option: any) => {
   const value = getOptionValue(option);
   if (props.multiple) {
     return Array.isArray(props.modelValue) && props.modelValue.includes(value);
@@ -138,7 +138,7 @@ const isSelected = (option) => {
   return props.modelValue === value;
 };
 
-const selectOption = (option) => {
+const selectOption = (option: any) => {
   if (props.isDisabled || option.disabled) return;
 
   const value = getOptionValue(option);
@@ -161,11 +161,11 @@ const selectOption = (option) => {
   }
 };
 
-const onFilterInput = (event) => {
+const onFilterInput = (event: Event) => {
   emit("filter", { value: filterValue.value, originalEvent: event });
 };
 
-const onOptionKeydown = (event, option, index) => {
+const onOptionKeydown = (event: KeyboardEvent, option: any, index: any) => {
   if (event.key === "Enter" || event.key === " ") {
     event.preventDefault();
     if (!option.disabled) {
@@ -184,10 +184,10 @@ const onOptionKeydown = (event, option, index) => {
   }
 };
 
-const focusOption = (index) => {
+const focusOption = (index: any) => {
   const options = document.querySelectorAll(".listbox__option");
   if (options[index]) {
-    options[index].focus();
+    (options[index] as HTMLElement).focus();
   }
 };
 

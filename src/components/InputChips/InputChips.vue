@@ -69,7 +69,7 @@ const props = withDefaults(defineProps<InputChipsProps>(), {
 
 const emit = defineEmits(["update:modelValue", "add", "remove", "focus", "blur"]);
 
-const inputRef = ref(null);
+const inputRef = ref<HTMLInputElement | null>(null);
 const inputValue = ref("");
 const isFocused = ref(false);
 
@@ -80,7 +80,7 @@ const canAddMore = computed(() => {
   return props.modelValue.length < props.max;
 });
 
-const addChip = (value) => {
+const addChip = (value: any) => {
   const trimmedValue = value.trim();
   if (!trimmedValue) return false;
 
@@ -96,24 +96,24 @@ const addChip = (value) => {
   return true;
 };
 
-const removeChip = (index) => {
+const removeChip = (index: any) => {
   const removedValue = props.modelValue[index];
   const newValue = props.modelValue.filter((_, i) => i !== index);
   emit("update:modelValue", newValue);
   emit("remove", { value: removedValue, chips: newValue });
 };
 
-const processInput = (value) => {
+const processInput = (value: any) => {
   if (props.separator) {
     const parts = value.split(props.separator);
-    parts.forEach((part) => addChip(part));
+    parts.forEach((part: any) => addChip(part));
   } else {
     addChip(value);
   }
   inputValue.value = "";
 };
 
-const onKeydown = (event) => {
+const onKeydown = (event: KeyboardEvent) => {
   if (event.key === "Enter") {
     event.preventDefault();
     if (inputValue.value) {
@@ -129,20 +129,20 @@ const onKeydown = (event) => {
   }
 };
 
-const onPaste = (event) => {
+const onPaste = (event: ClipboardEvent) => {
   if (props.separator) {
     event.preventDefault();
-    const pastedText = event.clipboardData.getData("text");
+    const pastedText = event.clipboardData!.getData("text");
     processInput(pastedText);
   }
 };
 
-const onFocus = (event) => {
+const onFocus = (event: FocusEvent) => {
   isFocused.value = true;
   emit("focus", { originalEvent: event });
 };
 
-const onBlur = (event) => {
+const onBlur = (event: FocusEvent) => {
   isFocused.value = false;
   if (inputValue.value) {
     processInput(inputValue.value);

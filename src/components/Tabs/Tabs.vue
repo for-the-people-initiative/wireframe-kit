@@ -51,17 +51,17 @@ const emit = defineEmits(["update:activeIndex", "tabChange", "tabClick"]);
 const tabsId = `tabs-${Math.random().toString(36).substring(2, 9)}`;
 
 // Tab registration
-const tabs = ref([]);
+const tabs = ref<any[]>([]);
 const tabElements = ref([]);
 const navRef = ref(null);
 
-const registerTab = (tab) => {
+const registerTab = (tab: any) => {
   const id = `tab-${tabs.value.length}`;
   tabs.value.push({ ...tab, id });
   return tabs.value.length - 1;
 };
 
-const unregisterTab = (index) => {
+const unregisterTab = (index: any) => {
   tabs.value.splice(index, 1);
 };
 
@@ -81,8 +81,8 @@ const updateIndicator = async () => {
   const activeTab = document.querySelector(`#${tabsId}-tab-${props.activeIndex}`);
   if (activeTab) {
     indicatorStyle.value = {
-      width: `${activeTab.offsetWidth}px`,
-      transform: `translateX(${activeTab.offsetLeft}px)`,
+      width: `${(activeTab as HTMLElement).offsetWidth}px`,
+      transform: `translateX(${(activeTab as HTMLElement).offsetLeft}px)`,
     };
   }
 };
@@ -95,7 +95,7 @@ watch(() => props.activeIndex, updateIndicator);
 watch(() => tabs.value.length, updateIndicator);
 
 // Event handlers
-const onTabClick = (index, event) => {
+const onTabClick = (index: any, event: any) => {
   if (tabs.value[index]?.disabled) return;
 
   emit("tabClick", { originalEvent: event, index });
@@ -106,7 +106,7 @@ const onTabClick = (index, event) => {
   }
 };
 
-const onKeydown = (event, currentIndex) => {
+const onKeydown = (event: KeyboardEvent, currentIndex: any) => {
   const tabCount = tabs.value.length;
   let newIndex = currentIndex;
 
@@ -153,7 +153,7 @@ const onKeydown = (event, currentIndex) => {
     // Focus the new tab
     nextTick(() => {
       const newTab = document.querySelector(`#${tabsId}-tab-${newIndex}`);
-      newTab?.focus();
+      (newTab as HTMLElement)?.focus();
     });
   }
 };

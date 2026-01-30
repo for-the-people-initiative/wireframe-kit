@@ -69,7 +69,7 @@ const props = withDefaults(defineProps<MessageProps>(), {
 const emit = defineEmits(["close", "life-end"]);
 
 const visible = ref(true);
-let lifeTimeout = null;
+let lifeTimeout: ReturnType<typeof setTimeout> | null = null;
 
 const hasIcon = computed(() => props.icon);
 

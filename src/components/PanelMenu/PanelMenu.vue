@@ -177,8 +177,8 @@ const props = withDefaults(defineProps<PanelMenuProps>(), {
 const emit = defineEmits(["update:expandedKeys", "panel-open", "panel-close", "item-click"]);
 
 // Internal state
-const internalExpandedKeys = ref({ ...props.expandedKeys });
-const expandedSubmenus = ref({});
+const internalExpandedKeys = ref<Record<string, boolean>>({ ...props.expandedKeys });
+const expandedSubmenus = ref<Record<string, boolean>>({});
 
 // Watch for external changes
 watch(
@@ -189,16 +189,16 @@ watch(
   { deep: true }
 );
 
-const isExpanded = (panelIndex) => {
+const isExpanded = (panelIndex: any) => {
   return internalExpandedKeys.value[panelIndex] === true;
 };
 
-const isSubmenuExpanded = (panelIndex, itemIndex) => {
+const isSubmenuExpanded = (panelIndex: any, itemIndex: any) => {
   const key = `${panelIndex}-${itemIndex}`;
   return expandedSubmenus.value[key] === true;
 };
 
-const togglePanel = (panelIndex, panel) => {
+const togglePanel = (panelIndex: any, panel: any) => {
   if (panel.disabled) return;
 
   const wasExpanded = isExpanded(panelIndex);
@@ -210,7 +210,7 @@ const togglePanel = (panelIndex, panel) => {
     };
   } else {
     // Close all panels except the clicked one
-    const newKeys = {};
+    const newKeys: Record<string, boolean> = {};
     if (!wasExpanded) {
       newKeys[panelIndex] = true;
     }
@@ -226,7 +226,7 @@ const togglePanel = (panelIndex, panel) => {
   }
 };
 
-const toggleSubmenu = (panelIndex, itemIndex) => {
+const toggleSubmenu = (panelIndex: any, itemIndex: any) => {
   const key = `${panelIndex}-${itemIndex}`;
   expandedSubmenus.value = {
     ...expandedSubmenus.value,
@@ -234,7 +234,7 @@ const toggleSubmenu = (panelIndex, itemIndex) => {
   };
 };
 
-const onItemClick = (event, item, panelIndex, itemIndex) => {
+const onItemClick = (event: MouseEvent, item: any, panelIndex: any, itemIndex: any) => {
   if (item.disabled) {
     event.preventDefault();
     return;
@@ -254,7 +254,7 @@ const onItemClick = (event, item, panelIndex, itemIndex) => {
   emit("item-click", { originalEvent: event, item });
 };
 
-const onSubitemClick = (event, item) => {
+const onSubitemClick = (event: MouseEvent, item: any) => {
   if (item.disabled) {
     event.preventDefault();
     return;
@@ -267,7 +267,7 @@ const onSubitemClick = (event, item) => {
   emit("item-click", { originalEvent: event, item });
 };
 
-const onHeaderKeydown = (event, panelIndex) => {
+const onHeaderKeydown = (event: KeyboardEvent, panelIndex: any) => {
   switch (event.key) {
     case "ArrowDown":
       event.preventDefault();

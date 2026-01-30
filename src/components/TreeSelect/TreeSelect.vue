@@ -88,7 +88,7 @@ const TreeNode = {
     childrenField: String,
   },
   emits: ["select", "toggle"],
-  setup(props, { emit }) {
+  setup(props: any, { emit }: { emit: any }) {
     const hasChildren = computed(() => {
       const children = props.node[props.childrenField];
       return children && children.length > 0;
@@ -102,7 +102,7 @@ const TreeNode = {
       return props.selectedKeys.has(props.node[props.keyField]);
     });
 
-    const onToggle = (event) => {
+    const onToggle = (event: Event) => {
       event.stopPropagation();
       emit("toggle", props.node);
     };
@@ -159,7 +159,7 @@ const TreeNode = {
       // Children nodes
       if (hasChildren.value && isExpanded.value) {
         const nodeChildren = props.node[props.childrenField];
-        nodeChildren.forEach((child) => {
+        nodeChildren.forEach((child: any) => {
           children.push(h(TreeNode, {
             key: child[props.keyField],
             node: child,
@@ -170,8 +170,8 @@ const TreeNode = {
             labelField: props.labelField,
             keyField: props.keyField,
             childrenField: props.childrenField,
-            onSelect: (n) => emit("select", n),
-            onToggle: (n) => emit("toggle", n),
+            onSelect: (n: any) => emit("select", n),
+            onToggle: (n: any) => emit("toggle", n),
           }));
         });
       }
@@ -197,15 +197,15 @@ const props = withDefaults(defineProps<TreeSelectProps>(), {
 
 const emit = defineEmits(["update:modelValue", "change"]);
 
-const containerRef = ref(null);
-const dropdownRef = ref(null);
-const filterInputRef = ref(null);
+const containerRef = ref<HTMLElement | null>(null);
+const dropdownRef = ref<HTMLElement | null>(null);
+const filterInputRef = ref<HTMLElement | null>(null);
 const isOpen = ref(false);
 const filterValue = ref("");
 const expandedKeys = ref(new Set());
 const dropdownStyle = ref({});
 
-const getNodeKey = (node) => node[props.keyField];
+const getNodeKey = (node: any) => node[props.keyField];
 
 const selectedKeysSet = computed(() => {
   if (props.modelValue === null || props.modelValue === undefined) {
@@ -217,8 +217,8 @@ const selectedKeysSet = computed(() => {
   return new Set([props.modelValue]);
 });
 
-const flattenNodes = (nodes, result = []) => {
-  nodes.forEach((node) => {
+const flattenNodes = (nodes: any, result: any[] = []) => {
+  nodes.forEach((node: any) => {
     result.push(node);
     const children = node[props.childrenField];
     if (children && children.length > 0) {
@@ -228,7 +228,7 @@ const flattenNodes = (nodes, result = []) => {
   return result;
 };
 
-const findNodeByKey = (key) => {
+const findNodeByKey = (key: any) => {
   const allNodes = flattenNodes(props.options);
   return allNodes.find((node) => node[props.keyField] === key);
 };
@@ -248,11 +248,11 @@ const displayLabel = computed(() => {
   return node ? node[props.labelField] : "";
 });
 
-const filterNodes = (nodes, searchTerm) => {
-  const result = [];
+const filterNodes = (nodes: any, searchTerm: any) => {
+  const result: any[] = [];
   const search = searchTerm.toLowerCase();
 
-  nodes.forEach((node) => {
+  nodes.forEach((node: any) => {
     const label = node[props.labelField].toLowerCase();
     const children = node[props.childrenField];
 
@@ -277,7 +277,7 @@ const filteredOptions = computed(() => {
   return filterNodes(props.options, filterValue.value);
 });
 
-const onNodeSelect = (node) => {
+const onNodeSelect = (node: any) => {
   const key = node[props.keyField];
 
   if (props.selectionMode === "single") {
@@ -300,7 +300,7 @@ const onNodeSelect = (node) => {
   }
 };
 
-const onNodeToggle = (node) => {
+const onNodeToggle = (node: any) => {
   const key = node[props.keyField];
   const newExpanded = new Set(expandedKeys.value);
   if (newExpanded.has(key)) {
@@ -338,7 +338,7 @@ const updateDropdownPosition = () => {
   };
 };
 
-const onTriggerKeydown = (event) => {
+const onTriggerKeydown = (event: KeyboardEvent) => {
   switch (event.key) {
     case "Enter":
     case " ":
@@ -355,12 +355,12 @@ const onTriggerKeydown = (event) => {
   }
 };
 
-const onClickOutside = (event) => {
+const onClickOutside = (event: MouseEvent) => {
   if (
     containerRef.value &&
-    !containerRef.value.contains(event.target) &&
+    !containerRef.value.contains(event.target as Node) &&
     dropdownRef.value &&
-    !dropdownRef.value.contains(event.target)
+    !dropdownRef.value.contains(event.target as Node)
   ) {
     close();
   }

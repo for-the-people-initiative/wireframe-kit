@@ -29,7 +29,7 @@ const props = withDefaults(defineProps<SplitterPanelProps>(), {
   minSize: 5,
 });
 
-const splitterContext = inject("splitter");
+const splitterContext = inject("splitter") as any;
 const panelIndex = ref(-1);
 
 onMounted(async () => {
@@ -76,12 +76,12 @@ const panelStyle = computed(() => {
   };
 });
 
-const onGutterMouseDown = (event) => {
+const onGutterMouseDown = (event: MouseEvent) => {
   event.preventDefault();
   splitterContext.onGutterMouseDown(event, panelIndex.value);
 };
 
-const onGutterKeyDown = (event) => {
+const onGutterKeyDown = (event: KeyboardEvent) => {
   const step = 1; // 1% step
   let handled = false;
 
@@ -108,7 +108,7 @@ const onGutterKeyDown = (event) => {
   }
 };
 
-const adjustSize = (delta) => {
+const adjustSize = (delta: any) => {
   const prevIndex = panelIndex.value;
   const nextIndex = panelIndex.value + 1;
   const sizes = splitterContext.panelSizes.value;

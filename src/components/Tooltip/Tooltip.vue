@@ -41,11 +41,11 @@ const props = withDefaults(defineProps<TooltipProps>(), {
 });
 
 const isVisible = ref(false);
-const tooltipRef = ref(null);
+const tooltipRef = ref<HTMLElement | null>(null);
 const tooltipStyle = ref({});
-let showTimeoutId = null;
-let hideTimeoutId = null;
-let triggerElement = null;
+let showTimeoutId: ReturnType<typeof setTimeout> | null = null;
+let hideTimeoutId: ReturnType<typeof setTimeout> | null = null;
+let triggerElement: HTMLElement | null = null;
 
 const positionClass = computed(() => `tooltip--${props.position}`);
 
@@ -60,11 +60,11 @@ function clearTimeouts() {
   }
 }
 
-function show(event) {
+function show(event: Event) {
   if (props.disabled) return;
 
   clearTimeouts();
-  triggerElement = event.currentTarget;
+  triggerElement = event.currentTarget as HTMLElement;
 
   if (props.showDelay > 0) {
     showTimeoutId = setTimeout(() => {
@@ -128,7 +128,7 @@ function updatePosition() {
   };
 }
 
-function onMouseEnter(event) {
+function onMouseEnter(event: MouseEvent) {
   show(event);
 }
 
@@ -136,7 +136,7 @@ function onMouseLeave() {
   hide();
 }
 
-function onFocus(event) {
+function onFocus(event: FocusEvent) {
   show(event);
 }
 

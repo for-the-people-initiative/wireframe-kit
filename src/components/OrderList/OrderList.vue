@@ -119,7 +119,7 @@ defineOptions({
 });
 
 const internalValue = ref([...props.modelValue]);
-const selection = ref([]);
+const selection = ref<any[]>([]);
 const draggingIndex = ref(null);
 
 watch(
@@ -146,18 +146,18 @@ const isLastSelected = computed(() => {
   return Math.max(...selectedIndices.value) === internalValue.value.length - 1;
 });
 
-const getItemKey = (item, index) => {
+const getItemKey = (item: any, index: any) => {
   if (props.itemKey && typeof item === "object") {
     return item[props.itemKey];
   }
   return index;
 };
 
-const isSelected = (item) => {
+const isSelected = (item: any) => {
   return selection.value.includes(item);
 };
 
-const onItemClick = (item, event) => {
+const onItemClick = (item: any, event: any) => {
   if (props.multiple && (event.ctrlKey || event.metaKey)) {
     const index = selection.value.indexOf(item);
     if (index > -1) {
@@ -236,13 +236,13 @@ const moveToBottom = () => {
   emitUpdate();
 };
 
-const onDragStart = (index, event) => {
+const onDragStart = (index: any, event: any) => {
   draggingIndex.value = index;
   event.dataTransfer.effectAllowed = "move";
   event.dataTransfer.setData("text/plain", index);
 };
 
-const onDragOver = (index, event) => {
+const onDragOver = (index: any, event: any) => {
   event.preventDefault();
   event.dataTransfer.dropEffect = "move";
 };
@@ -251,7 +251,7 @@ const onDragEnd = () => {
   draggingIndex.value = null;
 };
 
-const onDrop = (targetIndex, event) => {
+const onDrop = (targetIndex: any, event: any) => {
   event.preventDefault();
   const sourceIndex = draggingIndex.value;
 

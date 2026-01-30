@@ -49,12 +49,12 @@ const emit = defineEmits(["remove"]);
 
 const visible = ref(true);
 
-const onRemove = (event) => {
+const onRemove = (event: Event) => {
   visible.value = false;
   emit("remove", event);
 };
 
-const onKeydown = (event) => {
+const onKeydown = (event: KeyboardEvent) => {
   if (event.key === "Enter" || event.key === "Backspace") {
     onRemove(event);
   }

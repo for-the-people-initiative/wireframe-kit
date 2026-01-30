@@ -121,11 +121,11 @@ const props = withDefaults(defineProps<MegaMenuProps>(), {
 
 const emit = defineEmits(["item-click"]);
 
-const activeRootItem = ref(null);
+const activeRootItem = ref<any>(null);
 const mobileMenuOpen = ref(false);
-let closeTimeout = null;
+let closeTimeout: ReturnType<typeof setTimeout> | null = null;
 
-function onRootItemClick(item, event) {
+function onRootItemClick(item: any, event: any) {
   if (item.disabled) {
     event.preventDefault();
     return;
@@ -146,10 +146,10 @@ function onRootItemClick(item, event) {
   }
 }
 
-function onRootItemMouseEnter(item) {
+function onRootItemMouseEnter(item: any) {
   if (item.disabled) return;
 
-  clearTimeout(closeTimeout);
+  clearTimeout(closeTimeout!);
 
   if (item.items?.length) {
     activeRootItem.value = item;
@@ -163,7 +163,7 @@ function onRootItemMouseLeave() {
 }
 
 function onPanelMouseEnter() {
-  clearTimeout(closeTimeout);
+  clearTimeout(closeTimeout!);
 }
 
 function onPanelMouseLeave() {
@@ -172,7 +172,7 @@ function onPanelMouseLeave() {
   }, 150);
 }
 
-function onItemClick(item, event) {
+function onItemClick(item: any, event: any) {
   if (item.disabled) {
     event.preventDefault();
     return;
@@ -191,14 +191,14 @@ function onItemClick(item, event) {
   mobileMenuOpen.value = false;
 }
 
-function onDocumentClick(event) {
-  if (!event.target.closest(".mega-menu")) {
+function onDocumentClick(event: MouseEvent) {
+  if (!(event.target as HTMLElement).closest(".mega-menu")) {
     activeRootItem.value = null;
     mobileMenuOpen.value = false;
   }
 }
 
-function onEscapeKey(event) {
+function onEscapeKey(event: KeyboardEvent) {
   if (event.key === "Escape") {
     activeRootItem.value = null;
     mobileMenuOpen.value = false;
@@ -213,6 +213,6 @@ onMounted(() => {
 onUnmounted(() => {
   document.removeEventListener("click", onDocumentClick);
   document.removeEventListener("keydown", onEscapeKey);
-  clearTimeout(closeTimeout);
+  clearTimeout(closeTimeout!);
 });
 </script>

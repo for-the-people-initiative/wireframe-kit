@@ -48,7 +48,7 @@ const props = withDefaults(defineProps<SelectButtonProps>(), {
 
 const emit = defineEmits(["update:modelValue", "change"]);
 
-const getOptionLabel = (option) => {
+const getOptionLabel = (option: any) => {
   if (props.optionLabel) {
     if (typeof props.optionLabel === "function") {
       return props.optionLabel(option);
@@ -58,7 +58,7 @@ const getOptionLabel = (option) => {
   return option?.label ?? option;
 };
 
-const getOptionValue = (option) => {
+const getOptionValue = (option: any) => {
   if (props.optionValue) {
     if (typeof props.optionValue === "function") {
       return props.optionValue(option);
@@ -68,7 +68,7 @@ const getOptionValue = (option) => {
   return option?.value ?? option;
 };
 
-const isOptionDisabled = (option) => {
+const isOptionDisabled = (option: any) => {
   if (props.optionDisabled) {
     if (typeof props.optionDisabled === "function") {
       return props.optionDisabled(option);
@@ -78,7 +78,7 @@ const isOptionDisabled = (option) => {
   return option?.disabled ?? false;
 };
 
-const isSelected = (option) => {
+const isSelected = (option: any) => {
   const optionValue = getOptionValue(option);
 
   if (props.multiple) {
@@ -89,7 +89,7 @@ const isSelected = (option) => {
   return equals(props.modelValue, optionValue);
 };
 
-const equals = (value1, value2) => {
+const equals = (value1: any, value2: any) => {
   if (value1 === value2) return true;
   if (typeof value1 === "object" && typeof value2 === "object") {
     return JSON.stringify(value1) === JSON.stringify(value2);
@@ -97,7 +97,7 @@ const equals = (value1, value2) => {
   return false;
 };
 
-const onOptionClick = (option, event) => {
+const onOptionClick = (option: any, event: any) => {
   if (props.isDisabled || isOptionDisabled(option)) return;
 
   const optionValue = getOptionValue(option);

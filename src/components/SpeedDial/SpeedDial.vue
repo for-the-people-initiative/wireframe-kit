@@ -104,7 +104,7 @@ const onMouseLeave = () => {
   }
 };
 
-const onActionClick = (item) => {
+const onActionClick = (item: any) => {
   if (item.command) {
     item.command({ originalEvent: event, item });
   }
@@ -112,7 +112,7 @@ const onActionClick = (item) => {
   close();
 };
 
-const getActionStyle = (index) => {
+const getActionStyle = (index: any) => {
   if (props.type === "linear") {
     return {};
   }
@@ -176,7 +176,7 @@ const getActionStyle = (index) => {
   const y = Math.sin(radian) * radius;
 
   return {
-    position: "absolute",
+    position: 'absolute' as const,
     left: `calc(50% + ${x}px)`,
     top: `calc(50% + ${y}px)`,
     transform: "translate(-50%, -50%)",

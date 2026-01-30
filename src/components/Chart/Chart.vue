@@ -64,8 +64,8 @@ const props = withDefaults(defineProps<ChartProps>(), {
 });
 
 const canvasRef = ref(null);
-let chartInstance = null;
-let ChartJS = null;
+let chartInstance: any = null;
+let ChartJS: any = null;
 
 const additionalClasses = computed(() =>
   [
@@ -78,14 +78,14 @@ const additionalClasses = computed(() =>
 
 const hasData = computed(() => {
   if (!props.data) return false;
-  if (props.data.datasets) {
-    return props.data.datasets.some(ds => ds.data && ds.data.length > 0);
+  if ((props.data as any).datasets) {
+    return (props.data as any).datasets.some((ds: any) => ds.data && ds.data.length > 0);
   }
   return Object.keys(props.data).length > 0;
 });
 
 const wrapperStyle = computed(() => {
-  const style = {};
+  const style: Record<string, string> = {};
   if (props.width) {
     style.width = typeof props.width === "number" ? `${props.width}px` : props.width;
   }
@@ -130,7 +130,7 @@ function destroyChart() {
   }
 }
 
-function onCanvasClick(event) {
+function onCanvasClick(event: MouseEvent) {
   if (!chartInstance) return;
 
   const elements = chartInstance.getElementsAtEventForMode(

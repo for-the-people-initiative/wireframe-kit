@@ -69,10 +69,10 @@ const props = withDefaults(defineProps<ScrollPanelProps>(), {
   step: 40,
 });
 
-const containerRef = ref(null);
-const contentRef = ref(null);
-const thumbYRef = ref(null);
-const thumbXRef = ref(null);
+const containerRef = ref<HTMLElement | null>(null);
+const contentRef = ref<HTMLElement | null>(null);
+const thumbYRef = ref<HTMLElement | null>(null);
+const thumbXRef = ref<HTMLElement | null>(null);
 
 // Scroll state
 const scrollYPercent = ref(0);
@@ -143,17 +143,17 @@ const onScroll = () => {
 };
 
 // Vertical thumb dragging
-const onThumbYMouseDown = (event) => {
+const onThumbYMouseDown = (event: MouseEvent) => {
   event.preventDefault();
   isDraggingY.value = true;
   dragStartY.value = event.pageY;
-  scrollStartY.value = contentRef.value.scrollTop;
+  scrollStartY.value = contentRef.value!.scrollTop;
 
   document.addEventListener("mousemove", onThumbYMouseMove);
   document.addEventListener("mouseup", onThumbYMouseUp);
 };
 
-const onThumbYMouseMove = (event) => {
+const onThumbYMouseMove = (event: MouseEvent) => {
   if (!isDraggingY.value || !contentRef.value || !containerRef.value) return;
 
   const container = containerRef.value;
@@ -173,30 +173,30 @@ const onThumbYMouseUp = () => {
   document.removeEventListener("mouseup", onThumbYMouseUp);
 };
 
-const onThumbYKeyDown = (event) => {
+const onThumbYKeyDown = (event: KeyboardEvent) => {
   if (!contentRef.value) return;
 
   if (event.key === "ArrowUp") {
     event.preventDefault();
-    contentRef.value.scrollTop -= props.step;
+    contentRef.value!.scrollTop -= props.step;
   } else if (event.key === "ArrowDown") {
     event.preventDefault();
-    contentRef.value.scrollTop += props.step;
+    contentRef.value!.scrollTop += props.step;
   }
 };
 
 // Horizontal thumb dragging
-const onThumbXMouseDown = (event) => {
+const onThumbXMouseDown = (event: MouseEvent) => {
   event.preventDefault();
   isDraggingX.value = true;
   dragStartX.value = event.pageX;
-  scrollStartX.value = contentRef.value.scrollLeft;
+  scrollStartX.value = contentRef.value!.scrollLeft;
 
   document.addEventListener("mousemove", onThumbXMouseMove);
   document.addEventListener("mouseup", onThumbXMouseUp);
 };
 
-const onThumbXMouseMove = (event) => {
+const onThumbXMouseMove = (event: MouseEvent) => {
   if (!isDraggingX.value || !contentRef.value || !containerRef.value) return;
 
   const container = containerRef.value;
@@ -216,15 +216,15 @@ const onThumbXMouseUp = () => {
   document.removeEventListener("mouseup", onThumbXMouseUp);
 };
 
-const onThumbXKeyDown = (event) => {
+const onThumbXKeyDown = (event: KeyboardEvent) => {
   if (!contentRef.value) return;
 
   if (event.key === "ArrowLeft") {
     event.preventDefault();
-    contentRef.value.scrollLeft -= props.step;
+    contentRef.value!.scrollLeft -= props.step;
   } else if (event.key === "ArrowRight") {
     event.preventDefault();
-    contentRef.value.scrollLeft += props.step;
+    contentRef.value!.scrollLeft += props.step;
   }
 };
 
@@ -235,15 +235,15 @@ const refresh = () => {
   });
 };
 
-const scrollTop = (value) => {
+const scrollTop = (value: any) => {
   if (contentRef.value) {
-    contentRef.value.scrollTop = value;
+    contentRef.value!.scrollTop = value;
   }
 };
 
-const scrollLeft = (value) => {
+const scrollLeft = (value: any) => {
   if (contentRef.value) {
-    contentRef.value.scrollLeft = value;
+    contentRef.value!.scrollLeft = value;
   }
 };
 
@@ -255,7 +255,7 @@ defineExpose({
 });
 
 // Lifecycle
-let resizeObserver = null;
+let resizeObserver: ResizeObserver | null = null;
 
 onMounted(() => {
   updateScrollbars();

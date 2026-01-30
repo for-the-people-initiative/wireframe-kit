@@ -159,12 +159,12 @@ const additionalClasses = computed(() =>
   [`data-view--layout-${internalLayout.value}`].filter(Boolean).join(" ")
 );
 
-const setLayout = (layout) => {
+const setLayout = (layout: any) => {
   internalLayout.value = layout;
   emit("update:layout", layout);
 };
 
-const goToPage = (page) => {
+const goToPage = (page: any) => {
   if (page < 1 || page > totalPages.value) return;
   currentPage.value = page;
   emit("page", { page: currentPage.value });

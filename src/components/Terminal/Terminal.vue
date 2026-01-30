@@ -52,10 +52,10 @@ const props = withDefaults(defineProps<TerminalProps>(), {
 
 const emit = defineEmits(["command"]);
 
-const commands = ref([]);
+const commands = ref<any[]>([]);
 const currentCommand = ref("");
-const inputRef = ref(null);
-const contentRef = ref(null);
+const inputRef = ref<HTMLInputElement | null>(null);
+const contentRef = ref<HTMLElement | null>(null);
 
 const focusInput = () => {
   inputRef.value?.focus();
@@ -73,7 +73,7 @@ const executeCommand = () => {
   commands.value.push(command);
   currentCommand.value = "";
 
-  emit("command", text, (response) => {
+  emit("command", text, (response: any) => {
     command.response = response;
   });
 
@@ -88,7 +88,7 @@ const scrollToBottom = () => {
   }
 };
 
-const addResponse = (response) => {
+const addResponse = (response: any) => {
   if (commands.value.length > 0) {
     commands.value[commands.value.length - 1].response = response;
     nextTick(() => {

@@ -163,7 +163,7 @@ const emit = defineEmits(["update:activeIndex", "show", "hide"]);
 
 const internalIndex = ref(props.activeIndex);
 const fullscreenVisible = ref(false);
-const autoplayTimer = ref(null);
+const autoplayTimer = ref<ReturnType<typeof setInterval> | null>(null);
 
 const activeIndex = computed({
   get: () => internalIndex.value,
@@ -204,7 +204,7 @@ const next = () => {
   }
 };
 
-const goTo = (index) => {
+const goTo = (index: any) => {
   activeIndex.value = index;
 };
 

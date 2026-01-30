@@ -54,7 +54,7 @@ const props = withDefaults(defineProps<VirtualScrollerProps>(), {
 
 const emit = defineEmits(["scroll", "scroll-index-change"]);
 
-const containerRef = ref(null);
+const containerRef = ref<HTMLElement | null>(null);
 const scrollPosition = ref(0);
 
 const isVertical = computed(() => props.orientation === "vertical");
@@ -64,8 +64,8 @@ const totalSize = computed(() => props.items.length * props.itemSize);
 const viewportSize = computed(() => {
   if (!containerRef.value) return 0;
   return isVertical.value
-    ? containerRef.value.clientHeight
-    : containerRef.value.clientWidth;
+    ? containerRef.value!.clientHeight
+    : containerRef.value!.clientWidth;
 });
 
 const visibleCount = computed(() => {
@@ -86,7 +86,7 @@ const visibleItems = computed(() => {
   return props.items.slice(startIndex.value, endIndex.value);
 });
 
-const getItemKey = (item, index) => {
+const getItemKey = (item: any, index: any) => {
   if (props.dataKey && typeof item === "object") {
     return item[props.dataKey];
   }
@@ -96,18 +96,18 @@ const getItemKey = (item, index) => {
 const containerStyle = computed(() => ({
   height: isVertical.value ? props.scrollHeight : "auto",
   width: isVertical.value ? "100%" : props.scrollHeight,
-  overflowY: isVertical.value ? "auto" : "hidden",
-  overflowX: isVertical.value ? "hidden" : "auto",
+  overflowY: isVertical.value ? 'auto' as const : 'hidden' as const,
+  overflowX: isVertical.value ? 'hidden' as const : 'auto' as const,
 }));
 
 const spacerStyle = computed(() => ({
-  position: "relative",
+  position: 'relative' as const,
   height: isVertical.value ? `${totalSize.value}px` : "100%",
   width: isVertical.value ? "100%" : `${totalSize.value}px`,
 }));
 
 const contentStyle = computed(() => ({
-  position: "absolute",
+  position: 'absolute' as const,
   top: isVertical.value ? `${startIndex.value * props.itemSize}px` : "0",
   left: isVertical.value ? "0" : `${startIndex.value * props.itemSize}px`,
   width: isVertical.value ? "100%" : "auto",
@@ -119,9 +119,9 @@ const itemStyle = computed(() => ({
   width: isVertical.value ? "100%" : `${props.itemSize}px`,
 }));
 
-const onScroll = (event) => {
+const onScroll = (event: Event) => {
   const target = event.target;
-  const newPosition = isVertical.value ? target.scrollTop : target.scrollLeft;
+  const newPosition = isVertical.value ? (target as HTMLElement).scrollTop : (target as HTMLElement).scrollLeft;
   const oldStartIndex = startIndex.value;
 
   scrollPosition.value = newPosition;
@@ -139,19 +139,19 @@ const onScroll = (event) => {
   }
 };
 
-const scrollToIndex = (index, behavior = "auto") => {
+const scrollToIndex = (index: any, behavior: ScrollBehavior = "auto") => {
   if (!containerRef.value) return;
 
   const position = index * props.itemSize;
 
   if (isVertical.value) {
-    containerRef.value.scrollTo({ top: position, behavior });
+    containerRef.value!.scrollTo({ top: position, behavior });
   } else {
-    containerRef.value.scrollTo({ left: position, behavior });
+    containerRef.value!.scrollTo({ left: position, behavior });
   }
 };
 
-const scrollIntoView = (index, behavior = "auto", align = "start") => {
+const scrollIntoView = (index: any, behavior: ScrollBehavior = "auto", align = "start") => {
   if (!containerRef.value) return;
 
   const itemPosition = index * props.itemSize;
@@ -180,22 +180,22 @@ const scrollIntoView = (index, behavior = "auto", align = "start") => {
   targetScroll = Math.max(0, Math.min(targetScroll, totalSize.value - viewport));
 
   if (isVertical.value) {
-    containerRef.value.scrollTo({ top: targetScroll, behavior });
+    containerRef.value!.scrollTo({ top: targetScroll, behavior });
   } else {
-    containerRef.value.scrollTo({ left: targetScroll, behavior });
+    containerRef.value!.scrollTo({ left: targetScroll, behavior });
   }
 };
 
 // Recalculate on mount and resize
-let resizeObserver = null;
+let resizeObserver: ResizeObserver | null = null;
 
 onMounted(() => {
   if (containerRef.value && typeof ResizeObserver !== "undefined") {
     resizeObserver = new ResizeObserver(() => {
       // Force reactivity update
       scrollPosition.value = isVertical.value
-        ? containerRef.value.scrollTop
-        : containerRef.value.scrollLeft;
+        ? containerRef.value!.scrollTop
+        : containerRef.value!.scrollLeft;
     });
     resizeObserver.observe(containerRef.value);
   }
@@ -212,8 +212,8 @@ watch(() => props.items, () => {
   nextTick(() => {
     if (containerRef.value) {
       scrollPosition.value = isVertical.value
-        ? containerRef.value.scrollTop
-        : containerRef.value.scrollLeft;
+        ? containerRef.value!.scrollTop
+        : containerRef.value!.scrollLeft;
     }
   });
 }, { deep: true });

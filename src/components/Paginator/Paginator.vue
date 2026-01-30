@@ -175,7 +175,7 @@ const visiblePages = computed(() => {
   return pages;
 });
 
-function goToPage(page) {
+function goToPage(page: any) {
   const newFirst = (page - 1) * props.rows;
   emit("update:first", newFirst);
   emit("page", { page, first: newFirst, rows: props.rows, pageCount: totalPages.value });
@@ -201,8 +201,8 @@ function goToNext() {
   }
 }
 
-function handleRowsChange(event) {
-  const newRows = parseInt(event.target.value, 10);
+function handleRowsChange(event: Event) {
+  const newRows = parseInt((event.target as HTMLSelectElement).value, 10);
   emit("update:rows", newRows);
   emit("update:first", 0);
   emit("page", { page: 1, first: 0, rows: newRows, pageCount: Math.ceil(props.totalRecords / newRows) });

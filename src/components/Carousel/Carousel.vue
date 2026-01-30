@@ -92,7 +92,7 @@ const emit = defineEmits(["update:page"]);
 
 const viewportRef = ref(null);
 const currentIndex = ref(0);
-const autoplayTimer = ref(null);
+const autoplayTimer = ref<ReturnType<typeof setInterval> | null>(null);
 
 const additionalClasses = computed(() =>
   [
@@ -133,7 +133,7 @@ const next = () => {
   emit("update:page", currentIndex.value);
 };
 
-const goTo = (index) => {
+const goTo = (index: any) => {
   currentIndex.value = index;
   emit("update:page", currentIndex.value);
 };
@@ -146,7 +146,7 @@ const startAutoplay = () => {
   }
 };
 
-const onKeydown = (event) => {
+const onKeydown = (event: KeyboardEvent) => {
   switch (event.key) {
     case "ArrowLeft":
       event.preventDefault();

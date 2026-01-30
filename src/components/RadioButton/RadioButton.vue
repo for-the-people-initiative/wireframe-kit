@@ -38,7 +38,7 @@ const emit = defineEmits(["update:modelValue", "change"]);
 
 const isChecked = computed(() => props.modelValue === props.value);
 
-const onChange = (event) => {
+const onChange = (event: Event) => {
   emit("update:modelValue", props.value);
   emit("change", { value: props.value, originalEvent: event });
 };

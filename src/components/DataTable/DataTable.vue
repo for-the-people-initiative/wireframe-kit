@@ -203,13 +203,13 @@ const additionalClasses = computed(() =>
   [props.hoverable && "data-table--hoverable"].filter(Boolean).join(" ")
 );
 
-const getFieldValue = (obj, field) => {
-  return field.split(".").reduce((o, k) => (o ? o[k] : undefined), obj);
+const getFieldValue = (obj: any, field: any) => {
+  return field.split(".").reduce((o: any, k: any) => (o ? o[k] : undefined), obj);
 };
 
-const onSort = (field) => {
+const onSort = (field: any) => {
   if (internalSortField.value === field) {
-    internalSortOrder.value = internalSortOrder.value * -1;
+    internalSortOrder.value = (internalSortOrder.value * -1) as 1 | -1;
   } else {
     internalSortField.value = field;
     internalSortOrder.value = 1;
@@ -217,7 +217,7 @@ const onSort = (field) => {
   emit("sort", { sortField: internalSortField.value, sortOrder: internalSortOrder.value });
 };
 
-const goToPage = (page) => {
+const goToPage = (page: any) => {
   if (page < 1 || page > totalPages.value) return;
   currentPage.value = page;
   emit("page", { page: currentPage.value });

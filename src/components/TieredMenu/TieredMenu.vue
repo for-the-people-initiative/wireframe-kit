@@ -125,7 +125,7 @@ const props = withDefaults(defineProps<TieredMenuProps>(), {
 
 const emit = defineEmits(["item-click", "show", "hide"]);
 
-const menuRef = ref(null);
+const menuRef = ref<HTMLElement | null>(null);
 const visible = ref(!props.popup);
 const activeSubmenu = ref(null);
 
@@ -133,7 +133,7 @@ const additionalClasses = computed(() =>
   [props.popup && "tieredmenu--popup"].filter(Boolean).join(" ")
 );
 
-const show = (event) => {
+const show = (event: any) => {
   if (props.popup) {
     visible.value = true;
     emit("show", event);
@@ -158,7 +158,7 @@ const hide = () => {
   }
 };
 
-const toggle = (event) => {
+const toggle = (event: Event) => {
   if (visible.value) {
     hide();
   } else {
@@ -167,8 +167,8 @@ const toggle = (event) => {
 };
 
 // Handle click outside
-const onClickOutside = (event) => {
-  if (props.popup && visible.value && menuRef.value && !menuRef.value.contains(event.target)) {
+const onClickOutside = (event: MouseEvent) => {
+  if (props.popup && visible.value && menuRef.value && !menuRef.value.contains(event.target as Node)) {
     hide();
   }
 };
@@ -183,7 +183,7 @@ onUnmounted(() => {
   document.removeEventListener("click", onClickOutside);
 });
 
-const onItemMouseEnter = (index, item) => {
+const onItemMouseEnter = (index: any, item: any) => {
   if (!item.disabled && item.items && item.items.length > 0) {
     activeSubmenu.value = index;
   }
@@ -193,7 +193,7 @@ const onItemMouseLeave = () => {
   // Delay to allow moving to submenu
 };
 
-const onItemClick = (event, item) => {
+const onItemClick = (event: MouseEvent, item: any) => {
   if (item.disabled) {
     event.preventDefault();
     return;
@@ -213,7 +213,7 @@ const onItemClick = (event, item) => {
   }
 };
 
-const onSubitemClick = ({ originalEvent, item }) => {
+const onSubitemClick = ({ originalEvent, item }: { originalEvent: any; item: any }) => {
   emit("item-click", { originalEvent, item });
 
   if (props.popup) {
@@ -221,7 +221,7 @@ const onSubitemClick = ({ originalEvent, item }) => {
   }
 };
 
-const onItemKeydown = (event, index, item) => {
+const onItemKeydown = (event: KeyboardEvent, index: any, item: any) => {
   switch (event.key) {
     case "ArrowRight":
       event.preventDefault();
@@ -259,7 +259,7 @@ const onItemKeydown = (event, index, item) => {
   }
 };
 
-const onKeydown = (event) => {
+const onKeydown = (event: KeyboardEvent) => {
   if (event.key === "Escape" && props.popup) {
     hide();
   }

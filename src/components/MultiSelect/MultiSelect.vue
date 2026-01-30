@@ -120,22 +120,22 @@ const props = withDefaults(defineProps<MultiSelectProps>(), {
 
 const emit = defineEmits(["update:modelValue", "change"]);
 
-const containerRef = ref(null);
-const dropdownRef = ref(null);
-const filterInputRef = ref(null);
+const containerRef = ref<HTMLElement | null>(null);
+const dropdownRef = ref<HTMLElement | null>(null);
+const filterInputRef = ref<HTMLElement | null>(null);
 const isOpen = ref(false);
 const filterValue = ref("");
 const focusedIndex = ref(0);
 const dropdownStyle = ref({});
 
-const getOptionValue = (option) => {
+const getOptionValue = (option: any) => {
   if (typeof option === "string" || typeof option === "number") {
     return option;
   }
   return option[props.optionValue];
 };
 
-const getOptionLabel = (option) => {
+const getOptionLabel = (option: any) => {
   if (typeof option === "string" || typeof option === "number") {
     return option;
   }
@@ -160,11 +160,11 @@ const filteredOptions = computed(() => {
   );
 });
 
-const isSelected = (option) => {
+const isSelected = (option: any) => {
   return props.modelValue.includes(getOptionValue(option));
 };
 
-const toggleOption = (option) => {
+const toggleOption = (option: any) => {
   const value = getOptionValue(option);
   let newValue;
   if (isSelected(option)) {
@@ -176,7 +176,7 @@ const toggleOption = (option) => {
   emit("change", { value: newValue });
 };
 
-const removeItem = (item) => {
+const removeItem = (item: any) => {
   const value = getOptionValue(item);
   const newValue = props.modelValue.filter((v) => v !== value);
   emit("update:modelValue", newValue);
@@ -211,7 +211,7 @@ const updateDropdownPosition = () => {
   };
 };
 
-const onTriggerKeydown = (event) => {
+const onTriggerKeydown = (event: KeyboardEvent) => {
   switch (event.key) {
     case "Enter":
     case " ":
@@ -228,7 +228,7 @@ const onTriggerKeydown = (event) => {
   }
 };
 
-const onFilterKeydown = (event) => {
+const onFilterKeydown = (event: KeyboardEvent) => {
   switch (event.key) {
     case "ArrowDown":
       event.preventDefault();
@@ -250,12 +250,12 @@ const onFilterKeydown = (event) => {
   }
 };
 
-const onClickOutside = (event) => {
+const onClickOutside = (event: MouseEvent) => {
   if (
     containerRef.value &&
-    !containerRef.value.contains(event.target) &&
+    !containerRef.value.contains(event.target as Node) &&
     dropdownRef.value &&
-    !dropdownRef.value.contains(event.target)
+    !dropdownRef.value.contains(event.target as Node)
   ) {
     close();
   }

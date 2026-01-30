@@ -136,7 +136,7 @@ const onOverlayClick = () => {
   }
 };
 
-const onEscapeKey = (event) => {
+const onEscapeKey = (event: KeyboardEvent) => {
   if (props.closeOnEscape && props.visible) {
     event.preventDefault();
     reject();

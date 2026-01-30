@@ -35,12 +35,12 @@ const props = withDefaults(defineProps<InputMaskProps>(), {
 
 const emit = defineEmits(["update:modelValue", "complete", "focus", "blur"]);
 
-const inputRef = ref(null);
-const buffer = ref([]);
+const inputRef = ref<HTMLInputElement | null>(null);
+const buffer = ref<string[]>([]);
 const focusPosition = ref(0);
 
 // Mask definitions: 9 = digit, a = letter, * = alphanumeric
-const maskDefinitions = {
+const maskDefinitions: Record<string, RegExp> = {
   "9": /\d/,
   "a": /[a-zA-Z]/,
   "*": /[a-zA-Z0-9]/,
@@ -48,13 +48,13 @@ const maskDefinitions = {
 
 const getMaskArray = () => props.mask.split("");
 
-const isEditablePosition = (pos) => {
+const isEditablePosition = (pos: any) => {
   const maskArray = getMaskArray();
   if (pos < 0 || pos >= maskArray.length) return false;
   return Object.keys(maskDefinitions).includes(maskArray[pos]);
 };
 
-const getNextEditablePosition = (pos) => {
+const getNextEditablePosition = (pos: any) => {
   const maskArray = getMaskArray();
   for (let i = pos; i < maskArray.length; i++) {
     if (isEditablePosition(i)) return i;
@@ -62,7 +62,7 @@ const getNextEditablePosition = (pos) => {
   return -1;
 };
 
-const getPrevEditablePosition = (pos) => {
+const getPrevEditablePosition = (pos: any) => {
   for (let i = pos - 1; i >= 0; i--) {
     if (isEditablePosition(i)) return i;
   }
@@ -126,19 +126,19 @@ const isComplete = () => {
   });
 };
 
-const validateChar = (char, pos) => {
+const validateChar = (char: any, pos: any) => {
   const maskArray = getMaskArray();
   const maskChar = maskArray[pos];
   const regex = maskDefinitions[maskChar];
   return regex ? regex.test(char) : false;
 };
 
-const onInput = (event) => {
+const onInput = (event: Event) => {
   // Prevent default input handling - we manage it ourselves
   event.preventDefault();
 };
 
-const onKeydown = (event) => {
+const onKeydown = (event: KeyboardEvent) => {
   const input = inputRef.value;
   if (!input) return;
 
@@ -162,10 +162,10 @@ const onKeydown = (event) => {
     event.preventDefault();
     let deletePos = pos;
 
-    if (!isEditablePosition(pos) || buffer.value[pos] === props.slotChar) {
-      deletePos = getPrevEditablePosition(pos);
+    if (!isEditablePosition(pos) || buffer.value[pos!] === props.slotChar) {
+      deletePos = getPrevEditablePosition(pos!);
     } else {
-      deletePos = pos;
+      deletePos = pos!;
     }
 
     if (deletePos !== -1 && deletePos >= 0) {
@@ -183,7 +183,7 @@ const onKeydown = (event) => {
     event.preventDefault();
     const deletePos = isEditablePosition(pos) ? pos : getNextEditablePosition(pos);
     if (deletePos !== -1) {
-      buffer.value[deletePos] = props.slotChar;
+      buffer.value[deletePos!] = props.slotChar;
       emitValue();
     }
   } else if (event.key === "ArrowLeft") {
@@ -194,7 +194,7 @@ const onKeydown = (event) => {
     }
   } else if (event.key === "ArrowRight") {
     event.preventDefault();
-    const newPos = getNextEditablePosition(pos + 1);
+    const newPos = getNextEditablePosition(pos! + 1);
     if (newPos !== -1) {
       input.setSelectionRange(newPos, newPos);
     }
@@ -210,7 +210,7 @@ const emitValue = () => {
   }
 };
 
-const onFocus = (event) => {
+const onFocus = (event: FocusEvent) => {
   const input = inputRef.value;
   if (!input) return;
 
@@ -224,7 +224,7 @@ const onFocus = (event) => {
   emit("focus", { originalEvent: event });
 };
 
-const onBlur = (event) => {
+const onBlur = (event: FocusEvent) => {
   if (props.autoClear && !isComplete()) {
     initBuffer();
     emit("update:modelValue", "");

@@ -43,18 +43,18 @@ const props = withDefaults(defineProps<MeterGroupProps>(), {
   showLabels: true,
 });
 
-const colorMap = {
+const colorMap: Record<string, string> = {
   primary: "var(--meter-group-colors-primary)",
   success: "var(--meter-group-colors-success)",
   warning: "var(--meter-group-colors-warning)",
   danger: "var(--meter-group-colors-danger)",
 };
 
-function getColor(color) {
+function getColor(color: any) {
   return colorMap[color] || color || colorMap.primary;
 }
 
-function getMeterStyle(item) {
+function getMeterStyle(item: any) {
   const percentage = (item.value / props.max) * 100;
   return {
     width: props.orientation === "horizontal" ? `${percentage}%` : "100%",
@@ -63,7 +63,7 @@ function getMeterStyle(item) {
   };
 }
 
-function formatValue(value) {
+function formatValue(value: any) {
   return `${Math.round((value / props.max) * 100)}%`;
 }
 

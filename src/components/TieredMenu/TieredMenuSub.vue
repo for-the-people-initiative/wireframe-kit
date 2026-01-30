@@ -107,7 +107,7 @@ const emit = defineEmits(["item-click"]);
 
 const activeSubmenu = ref(null);
 
-const onItemMouseEnter = (index, item) => {
+const onItemMouseEnter = (index: any, item: any) => {
   if (!item.disabled && item.items && item.items.length > 0) {
     activeSubmenu.value = index;
   }
@@ -117,7 +117,7 @@ const onItemMouseLeave = () => {
   // Keep open while hovering submenu
 };
 
-const onItemClick = (event, item) => {
+const onItemClick = (event: MouseEvent, item: any) => {
   if (item.disabled) {
     event.preventDefault();
     return;

@@ -75,7 +75,7 @@ import { computed, ref } from "vue";
 defineOptions({ name: 'FtpFileUpload' });
 
 const props = withDefaults(defineProps<FileUploadProps>(), {
-  accept: null,
+  accept: undefined,
   multiple: false,
   maxFileSize: null,
   maxFiles: null,
@@ -84,9 +84,9 @@ const props = withDefaults(defineProps<FileUploadProps>(), {
 
 const emit = defineEmits(["select", "remove", "error"]);
 
-const fileInputRef = ref(null);
+const fileInputRef = ref<HTMLInputElement | null>(null);
 const isDragging = ref(false);
-const files = ref([]);
+const files = ref<File[]>([]);
 
 const additionalClasses = computed(() =>
   [
@@ -118,21 +118,21 @@ const onDragLeave = () => {
   isDragging.value = false;
 };
 
-const onDrop = (event) => {
+const onDrop = (event: DragEvent) => {
   isDragging.value = false;
   if (props.isDisabled) return;
 
-  const droppedFiles = Array.from(event.dataTransfer.files);
+  const droppedFiles = Array.from(event.dataTransfer!.files);
   processFiles(droppedFiles);
 };
 
-const onFileSelect = (event) => {
-  const selectedFiles = Array.from(event.target.files);
+const onFileSelect = (event: Event) => {
+  const selectedFiles = Array.from((event.target as HTMLInputElement).files!);
   processFiles(selectedFiles);
-  event.target.value = "";
+  (event.target as HTMLInputElement).value = "";
 };
 
-const processFiles = (newFiles) => {
+const processFiles = (newFiles: any) => {
   const validFiles = [];
 
   for (const file of newFiles) {
@@ -161,13 +161,13 @@ const processFiles = (newFiles) => {
   }
 };
 
-const removeFile = (index) => {
+const removeFile = (index: any) => {
   const removed = files.value[index];
   files.value = files.value.filter((_, i) => i !== index);
   emit("remove", removed);
 };
 
-const formatFileSize = (bytes) => {
+const formatFileSize = (bytes: any) => {
   if (bytes === 0) return "0 B";
   const k = 1024;
   const sizes = ["B", "KB", "MB", "GB"];

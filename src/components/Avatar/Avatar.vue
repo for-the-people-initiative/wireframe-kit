@@ -30,7 +30,7 @@ const emit = defineEmits(["error"]);
 
 const imageError = ref(false);
 
-const onImageError = (event) => {
+const onImageError = (event: Event) => {
   imageError.value = true;
   emit("error", event);
 };

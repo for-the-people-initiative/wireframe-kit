@@ -56,9 +56,9 @@ const props = withDefaults(defineProps<InputOtpProps>(), {
 
 const emit = defineEmits(["update:modelValue", "change", "complete"]);
 
-const inputRefs = ref([]);
+const inputRefs = ref<(HTMLInputElement | null)[]>([]);
 const focusedIndex = ref(-1);
-const values = ref([]);
+const values = ref<string[]>([]);
 
 // Initialize values from modelValue
 const initializeValues = () => {
@@ -106,19 +106,19 @@ const emitValue = () => {
   }
 };
 
-const isValidChar = (char) => {
+const isValidChar = (char: any) => {
   if (props.integerOnly) {
     return /^[0-9]$/.test(char);
   }
   return char.length === 1;
 };
 
-const onInput = (event, index) => {
-  const inputValue = event.target.value;
+const onInput = (event: Event, index: any) => {
+  const inputValue = (event.target as HTMLInputElement).value;
   const char = inputValue.slice(-1);
 
   if (char && !isValidChar(char)) {
-    event.target.value = values.value[index];
+    (event.target as HTMLInputElement).value = values.value[index];
     return;
   }
 
@@ -133,7 +133,7 @@ const onInput = (event, index) => {
   }
 };
 
-const onKeyDown = (event, index) => {
+const onKeyDown = (event: KeyboardEvent, index: any) => {
   switch (event.key) {
     case "Backspace":
       if (values.value[index] === "" && index > 0) {
@@ -178,7 +178,7 @@ const onKeyDown = (event, index) => {
   }
 };
 
-const onFocus = (index) => {
+const onFocus = (index: any) => {
   focusedIndex.value = index;
   // Select existing content
   nextTick(() => {
@@ -190,10 +190,10 @@ const onBlur = () => {
   focusedIndex.value = -1;
 };
 
-const onPaste = (event, index) => {
+const onPaste = (event: ClipboardEvent, index: any) => {
   event.preventDefault();
   const pastedData = event.clipboardData?.getData("text") || "";
-  const chars = pastedData.split("").filter((char) => isValidChar(char));
+  const chars = pastedData.split("").filter((char: any) => isValidChar(char));
 
   // Fill from current index
   for (let i = 0; i < chars.length && index + i < props.length; i++) {

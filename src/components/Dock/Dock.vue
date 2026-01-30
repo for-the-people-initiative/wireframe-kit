@@ -67,7 +67,7 @@ const tooltipTransition = computed(() => {
   return "dock-tooltip-left";
 });
 
-function getItemStyle(index) {
+function getItemStyle(index: any) {
   if (!props.magnification || hoveredIndex.value === -1) {
     return {};
   }
@@ -87,7 +87,7 @@ function getItemStyle(index) {
   };
 }
 
-function onItemClick(item, event) {
+function onItemClick(item: any, event: any) {
   if (item.disabled) return;
 
   if (item.command) {
@@ -97,7 +97,7 @@ function onItemClick(item, event) {
   emit("item-click", { originalEvent: event, item });
 }
 
-function onItemMouseEnter(index) {
+function onItemMouseEnter(index: any) {
   hoveredIndex.value = index;
 }
 

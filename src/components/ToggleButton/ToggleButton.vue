@@ -38,7 +38,7 @@ const props = withDefaults(defineProps<ToggleButtonProps>(), {
 
 const emit = defineEmits(["update:modelValue", "change"]);
 
-const onClick = (event) => {
+const onClick = (event: MouseEvent) => {
   if (props.isDisabled) return;
   const newValue = !props.modelValue;
   emit("update:modelValue", newValue);

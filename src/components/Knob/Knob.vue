@@ -123,16 +123,16 @@ const additionalClasses = computed(() =>
 const isDragging = ref(false);
 const knobElement = ref(null);
 
-const updateValue = (event) => {
+const updateValue = (event: MouseEvent | TouchEvent) => {
   if (props.isDisabled) return;
 
-  const svg = event.target.closest("svg") || event.currentTarget;
-  const rect = svg.getBoundingClientRect();
+  const svg = (event.target as HTMLElement).closest("svg") || event.currentTarget as HTMLElement;
+  const rect = svg!.getBoundingClientRect();
   const centerX = rect.left + rect.width / 2;
   const centerY = rect.top + rect.height / 2;
 
-  const clientX = event.touches ? event.touches[0].clientX : event.clientX;
-  const clientY = event.touches ? event.touches[0].clientY : event.clientY;
+  const clientX = 'touches' in event && event.touches.length ? event.touches[0].clientX : (event as MouseEvent).clientX;
+  const clientY = 'touches' in event && event.touches.length ? event.touches[0].clientY : (event as MouseEvent).clientY;
 
   // Calculate angle from center
   const dx = clientX - centerX;
@@ -157,13 +157,13 @@ const updateValue = (event) => {
   }
 };
 
-const onMouseDown = (event) => {
+const onMouseDown = (event: MouseEvent) => {
   if (props.isDisabled) return;
 
   isDragging.value = true;
   updateValue(event);
 
-  const onMouseMove = (e) => {
+  const onMouseMove = (e: MouseEvent) => {
     if (isDragging.value) {
       updateValue(e);
     }
@@ -182,13 +182,13 @@ const onMouseDown = (event) => {
   document.addEventListener("mouseup", onMouseUp);
 };
 
-const onTouchStart = (event) => {
+const onTouchStart = (event: TouchEvent) => {
   if (props.isDisabled) return;
 
   isDragging.value = true;
   updateValue(event);
 
-  const onTouchMove = (e) => {
+  const onTouchMove = (e: TouchEvent) => {
     if (isDragging.value) {
       e.preventDefault();
       updateValue(e);
@@ -208,7 +208,7 @@ const onTouchStart = (event) => {
   document.addEventListener("touchend", onTouchEnd);
 };
 
-const onKeyDown = (event) => {
+const onKeyDown = (event: KeyboardEvent) => {
   if (props.isDisabled) return;
 
   let newValue = props.modelValue;

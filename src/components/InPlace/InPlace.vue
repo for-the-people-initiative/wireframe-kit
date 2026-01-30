@@ -95,7 +95,7 @@ const close = () => {
   nextTick(() => {
     const displayElement = document.querySelector(".in-place__display");
     if (displayElement) {
-      displayElement.focus();
+      (displayElement as HTMLElement).focus();
     }
   });
 };

@@ -49,12 +49,12 @@ const props = withDefaults(defineProps<PopOverProps>(), {
 const emit = defineEmits(["update:visible", "show", "hide"]);
 
 const internalVisible = ref(false);
-const popoverRef = ref(null);
+const popoverRef = ref<HTMLElement | null>(null);
 const popoverStyle = ref({});
 const isOverPopover = ref(false);
-let showTimeoutId = null;
-let hideTimeoutId = null;
-let triggerElement = null;
+let showTimeoutId: ReturnType<typeof setTimeout> | null = null;
+let hideTimeoutId: ReturnType<typeof setTimeout> | null = null;
+let triggerElement: HTMLElement | null = null;
 
 // Support both controlled (v-model) and uncontrolled modes
 const isVisible = computed(() => {
@@ -74,12 +74,12 @@ function clearTimeouts() {
   }
 }
 
-function show(event) {
+function show(event: Event) {
   if (props.disabled) return;
 
   clearTimeouts();
   if (event?.currentTarget) {
-    triggerElement = event.currentTarget;
+    triggerElement = event.currentTarget as HTMLElement;
   }
 
   const doShow = () => {
@@ -120,7 +120,7 @@ function hide() {
   }
 }
 
-function toggle(event) {
+function toggle(event: Event) {
   if (isVisible.value) {
     hide();
   } else {
@@ -167,7 +167,7 @@ function updatePosition() {
   };
 }
 
-function onMouseEnter(event) {
+function onMouseEnter(event: MouseEvent) {
   if (props.trigger === "hover") {
     show(event);
   }
@@ -193,13 +193,13 @@ function onPopoverMouseLeave() {
   }
 }
 
-function onClick(event) {
+function onClick(event: MouseEvent) {
   if (props.trigger === "click") {
     toggle(event);
   }
 }
 
-function onFocus(event) {
+function onFocus(event: FocusEvent) {
   if (props.trigger === "hover") {
     show(event);
   }
@@ -211,9 +211,9 @@ function onBlur() {
   }
 }
 
-function handleClickOutside(event) {
-  if (props.trigger === "click" && isVisible.value && popoverRef.value && !popoverRef.value.contains(event.target)) {
-    if (triggerElement && triggerElement.contains(event.target)) {
+function handleClickOutside(event: MouseEvent) {
+  if (props.trigger === "click" && isVisible.value && popoverRef.value && !popoverRef.value.contains(event.target as Node)) {
+    if (triggerElement && triggerElement.contains(event.target as Node)) {
       return;
     }
     hide();

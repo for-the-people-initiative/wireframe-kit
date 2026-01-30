@@ -157,9 +157,9 @@ const props = withDefaults(defineProps<CalendarProps>(), {
 
 const emit = defineEmits(["update:modelValue", "select", "show", "hide"]);
 
-const containerRef = ref(null);
-const inputRef = ref(null);
-const panelRef = ref(null);
+const containerRef = ref<HTMLElement | null>(null);
+const inputRef = ref<HTMLInputElement | null>(null);
+const panelRef = ref<HTMLElement | null>(null);
 const isPanelOpen = ref(false);
 const isFocused = ref(false);
 const viewDate = ref(new Date());
@@ -176,7 +176,7 @@ const weekdayNames = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 const today = new Date();
 today.setHours(0, 0, 0, 0);
 
-const formatDate = (date) => {
+const formatDate = (date: any) => {
   if (!date) return "";
   const d = new Date(date);
   const day = String(d.getDate()).padStart(2, "0");
@@ -186,10 +186,10 @@ const formatDate = (date) => {
   return props.dateFormat
     .replace("dd", day)
     .replace("mm", month)
-    .replace("yyyy", year);
+    .replace("yyyy", String(year));
 };
 
-const formatFullDate = (date) => {
+const formatFullDate = (date: any) => {
   if (!date) return "";
   return date.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
 };
@@ -261,7 +261,7 @@ const yearRange = computed(() => {
   return years;
 });
 
-const isSameDay = (date1, date2) => {
+const isSameDay = (date1: any, date2: any) => {
   if (!date1 || !date2) return false;
   return (
     date1.getDate() === date2.getDate() &&
@@ -270,14 +270,14 @@ const isSameDay = (date1, date2) => {
   );
 };
 
-const isDateInRange = (date) => {
+const isDateInRange = (date: any) => {
   if (props.selectionMode !== "range" || !Array.isArray(props.modelValue)) return false;
   const [start, end] = props.modelValue;
   if (!start || !end) return false;
   return date > start && date < end;
 };
 
-const isSelected = (date) => {
+const isSelected = (date: any) => {
   if (!props.modelValue) return false;
   if (props.selectionMode === "range" && Array.isArray(props.modelValue)) {
     return props.modelValue.some((d) => d && isSameDay(d, date));
@@ -285,7 +285,7 @@ const isSelected = (date) => {
   return isSameDay(props.modelValue, date);
 };
 
-const getDayClasses = (day) => {
+const getDayClasses = (day: any) => {
   return {
     "calendar__day--other-month": !day.currentMonth,
     "calendar__day--today": isSameDay(day.date, today),
@@ -294,12 +294,12 @@ const getDayClasses = (day) => {
   };
 };
 
-const isCurrentMonth = (monthIndex) => {
+const isCurrentMonth = (monthIndex: any) => {
   const selected = props.modelValue instanceof Date ? props.modelValue : null;
   return selected && selected.getMonth() === monthIndex && selected.getFullYear() === viewDate.value.getFullYear();
 };
 
-const isCurrentYear = (year) => {
+const isCurrentYear = (year: any) => {
   const selected = props.modelValue instanceof Date ? props.modelValue : null;
   return selected && selected.getFullYear() === year;
 };
@@ -349,13 +349,13 @@ const toggleView = () => {
   }
 };
 
-const navigateMonth = (offset) => {
+const navigateMonth = (offset: any) => {
   const newDate = new Date(viewDate.value);
   newDate.setMonth(newDate.getMonth() + offset);
   viewDate.value = newDate;
 };
 
-const selectDate = (day) => {
+const selectDate = (day: any) => {
   if (!day.currentMonth) return;
 
   if (props.selectionMode === "range") {
@@ -378,14 +378,14 @@ const selectDate = (day) => {
   }
 };
 
-const selectMonth = (monthIndex) => {
+const selectMonth = (monthIndex: any) => {
   const newDate = new Date(viewDate.value);
   newDate.setMonth(monthIndex);
   viewDate.value = newDate;
   currentView.value = "day";
 };
 
-const selectYear = (year) => {
+const selectYear = (year: any) => {
   const newDate = new Date(viewDate.value);
   newDate.setFullYear(year);
   viewDate.value = newDate;
@@ -408,11 +408,11 @@ const onInputBlur = () => {
 };
 
 // Click outside handler
-const handleClickOutside = (event) => {
+const handleClickOutside = (event: MouseEvent) => {
   if (!containerRef.value || !panelRef.value) return;
   if (
-    !containerRef.value.contains(event.target) &&
-    !panelRef.value.contains(event.target)
+    !containerRef.value.contains(event.target as Node) &&
+    !panelRef.value.contains(event.target as Node)
   ) {
     closePanel();
   }

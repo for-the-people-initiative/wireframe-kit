@@ -26,17 +26,19 @@ const props = withDefaults(defineProps<ParticleBackgroundProps>(), {
   fixed: false,
 });
 
-const canvasRef = ref(null);
-let ctx = null;
-let particles = [];
-let staticStars = [];
-let animationId = null;
+const canvasRef = ref<HTMLCanvasElement | null>(null);
+let ctx: CanvasRenderingContext2D | null = null;
+let particles: Particle[] = [];
+let staticStars: StaticStar[] = [];
+let animationId: number | null = null;
 let mouseX = 0;
 let mouseY = 0;
 
 // Static star - doesn't move, only ~10% twinkle
 class StaticStar {
-  constructor(canvas, x = null, y = null, sizeMultiplier = 1) {
+  canvas: any; x: number; y: number; size: number; opacity: number;
+  doesTwinkle: boolean; twinkleSpeed: number; twinklePhase: number; currentOpacity: number;
+  constructor(canvas: any, x: number | null = null, y: number | null = null, sizeMultiplier = 1) {
     this.canvas = canvas;
     // Allow preset position for clusters
     this.x = x !== null ? x : Math.random() * canvas.width;
@@ -52,17 +54,17 @@ class StaticStar {
     this.currentOpacity = this.opacity;
   }
 
-  update(deltaTime) {
+  update(deltaTime: any) {
     if (this.doesTwinkle && props.twinkle) {
       this.twinklePhase += this.twinkleSpeed * deltaTime;
       this.currentOpacity = this.opacity * (0.6 + 0.4 * Math.sin(this.twinklePhase));
     }
   }
 
-  draw(ctx) {
+  draw(ctx: any) {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = props.particleColor.replace(
+    ctx!.fillStyle = props.particleColor.replace(
       /[\d.]+\)$/,
       `${this.currentOpacity})`
     );
@@ -72,7 +74,9 @@ class StaticStar {
 
 // Moving particle
 class Particle {
-  constructor(canvas) {
+  canvas: any; x: number = 0; y: number = 0; size: number = 0; speedX: number = 0; speedY: number = 0;
+  opacity: number = 0; twinkleSpeed: number = 0; twinklePhase: number = 0; depth: number = 0; currentOpacity: number = 0;
+  constructor(canvas: any) {
     this.canvas = canvas;
     this.reset();
   }
@@ -90,7 +94,7 @@ class Particle {
     this.depth = Math.random();
   }
 
-  update(deltaTime) {
+  update(deltaTime: any) {
     // Movement
     this.x += this.speedX * deltaTime;
     this.y += this.speedY * deltaTime;
@@ -110,7 +114,7 @@ class Particle {
     }
   }
 
-  draw(ctx, offsetX = 0, offsetY = 0) {
+  draw(ctx: any, offsetX = 0, offsetY = 0) {
     const parallaxMultiplier = props.parallax ? this.depth * 0.02 : 0;
     const drawX = this.x + offsetX * parallaxMultiplier;
     const drawY = this.y + offsetY * parallaxMultiplier;
@@ -200,14 +204,14 @@ function resizeCanvas() {
   canvas.height = rect.height * dpr;
 
   ctx = canvas.getContext("2d");
-  ctx.scale(dpr, dpr);
+  ctx!.scale(dpr, dpr);
 
   // Reinitialize particles with new dimensions
   initParticles();
 }
 
 let lastTime = 0;
-function animate(currentTime) {
+function animate(currentTime: any) {
   const deltaTime = lastTime ? (currentTime - lastTime) / 16.67 : 1; // Normalize to ~60fps
   lastTime = currentTime;
 
@@ -217,7 +221,7 @@ function animate(currentTime) {
   const rect = canvas.getBoundingClientRect();
 
   // Clear canvas
-  ctx.clearRect(0, 0, rect.width, rect.height);
+  ctx!.clearRect(0, 0, rect.width, rect.height);
 
   // Calculate parallax offset
   const offsetX = props.parallax ? (mouseX - rect.width / 2) : 0;
@@ -238,7 +242,7 @@ function animate(currentTime) {
   animationId = requestAnimationFrame(animate);
 }
 
-function handleMouseMove(e) {
+function handleMouseMove(e: MouseEvent) {
   if (!props.parallax) return;
   const canvas = canvasRef.value;
   if (!canvas) return;

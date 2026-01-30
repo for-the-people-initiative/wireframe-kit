@@ -57,11 +57,11 @@ const registerTab = () => {
   return index;
 };
 
-const isTabActive = (index) => {
+const isTabActive = (index: number) => {
   return activeIndices.value.includes(index);
 };
 
-const toggleTab = (index, disabled) => {
+const toggleTab = (index: any, disabled: any) => {
   if (disabled) return;
 
   const isActive = activeIndices.value.includes(index);

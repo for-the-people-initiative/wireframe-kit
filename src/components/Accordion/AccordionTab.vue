@@ -47,7 +47,7 @@ const props = withDefaults(defineProps<AccordionTabProps>(), {
   isDisabled: false,
 });
 
-const accordion = inject("accordion");
+const accordion = inject<{ registerTab: () => number; isTabActive: (index: number) => boolean; toggleTab: (index: number, disabled: boolean) => void }>("accordion");
 const tabIndex = ref(-1);
 const contentId = computed(() => `accordion-content-${tabIndex.value}`);
 

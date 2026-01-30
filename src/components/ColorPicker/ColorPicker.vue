@@ -114,10 +114,10 @@ const props = withDefaults(defineProps<ColorPickerProps>(), {
 
 const emit = defineEmits(["update:modelValue", "change"]);
 
-const containerRef = ref(null);
-const panelRef = ref(null);
-const gradientRef = ref(null);
-const hueRef = ref(null);
+const containerRef = ref<HTMLElement | null>(null);
+const panelRef = ref<HTMLElement | null>(null);
+const gradientRef = ref<HTMLElement | null>(null);
+const hueRef = ref<HTMLElement | null>(null);
 const isPanelOpen = ref(false);
 const panelStyle = ref({});
 
@@ -128,7 +128,7 @@ const brightness = ref(100);
 const hexInput = ref("");
 
 // Convert hex to HSV
-const hexToHsv = (hex) => {
+const hexToHsv = (hex: any) => {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   if (!result) return { h: 0, s: 100, v: 100 };
 
@@ -162,7 +162,7 @@ const hexToHsv = (hex) => {
 };
 
 // Convert HSV to hex
-const hsvToHex = (h, s, v) => {
+const hsvToHex = (h: any, s: any, v: any) => {
   s = s / 100;
   v = v / 100;
 
@@ -186,7 +186,7 @@ const hsvToHex = (h, s, v) => {
     [r, g, b] = [c, 0, x];
   }
 
-  const toHex = (n) => {
+  const toHex = (n: any) => {
     const hex = Math.round((n + m) * 255).toString(16);
     return hex.length === 1 ? "0" + hex : hex;
   };
@@ -227,7 +227,7 @@ const gradientPointerStyle = computed(() => ({
 }));
 
 // Gradient keyboard handling
-const onGradientKeydown = (event) => {
+const onGradientKeydown = (event: KeyboardEvent) => {
   const step = event.shiftKey ? 10 : 2;
   switch (event.key) {
     case "ArrowRight":
@@ -254,7 +254,7 @@ const onGradientKeydown = (event) => {
 };
 
 // Hue keyboard handling
-const onHueKeydown = (event) => {
+const onHueKeydown = (event: KeyboardEvent) => {
   const step = event.shiftKey ? 10 : 2;
   switch (event.key) {
     case "ArrowRight":
@@ -273,13 +273,13 @@ const onHueKeydown = (event) => {
 };
 
 // Gradient mouse handling
-const onGradientMouseDown = (event) => {
+const onGradientMouseDown = (event: MouseEvent) => {
   updateGradientFromEvent(event);
   document.addEventListener("mousemove", onGradientMouseMove);
   document.addEventListener("mouseup", onGradientMouseUp);
 };
 
-const onGradientMouseMove = (event) => {
+const onGradientMouseMove = (event: MouseEvent) => {
   updateGradientFromEvent(event);
 };
 
@@ -288,7 +288,7 @@ const onGradientMouseUp = () => {
   document.removeEventListener("mouseup", onGradientMouseUp);
 };
 
-const updateGradientFromEvent = (event) => {
+const updateGradientFromEvent = (event: MouseEvent) => {
   if (!gradientRef.value) return;
   const rect = gradientRef.value.getBoundingClientRect();
   const x = Math.max(0, Math.min(rect.width, event.clientX - rect.left));
@@ -300,13 +300,13 @@ const updateGradientFromEvent = (event) => {
 };
 
 // Hue slider mouse handling
-const onHueMouseDown = (event) => {
+const onHueMouseDown = (event: MouseEvent) => {
   updateHueFromEvent(event);
   document.addEventListener("mousemove", onHueMouseMove);
   document.addEventListener("mouseup", onHueMouseUp);
 };
 
-const onHueMouseMove = (event) => {
+const onHueMouseMove = (event: MouseEvent) => {
   updateHueFromEvent(event);
 };
 
@@ -315,7 +315,7 @@ const onHueMouseUp = () => {
   document.removeEventListener("mouseup", onHueMouseUp);
 };
 
-const updateHueFromEvent = (event) => {
+const updateHueFromEvent = (event: MouseEvent) => {
   if (!hueRef.value) return;
   const rect = hueRef.value.getBoundingClientRect();
   const x = Math.max(0, Math.min(rect.width, event.clientX - rect.left));
@@ -340,7 +340,7 @@ const onHexInputBlur = () => {
 };
 
 // Preset color selection
-const selectPreset = (color) => {
+const selectPreset = (color: any) => {
   const hsv = hexToHsv(color);
   hue.value = hsv.h;
   saturation.value = hsv.s;
@@ -371,11 +371,11 @@ const togglePanel = () => {
 };
 
 // Click outside handler
-const handleClickOutside = (event) => {
+const handleClickOutside = (event: MouseEvent) => {
   if (!containerRef.value || !panelRef.value) return;
   if (
-    !containerRef.value.contains(event.target) &&
-    !panelRef.value.contains(event.target)
+    !containerRef.value.contains(event.target as Node) &&
+    !panelRef.value.contains(event.target as Node)
   ) {
     isPanelOpen.value = false;
   }

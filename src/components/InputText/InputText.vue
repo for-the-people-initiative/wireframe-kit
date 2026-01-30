@@ -35,23 +35,23 @@ const props = withDefaults(defineProps<InputTextProps>(), {
 
 const emit = defineEmits(["update:modelValue", "input", "change", "focus", "blur"]);
 
-const inputRef = ref(null);
+const inputRef = ref<HTMLInputElement | null>(null);
 
-const onInput = (event) => {
-  const value = event.target.value;
+const onInput = (event: Event) => {
+  const value = (event.target as HTMLInputElement).value;
   emit("update:modelValue", value);
   emit("input", { value, originalEvent: event });
 };
 
-const onChange = (event) => {
-  emit("change", { value: event.target.value, originalEvent: event });
+const onChange = (event: Event) => {
+  emit("change", { value: (event.target as HTMLInputElement).value, originalEvent: event });
 };
 
-const onFocus = (event) => {
+const onFocus = (event: FocusEvent) => {
   emit("focus", { originalEvent: event });
 };
 
-const onBlur = (event) => {
+const onBlur = (event: FocusEvent) => {
   emit("blur", { originalEvent: event });
 };
 

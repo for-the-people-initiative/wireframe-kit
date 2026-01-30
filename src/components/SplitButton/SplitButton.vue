@@ -92,8 +92,8 @@ const props = withDefaults(defineProps<SplitButtonProps>(), {
 
 const emit = defineEmits(["click"]);
 
-const containerRef = ref(null);
-const menuRef = ref(null);
+const containerRef = ref<HTMLElement | null>(null);
+const menuRef = ref<HTMLElement | null>(null);
 const isOpen = ref(false);
 const menuStyle = ref({});
 
@@ -106,12 +106,12 @@ const closeMenu = () => {
   isOpen.value = false;
 };
 
-const onMainClick = (event) => {
+const onMainClick = (event: MouseEvent) => {
   if (props.isDisabled) return;
   emit("click", event);
 };
 
-const onItemClick = (item) => {
+const onItemClick = (item: any) => {
   if (item.command) {
     item.command({ originalEvent: event, item });
   }
@@ -130,12 +130,12 @@ const updateMenuPosition = () => {
   };
 };
 
-const onClickOutside = (event) => {
+const onClickOutside = (event: MouseEvent) => {
   if (
     containerRef.value &&
-    !containerRef.value.contains(event.target) &&
+    !containerRef.value.contains(event.target as Node) &&
     menuRef.value &&
-    !menuRef.value.contains(event.target)
+    !menuRef.value.contains(event.target as Node)
   ) {
     closeMenu();
   }

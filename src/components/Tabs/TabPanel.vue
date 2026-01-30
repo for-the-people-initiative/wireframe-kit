@@ -21,7 +21,7 @@ const props = withDefaults(defineProps<TabPanelProps>(), {
   disabled: false,
 });
 
-const tabsContext = inject("tabs");
+const tabsContext = inject("tabs") as any;
 const panelIndex = ref(-1);
 
 onMounted(() => {

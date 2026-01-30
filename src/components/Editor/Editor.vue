@@ -155,7 +155,7 @@ const props = withDefaults(defineProps<EditorProps>(), {
 
 const emit = defineEmits(["update:modelValue", "focus", "blur", "change"]);
 
-const contentRef = ref(null);
+const contentRef = ref<HTMLElement | null>(null);
 const isFocused = ref(false);
 const activeFormats = ref({
   bold: false,
@@ -166,7 +166,7 @@ const activeFormats = ref({
   insertOrderedList: false,
 });
 
-const execCommand = (command, value = null) => {
+const execCommand = (command: any, value: string | undefined = undefined) => {
   if (props.isDisabled) return;
   contentRef.value?.focus();
   document.execCommand(command, false, value);
@@ -203,12 +203,12 @@ const emitValue = () => {
   emit("change", { value: html });
 };
 
-const onFocus = (event) => {
+const onFocus = (event: FocusEvent) => {
   isFocused.value = true;
   emit("focus", { originalEvent: event });
 };
 
-const onBlur = (event) => {
+const onBlur = (event: FocusEvent) => {
   isFocused.value = false;
   emit("blur", { originalEvent: event });
 };
@@ -243,7 +243,7 @@ defineExpose({
   focus: () => contentRef.value?.focus(),
   blur: () => contentRef.value?.blur(),
   getContent: () => contentRef.value?.innerHTML || "",
-  setContent: (html) => {
+  setContent: (html: any) => {
     if (contentRef.value) {
       contentRef.value.innerHTML = html;
       emitValue();

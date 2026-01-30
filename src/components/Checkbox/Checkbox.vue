@@ -59,8 +59,8 @@ const props = withDefaults(defineProps<CheckboxProps>(), {
 
 const emit = defineEmits(["update:modelValue", "change"]);
 
-const onChange = (event) => {
-  const checked = event.target.checked;
+const onChange = (event: Event) => {
+  const checked = (event.target as HTMLInputElement).checked;
   emit("update:modelValue", checked);
   emit("change", { checked, originalEvent: event });
 };

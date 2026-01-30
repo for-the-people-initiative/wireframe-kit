@@ -69,7 +69,7 @@ const additionalClasses = computed(() =>
   [props.isReadonly && "steps--readonly"].filter(Boolean).join(" ")
 );
 
-const getStepClasses = (index) => {
+const getStepClasses = (index: any) => {
   const classes = [];
 
   if (index < props.activeIndex) {
@@ -87,7 +87,7 @@ const getStepClasses = (index) => {
   return classes.join(" ");
 };
 
-const onStepClick = (event, step, index) => {
+const onStepClick = (event: MouseEvent, step: any, index: any) => {
   if (props.isReadonly || step.disabled) return;
 
   emit("update:activeIndex", index);

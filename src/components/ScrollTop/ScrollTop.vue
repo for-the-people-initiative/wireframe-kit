@@ -45,13 +45,13 @@ const props = withDefaults(defineProps<ScrollTopProps>(), {
 const emit = defineEmits(["click"]);
 
 const isVisible = ref(false);
-let scrollTarget = null;
+let scrollTarget: HTMLElement | Window | null = null;
 
 function getScrollTop() {
   if (props.target === "window") {
     return window.scrollY || document.documentElement.scrollTop;
   }
-  return scrollTarget?.scrollTop || 0;
+  return (scrollTarget as HTMLElement)?.scrollTop || 0;
 }
 
 function handleScroll() {
@@ -79,7 +79,7 @@ onMounted(() => {
     scrollTarget = window;
     window.addEventListener("scroll", handleScroll, { passive: true });
   } else {
-    scrollTarget = document.querySelector(props.target);
+    scrollTarget = document.querySelector(props.target) as HTMLElement | null;
     if (scrollTarget) {
       scrollTarget.addEventListener("scroll", handleScroll, { passive: true });
     }
