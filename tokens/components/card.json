@@ -52,13 +52,13 @@
       "description": "Card shadow"
     },
     "padding": {
-      "value": "{inset.l}",
+      "value": "{space.l}",
       "type": "dimension",
       "description": "Card inner padding"
     },
     "header": {
       "padding": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Header section padding"
       },
@@ -75,12 +75,12 @@
     },
     "body": {
       "padding": {
-        "value": "{inset.l}",
+        "value": "{space.l}",
         "type": "dimension",
         "description": "Body section padding"
       },
       "gap": {
-        "value": "{stack.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Gap between caption and content"
       }
@@ -124,7 +124,7 @@
         "description": "Subtitle font weight"
       },
       "marginTop": {
-        "value": "{stack.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Space between title and subtitle"
       }
@@ -138,7 +138,7 @@
     },
     "footer": {
       "padding": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Footer section padding"
       },

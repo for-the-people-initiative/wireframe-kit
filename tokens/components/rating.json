@@ -7,7 +7,7 @@
         "description": "Size of each star icon"
       },
       "gap": {
-        "value": "{inline.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Gap between stars"
       },

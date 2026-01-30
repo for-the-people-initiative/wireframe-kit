@@ -46,7 +46,7 @@
         "description": "Label font weight"
       },
       "gap": {
-        "value": "{stack.xs}",
+        "value": "{space.xs}",
         "type": "dimension",
         "description": "Gap between label and meter"
       }
@@ -65,7 +65,7 @@
     },
     "legend": {
       "gap": {
-        "value": "{inline.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Gap between legend items"
       },

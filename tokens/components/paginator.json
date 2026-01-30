@@ -6,12 +6,12 @@
       "description": "Paginator container background"
     },
     "padding": {
-      "value": "{inset.s}",
+      "value": "{space.s}",
       "type": "dimension",
       "description": "Paginator container padding"
     },
     "gap": {
-      "value": "{inline.xs}",
+      "value": "{space.xs}",
       "type": "dimension",
       "description": "Gap between paginator elements"
     },

@@ -6,7 +6,7 @@
       "description": "Menu background"
     },
     "padding": {
-      "value": "{inset.2xs}",
+      "value": "{space.2xs}",
       "type": "dimension",
       "description": "Menu container padding"
     },
@@ -39,12 +39,12 @@
     },
     "item": {
       "padding": {
-        "value": "{inset.xs} {inset.s}",
+        "value": "{space.xs} {space.s}",
         "type": "dimension",
         "description": "Item padding"
       },
       "gap": {
-        "value": "{inline.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Gap between icon and label"
       },
@@ -126,7 +126,7 @@
         "description": "Separator color"
       },
       "margin": {
-        "value": "{stack.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Separator margin"
       }

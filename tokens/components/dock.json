@@ -28,12 +28,12 @@
       "description": "Dock elevation shadow"
     },
     "padding": {
-      "value": "{inset.s}",
+      "value": "{space.s}",
       "type": "dimension",
       "description": "Dock inner padding"
     },
     "gap": {
-      "value": "{inline.2xs}",
+      "value": "{space.2xs}",
       "type": "dimension",
       "description": "Gap between dock items"
     },
@@ -44,7 +44,7 @@
     },
     "position": {
       "offset": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Distance from screen edge"
       }
@@ -113,7 +113,7 @@
     },
     "tooltip": {
       "offset": {
-        "value": "{inset.xs}",
+        "value": "{space.xs}",
         "type": "dimension",
         "description": "Tooltip distance from dock"
       },
@@ -136,12 +136,12 @@
       },
       "padding": {
         "x": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension",
           "description": "Tooltip horizontal padding"
         },
         "y": {
-          "value": "{inset.2xs}",
+          "value": "{space.2xs}",
           "type": "dimension",
           "description": "Tooltip vertical padding"
         }
@@ -164,7 +164,7 @@
         "description": "Active indicator color"
       },
       "gap": {
-        "value": "{inset.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Gap between item and indicator"
       }

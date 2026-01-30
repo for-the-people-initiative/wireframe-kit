@@ -19,12 +19,12 @@
     },
     "item": {
       "padding": {
-        "value": "{inset.s} {inset.m}",
+        "value": "{space.s} {space.m}",
         "type": "dimension",
         "description": "Tab item padding"
       },
       "gap": {
-        "value": "{inline.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Gap between icon and label"
       },

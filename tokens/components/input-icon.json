@@ -30,7 +30,7 @@
       }
     },
     "offset": {
-      "value": "{inset.m}",
+      "value": "{space.m}",
       "type": "dimension",
       "description": "Horizontal offset from input edge"
     }

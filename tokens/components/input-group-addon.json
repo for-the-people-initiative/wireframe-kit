@@ -28,12 +28,12 @@
     },
     "padding": {
       "x": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Horizontal padding"
       },
       "y": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Vertical padding"
       }

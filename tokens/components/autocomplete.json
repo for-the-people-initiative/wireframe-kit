@@ -16,16 +16,16 @@
     },
     "padding": {
       "x": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension"
       },
       "y": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension"
       }
     },
     "gap": {
-      "value": "{inline.xs}",
+      "value": "{space.xs}",
       "type": "dimension"
     },
     "radius": {
@@ -123,11 +123,11 @@
     "option": {
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension"
         },
         "y": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension"
         }
       },
@@ -159,16 +159,16 @@
     "chip": {
       "padding": {
         "x": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension"
         },
         "y": {
-          "value": "{inset.2xs}",
+          "value": "{space.2xs}",
           "type": "dimension"
         }
       },
       "gap": {
-        "value": "{inline.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension"
       },
       "radius": {

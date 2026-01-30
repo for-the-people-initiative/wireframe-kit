@@ -50,12 +50,12 @@
     },
     "content": {
       "gap": {
-        "value": "{stack.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Gap between timeline items"
       },
       "padding": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Padding around content area"
       }

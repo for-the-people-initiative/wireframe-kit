@@ -7,7 +7,7 @@
         "description": "Chart container background"
       },
       "padding": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Chart container padding"
       },
@@ -46,7 +46,7 @@
         "description": "Chart title font weight"
       },
       "marginBottom": {
-        "value": "{stack.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Space below chart title"
       }
@@ -60,13 +60,13 @@
     },
     "legend": {
       "gap": {
-        "value": "{inline.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Gap between legend items"
       },
       "item": {
         "gap": {
-          "value": "{inline.xs}",
+          "value": "{space.xs}",
           "type": "dimension",
           "description": "Gap between legend marker and text"
         },

@@ -1,12 +1,12 @@
 {
   "picklist": {
     "padding": {
-      "value": "{inset.m}",
+      "value": "{space.m}",
       "type": "dimension",
       "description": "Container padding"
     },
     "gap": {
-      "value": "{inline.m}",
+      "value": "{space.m}",
       "type": "dimension",
       "description": "Gap between source, controls, and target"
     },
@@ -57,18 +57,18 @@
         "description": "Maximum height before scrolling"
       },
       "padding": {
-        "value": "{inset.xs}",
+        "value": "{space.xs}",
         "type": "dimension"
       }
     },
     "header": {
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension"
         },
         "y": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension"
         }
       },
@@ -88,11 +88,11 @@
     "item": {
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension"
         },
         "y": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension"
         }
       },
@@ -127,7 +127,7 @@
     },
     "controls": {
       "gap": {
-        "value": "{stack.xs}",
+        "value": "{space.xs}",
         "type": "dimension"
       },
       "button": {

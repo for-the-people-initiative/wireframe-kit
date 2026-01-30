@@ -16,7 +16,7 @@
     },
     "padding": {
       "x": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension"
       }
     },

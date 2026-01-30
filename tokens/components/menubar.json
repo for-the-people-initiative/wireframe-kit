@@ -6,7 +6,7 @@
       "description": "Menubar background color"
     },
     "padding": {
-      "value": "{inset.s}",
+      "value": "{space.s}",
       "type": "dimension",
       "description": "Menubar container padding"
     },
@@ -29,12 +29,12 @@
     },
     "item": {
       "padding": {
-        "value": "{inset.xs} {inset.s}",
+        "value": "{space.xs} {space.s}",
         "type": "dimension",
         "description": "Menu item padding"
       },
       "gap": {
-        "value": "{inline.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Gap between icon and label"
       },
@@ -114,7 +114,7 @@
         "description": "Submenu minimum width"
       },
       "padding": {
-        "value": "{inset.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Submenu container padding"
       },
@@ -136,7 +136,7 @@
         "description": "Separator color"
       },
       "margin": {
-        "value": "{stack.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Separator vertical margin"
       }

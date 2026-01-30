@@ -16,11 +16,11 @@
     },
     "padding": {
       "x": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension"
       },
       "y": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension"
       }
     },
@@ -139,20 +139,20 @@
     "node": {
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension"
         },
         "y": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension"
         }
       },
       "gap": {
-        "value": "{inline.s}",
+        "value": "{space.s}",
         "type": "dimension"
       },
       "indent": {
-        "value": "{inset.l}",
+        "value": "{space.l}",
         "type": "dimension"
       },
       "background": {
@@ -198,7 +198,7 @@
     },
     "filter": {
       "padding": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension"
       },
       "borderColor": {

@@ -85,35 +85,15 @@ $shadow-m: var(--shadow-m); // Medium elevation - dropdowns
 $shadow-l: var(--shadow-l); // High elevation - modals
 $shadow-xl: var(--shadow-xl); // Highest elevation - toasts
 
-// Inset
-$inset-3xs: var(--inset-3xs); // Extra extra extra small inset padding
-$inset-2xs: var(--inset-2xs); // Extra extra small inset padding
-$inset-xs: var(--inset-xs); // Extra small inset padding
-$inset-s: var(--inset-s); // Small inset padding
-$inset-m: var(--inset-m); // Medium inset padding
-$inset-l: var(--inset-l); // Large inset padding
-$inset-xl: var(--inset-xl); // Extra large inset padding
-$inset-2xl: var(--inset-2xl); // Extra extra large inset padding
-
-// Stack
-$stack-3xs: var(--stack-3xs); // Vertical spacing between stacked items
-$stack-2xs: var(--stack-2xs);
-$stack-xs: var(--stack-xs);
-$stack-s: var(--stack-s);
-$stack-m: var(--stack-m);
-$stack-l: var(--stack-l);
-$stack-xl: var(--stack-xl);
-$stack-2xl: var(--stack-2xl);
-
-// Inline
-$inline-3xs: var(--inline-3xs); // Horizontal spacing between inline items
-$inline-2xs: var(--inline-2xs);
-$inline-xs: var(--inline-xs);
-$inline-s: var(--inline-s);
-$inline-m: var(--inline-m);
-$inline-l: var(--inline-l);
-$inline-xl: var(--inline-xl);
-$inline-2xl: var(--inline-2xl);
+// Space
+$space-3xs: var(--space-3xs); // 2px
+$space-2xs: var(--space-2xs); // 4px
+$space-xs: var(--space-xs); // 6px
+$space-s: var(--space-s); // 10px
+$space-m: var(--space-m); // 16px
+$space-l: var(--space-l); // 26px
+$space-xl: var(--space-xl); // 42px
+$space-2xl: var(--space-2xl); // 68px
 
 // Accordion
 $accordion-header-padding: var(--accordion-header-padding); // Header padding

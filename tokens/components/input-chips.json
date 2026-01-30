@@ -19,18 +19,18 @@
     },
     "padding": {
       "x": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Horizontal padding"
       },
       "y": {
-        "value": "{inset.xs}",
+        "value": "{space.xs}",
         "type": "dimension",
         "description": "Vertical padding"
       }
     },
     "gap": {
-      "value": "{inline.xs}",
+      "value": "{space.xs}",
       "type": "dimension",
       "description": "Gap between chips and input"
     },
@@ -118,16 +118,16 @@
     "chip": {
       "padding": {
         "x": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension"
         },
         "y": {
-          "value": "{inset.2xs}",
+          "value": "{space.2xs}",
           "type": "dimension"
         }
       },
       "gap": {
-        "value": "{inline.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension"
       },
       "radius": {

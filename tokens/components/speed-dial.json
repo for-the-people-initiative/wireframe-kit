@@ -84,7 +84,7 @@
         "type": "dimension"
       },
       "gap": {
-        "value": "{stack.s}",
+        "value": "{space.s}",
         "type": "dimension"
       }
     },
@@ -99,11 +99,11 @@
       },
       "padding": {
         "x": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension"
         },
         "y": {
-          "value": "{inset.2xs}",
+          "value": "{space.2xs}",
           "type": "dimension"
         }
       },
@@ -116,7 +116,7 @@
         "type": "dimension"
       },
       "offset": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension"
       }
     },

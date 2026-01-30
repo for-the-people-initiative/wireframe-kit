@@ -1,32 +1,12 @@
 {
-  "inset": {
-    "3xs": { "value": "{spacing.1}", "type": "dimension", "description": "Extra extra extra small inset padding" },
-    "2xs": { "value": "{spacing.2}", "type": "dimension", "description": "Extra extra small inset padding" },
-    "xs": { "value": "{spacing.3}", "type": "dimension", "description": "Extra small inset padding" },
-    "s": { "value": "{spacing.4}", "type": "dimension", "description": "Small inset padding" },
-    "m": { "value": "{spacing.5}", "type": "dimension", "description": "Medium inset padding" },
-    "l": { "value": "{spacing.6}", "type": "dimension", "description": "Large inset padding" },
-    "xl": { "value": "{spacing.7}", "type": "dimension", "description": "Extra large inset padding" },
-    "2xl": { "value": "{spacing.8}", "type": "dimension", "description": "Extra extra large inset padding" }
-  },
-  "stack": {
-    "3xs": { "value": "{spacing.1}", "type": "dimension", "description": "Vertical spacing between stacked items" },
-    "2xs": { "value": "{spacing.2}", "type": "dimension" },
-    "xs": { "value": "{spacing.3}", "type": "dimension" },
-    "s": { "value": "{spacing.4}", "type": "dimension" },
-    "m": { "value": "{spacing.5}", "type": "dimension" },
-    "l": { "value": "{spacing.6}", "type": "dimension" },
-    "xl": { "value": "{spacing.7}", "type": "dimension" },
-    "2xl": { "value": "{spacing.8}", "type": "dimension" }
-  },
-  "inline": {
-    "3xs": { "value": "{spacing.1}", "type": "dimension", "description": "Horizontal spacing between inline items" },
-    "2xs": { "value": "{spacing.2}", "type": "dimension" },
-    "xs": { "value": "{spacing.3}", "type": "dimension" },
-    "s": { "value": "{spacing.4}", "type": "dimension" },
-    "m": { "value": "{spacing.5}", "type": "dimension" },
-    "l": { "value": "{spacing.6}", "type": "dimension" },
-    "xl": { "value": "{spacing.7}", "type": "dimension" },
-    "2xl": { "value": "{spacing.8}", "type": "dimension" }
+  "space": {
+    "3xs": { "value": "{spacing.1}", "type": "dimension", "description": "2px" },
+    "2xs": { "value": "{spacing.2}", "type": "dimension", "description": "4px" },
+    "xs": { "value": "{spacing.3}", "type": "dimension", "description": "6px" },
+    "s": { "value": "{spacing.4}", "type": "dimension", "description": "10px" },
+    "m": { "value": "{spacing.5}", "type": "dimension", "description": "16px" },
+    "l": { "value": "{spacing.6}", "type": "dimension", "description": "26px" },
+    "xl": { "value": "{spacing.7}", "type": "dimension", "description": "42px" },
+    "2xl": { "value": "{spacing.8}", "type": "dimension", "description": "68px" }
   }
 }

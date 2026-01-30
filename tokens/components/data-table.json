@@ -34,7 +34,7 @@
         "description": "Header text color"
       },
       "padding": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Header cell padding"
       },
@@ -78,7 +78,7 @@
         "description": "Body text color"
       },
       "padding": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Body cell padding"
       },
@@ -114,12 +114,12 @@
     },
     "pagination": {
       "padding": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Pagination area padding"
       },
       "gap": {
-        "value": "{stack.xs}",
+        "value": "{space.xs}",
         "type": "dimension",
         "description": "Gap between pagination elements"
       },
@@ -136,7 +136,7 @@
     },
     "empty": {
       "padding": {
-        "value": "{inset.xl}",
+        "value": "{space.xl}",
         "type": "dimension",
         "description": "Empty state padding"
       },

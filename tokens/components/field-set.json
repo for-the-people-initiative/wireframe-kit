@@ -1,7 +1,7 @@
 {
   "field-set": {
     "padding": {
-      "value": "{inset.l}",
+      "value": "{space.l}",
       "type": "dimension",
       "description": "Content padding"
     },
@@ -30,12 +30,12 @@
     "legend": {
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension",
           "description": "Legend horizontal padding"
         },
         "y": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension",
           "description": "Legend vertical padding"
         }
@@ -99,7 +99,7 @@
         }
       },
       "gap": {
-        "value": "{inline.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Gap between legend text and toggle icon"
       }

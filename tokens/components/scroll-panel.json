@@ -7,12 +7,12 @@
     },
     "scrollbar": {
       "size": {
-        "value": "{inset.xs}",
+        "value": "{space.xs}",
         "type": "dimension",
         "description": "Scrollbar track width/height"
       },
       "padding": {
-        "value": "{inset.3xs}",
+        "value": "{space.3xs}",
         "type": "dimension",
         "description": "Padding around scrollbar"
       },

@@ -272,12 +272,12 @@
           "description": "Small button height"
         },
         "paddingX": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension",
           "description": "Small button horizontal padding"
         },
         "paddingY": {
-          "value": "{inset.2xs}",
+          "value": "{space.2xs}",
           "type": "dimension",
           "description": "Small button vertical padding"
         },
@@ -292,7 +292,7 @@
           "description": "Small button icon size"
         },
         "gap": {
-          "value": "{inline.2xs}",
+          "value": "{space.2xs}",
           "type": "dimension",
           "description": "Small button gap between icon and label"
         }
@@ -304,12 +304,12 @@
           "description": "Medium button height"
         },
         "paddingX": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension",
           "description": "Medium button horizontal padding"
         },
         "paddingY": {
-          "value": "{inset.xs}",
+          "value": "{space.xs}",
           "type": "dimension",
           "description": "Medium button vertical padding"
         },
@@ -324,7 +324,7 @@
           "description": "Medium button icon size"
         },
         "gap": {
-          "value": "{inline.xs}",
+          "value": "{space.xs}",
           "type": "dimension",
           "description": "Medium button gap between icon and label"
         }
@@ -336,12 +336,12 @@
           "description": "Large button height"
         },
         "paddingX": {
-          "value": "{inset.l}",
+          "value": "{space.l}",
           "type": "dimension",
           "description": "Large button horizontal padding"
         },
         "paddingY": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension",
           "description": "Large button vertical padding"
         },
@@ -356,7 +356,7 @@
           "description": "Large button icon size"
         },
         "gap": {
-          "value": "{inline.s}",
+          "value": "{space.s}",
           "type": "dimension",
           "description": "Large button gap between icon and label"
         }

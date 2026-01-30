@@ -1,7 +1,7 @@
 {
   "input-otp": {
     "gap": {
-      "value": "{inline.s}",
+      "value": "{space.s}",
       "type": "dimension",
       "description": "Gap between input cells"
     },

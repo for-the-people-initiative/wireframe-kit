@@ -93,7 +93,7 @@
     },
     "label": {
       "gap": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension"
       },
       "color": {

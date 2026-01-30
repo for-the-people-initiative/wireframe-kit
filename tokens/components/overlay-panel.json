@@ -2,12 +2,12 @@
   "overlayPanel": {
     "padding": {
       "x": {
-        "value": "{inset.l}",
+        "value": "{space.l}",
         "type": "dimension",
         "description": "Horizontal padding"
       },
       "y": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Vertical padding"
       }

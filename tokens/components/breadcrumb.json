@@ -1,7 +1,7 @@
 {
   "breadcrumb": {
     "gap": {
-      "value": "{inline.xs}",
+      "value": "{space.xs}",
       "type": "dimension",
       "description": "Gap between breadcrumb items and separators"
     },
@@ -43,7 +43,7 @@
         "description": "Icon size in breadcrumb items"
       },
       "gap": {
-        "value": "{inline.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Gap between icon and label"
       }

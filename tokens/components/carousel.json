@@ -14,12 +14,12 @@
     },
     "content": {
       "gap": {
-        "value": "{inline.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Gap between carousel items"
       },
       "padding": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Content area padding"
       }
@@ -36,7 +36,7 @@
         "description": "Carousel item border radius"
       },
       "padding": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Carousel item padding"
       }
@@ -116,12 +116,12 @@
         "description": "Indicator dot size"
       },
       "gap": {
-        "value": "{inline.xs}",
+        "value": "{space.xs}",
         "type": "dimension",
         "description": "Gap between indicators"
       },
       "marginTop": {
-        "value": "{stack.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Space above indicators"
       },

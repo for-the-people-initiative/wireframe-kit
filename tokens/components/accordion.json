@@ -2,7 +2,7 @@
   "accordion": {
     "header": {
       "padding": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Header padding"
       },
@@ -43,7 +43,7 @@
     },
     "content": {
       "padding": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Content padding"
       },

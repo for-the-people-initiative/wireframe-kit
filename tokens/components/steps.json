@@ -1,7 +1,7 @@
 {
   "steps": {
     "gap": {
-      "value": "{inline.m}",
+      "value": "{space.m}",
       "type": "dimension",
       "description": "Gap between step items"
     },
@@ -128,7 +128,7 @@
         }
       },
       "gap": {
-        "value": "{stack.xs}",
+        "value": "{space.xs}",
         "type": "dimension",
         "description": "Gap between marker and label"
       }

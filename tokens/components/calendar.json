@@ -5,7 +5,7 @@
       "type": "dimension"
     },
     "padding": {
-      "value": "{inset.m}",
+      "value": "{space.m}",
       "type": "dimension"
     },
     "radius": {
@@ -32,11 +32,11 @@
     },
     "header": {
       "padding": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension"
       },
       "gap": {
-        "value": "{inline.s}",
+        "value": "{space.s}",
         "type": "dimension"
       },
       "text": {
@@ -84,7 +84,7 @@
     },
     "weekday": {
       "padding": {
-        "value": "{inset.xs}",
+        "value": "{space.xs}",
         "type": "dimension"
       },
       "text": {
@@ -171,7 +171,7 @@
       },
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension"
         }
       },

@@ -90,17 +90,17 @@
     },
     "padding": {
       "sm": {
-        "value": "{inset.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Small badge horizontal padding"
       },
       "md": {
-        "value": "{inset.xs}",
+        "value": "{space.xs}",
         "type": "dimension",
         "description": "Medium badge horizontal padding"
       },
       "lg": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Large badge horizontal padding"
       }

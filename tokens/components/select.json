@@ -16,11 +16,11 @@
     },
     "padding": {
       "x": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension"
       },
       "y": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension"
       }
     },
@@ -139,11 +139,11 @@
     "option": {
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension"
         },
         "y": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension"
         }
       },

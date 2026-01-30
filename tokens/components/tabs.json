@@ -14,12 +14,12 @@
     "tab": {
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension",
           "description": "Horizontal tab padding"
         },
         "y": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension",
           "description": "Vertical tab padding"
         }
@@ -74,7 +74,7 @@
     },
     "content": {
       "padding": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Tab panel content padding"
       }

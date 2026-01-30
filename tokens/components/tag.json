@@ -2,18 +2,18 @@
   "tag": {
     "padding": {
       "x": {
-        "value": "{inset.xs}",
+        "value": "{space.xs}",
         "type": "dimension",
         "description": "Horizontal padding"
       },
       "y": {
-        "value": "{inset.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Vertical padding"
       }
     },
     "gap": {
-      "value": "{inline.2xs}",
+      "value": "{space.2xs}",
       "type": "dimension",
       "description": "Gap between icon and text"
     },

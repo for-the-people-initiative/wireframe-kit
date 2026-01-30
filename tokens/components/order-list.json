@@ -29,7 +29,7 @@
         "description": "Header background color"
       },
       "padding": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Header padding"
       },
@@ -56,19 +56,19 @@
     },
     "list": {
       "padding": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "List container padding"
       },
       "gap": {
-        "value": "{stack.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Gap between list items"
       }
     },
     "item": {
       "padding": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Item padding"
       },
@@ -119,12 +119,12 @@
     },
     "controls": {
       "gap": {
-        "value": "{stack.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Gap between control buttons"
       },
       "padding": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Controls area padding"
       }

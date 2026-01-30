@@ -2,12 +2,12 @@
   "tooltip": {
     "padding": {
       "x": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Horizontal padding"
       },
       "y": {
-        "value": "{inset.xs}",
+        "value": "{space.xs}",
         "type": "dimension",
         "description": "Vertical padding"
       }

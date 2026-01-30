@@ -2,12 +2,12 @@
   "in-place": {
     "display": {
       "paddingX": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Display element horizontal padding"
       },
       "paddingY": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Display element vertical padding"
       },
@@ -84,7 +84,7 @@
         "description": "Close button border radius"
       },
       "gap": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Gap between content and close button"
       }

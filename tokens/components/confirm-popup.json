@@ -2,12 +2,12 @@
   "confirmPopup": {
     "padding": {
       "x": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Horizontal padding"
       },
       "y": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Vertical padding"
       }
@@ -87,12 +87,12 @@
     },
     "gap": {
       "content": {
-        "value": "{stack.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Gap between icon/message and buttons"
       },
       "buttons": {
-        "value": "{inline.xs}",
+        "value": "{space.xs}",
         "type": "dimension",
         "description": "Gap between buttons"
       }

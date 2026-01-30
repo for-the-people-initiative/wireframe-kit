@@ -24,7 +24,7 @@
     },
     "gutter": {
       "size": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Default gutter width/height"
       },

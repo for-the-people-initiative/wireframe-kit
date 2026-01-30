@@ -29,7 +29,7 @@
     },
     "header": {
       "padding": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Panel header padding"
       },
@@ -82,12 +82,12 @@
     },
     "item": {
       "padding": {
-        "value": "{inset.xs} {inset.m}",
+        "value": "{space.xs} {space.m}",
         "type": "dimension",
         "description": "Menu item padding"
       },
       "gap": {
-        "value": "{inline.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Gap between icon and label"
       },
@@ -131,7 +131,7 @@
         }
       },
       "indent": {
-        "value": "{inline.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Indent for nested items"
       }
@@ -174,7 +174,7 @@
         "description": "Separator color"
       },
       "margin": {
-        "value": "{stack.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Separator margin"
       }

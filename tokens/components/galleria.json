@@ -31,7 +31,7 @@
         "description": "Preview area background"
       },
       "padding": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Preview area padding"
       },
@@ -44,12 +44,12 @@
     "thumbnail": {
       "container": {
         "gap": {
-          "value": "{inline.xs}",
+          "value": "{space.xs}",
           "type": "dimension",
           "description": "Gap between thumbnails"
         },
         "padding": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension",
           "description": "Thumbnail container padding"
         }
@@ -149,7 +149,7 @@
         "description": "Indicator dot size"
       },
       "gap": {
-        "value": "{inline.xs}",
+        "value": "{space.xs}",
         "type": "dimension",
         "description": "Gap between indicators"
       },
@@ -214,7 +214,7 @@
         "description": "Caption text color"
       },
       "padding": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Caption padding"
       },

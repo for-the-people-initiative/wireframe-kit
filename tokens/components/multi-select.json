@@ -20,11 +20,11 @@
     },
     "padding": {
       "x": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension"
       },
       "y": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension"
       }
     },
@@ -120,16 +120,16 @@
     },
     "chip": {
       "gap": {
-        "value": "{inline.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension"
       },
       "padding": {
         "x": {
-          "value": "{inset.xs}",
+          "value": "{space.xs}",
           "type": "dimension"
         },
         "y": {
-          "value": "{inset.3xs}",
+          "value": "{space.3xs}",
           "type": "dimension"
         }
       },
@@ -187,16 +187,16 @@
     "option": {
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension"
         },
         "y": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension"
         }
       },
       "gap": {
-        "value": "{inline.s}",
+        "value": "{space.s}",
         "type": "dimension"
       },
       "background": {
@@ -218,7 +218,7 @@
     },
     "filter": {
       "padding": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension"
       },
       "borderColor": {

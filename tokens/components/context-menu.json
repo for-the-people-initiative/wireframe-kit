@@ -29,7 +29,7 @@
     },
     "padding": {
       "y": {
-        "value": "{inset.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Vertical padding"
       }
@@ -52,12 +52,12 @@
     "item": {
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension",
           "description": "Item horizontal padding"
         },
         "y": {
-          "value": "{inset.xs}",
+          "value": "{space.xs}",
           "type": "dimension",
           "description": "Item vertical padding"
         }
@@ -115,7 +115,7 @@
           "description": "Item icon color"
         },
         "gap": {
-          "value": "{inline.s}",
+          "value": "{space.s}",
           "type": "dimension",
           "description": "Space between icon and label"
         }
@@ -140,7 +140,7 @@
         "description": "Separator line color"
       },
       "margin": {
-        "value": "{inset.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Separator vertical margin"
       }

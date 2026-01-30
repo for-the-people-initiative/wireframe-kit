@@ -1,7 +1,7 @@
 {
   "listbox": {
     "padding": {
-      "value": "{inset.xs}",
+      "value": "{space.xs}",
       "type": "dimension",
       "description": "Container padding"
     },
@@ -57,7 +57,7 @@
       },
       "padding": {
         "x": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension"
         }
       },
@@ -82,18 +82,18 @@
         "type": "color"
       },
       "marginBottom": {
-        "value": "{stack.xs}",
+        "value": "{space.xs}",
         "type": "dimension"
       }
     },
     "option": {
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension"
         },
         "y": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension"
         }
       },
@@ -158,7 +158,7 @@
         "type": "dimension"
       },
       "marginRight": {
-        "value": "{inline.s}",
+        "value": "{space.s}",
         "type": "dimension"
       }
     }

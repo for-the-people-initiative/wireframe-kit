@@ -46,12 +46,12 @@
     },
     "position": {
       "bottom": {
-        "value": "{inset.l}",
+        "value": "{space.l}",
         "type": "dimension",
         "description": "Distance from bottom of viewport"
       },
       "right": {
-        "value": "{inset.l}",
+        "value": "{space.l}",
         "type": "dimension",
         "description": "Distance from right of viewport"
       }

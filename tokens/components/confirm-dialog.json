@@ -2,17 +2,17 @@
   "confirmDialog": {
     "padding": {
       "header": {
-        "value": "{inset.l}",
+        "value": "{space.l}",
         "type": "dimension",
         "description": "Header section padding"
       },
       "content": {
-        "value": "{inset.l}",
+        "value": "{space.l}",
         "type": "dimension",
         "description": "Content area padding"
       },
       "footer": {
-        "value": "{inset.l}",
+        "value": "{space.l}",
         "type": "dimension",
         "description": "Footer section padding"
       }
@@ -127,12 +127,12 @@
     },
     "gap": {
       "content": {
-        "value": "{stack.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Gap between icon and message"
       },
       "buttons": {
-        "value": "{inline.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Gap between footer buttons"
       }

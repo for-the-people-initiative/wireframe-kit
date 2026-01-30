@@ -5,11 +5,11 @@
       "type": "dimension"
     },
     "padding": {
-      "value": "{inset.m}",
+      "value": "{space.m}",
       "type": "dimension"
     },
     "gap": {
-      "value": "{stack.m}",
+      "value": "{space.m}",
       "type": "dimension"
     },
     "radius": {
@@ -121,7 +121,7 @@
       },
       "padding": {
         "x": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension"
         }
       },
@@ -154,7 +154,7 @@
         "type": "dimension"
       },
       "gap": {
-        "value": "{inline.xs}",
+        "value": "{space.xs}",
         "type": "dimension"
       },
       "radius": {

@@ -14,19 +14,19 @@
     },
     "margin": {
       "horizontal": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Vertical margin for horizontal dividers"
       },
       "vertical": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Horizontal margin for vertical dividers"
       }
     },
     "content": {
       "gap": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Gap between divider line and content"
       },

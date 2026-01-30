@@ -12,7 +12,7 @@
         "description": "Column header text color"
       },
       "padding": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Column header padding"
       },
@@ -44,7 +44,7 @@
         "description": "Column body text color"
       },
       "padding": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Column body padding"
       },
@@ -71,7 +71,7 @@
         "description": "Column footer text color"
       },
       "padding": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Column footer padding"
       },

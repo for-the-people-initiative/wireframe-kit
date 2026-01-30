@@ -6,7 +6,7 @@
       "description": "Chart container background"
     },
     "padding": {
-      "value": "{inset.l}",
+      "value": "{space.l}",
       "type": "dimension",
       "description": "Chart container padding"
     },
@@ -58,7 +58,7 @@
         "description": "Node border radius"
       },
       "padding": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Node content padding"
       },
@@ -82,7 +82,7 @@
     },
     "nodeContent": {
       "gap": {
-        "value": "{stack.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Gap between node content elements"
       },
@@ -140,12 +140,12 @@
     },
     "spacing": {
       "horizontal": {
-        "value": "{stack.xl}",
+        "value": "{space.xl}",
         "type": "dimension",
         "description": "Horizontal spacing between nodes"
       },
       "vertical": {
-        "value": "{stack.l}",
+        "value": "{space.l}",
         "type": "dimension",
         "description": "Vertical spacing between levels"
       }

@@ -26,11 +26,11 @@
     "header": {
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension"
         },
         "y": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension"
         }
       },
@@ -54,11 +54,11 @@
     "row": {
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension"
         },
         "y": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension"
         }
       },
@@ -98,11 +98,11 @@
     "cell": {
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension"
         },
         "y": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension"
         }
       }
@@ -123,12 +123,12 @@
         }
       },
       "marginRight": {
-        "value": "{inline.s}",
+        "value": "{space.s}",
         "type": "dimension"
       }
     },
     "indent": {
-      "value": "{inset.l}",
+      "value": "{space.l}",
       "type": "dimension"
     },
     "checkbox": {
@@ -137,7 +137,7 @@
         "type": "dimension"
       },
       "marginRight": {
-        "value": "{inline.s}",
+        "value": "{space.s}",
         "type": "dimension"
       }
     },

@@ -16,11 +16,11 @@
     },
     "padding": {
       "x": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension"
       },
       "y": {
-        "value": "{inset.s}",
+        "value": "{space.s}",
         "type": "dimension"
       }
     },
@@ -136,7 +136,7 @@
         "type": "dimension"
       },
       "padding": {
-        "value": "{inset.xs}",
+        "value": "{space.xs}",
         "type": "dimension"
       }
     },
@@ -147,7 +147,7 @@
       },
       "padding": {
         "x": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension"
         }
       },
@@ -164,18 +164,18 @@
         "type": "dimension"
       },
       "marginBottom": {
-        "value": "{stack.xs}",
+        "value": "{space.xs}",
         "type": "dimension"
       }
     },
     "option": {
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension"
         },
         "y": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension"
         }
       },

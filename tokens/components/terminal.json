@@ -23,7 +23,7 @@
       }
     },
     "padding": {
-      "value": "{inset.m}",
+      "value": "{space.m}",
       "type": "dimension",
       "description": "Terminal content padding"
     },
@@ -58,7 +58,7 @@
         "description": "Prompt text color"
       },
       "gap": {
-        "value": "{inline.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Gap between prompt and input"
       }
@@ -77,14 +77,14 @@
         "description": "Welcome message color"
       },
       "marginBottom": {
-        "value": "{stack.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Space below welcome message"
       }
     },
     "command": {
       "gap": {
-        "value": "{stack.xs}",
+        "value": "{space.xs}",
         "type": "dimension",
         "description": "Gap between commands"
       }

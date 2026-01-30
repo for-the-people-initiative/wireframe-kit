@@ -28,7 +28,7 @@
       "description": "Menu popup shadow"
     },
     "padding": {
-      "value": "{inset.xs}",
+      "value": "{space.xs}",
       "type": "dimension",
       "description": "Menu content padding"
     },
@@ -50,18 +50,18 @@
     "item": {
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension",
           "description": "Item horizontal padding"
         },
         "y": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension",
           "description": "Item vertical padding"
         }
       },
       "gap": {
-        "value": "{inline.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Gap between icon and label"
       },
@@ -136,7 +136,7 @@
         "description": "Separator line color"
       },
       "margin": {
-        "value": "{stack.xs}",
+        "value": "{space.xs}",
         "type": "dimension",
         "description": "Separator vertical margin"
       }

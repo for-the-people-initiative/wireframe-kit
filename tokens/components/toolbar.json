@@ -23,12 +23,12 @@
       "description": "Toolbar border radius"
     },
     "padding": {
-      "value": "{inset.m}",
+      "value": "{space.m}",
       "type": "dimension",
       "description": "Toolbar inner padding"
     },
     "gap": {
-      "value": "{inline.m}",
+      "value": "{space.m}",
       "type": "dimension",
       "description": "Gap between toolbar items"
     },

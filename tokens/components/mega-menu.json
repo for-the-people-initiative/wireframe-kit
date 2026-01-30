@@ -8,18 +8,18 @@
       },
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension",
           "description": "Menu bar horizontal padding"
         },
         "y": {
-          "value": "{inset.xs}",
+          "value": "{space.xs}",
           "type": "dimension",
           "description": "Menu bar vertical padding"
         }
       },
       "gap": {
-        "value": "{inline.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Gap between root items"
       }
@@ -27,12 +27,12 @@
     "rootItem": {
       "padding": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension",
           "description": "Root item horizontal padding"
         },
         "y": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension",
           "description": "Root item vertical padding"
         }
@@ -137,12 +137,12 @@
         "description": "Panel shadow"
       },
       "padding": {
-        "value": "{inset.l}",
+        "value": "{space.l}",
         "type": "dimension",
         "description": "Panel padding"
       },
       "gap": {
-        "value": "{inline.l}",
+        "value": "{space.l}",
         "type": "dimension",
         "description": "Gap between columns"
       },
@@ -164,7 +164,7 @@
         "description": "Minimum column width"
       },
       "gap": {
-        "value": "{stack.xs}",
+        "value": "{space.xs}",
         "type": "dimension",
         "description": "Gap between column items"
       }
@@ -199,7 +199,7 @@
       },
       "margin": {
         "bottom": {
-          "value": "{stack.s}",
+          "value": "{space.s}",
           "type": "dimension",
           "description": "Space below category heading"
         }
@@ -208,12 +208,12 @@
     "item": {
       "padding": {
         "x": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension",
           "description": "Item horizontal padding"
         },
         "y": {
-          "value": "{inset.xs}",
+          "value": "{space.xs}",
           "type": "dimension",
           "description": "Item vertical padding"
         }
@@ -261,7 +261,7 @@
           "description": "Item icon color"
         },
         "gap": {
-          "value": "{inline.s}",
+          "value": "{space.s}",
           "type": "dimension",
           "description": "Gap between icon and text"
         }

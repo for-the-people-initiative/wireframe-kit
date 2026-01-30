@@ -1,18 +1,18 @@
 {
   "selectButton": {
     "gap": {
-      "value": "{inline.2xs}",
+      "value": "{space.2xs}",
       "type": "dimension",
       "description": "Gap between option buttons"
     },
     "padding": {
       "x": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Horizontal padding for option buttons"
       },
       "y": {
-        "value": "{inset.xs}",
+        "value": "{space.xs}",
         "type": "dimension",
         "description": "Vertical padding for option buttons"
       }

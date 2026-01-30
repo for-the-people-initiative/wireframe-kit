@@ -2,12 +2,12 @@
   "toast": {
     "container": {
       "gap": {
-        "value": "{stack.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Gap between stacked toasts"
       },
       "padding": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Container padding from screen edge"
       },
@@ -95,12 +95,12 @@
     },
     "padding": {
       "x": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Horizontal padding"
       },
       "y": {
-        "value": "{inset.m}",
+        "value": "{space.m}",
         "type": "dimension",
         "description": "Vertical padding"
       }
@@ -139,14 +139,14 @@
         }
       },
       "gap": {
-        "value": "{inline.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Gap between icon and content"
       }
     },
     "content": {
       "gap": {
-        "value": "{stack.2xs}",
+        "value": "{space.2xs}",
         "type": "dimension",
         "description": "Gap between summary and detail"
       }

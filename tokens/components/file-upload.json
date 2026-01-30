@@ -53,7 +53,7 @@
         "description": "Dropzone border radius"
       },
       "padding": {
-        "value": "{inset.xl}",
+        "value": "{space.xl}",
         "type": "dimension",
         "description": "Dropzone padding"
       }
@@ -105,7 +105,7 @@
     },
     "fileList": {
       "gap": {
-        "value": "{stack.s}",
+        "value": "{space.s}",
         "type": "dimension",
         "description": "Gap between file items"
       },
@@ -116,7 +116,7 @@
           "description": "File item background"
         },
         "padding": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension",
           "description": "File item padding"
         },

@@ -24,7 +24,7 @@
     },
     "header": {
       "padding": {
-        "value": "{inset.l}",
+        "value": "{space.l}",
         "type": "dimension",
         "description": "Header section padding"
       },
@@ -58,7 +58,7 @@
     },
     "content": {
       "padding": {
-        "value": "{inset.l}",
+        "value": "{space.l}",
         "type": "dimension",
         "description": "Content area padding"
       },

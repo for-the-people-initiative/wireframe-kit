@@ -20,43 +20,43 @@
     "padding": {
       "sm": {
         "x": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension",
           "description": "Small toggle button horizontal padding"
         },
         "y": {
-          "value": "{inset.2xs}",
+          "value": "{space.2xs}",
           "type": "dimension",
           "description": "Small toggle button vertical padding"
         }
       },
       "md": {
         "x": {
-          "value": "{inset.m}",
+          "value": "{space.m}",
           "type": "dimension",
           "description": "Medium toggle button horizontal padding"
         },
         "y": {
-          "value": "{inset.xs}",
+          "value": "{space.xs}",
           "type": "dimension",
           "description": "Medium toggle button vertical padding"
         }
       },
       "lg": {
         "x": {
-          "value": "{inset.l}",
+          "value": "{space.l}",
           "type": "dimension",
           "description": "Large toggle button horizontal padding"
         },
         "y": {
-          "value": "{inset.s}",
+          "value": "{space.s}",
           "type": "dimension",
           "description": "Large toggle button vertical padding"
         }
       }
     },
     "gap": {
-      "value": "{inline.xs}",
+      "value": "{space.xs}",
       "type": "dimension",
       "description": "Gap between icon and label"
     },
