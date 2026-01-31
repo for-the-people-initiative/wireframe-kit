@@ -1,0 +1,61 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Patronen/Status Indicatoren" />
+
+# Status Indicatoren
+
+Hoe toon je status, voortgang en toestand aan de gebruiker?
+
+## Beslisboom
+
+```
+Wat wil je communiceren?
+├── Een categorie/type label → Tag
+├── Een numerieke telling → Badge
+├── Online/offline status → Badge (dot variant)
+├── Voortgang (bekend percentage) → ProgressBar
+├── Laden (onbekende duur) → ProgressSpinner of Skeleton
+├── Actief/inactief in een tabel → Gekleurde tekst of dot
+└── Urgentie/prioriteit → Tag met severity of gekleurde tekst
+```
+
+## Per context
+
+### In tabellen
+- **Status kolom**: Gewone tekst, evt. met kleur. Geen Tag als er al gefilterd wordt.
+- **Prioriteit**: Gekleurde dot (●) of icoon
+- **Hoeveelheid**: Gewoon getal
+
+### Op cards
+- **Type/categorie**: Tag in de header
+- **Status**: Gekleurde tekst of kleine Tag
+- **Nieuw item**: Badge op de card
+
+### In navigatie
+- **Ongelezen items**: Badge met telling
+- **Nieuwe sectie**: Badge (dot)
+
+### Op dashboards
+- **KPI voortgang**: ProgressBar of Knob/Meter
+- **Laden van data**: Skeleton (behoudt layout) of ProgressSpinner
+- **Systeem status**: Message component
+
+## Kleurgebruik
+
+| Kleur | Severity | Betekenis |
+|---|---|---|
+| 🟢 Groen | success | Actief, voltooid, goedgekeurd |
+| 🔵 Blauw | info | Informatief, nieuw, in behandeling |
+| 🟡 Oranje | warn | Waarschuwing, aandacht nodig |
+| 🔴 Rood | danger/error | Fout, verlopen, afgekeurd |
+| ⚪ Grijs | secondary | Inactief, concept, nvt |
+
+## Veelgemaakte fouten
+
+❌ Tags overal plakken — in een tabel met filters is het dubbelop
+
+❌ Rood gebruiken voor "urgent maar niet fout" — gebruik oranje (warn)
+
+❌ ProgressSpinner gebruiken als je weet hoe lang het duurt — gebruik ProgressBar
+
+❌ Skeleton gebruiken voor lege states — Skeleton is voor laden, gebruik EmptyState voor "geen data"

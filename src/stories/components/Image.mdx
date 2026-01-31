@@ -1,0 +1,27 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Image/Rationale" />
+
+# Image
+
+Een afbeeldingscomponent met ingebouwde preview/lightbox functionaliteit.
+
+## Wanneer gebruiken ✅
+
+- **Enkele afbeelding met preview**: Klik om te vergroten
+- **Afbeelding met fallback**: Placeholder bij laadfouten
+- **Consistente afbeeldingsstijl**: Border-radius, schaduw via design system
+
+## Wanneer NIET gebruiken ❌
+
+- **Meerdere afbeeldingen met navigatie** → gebruik [Galleria](?path=/docs/components-galleria-rationale--docs)
+- **Decoratieve achtergrondafbeeldingen** → gebruik CSS `background-image`
+- **Avatars/profielfoto's** → gebruik Avatar
+
+## Best practices
+
+✅ Gebruik `preview` als de gebruiker de afbeelding groter wil bekijken
+
+✅ Zet altijd een `alt` tekst voor accessibility
+
+❌ Gebruik Image niet als wrapper om elke `<img>` — alleen als je preview of FTP-styling nodig hebt

@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Menu/Rationale" />
+
+# Menu
+
+Een lijst met navigatie-items of acties — de basis voor alle menu-varianten.
+
+## Wanneer gebruiken ✅
+
+- **Contextmenu**: Rechtermuisklik-acties
+- **Actie-dropdown**: Klik op "⋯" knop → lijst met acties
+- **Sidebar navigatie**: Vaste lijst met links
+
+## Wanneer NIET gebruiken ❌
+
+- **Horizontale navigatiebalk** → gebruik MenuBar
+- **Geneste submenu's** → gebruik TieredMenu
+- **Mega-navigatie met kolommen** → gebruik MegaMenu
+- **Breadcrumbs** → gebruik [Breadcrumb](?path=/docs/components-breadcrumb-rationale--docs)
+
+## Alternatieven
+
+| In plaats van Menu... | Gebruik... | Wanneer... |
+|---|---|---|
+| MenuBar | Horizontale navigatiebalk bovenaan |
+| TieredMenu | Menu met submenu's (genest) |
+| MegaMenu | Grote navigatie met kolommen/groepen |
+| ContextMenu | Rechtermuisklik menu |
+| SpeedDial | Floating action menu |
+
+## Best practices
+
+✅ Groepeer items met separators
+
+✅ Gebruik iconen voor snelle herkenning
+
+✅ Markeer het actieve item
+
+❌ Stop niet meer dan 10-12 items in één menu zonder groepering
+
+❌ Meng geen navigatie-links met acties (verwijderen, bewerken) in hetzelfde menu

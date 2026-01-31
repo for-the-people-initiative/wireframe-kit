@@ -1,0 +1,38 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Galleria/Rationale" />
+
+# Galleria
+
+Een geavanceerde afbeeldingenviewer met thumbnails, navigatie en optionele lightbox.
+
+## Wanneer gebruiken ✅
+
+- **Meerdere afbeeldingen van één item**: Vastgoedfoto's, productfoto's
+- **Thumbnail-navigatie nodig**: Gebruiker wilt snel door foto's bladeren
+- **Lightbox/fullscreen**: Foto's groter bekijken
+
+## Wanneer NIET gebruiken ❌
+
+- **Eén afbeelding** → gebruik [Image](?path=/docs/components-image-rationale--docs)
+- **Automatisch doorscrollende content** → gebruik Carousel
+- **Decoratieve afbeeldingen** → gebruik gewoon een `<img>` tag
+- **Video content** — Galleria is voor afbeeldingen
+
+## Alternatieven
+
+| In plaats van Galleria... | Gebruik... | Wanneer... |
+|---|---|---|
+| Image | Enkele afbeelding met optionele preview |
+| Carousel | Auto-roterende slides (marketing, banners) |
+| Gewone img grid | Simpel grid zonder navigatie |
+
+## Best practices
+
+✅ Lever altijd thumbnails aan (niet dezelfde grote afbeelding schalen)
+
+✅ Gebruik `showThumbnails` voor vastgoed/product pagina's
+
+✅ Gebruik `showIndicators` als alternatief voor thumbnails op mobiel
+
+❌ Laad niet 50+ afbeeldingen in één keer — gebruik lazy loading

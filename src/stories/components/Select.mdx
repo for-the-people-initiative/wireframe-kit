@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Select/Rationale" />
+
+# Select
+
+Een dropdown waarmee je één optie kiest uit een lijst — de standaard voor formulierkeuzes.
+
+## Wanneer gebruiken ✅
+
+- **Formuliervelden met 5+ opties**: Land, categorie, status
+- **Ruimtebesparing**: Opties hoeven niet altijd zichtbaar te zijn
+- **Gestandaardiseerde keuzes**: Voorgedefinieerde waarden
+
+## Wanneer NIET gebruiken ❌
+
+- **2-4 opties die altijd zichtbaar moeten zijn** → gebruik RadioButtons of [SelectButton](?path=/docs/components-selectbutton-rationale--docs)
+- **Gebruiker moet kunnen zoeken/typen** → gebruik AutoComplete
+- **Meerdere selecties** → gebruik MultiSelect of Listbox
+- **Lange lijst (100+ items) met zoekfunctie** → gebruik AutoComplete met server-side filtering
+
+## Alternatieven
+
+| In plaats van Select... | Gebruik... | Wanneer... |
+|---|---|---|
+| AutoComplete | Gebruiker moet kunnen zoeken/typen |
+| MultiSelect | Meerdere items selecteren |
+| ListBox | Alle opties altijd zichtbaar + multi-select |
+| RadioButton | 2-4 opties in een formulier |
+| SelectButton | Visuele switch (lijst/grid) |
+
+## Best practices
+
+✅ Gebruik `placeholder` om aan te geven wat er gekozen moet worden
+
+✅ Gebruik `optionLabel` en `optionValue` voor custom objecten
+
+✅ Voeg `filter` toe bij >10 opties
+
+✅ Gebruik `showClear` als "geen selectie" een geldige optie is
+
+❌ Gebruik geen Select voor 2 opties (ja/nee) — dat is een ToggleSwitch of RadioButton
+
+❌ Maak geen geneste Select-ketens als een AutoComplete met server-side filtering beter past

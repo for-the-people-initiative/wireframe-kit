@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/ProgressBar/Rationale" />
+
+# ProgressBar
+
+Een horizontale balk die voortgang of een percentage toont.
+
+## Wanneer gebruiken ✅
+
+- **Bekende voortgang**: Upload 45%, stap 3/5, profiel 80% compleet
+- **Proces met einddoel**: De gebruiker weet hoeveel er nog te gaan is
+- **Visuele KPI**: Target vs actueel (bijv. budget besteed)
+
+## Wanneer NIET gebruiken ❌
+
+- **Onbekende duur** (laden, wachten op server) → gebruik ProgressSpinner
+- **Placeholder voor content die laadt** → gebruik Skeleton
+- **Status zonder percentage** → gebruik een Tag of gekleurde tekst
+
+## Alternatieven
+
+| In plaats van ProgressBar... | Gebruik... | Wanneer... |
+|---|---|---|
+| ProgressSpinner | Laden zonder bekende duur |
+| Skeleton | Placeholder voor content layout |
+| Meter / Knob | Gauge-achtige weergave |
+
+## Best practices
+
+✅ Toon het percentage als label als dat nuttig is
+
+✅ Gebruik `mode="indeterminate"` alleen als je echt niet weet hoe lang het duurt
+
+❌ Gebruik geen progress bar voor iets dat al klaar is — toon dan het resultaat

@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue';
 
 const config: StorybookConfig = {
   stories: [
+    '../src/stories/**/*.mdx',
     '../src/stories/**/*.stories.ts',
   ],
   addons: [

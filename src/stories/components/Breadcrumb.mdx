@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Breadcrumb/Rationale" />
+
+# Breadcrumb
+
+Een navigatiepad dat toont waar je bent in de hiërarchie — "Home > Woningen > Amsterdam > Detail".
+
+## Wanneer gebruiken ✅
+
+- **Hiërarchische navigatie**: Gebruiker moet kunnen terug navigeren naar bovenliggende pagina's
+- **Diepgeneste content**: 3+ niveaus diep
+- **E-commerce / portalen**: Categorie > Subcategorie > Product
+
+## Wanneer NIET gebruiken ❌
+
+- **Platte site** (alles op 1-2 niveaus) — breadcrumbs zijn dan overbodig
+- **Wizard/stappen** → gebruik Steps (toont voortgang, niet locatie)
+- **Tab-navigatie** → gebruik [Tabs](?path=/docs/components-tabs-rationale--docs) of TabMenu
+
+## Het verschil: Breadcrumb vs Steps vs TabMenu
+
+| Component | Toont... | Doel |
+|---|---|---|
+| **Breadcrumb** | Waar je bent (hiërarchie) | Terug navigeren |
+| **Steps** | Waar je bent (proces) | Voortgang in wizard |
+| **TabMenu** | Beschikbare secties | Navigeren tussen gelijke pagina's |
+
+## Best practices
+
+✅ Maak elk item clickable behalve het huidige (laatste)
+
+✅ Begin altijd met "Home" of het hoofdniveau
+
+✅ Gebruik `router` prop voor Vue Router integratie
+
+❌ Maak breadcrumbs niet langer dan 4-5 niveaus — vereenvoudig je navigatiestructuur
+
+❌ Gebruik breadcrumbs niet als enige navigatie — het is een aanvulling

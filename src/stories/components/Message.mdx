@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Message/Rationale" />
+
+# Message
+
+Een inline bericht dat informatie, waarschuwingen of fouten toont — blijft zichtbaar op de pagina.
+
+## Wanneer gebruiken ✅
+
+- **Formuliervalidatie**: Foutmelding boven of onder een formulier
+- **Pagina-level feedback**: "Je hebt geen rechten voor deze actie"
+- **Informatieve banners**: "Onderhoud gepland op vrijdag"
+- **Persistente meldingen**: Berichten die de gebruiker moet kunnen herlezen
+
+## Wanneer NIET gebruiken ❌
+
+- **Korte bevestiging** ("Opgeslagen!") → gebruik [Toast](?path=/docs/components-toast-rationale--docs)
+- **Bij een specifiek veld** → gebruik InlineMessage (kleiner, inline)
+- **Kritieke bevestiging** → gebruik [Dialog](?path=/docs/components-dialog-rationale--docs) of ConfirmDialog
+- **Realtime notificaties** → gebruik Toast
+
+## Het verschil: Message vs Toast vs InlineMessage
+
+| Component | Positie | Verdwijnt? | Gebruik |
+|---|---|---|---|
+| **Message** | Inline op pagina | Nee (sluitbaar) | Formulierfouten, waarschuwingen |
+| **Toast** | Overlay (hoek) | Ja (automatisch) | Bevestigingen, korte meldingen |
+| **InlineMessage** | Naast een veld | Nee | Veldspecifieke feedback |
+
+## Best practices
+
+✅ Gebruik `severity` correct: info (blauw), success (groen), warn (oranje), error (rood)
+
+✅ Maak berichten sluitbaar tenzij ze kritiek zijn
+
+✅ Wees specifiek — "E-mailadres is ongeldig" is beter dan "Er is een fout opgetreden"
+
+❌ Toon niet meerdere Messages van hetzelfde type boven elkaar — groepeer ze
+
+❌ Gebruik geen Message voor succes-feedback die even getoond hoeft te worden — dat is een Toast

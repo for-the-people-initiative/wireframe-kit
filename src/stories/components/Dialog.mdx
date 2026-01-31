@@ -1,0 +1,48 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Dialog/Rationale" />
+
+# Dialog
+
+Een modaal venster dat de gebruiker dwingt tot interactie voordat ze verder kunnen.
+
+## Wanneer gebruiken ✅
+
+- **Kritieke acties bevestigen**: Verwijderen, annuleren, ongedaan maken
+- **Korte formulieren**: Inline bewerken, snel een item toevoegen
+- **Belangrijke informatie**: Waarschuwingen die niet genegeerd mogen worden
+- **Wizards**: Stapsgewijze flows in een overlay
+
+## Wanneer NIET gebruiken ❌
+
+- **Lange formulieren** → gebruik een aparte pagina of [Drawer](?path=/story/components-drawer--default)
+- **Niet-kritieke info** → gebruik [Toast](?path=/docs/components-toast-rationale--docs) of [Message](?path=/docs/components-message-rationale--docs)
+- **Contextmenu of tooltips** → gebruik OverlayPanel of Tooltip
+- **"Weet je het zeker?"** voor simpele acties → gebruik ConfirmPopup (inline, minder disruptief)
+- **Meerdere dialogen tegelijk** — als je een dialog in een dialog opent, heroverweeg je flow
+
+## Alternatieven
+
+| In plaats van Dialog... | Gebruik... | Wanneer... |
+|---|---|---|
+| Drawer (Sidebar) | Lang formulier, detailweergave |
+| OverlayPanel | Korte contextinfo bij een element |
+| ConfirmDialog | Standaard bevestiging (ja/nee) |
+| ConfirmPopup | Bevestiging inline bij de trigger |
+| Aparte pagina | Complex formulier of flow |
+
+## Best practices
+
+✅ Gebruik `modal` voor kritieke acties (voorkomt interactie met achtergrond)
+
+✅ Zet de primaire actie rechts, secundaire links
+
+✅ Gebruik een duidelijke titel die de actie beschrijft ("Woning verwijderen", niet "Bevestigen")
+
+✅ Gebruik `ConfirmDialog` voor standaard ja/nee — bouw het niet zelf
+
+❌ Open geen dialog vanuit een dialog
+
+❌ Gebruik geen dialog voor informatie die ook inline kan (bijv. een foutmelding)
+
+❌ Maak dialogen niet fullscreen op desktop — dat is een pagina, geen dialog

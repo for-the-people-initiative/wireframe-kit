@@ -1,0 +1,71 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Patronen/Navigatie" />
+
+# Navigatie
+
+Hoe structureer je navigatie in je app?
+
+## Navigatieniveaus
+
+### Niveau 1: App-navigatie (altijd zichtbaar)
+**Component:** MenuBar (horizontaal) of Menu in Sidebar (verticaal)
+
+Gebruik voor de hoofdsecties van je app: Dashboard, Woningen, Klanten, Instellingen.
+
+✅ MenuBar voor apps met 3-7 hoofdsecties
+✅ Sidebar Menu voor apps met veel secties of geneste navigatie
+❌ Niet meer dan 7 items in een horizontale bar
+
+### Niveau 2: Sectie-navigatie
+**Component:** TabMenu of Tabs
+
+Gebruik voor subsecties binnen een hoofdsectie: Overzicht, Details, Historie.
+
+✅ TabMenu als het aparte routes/pagina's zijn
+✅ Tabs als het content-panelen op dezelfde pagina zijn
+
+### Niveau 3: Locatie-indicator
+**Component:** Breadcrumb
+
+Gebruik als de app 3+ niveaus diep gaat en de gebruiker terug moet kunnen navigeren.
+
+✅ E-commerce: Home > Categorie > Product
+✅ Portalen: Dashboard > Klant > Dossier > Document
+
+### Utility-navigatie
+**Component:** Menu (als popup), SpeedDial, ContextMenu
+
+Voor acties en secundaire navigatie.
+
+## Beslisboom
+
+```
+Wat voor navigatie heb je nodig?
+├── Hoofdnavigatie (altijd zichtbaar)
+│   ├── Horizontaal → MenuBar
+│   └── Verticaal (sidebar) → Menu of PanelMenu
+├── Subsecties
+│   ├── Aparte pagina's → TabMenu
+│   └── Zelfde pagina → Tabs
+├── Terug navigeren in hiërarchie → Breadcrumb
+├── Stapsgewijs proces → Steps
+└── Actiemenu
+    ├── Op element → ContextMenu
+    ├── Floating → SpeedDial
+    └── Dropdown → Menu + Button trigger
+```
+
+## Do's en Don'ts
+
+✅ Markeer altijd het actieve item
+
+✅ Gebruik consistente navigatie door de hele app
+
+✅ Combineer Breadcrumb + TabMenu voor complexe apps
+
+❌ Gebruik Tabs niet voor pagina-navigatie (dat is TabMenu)
+
+❌ Gebruik Steps niet als navigatie — Steps is voor wizards met voortgang
+
+❌ Mix niet horizontale en verticale navigatie voor hetzelfde niveau

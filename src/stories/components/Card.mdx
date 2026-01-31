@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Card/Rationale" />
+
+# Card
+
+Een container met optionele header, content en footer — voor het groeperen van gerelateerde informatie.
+
+## Wanneer gebruiken ✅
+
+- **Content blokken**: Vastgoedobjecten, producten, profielen
+- **Dashboard widgets**: KPI's, grafieken, samenvattingen
+- **Overzichtspagina's**: Grid of lijst van items met afbeelding + tekst
+- **Clickable items**: Card als link naar detailpagina
+
+## Wanneer NIET gebruiken ❌
+
+- **Formuliersecties** → gebruik FieldSet (heeft legend/label voor formuliergroepen)
+- **Uitklapbare content** → gebruik Panel (heeft ingebouwde toggle)
+- **Simpele container zonder visueel onderscheid** → gebruik gewoon een `<div>`
+- **Tabellen met data** → gebruik [DataTable](?path=/docs/components-datatable-rationale--docs)
+
+## Alternatieven
+
+| In plaats van Card... | Gebruik... | Wanneer... |
+|---|---|---|
+| Panel | Uitklapbare sectie met header |
+| FieldSet | Formuliergroep met label |
+| Accordion | Meerdere uitklapbare secties |
+| Gewone div | Geen visuele container nodig |
+
+## Best practices
+
+✅ Gebruik de `header` en `footer` slots voor consistente layout
+
+✅ Maak cards clickable als ze naar een detail leiden (hele card, niet alleen een knop)
+
+✅ Houd cards in een grid even hoog (gebruik CSS grid met `align-items: stretch`)
+
+❌ Nest geen cards in cards — wordt onoverzichtelijk
+
+❌ Stop niet te veel content in één card — als het scrolt, is het te veel

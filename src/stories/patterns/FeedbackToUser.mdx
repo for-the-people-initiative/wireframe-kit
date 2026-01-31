@@ -1,0 +1,71 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Patronen/Feedback aan Gebruiker" />
+
+# Feedback aan de Gebruiker
+
+Hoe communiceer je met de gebruiker? Kies het juiste component op basis van urgentie.
+
+## Urgentieniveaus
+
+### 🔴 Kritiek — Actie vereist
+**Component:** Dialog (ConfirmDialog) of Message (severity="error", niet wegklikbaar)
+
+Voorbeelden:
+- "Weet je zeker dat je dit wilt verwijderen?"
+- "Je sessie is verlopen, log opnieuw in"
+- Onherstelbare acties
+
+### 🟡 Belangrijk — Moet gezien worden
+**Component:** Message (inline op pagina)
+
+Voorbeelden:
+- Formuliervalidatiefouten
+- "Je hebt geen rechten voor deze actie"
+- Systeemwaarschuwingen ("Onderhoud gepland")
+
+### 🟢 Informatief — Bevestiging
+**Component:** Toast
+
+Voorbeelden:
+- "Opgeslagen"
+- "E-mail verzonden"
+- "Item toegevoegd"
+
+### ⚪ Subtiel — Context
+**Component:** InlineMessage of Tooltip
+
+Voorbeelden:
+- Help-tekst bij een formulierveld
+- "Dit veld is verplicht"
+- Uitleg bij een instelling
+
+## Beslisboom
+
+```
+Hoe urgent is het?
+├── Gebruiker MOET actie ondernemen → Dialog / ConfirmDialog
+├── Gebruiker MOET het zien → Message (inline, persistent)
+├── Gebruiker MAG het missen → Toast (verdwijnt automatisch)
+└── Extra context (niet proactief) → Tooltip / InlineMessage
+```
+
+## Veelgemaakte fouten
+
+❌ Toast voor fouten — gebruiker mist het als het verdwijnt (maak error-toasts minstens sticky)
+
+❌ Dialog voor "Opgeslagen!" — veel te disruptief, gebruik Toast
+
+❌ Alert/confirm van de browser — gebruik altijd ConfirmDialog
+
+❌ Geen feedback geven na een actie — gebruiker weet niet of het gelukt is
+
+## Best practices
+
+✅ Elke destructieve actie: bevestiging via ConfirmDialog of ConfirmPopup
+
+✅ Elke succesvolle actie: Toast bevestiging
+
+✅ Formulierfouten: Message bovenaan + InlineMessage per veld
+
+✅ Systeemmeldingen: Message met juiste severity, sluitbaar maar persistent

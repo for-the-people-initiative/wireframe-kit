@@ -1,0 +1,51 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Tag/Rationale" />
+
+# Tag
+
+Een klein label dat metadata of categorieën toont — denk aan keywords, labels, of types.
+
+## Wanneer gebruiken ✅
+
+- **Categorisatie**: Type aanduiden (bijv. "Huur", "Koop", "Nieuwbouw")
+- **Labels op content**: Keywords op artikelen, skills op profielen
+- **Filters als visuele feedback**: Tonen welke filters actief zijn (mét verwijder-optie)
+- **Status in een lijst/kaart**: Kleine visuele indicator naast een titel
+
+## Wanneer NIET gebruiken ❌
+
+- **In tabellen die al filterknoppen hebben** — dan is de Tag redundant. Gebruik gewoon tekst.
+- **Als tellernotificatie** → gebruik [Badge](?path=/docs/components-badge-rationale--docs)
+- **Als interactieve chip** (verwijderbaar, selecteerbaar) → gebruik [Chip](?path=/docs/components-chip-rationale--docs)
+- **Voor statusindicatoren in dashboards** — overweeg gekleurde tekst of een dot/icoon
+- **Overal waar je >3 tags per item toont** — wordt visuele ruis, vat samen
+
+## Alternatieven
+
+| In plaats van Tag... | Gebruik... | Wanneer... |
+|---|---|---|
+| Badge | Numerieke notificatie (3 nieuwe berichten) |
+| Chip | Gebruiker kan item verwijderen of selecteren |
+| Gewone tekst | In een tabelcel waar de kolom al context geeft |
+| Gekleurde dot | Alleen status tonen (actief/inactief) |
+
+## Best practices
+
+✅ Gebruik severity/kleur om categorieën visueel te groeperen
+
+✅ Houd tag-tekst kort (1-3 woorden)
+
+✅ Gebruik `rounded` voor een zachtere look bij labels
+
+❌ Gebruik GEEN Tags in tabellen als er al gefilterd kan worden — dit was vandaag een veelgemaakte fout
+
+❌ Maak tags niet clickable tenzij ze echt iets doen (filter activeren)
+
+❌ Gebruik geen 5+ kleuren door elkaar — max 3-4 severity levels
+
+## Voorbeeld uit de praktijk
+
+> **Goed:** Een vastgoedkaart met tags "Huur" en "Appartement" om type aan te duiden.
+>
+> **Fout:** Een DataTable met een "Status" kolom waar elke rij een Tag "Actief"/"Inactief" heeft, terwijl er al een statusfilter boven de tabel zit. Gebruik daar gewoon tekst of een gekleurde dot.

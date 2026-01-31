@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Chip/Rationale" />
+
+# Chip
+
+Een compact, interactief element — typisch voor geselecteerde items die je kunt verwijderen, of filteropties.
+
+## Wanneer gebruiken ✅
+
+- **Geselecteerde filters**: Actieve filters tonen met een ✕ om te verwijderen
+- **Multi-select weergave**: Geselecteerde items uit een lijst (bijv. gekozen tags)
+- **Verwijderbare items**: Alles waar de gebruiker een item uit een set kan verwijderen
+- **Input tokens**: E-mailadressen in een "aan"-veld
+
+## Wanneer NIET gebruiken ❌
+
+- **Statisch label** → gebruik [Tag](?path=/docs/components-tag-rationale--docs)
+- **Notificatietelling** → gebruik [Badge](?path=/docs/components-badge-rationale--docs)
+- **Navigatie** → gebruik knoppen of links
+- **Als de gebruiker niks kan doen met het item** — dan is het een Tag, geen Chip
+
+## Het verschil: Tag vs Chip vs Badge
+
+| Component | Interactief? | Doel | Voorbeeld |
+|---|---|---|---|
+| **Tag** | Nee (of filter-klik) | Categoriseren, labelen | "Nieuwbouw", "Urgent" |
+| **Chip** | Ja (verwijderen, selecteren) | Selectie tonen/beheren | Geselecteerde filters met ✕ |
+| **Badge** | Nee | Tellen, notificeren | "3" op een inbox-icoon |
+
+## Best practices
+
+✅ Toon altijd een verwijder-icoon als de chip verwijderbaar is
+
+✅ Gebruik een avatar/icoon in de chip voor extra context (bijv. profielfoto bij naam)
+
+❌ Gebruik geen chips als statische labels — dat is wat Tags zijn
+
+❌ Maak niet meer dan ~10 chips zichtbaar — gebruik een "+5 meer" overflow

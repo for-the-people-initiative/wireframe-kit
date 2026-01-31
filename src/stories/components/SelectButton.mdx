@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/SelectButton/Rationale" />
+
+# SelectButton
+
+Een rij knoppen waaruit je één (of meerdere) opties kiest — visueel als een segmented control.
+
+## Wanneer gebruiken ✅
+
+- **2-5 opties**: Weergave wisselen (Lijst/Grid/Kaart), filter switchen
+- **De opties zijn gelijkwaardig**: Geen hiërarchie, allemaal even belangrijk
+- **Directe feedback**: Selectie verandert meteen de view
+- **Compact formulier**: Geslacht, ja/nee, of vergelijkbare korte keuzes
+
+## Wanneer NIET gebruiken ❌
+
+- **Navigatie tussen pagina's** → gebruik [Tabs](?path=/docs/components-tabs-rationale--docs) of [TabMenu](?path=/story/components-tabmenu--default)
+- **Meer dan 5 opties** → gebruik [Select](?path=/docs/components-select-rationale--docs) of RadioButtons
+- **Aan/uit toggle** → gebruik [ToggleSwitch](?path=/docs/components-toggleswitch-rationale--docs)
+- **Als je iconen + labels nodig hebt** → overweeg Tabs
+
+## Het verschil: SelectButton vs Tabs vs ToggleButton
+
+| Component | Doel | Navigeert? | Meerdere selectie? |
+|---|---|---|---|
+| **SelectButton** | Data/view filteren | Nee | Optioneel |
+| **Tabs** | Content-panelen wisselen | Ja (toont ander panel) | Nee |
+| **ToggleButton** | Één optie aan/uit | Nee | N.v.t. |
+| **RadioButton** | Formulier-keuze | Nee | Nee |
+
+## Best practices
+
+✅ Gebruik voor view-switching (lijst/grid/kaart)
+
+✅ Houd labels kort (1-2 woorden)
+
+✅ Zet de default/meest gebruikte optie als eerste
+
+❌ Mix niet met form-validatie — SelectButton is meer UI-control dan form-input
+
+❌ Gebruik niet voor ja/nee — daar is ToggleSwitch voor

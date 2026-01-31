@@ -1,0 +1,62 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Patronen/Data Weergeven" />
+
+# Data Weergeven
+
+Hoe kies je het juiste component om data te tonen? Gebruik deze beslisboom.
+
+## Beslisboom
+
+```
+Heb je gestructureerde data met kolommen?
+├── Ja → Moet de gebruiker sorteren/filteren?
+│   ├── Ja → DataTable
+│   └── Nee → Plain HTML <table>
+└── Nee → Is het visuele content (afbeeldingen, kaarten)?
+    ├── Ja → Cards in een grid
+    └── Nee → Is het hiërarchisch (parent-child)?
+        ├── Ja → Tree of TreeTable
+        └── Nee → Simpele lijst (<ul>) of DataView
+```
+
+## Componenten per scenario
+
+### Tabel met interactie → DataTable
+Voor lijsten met 5+ kolommen waar de gebruiker moet kunnen zoeken, sorteren, filteren.
+
+✅ Vastgoedoverzicht: adres, type, prijs, status, datum
+✅ Gebruikerslijst met rollen en permissies
+❌ Niet voor 2-3 velden — gebruik een simpele lijst
+
+### Visuele items → Cards
+Voor items waar een afbeelding of visuele preview belangrijk is.
+
+✅ Vastgoedobjecten met foto, prijs, adres
+✅ Teamleden met avatar en rol
+❌ Niet als je 50+ items moet vergelijken — gebruik een tabel
+
+### Hiërarchische data → Tree / TreeTable
+Voor data met parent-child relaties.
+
+✅ Organisatiestructuur
+✅ Bestandsstructuur
+✅ Categorieën met subcategorieën
+
+### Simpele opsomming → Lijst
+Voor korte lijsten zonder complexe data.
+
+✅ To-do items
+✅ Notificatielijst
+✅ Activiteitenlog
+
+## Tags, Badges en Chips in data-weergave
+
+| Wil je... | Gebruik... |
+|---|---|
+| Status aanduiden in een tabel | Gekleurde tekst of kleine dot — GEEN Tag als er al filters zijn |
+| Categorie labelen op een card | Tag |
+| Teller op een icoon | Badge |
+| Filterchips die verwijderbaar zijn | Chip |
+
+> ⚠️ **Belangrijke les:** Gebruik geen Tags in DataTable-cellen als de kolom al een filter heeft. De Tag voegt dan geen informatie toe, alleen visuele ruis.

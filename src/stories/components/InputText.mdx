@@ -1,0 +1,32 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/InputText/Rationale" />
+
+# InputText
+
+Een standaard tekstveld voor korte invoer — namen, e-mails, zoektermen.
+
+## Wanneer gebruiken ✅
+
+- **Korte tekst**: Naam, e-mail, telefoonnummer, zoekterm
+- **Eenregelig**: Invoer past op één regel
+- **Gestructureerde data**: Met `type="email"`, `type="tel"`, etc.
+
+## Wanneer NIET gebruiken ❌
+
+- **Meerdere regels tekst** → gebruik Textarea
+- **Rich text (opmaak, links)** → gebruik Editor
+- **Getallen met stappen** → gebruik InputNumber
+- **Wachtwoorden** → gebruik Password (heeft toggle-visibility)
+
+## Best practices
+
+✅ Gebruik altijd een `label` (via FloatLabel of los)
+
+✅ Gebruik het juiste `type` attribuut voor mobiele keyboards
+
+✅ Gebruik `size="small"` in compacte interfaces (tabellen, toolbars)
+
+❌ Gebruik geen placeholder als vervanging voor een label
+
+❌ Maak het veld niet breder dan de verwachte invoer (postcode hoeft geen 400px breed te zijn)

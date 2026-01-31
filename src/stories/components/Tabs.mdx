@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Tabs/Rationale" />
+
+# Tabs
+
+Content-panelen die je wisselt door op tabs te klikken — voor gerelateerde maar gescheiden content op dezelfde pagina.
+
+## Wanneer gebruiken ✅
+
+- **Gerelateerde content groepen**: "Overzicht / Details / Historie" op een detailpagina
+- **Formuliersecties**: Grote formulieren opsplitsen in logische stappen
+- **Dashboard views**: Verschillende perspectieven op dezelfde data
+
+## Wanneer NIET gebruiken ❌
+
+- **Primaire navigatie** → gebruik MenuBar of Sidebar
+- **Stappen in een wizard** → gebruik Steps (toont voortgang)
+- **Data filteren** → gebruik [SelectButton](?path=/docs/components-selectbutton-rationale--docs) (verandert niet de hele view)
+- **Meer dan 7 tabs** → heroverweeg je informatiearchitectuur
+- **Als tabs content verbergen die de gebruiker tegelijk moet zien** → gebruik Accordion of toon alles
+
+## Het verschil: Tabs vs TabMenu vs SelectButton vs Steps
+
+| Component | Doel | Toont content-panelen? | URL-navigatie? |
+|---|---|---|---|
+| **Tabs** | Content wisselen | Ja | Optioneel |
+| **TabMenu** | Pagina-navigatie | Nee (navigeert) | Ja |
+| **SelectButton** | Data/view filteren | Nee | Nee |
+| **Steps** | Wizard-voortgang | Optioneel | Optioneel |
+
+## Best practices
+
+✅ Eerste tab is altijd actief bij laden
+
+✅ Houd tab-labels kort (1-2 woorden)
+
+✅ Gebruik iconen + tekst als er ruimte is
+
+❌ Verberg geen kritieke informatie achter een tab die gebruikers makkelijk missen
+
+❌ Gebruik tabs niet als de content onder elke tab heel kort is — toon het dan gewoon onder elkaar

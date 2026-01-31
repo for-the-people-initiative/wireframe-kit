@@ -1,0 +1,38 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/ToggleSwitch/Rationale" />
+
+# ToggleSwitch
+
+Een aan/uit schakelaar — voor settings en binaire keuzes die direct effect hebben.
+
+## Wanneer gebruiken ✅
+
+- **Instellingen**: Notificaties aan/uit, dark mode, feature toggles
+- **Direct effect**: De actie wordt meteen uitgevoerd (geen "opslaan" knop nodig)
+- **Binaire keuze**: Aan/uit, actief/inactief
+
+## Wanneer NIET gebruiken ❌
+
+- **In een formulier met een submit-knop** → gebruik [Checkbox](?path=/story/components-checkbox--default)
+- **Keuze tussen 2 opties die geen aan/uit zijn** (bijv. "Lijst/Grid") → gebruik [SelectButton](?path=/docs/components-selectbutton-rationale--docs)
+- **Meerdere gerelateerde opties** → gebruik Checkbox-groep
+- **Ja/nee in een enquête** → gebruik RadioButtons
+
+## Het verschil: ToggleSwitch vs Checkbox vs ToggleButton
+
+| Component | Gebruik | Wanneer effect? | Context |
+|---|---|---|---|
+| **ToggleSwitch** | Aan/uit instelling | Direct | Settings, preferences |
+| **Checkbox** | Optie aanvinken | Bij submit | Formulieren |
+| **ToggleButton** | Modus activeren | Direct | Toolbar (bold, italic) |
+
+## Best practices
+
+✅ Plaats het label links, de switch rechts (consistent met mobiele patronen)
+
+✅ Gebruik een duidelijk label dat beschrijft wat "aan" betekent
+
+❌ Gebruik geen ToggleSwitch in een formulier met een "Opslaan" knop — dat is verwarrend (switch = directe actie, formulier = uitgestelde actie)
+
+❌ Groepeer niet meer dan 5-7 switches onder elkaar

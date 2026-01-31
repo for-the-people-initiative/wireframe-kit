@@ -1,0 +1,73 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Patronen/Formulieren" />
+
+# Formulieren
+
+Hoe bouw je goede formulieren met het design system?
+
+## Invoertypes kiezen
+
+### Tekst invoeren
+
+| Scenario | Component |
+|---|---|
+| Kort (naam, e-mail) | InputText |
+| Meerdere regels | Textarea |
+| Opgemaakt tekst | Editor |
+| Wachtwoord | Password |
+| Getal | InputNumber |
+| Getal met eenheid | InputNumber + prefix/suffix |
+
+### Één optie kiezen
+
+| Scenario | Component |
+|---|---|
+| 2 opties (aan/uit, direct effect) | ToggleSwitch |
+| 2-4 opties (formulier) | RadioButton |
+| 2-5 opties (visuele switch) | SelectButton |
+| 5-20 opties | Select (dropdown) |
+| 20+ opties | AutoComplete (met zoeken) |
+| Datum | Calendar / DatePicker |
+
+### Meerdere opties kiezen
+
+| Scenario | Component |
+|---|---|
+| Paar opties (altijd zichtbaar) | Checkbox-groep |
+| Veel opties (dropdown) | MultiSelect |
+| Veel opties (altijd zichtbaar) | ListBox |
+
+## Validatie tonen
+
+| Situatie | Component |
+|---|---|
+| Fout bij specifiek veld | InlineMessage onder het veld |
+| Samenvatting van fouten | Message (severity="error") bovenaan formulier |
+| Succes na submit | Toast (severity="success") |
+
+## Layout tips
+
+✅ Gebruik FloatLabel voor compacte formulieren
+
+✅ Groepeer gerelateerde velden met FieldSet
+
+✅ Gebruik een 2-koloms layout voor brede formulieren op desktop
+
+✅ Stack alles verticaal op mobiel
+
+❌ Gebruik geen placeholder als label-vervanging
+
+❌ Zet niet meer dan 7-10 velden op één scherm — gebruik Tabs of Steps
+
+## Do's en Don'ts
+
+✅ Primaire actie rechts, secundaire links ("Opslaan" | "Annuleren")
+
+✅ Disable de submit-knop tijdens het verwerken
+
+✅ Toon inline validatie bij blur (niet bij elke keystroke)
+
+❌ Gebruik geen ToggleSwitch in formulieren met een submit-knop (verwarrend: switch = direct, form = uitgesteld)
+
+❌ Gebruik geen Select voor ja/nee — dat is een ToggleSwitch of RadioButton

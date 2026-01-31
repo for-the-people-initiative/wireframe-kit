@@ -1,0 +1,40 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Badge/Rationale" />
+
+# Badge
+
+Een kleine numerieke of dot-indicator die je over een ander element legt — typisch voor notificaties en tellingen.
+
+## Wanneer gebruiken ✅
+
+- **Notificatietelling**: "3 nieuwe berichten" op een icoon of menu-item
+- **Status-dot**: Kleine bol om online/offline aan te duiden
+- **Aandachtstrekker**: Markeren dat er iets nieuws is
+
+## Wanneer NIET gebruiken ❌
+
+- **Als label/categorie** → gebruik [Tag](?path=/docs/components-tag-rationale--docs)
+- **Als verwijderbaar item** → gebruik [Chip](?path=/docs/components-chip-rationale--docs)
+- **Met lange tekst** — Badges zijn voor cijfers of dots, niet voor woorden
+- **Als statuslabel in een tabel** — gebruik tekst of Tag
+
+## Alternatieven
+
+| In plaats van Badge... | Gebruik... | Wanneer... |
+|---|---|---|
+| Tag | Je wilt een categorie of label tonen |
+| Chip | Interactief item (verwijderbaar) |
+| Tekst | In tabellen voor status |
+
+## Best practices
+
+✅ Gebruik `severity` om urgentie aan te duiden (danger = rood voor errors)
+
+✅ Houd het getal kort — toon "99+" in plaats van exacte grote getallen
+
+✅ Gebruik de dot-variant (zonder getal) als "er is iets nieuws" voldoende is
+
+❌ Plak geen Badge op alles — als alles een badge heeft, valt niks meer op
+
+❌ Gebruik Badge niet als decoratie

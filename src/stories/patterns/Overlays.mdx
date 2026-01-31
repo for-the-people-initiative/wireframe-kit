@@ -1,0 +1,56 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Patronen/Overlays" />
+
+# Overlays
+
+Wanneer gebruik je een modal, drawer, popover of tooltip?
+
+## Beslisboom
+
+```
+Moet de gebruiker iets doen?
+├── Ja → Is het een korte bevestiging?
+│   ├── Ja → ConfirmDialog of ConfirmPopup
+│   └── Nee → Is het een kort formulier?
+│       ├── Ja (< 5 velden) → Dialog
+│       └── Nee (lang formulier/detail) → Drawer of aparte pagina
+└── Nee → Wil je context-informatie tonen?
+    ├── Bij hover → Tooltip
+    ├── Bij klik (kort) → OverlayPanel / Popover
+    └── Belangrijke info → Message (inline, geen overlay)
+```
+
+## Componenten vergeleken
+
+| Component | Blokkeert pagina? | Grootte | Gebruik |
+|---|---|---|---|
+| **Dialog** | Ja (modal) | Klein-medium | Bevestigingen, korte formulieren |
+| **Drawer** | Optioneel | Groot (sidebar) | Detail-views, lange formulieren |
+| **OverlayPanel** | Nee | Klein | Context-info bij een element |
+| **Tooltip** | Nee | Zeer klein | Korte uitleg bij hover |
+| **ConfirmDialog** | Ja | Klein | Ja/nee bevestiging |
+| **ConfirmPopup** | Nee | Klein | Inline bevestiging bij trigger |
+
+## Wanneer GEEN overlay
+
+Niet alles hoeft een overlay te zijn:
+
+✅ **Inline editing**: Klik op tekst → wordt invoerveld (geen dialog nodig)
+✅ **Filters**: Inline op de pagina, niet in een dialog
+✅ **Foutmeldingen**: Message component, niet een error-dialog
+✅ **Lange content**: Aparte pagina, niet een mega-dialog
+
+## Do's en Don'ts
+
+✅ Gebruik Dialog voor dingen die focus vereisen (verwijderen, bevestigen)
+
+✅ Gebruik Drawer voor detail-views die de context behouden (master-detail)
+
+✅ Gebruik ConfirmPopup voor low-risk bevestigingen (minder disruptief dan Dialog)
+
+❌ Open geen overlay vanuit een overlay (dialog in dialog)
+
+❌ Gebruik geen Dialog voor informatie die ook inline kan
+
+❌ Maak geen fullscreen dialogen op desktop — dat is gewoon een pagina

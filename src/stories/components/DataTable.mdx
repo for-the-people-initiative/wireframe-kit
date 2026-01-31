@@ -1,0 +1,53 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/DataTable/Rationale" />
+
+# DataTable
+
+Een krachtige tabel voor gestructureerde data met sortering, filtering, paginatie en selectie.
+
+## Wanneer gebruiken ✅
+
+- **Gestructureerde data met meerdere kolommen**: Lijsten van items met vergelijkbare eigenschappen
+- **Data die gesorteerd/gefilterd moet worden**: Gebruiker wil zoeken, sorteren, filteren
+- **Bulk-acties**: Meerdere rijen selecteren voor batch-operaties
+- **Export nodig**: Data die geëxporteerd moet worden naar CSV/Excel
+
+## Wanneer NIET gebruiken ❌
+
+- **Minder dan 3 kolommen** — overweeg een simpele lijst of cards
+- **Visueel rijke content** → gebruik Cards of een DataView
+- **Mobiel-first interfaces** — tabellen werken slecht op kleine schermen, gebruik cards
+- **Simpele key-value data** — gebruik een description list (`<dl>`)
+- **Alleen lezen, geen interactie nodig** — overweeg een plain HTML `<table>`
+
+## Alternatieven
+
+| In plaats van DataTable... | Gebruik... | Wanneer... |
+|---|---|---|
+| Cards/DataView | Content is visueel (afbeeldingen, kaarten) |
+| Lijst (ul/ol) | Simpele opsomming zonder kolommen |
+| Plain HTML table | Statische data, geen sort/filter nodig |
+| TreeTable | Hiërarchische data (parent-child relaties) |
+
+## Best practices
+
+✅ Gebruik `paginator` bij >20 rijen
+
+✅ Maak kolommen sorteerbaar waar dat logisch is
+
+✅ Gebruik `filterDisplay="row"` voor inline filters bij veel data
+
+✅ Houd kolommen beperkt — toon de 5-7 belangrijkste, rest in een detail-view
+
+❌ Stop geen complexe componenten (dropdowns, editors) in elke cel
+
+❌ Gebruik geen Tags in statuscellen als er al een kolomfilter is — gewone tekst volstaat
+
+❌ Maak niet elke kolom filterbaar — focus op wat gebruikers echt zoeken
+
+## Voorbeeld uit de praktijk
+
+> **Vastgoed dashboard:** DataTable met kolommen: Adres, Type, Prijs, Status, Datum.
+> Status als gekleurde tekst (niet als Tag). Filters bovenaan voor Type en Status.
+> Klik op rij opent detail-view.
