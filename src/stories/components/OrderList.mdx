@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/OrderList/Rationale" />
+
+# OrderList
+
+Een lijst waarvan de gebruiker items kan herordenen via knoppen of drag-and-drop.
+
+## Wanneer gebruiken ✅
+
+- **Prioriteit instellen**: Taken, stappen, of items rangschikken
+- **Volgorde bepaalt uitkomst**: Menustructuur, slideshow-volgorde, regelvolgorde
+- **Kleine tot middelgrote lijsten**: 5-20 items die handmatig gesorteerd moeten worden
+- **Met drag-and-drop**: Intuïtieve herordening voor eindgebruikers
+
+## Wanneer NIET gebruiken ❌
+
+- **Items verplaatsen tussen twee lijsten** → gebruik [PickList](?path=/docs/components-picklist-rationale--docs)
+- **Sorteren op kolom (A-Z, datum)** → gebruik [DataTable](?path=/docs/components-datatable-rationale--docs) met sort
+- **Meer dan 30 items** — drag-and-drop wordt onhandig, overweeg een zoek/filter aanpak
+- **Volgorde doet er niet toe** → gewone lijst volstaat
+
+## Alternatieven
+
+| In plaats van OrderList... | Gebruik... | Wanneer... |
+|---|---|---|
+| PickList | Items tussen twee lijsten verplaatsen | Bron → doel selectie |
+| DataTable (sortable) | Sorteren op kolom | Automatische sortering |
+| Drag-and-drop lijst | Custom DnD implementatie | Complexe nestbare structuren |
+
+## Best practices
+
+✅ Toon een header die uitlegt wat de volgorde betekent
+
+✅ Bied zowel knoppen als drag-and-drop aan voor toegankelijkheid
+
+✅ Markeer het geselecteerde item duidelijk
+
+❌ Gebruik geen OrderList als de volgorde automatisch bepaald wordt — dan is het misleidend
+
+❌ Vergeet de save-actie niet — gebruikers verwachten dat herordening pas opgeslagen wordt na bevestiging

@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/ProgressSpinner/Rationale" />
+
+# ProgressSpinner
+
+Een draaiende cirkel die aangeeft dat er iets laadt — voor onbepaalde wachttijden.
+
+## Wanneer gebruiken ✅
+
+- **Laden zonder bekende voortgang**: API calls, data ophalen, authenticatie
+- **Inline laden**: Naast of in een component dat bezig is
+- **Overlay laden**: Over een sectie heen terwijl die ververst wordt
+- **Korte wachttijden**: Wanneer de actie <10 seconden duurt
+
+## Wanneer NIET gebruiken ❌
+
+- **Bekende voortgang** (50%, 75%) → gebruik [ProgressBar](?path=/docs/components-progressbar-rationale--docs)
+- **Hele pagina laden** → gebruik een skeleton loader of page-level loading state
+- **Langdurige processen** → toon een ProgressBar met percentage of stappen
+- **Wanneer er niets laadt** — klinkt logisch, maar spinners worden soms vergeten uit te zetten
+
+## Alternatieven
+
+| In plaats van ProgressSpinner... | Gebruik... | Wanneer... |
+|---|---|---|
+| ProgressBar | Balk met percentage | Bekende voortgang (upload, download) |
+| Skeleton | Grijze placeholders | Pagina-layout laden |
+| Inline tekst ("Laden...") | Tekst indicator | Minimale UI, screenreaders |
+
+## Best practices
+
+✅ Toon altijd een `aria-label` voor screenreaders
+
+✅ Gebruik een passende grootte — niet te groot, niet te klein voor de context
+
+✅ Verwijder de spinner zodra laden klaar is (klinkt obvious, maar bugs happen)
+
+❌ Toon geen spinner voor acties die <200ms duren — dat flikkert alleen maar
+
+❌ Laat gebruikers niet eindeloos naar een spinner staren — toon een foutmelding na timeout

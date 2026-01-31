@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Panel/Rationale" />
+
+# Panel
+
+Een container met header, content en optionele footer — inklapbaar als `toggleable` is ingeschakeld.
+
+## Wanneer gebruiken ✅
+
+- **Secties groeperen**: Gerelateerde content onder een titel samenvatten
+- **Inklapbare secties**: Formuliersecties, instellingen, of lange pagina's opdelen
+- **Dashboard widgets**: Elke widget in een eigen Panel met header
+- **Met header-acties**: Knoppen of iconen in de header (via `icons` slot)
+
+## Wanneer NIET gebruiken ❌
+
+- **Simpele container zonder header** → gebruik een `<div>` met styling of [Card](?path=/docs/components-card-rationale--docs)
+- **Tabbed content** → gebruik [Tabs](?path=/docs/components-tabs-rationale--docs)
+- **Accordeon (meerdere panels)** → gebruik Accordion component
+- **Modale content** → gebruik [Dialog](?path=/docs/components-dialog-rationale--docs)
+
+## Alternatieven
+
+| In plaats van Panel... | Gebruik... | Wanneer... |
+|---|---|---|
+| Card | Visuele container met afbeelding | Content cards, previews |
+| Accordion | Meerdere inklapbare secties | FAQ, instellingen-groepen |
+| Tabs | Geschakelde content | Verschillende views van dezelfde data |
+| Fieldset | Formuliersectie met legend | HTML-semantisch correcte formulieren |
+
+## Best practices
+
+✅ Gebruik `toggleable` voor lange formulieren — laat gebruikers secties inklappen
+
+✅ Houd de header beknopt (1 regel)
+
+✅ Gebruik het `icons` slot voor acties (bewerken, verwijderen, vernieuwen)
+
+❌ Nest geen Panels in Panels — gebruik dan een plattere structuur
+
+❌ Begin niet standaard ingeklapt als de content essentieel is — gebruikers missen het

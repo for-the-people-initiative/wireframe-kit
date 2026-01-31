@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Paginator/Rationale" />
+
+# Paginator
+
+Navigatiecomponent voor het bladeren door gepagineerde data — met paginanummers, vorige/volgende, en eerste/laatste knoppen.
+
+## Wanneer gebruiken ✅
+
+- **Grote datasets**: Zoekresultaten, productenlijsten, logboeken
+- **Wanneer de gebruiker specifieke pagina's wil**: "Ga naar pagina 5"
+- **Server-side paginering**: Data wordt per pagina opgehaald
+- **In combinatie met DataTable**: Als de tabel geen eigen paginering heeft
+
+## Wanneer NIET gebruiken ❌
+
+- **Minder dan 20 items** — toon alles, paginering is dan overhead
+- **Infinite scroll past beter** → bij social feeds, timelines, content-browsing
+- **Binnen een kleine card/widget** — Paginator neemt te veel ruimte in
+- **Alleen vorige/volgende nodig** → simpele knoppen volstaan
+
+## Alternatieven
+
+| In plaats van Paginator... | Gebruik... | Wanneer... |
+|---|---|---|
+| Infinite scroll | Automatisch laden bij scrollen | Social feeds, content streams |
+| "Load more" knop | Eén knop onderaan de lijst | Eenvoudige uitbreiding |
+| DataTable paginering | Ingebouwde tabel-paginering | Tabelcontext |
+
+## Best practices
+
+✅ Toon altijd het totaal aantal resultaten (`showInfo`)
+
+✅ Gebruik `showFirstLast` bij meer dan 10 pagina's
+
+✅ Sync paginator-state met de URL (query params) voor deelbare links
+
+❌ Toon niet meer dan 7 paginanummers tegelijk — gebruik ellipsis
+
+❌ Vergeet niet de pagina te resetten bij nieuwe zoekopdrachten of filters

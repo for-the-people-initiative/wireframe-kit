@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/PickList/Rationale" />
+
+# PickList
+
+Twee lijsten naast elkaar waartussen items verplaatst kunnen worden — het klassieke "bron → doel" patroon.
+
+## Wanneer gebruiken ✅
+
+- **Items toewijzen**: Gebruikers aan een groep, rechten aan een rol, producten aan een categorie
+- **Duidelijk bron/doel onderscheid**: "Beschikbaar" vs "Geselecteerd"
+- **Bulk-selectie**: Meerdere items tegelijk verplaatsen
+- **Wanneer context van beide lijsten belangrijk is**: Gebruiker moet zien wat er overblijft
+
+## Wanneer NIET gebruiken ❌
+
+- **Simpele meervoudige selectie** → gebruik [MultiSelect](?path=/docs/components-multiselect-rationale--docs)
+- **Herordenen binnen één lijst** → gebruik [OrderList](?path=/docs/components-orderlist-rationale--docs)
+- **Minder dan 5 items** → checkboxes zijn sneller
+- **Mobiel** — twee lijsten naast elkaar werken slecht op kleine schermen
+
+## Alternatieven
+
+| In plaats van PickList... | Gebruik... | Wanneer... |
+|---|---|---|
+| MultiSelect | Dropdown met meervoudige selectie | Compact, minder items |
+| Checkboxes | Aan/uit per item | Weinig opties (<8) |
+| OrderList | Eén lijst herordenen | Volgorde, niet toewijzing |
+| DataTable met selectie | Tabel met checkboxes | Veel kolommen per item |
+
+## Best practices
+
+✅ Geef beide lijsten een duidelijke header ("Beschikbaar" / "Geselecteerd")
+
+✅ Bied "Alles verplaatsen" knoppen aan voor bulk-acties
+
+✅ Gebruik het `item` slot voor rijkere weergave dan alleen tekst
+
+❌ Gebruik geen PickList met meer dan ~50 items per lijst — voeg dan filtering toe
+
+❌ Vergeet niet een lege-staat tekst te tonen via het `sourceEmpty`/`targetEmpty` slot

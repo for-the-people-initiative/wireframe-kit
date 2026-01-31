@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Rating/Rationale" />
+
+# Rating
+
+Sterren-invoer voor beoordelingen — klikbaar om een score te geven of readonly om een score te tonen.
+
+## Wanneer gebruiken ✅
+
+- **Reviews/beoordelingen**: Product, service, of ervaring beoordelen
+- **Kwaliteitsindicatie**: Moeilijkheidsgraad, prioriteit, of tevredenheid
+- **Formulier-invoer**: Gebruiker geeft 1-5 sterren
+- **Readonly weergave**: Gemiddelde score tonen bij een product
+
+## Wanneer NIET gebruiken ❌
+
+- **Meer dan 10 sterren** — gebruik dan een slider of numerieke input
+- **Halve sterren nodig** — dit component ondersteunt alleen hele sterren
+- **Binaire keuze (like/dislike)** → gebruik thumbs up/down knoppen
+- **Exacte numerieke score** → gebruik een InputNumber
+
+## Alternatieven
+
+| In plaats van Rating... | Gebruik... | Wanneer... |
+|---|---|---|
+| Slider | Schuifbalk 1-10 | Breder bereik nodig |
+| Like/Dislike knoppen | Twee knoppen | Binaire feedback |
+| InputNumber | Numeriek invoerveld | Exacte score (0-100) |
+| Emoji picker | Emoji-gebaseerde feedback | Speelsere UI |
+
+## Best practices
+
+✅ Gebruik `cancel` knop zodat gebruikers hun rating kunnen wissen
+
+✅ Gebruik `readonly` voor weergave van bestaande scores
+
+✅ Toon het aantal beoordelingen naast de sterren voor context
+
+❌ Maak een rating niet verplicht als het niet essentieel is — het irriteert gebruikers
+
+❌ Gebruik geen 10-sterren systeem — 5 is de standaard die iedereen begrijpt

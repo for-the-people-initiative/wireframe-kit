@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/MultiSelect/Rationale" />
+
+# MultiSelect
+
+Een dropdown waarmee meerdere opties geselecteerd kunnen worden — met optioneel filter en chip-weergave.
+
+## Wanneer gebruiken ✅
+
+- **Meerdere keuzes uit een lijst**: Tags toekennen, categorieën selecteren, filters instellen
+- **Meer dan 5 opties**: Waar checkboxes te veel ruimte innemen
+- **Met zoekfunctie**: Grote lijsten (10+) waar de gebruiker moet kunnen filteren
+- **Chip-weergave**: Visuele feedback van geselecteerde items
+
+## Wanneer NIET gebruiken ❌
+
+- **Enkele selectie** → gebruik [Select](?path=/docs/components-select-rationale--docs)
+- **2-4 opties** → gebruik checkboxes — sneller en overzichtelijker
+- **Ja/nee keuze** → gebruik [ToggleSwitch](?path=/docs/components-toggleswitch-rationale--docs)
+- **Volgorde is belangrijk** → gebruik [OrderList](?path=/docs/components-orderlist-rationale--docs) of [PickList](?path=/docs/components-picklist-rationale--docs)
+
+## Alternatieven
+
+| In plaats van MultiSelect... | Gebruik... | Wanneer... |
+|---|---|---|
+| Checkboxes | Minder dan 5 opties, altijd zichtbaar | Formulier met weinig keuzes |
+| Select | Enkele keuze | Maar één optie nodig |
+| PickList | Twee lijsten, items verplaatsen | Bron → doel patroon |
+| Chip input | Vrije tekst + selectie | Tags die ook getypt mogen worden |
+
+## Best practices
+
+✅ Gebruik `filter` bij meer dan 8 opties
+
+✅ Gebruik `display="chip"` voor visuele feedback van selectie
+
+✅ Toon een duidelijke placeholder ("Selecteer categorieën...")
+
+❌ Gebruik geen MultiSelect voor verplichte enkele keuze — verwarrend
+
+❌ Verberg niet hoeveel items geselecteerd zijn — toon altijd feedback

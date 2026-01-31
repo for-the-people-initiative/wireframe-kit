@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/MenuBar/Rationale" />
+
+# MenuBar
+
+Een horizontale menubalk met dropdown-submenu's — de standaard topnavigatie voor applicaties.
+
+## Wanneer gebruiken ✅
+
+- **Hoofdnavigatie**: Horizontale balk bovenaan de pagina
+- **Applicatiemenu**: File, Edit, View-achtige menustructuur
+- **5-8 top-level items**: Met optionele submenu's per item
+- **Desktop applicaties**: Waar een klassieke menubalk verwacht wordt
+
+## Wanneer NIET gebruiken ❌
+
+- **Meer dan 8 top-level items** → gebruik [MegaMenu](?path=/docs/components-megamenu-rationale--docs)
+- **Verticale sidebar navigatie** → gebruik [PanelMenu](?path=/docs/components-panelmenu-rationale--docs)
+- **Contextmenu (rechtermuisklik)** → gebruik [Menu](?path=/docs/components-menu-rationale--docs) met contextmenu-trigger
+- **Mobiel-first** — MenuBar wordt krap op kleine schermen
+
+## Alternatieven
+
+| In plaats van MenuBar... | Gebruik... | Wanneer... |
+|---|---|---|
+| MegaMenu | Grote navigatie met kolommen | Veel categorieën (10+) |
+| PanelMenu | Verticale accordeon-navigatie | Sidebar in dashboards |
+| Menu | Enkele dropdown | Contextmenu of actie-menu |
+| Tabs | Horizontale navigatie zonder dropdown | Secties op één pagina |
+
+## Best practices
+
+✅ Houd top-level labels kort (1-2 woorden)
+
+✅ Gebruik separators om logische groepen in submenu's te scheiden
+
+✅ Voeg keyboard-navigatie toe (pijltjestoetsen werken standaard)
+
+❌ Neem niet meer dan 2 niveaus diep — gebruik dan MegaMenu
+
+❌ Mix geen links en buttons willekeurig — wees consistent

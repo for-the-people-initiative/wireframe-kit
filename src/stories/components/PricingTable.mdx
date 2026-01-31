@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/PricingTable/Rationale" />
+
+# PricingTable
+
+Een grid van PricingCards die abonnementen of pakketten naast elkaar toont — voor SaaS pricing pages.
+
+## Wanneer gebruiken ✅
+
+- **Pricing pagina**: Abonnementen vergelijken (Basic, Pro, Enterprise)
+- **Pakketten/plans**: Diensten met verschillende features en prijzen
+- **2-4 opties naast elkaar**: Visuele vergelijking stimuleren
+- **Eén "aanbevolen" plan uitlichten**: Met highlighted PricingCard
+
+## Wanneer NIET gebruiken ❌
+
+- **Meer dan 4 plans** — wordt onoverzichtelijk, vat samen of gebruik een vergelijkingstabel
+- **Producten met veel variabelen** → gebruik een DataTable of configurator
+- **Geen pricing context** — dit component is specifiek voor prijs/feature vergelijking
+- **Mobiel als primair platform** — cards worden gestapeld, vergelijking wordt lastiger
+
+## Alternatieven
+
+| In plaats van PricingTable... | Gebruik... | Wanneer... |
+|---|---|---|
+| DataTable | Feature-vergelijkingsmatrix | Veel features, meer dan 4 plans |
+| Card grid | Generieke kaarten | Niet-pricing content |
+| Accordion | Features per plan uitklappen | Mobiel-first |
+
+## Best practices
+
+✅ Beperk tot 3-4 kolommen — meer maakt vergelijken moeilijker
+
+✅ Licht het populairste plan visueel uit (highlighted/featured)
+
+✅ Houd feature-lijsten gelijk qua lengte voor visuele balans
+
+❌ Verstop geen kosten in kleine lettertjes — wees transparant
+
+❌ Gebruik geen PricingTable voor niet-pricing vergelijkingen — het wekt de verkeerde verwachting

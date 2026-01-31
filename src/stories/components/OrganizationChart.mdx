@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/OrganizationChart/Rationale" />
+
+# OrganizationChart
+
+Een visuele boomstructuur die hiërarchische relaties toont — typisch voor organigrammen.
+
+## Wanneer gebruiken ✅
+
+- **Teamstructuur**: Wie rapporteert aan wie, afdelingen en rollen
+- **Hiërarchische data**: Organisatie, productcategorieën, besluitbomen
+- **Selecteerbare nodes**: Wanneer je een node wilt kunnen aanklikken voor detail
+- **Inklapbare takken**: Grote bomen beheersbaar maken
+
+## Wanneer NIET gebruiken ❌
+
+- **Platte lijsten** → gebruik een gewone lijst of [DataTable](?path=/docs/components-datatable-rationale--docs)
+- **Procesflows of workflows** — dit is geen flowchart-tool
+- **Meer dan ~50 nodes** — wordt onleesbaar, overweeg zoek/filter of een dedicated tool
+- **Mobiel** — boomstructuren werken slecht op kleine schermen
+
+## Alternatieven
+
+| In plaats van OrganizationChart... | Gebruik... | Wanneer... |
+|---|---|---|
+| Tree/TreeTable | Boomstructuur als lijst | Meer data per node, compacter |
+| DataTable met nesting | Hiërarchische tabel | Tabelvorm gewenst |
+| Mermaid/D3 diagram | Complexe grafieken | Niet-hiërarchische relaties |
+
+## Best practices
+
+✅ Houd node-content kort (naam + rol/type)
+
+✅ Gebruik `collapsible` voor bomen met meer dan 3 niveaus
+
+✅ Bied een custom slot aan voor rijkere node-content
+
+❌ Probeer geen horizontale scroll te forceren — beperk de breedte of maak takken inklapbaar
+
+❌ Gebruik dit niet als vervanging voor een echte flowchart-library

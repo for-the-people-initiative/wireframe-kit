@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/PanelMenu/Rationale" />
+
+# PanelMenu
+
+Een verticaal accordeon-menu met uitklapbare secties — ideaal voor sidebar-navigatie.
+
+## Wanneer gebruiken ✅
+
+- **Sidebar navigatie**: Dashboard, admin panel, instellingenpagina's
+- **Gegroepeerde menu-items**: Categorieën met sub-items
+- **Veel navigatielinks**: Waar een plat menu te lang zou worden
+- **Meerdere niveaus**: Ondersteuning voor geneste submenu's
+
+## Wanneer NIET gebruiken ❌
+
+- **Horizontale navigatie** → gebruik [MenuBar](?path=/docs/components-menubar-rationale--docs)
+- **Simpel menu zonder groepen** → gebruik [Menu](?path=/docs/components-menu-rationale--docs)
+- **Mega-navigatie met kolommen** → gebruik [MegaMenu](?path=/docs/components-megamenu-rationale--docs)
+- **Tabs voor content-switching** → gebruik [Tabs](?path=/docs/components-tabs-rationale--docs)
+
+## Alternatieven
+
+| In plaats van PanelMenu... | Gebruik... | Wanneer... |
+|---|---|---|
+| MenuBar | Horizontale topnavigatie | Hoofdnavigatie bovenaan |
+| Menu | Plat verticaal menu | Geen groepen nodig |
+| MegaMenu | Grote multi-kolom navigatie | E-commerce, portals |
+| Tree | Boomstructuur navigatie | Bestandssysteem-achtig |
+
+## Best practices
+
+✅ Markeer het actieve item visueel (via `active` property)
+
+✅ Houd panel-headers kort en beschrijvend
+
+✅ Gebruik iconen bij headers voor snelle herkenning
+
+❌ Maak niet meer dan 3 niveaus diep — wordt onoverzichtelijk
+
+❌ Open niet alle panels standaard — laat de gebruiker kiezen

@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/OverlayPanel/Rationale" />
+
+# OverlayPanel
+
+Een zwevend paneel dat verschijnt naast een trigger-element — voor contextuele content zonder de pagina te verlaten.
+
+## Wanneer gebruiken ✅
+
+- **Snel detail tonen**: Gebruikersprofiel bij hover/klik op een naam
+- **Inline formuliertjes**: Snel een notitie toevoegen, een setting wijzigen
+- **Contextuele acties**: Extra opties bij een knop zonder volledige Dialog
+- **Preview-content**: Meer info tonen zonder navigatie
+
+## Wanneer NIET gebruiken ❌
+
+- **Eenvoudige tooltip** → gebruik [PopOver](?path=/docs/components-popover-rationale--docs) of Tooltip
+- **Complexe formulieren** → gebruik [Dialog](?path=/docs/components-dialog-rationale--docs) — OverlayPanel is te klein
+- **Navigatiemenu's** → gebruik [Menu](?path=/docs/components-menu-rationale--docs)
+- **Bevestigingsacties** → gebruik een Dialog of inline confirm
+
+## Alternatieven
+
+| In plaats van OverlayPanel... | Gebruik... | Wanneer... |
+|---|---|---|
+| PopOver | Tooltip-achtige content met pijl | Korte tekst, hover-trigger |
+| Dialog | Modaal venster | Complex formulier, bevestiging |
+| Menu | Lijst met acties | Keuze uit opties |
+| Sidebar | Groot detailpaneel | Veel content nodig |
+
+## Best practices
+
+✅ Positioneer automatisch — het paneel past zich aan aan beschikbare ruimte
+
+✅ Gebruik `dismissable` zodat klikken buiten het paneel het sluit
+
+✅ Houd content compact — het is een overlay, geen pagina
+
+❌ Nest geen OverlayPanels in elkaar — verwarrend en buggy
+
+❌ Gebruik geen OverlayPanel voor content die altijd zichtbaar moet zijn

@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Row/Rationale" />
+
+# Row
+
+Een gestylede tabelrij (`<tr>`) met ondersteuning voor selectie, striping en hover-effecten.
+
+## Wanneer gebruiken ✅
+
+- **In combinatie met DataTable**: Als je custom rij-styling nodig hebt
+- **Selecteerbare rijen**: Visuele feedback wanneer een rij geselecteerd is
+- **Zebra-striping**: Afwisselende rijkleuren voor leesbaarheid
+- **Hover-effecten**: Interactieve tabellen waar rijen klikbaar zijn
+
+## Wanneer NIET gebruiken ❌
+
+- **Buiten een tabel-context** — Row is een `<tr>`, gebruik het niet als generieke container
+- **DataTable regelt het al** → als je DataTable gebruikt, regelt die de rijen zelf
+- **Layout-doeleinden** → gebruik CSS Grid of Flexbox
+- **Kaart-gebaseerde lijsten** → gebruik [Card](?path=/docs/components-card-rationale--docs) in een grid
+
+## Alternatieven
+
+| In plaats van Row... | Gebruik... | Wanneer... |
+|---|---|---|
+| DataTable | Complete tabel met sorteren/filteren | Standaard tabelweergave |
+| Card in grid | Kaarten naast elkaar | Visuele content |
+| Flexbox/Grid | CSS layout | Geen tabel-semantiek nodig |
+
+## Best practices
+
+✅ Gebruik `isHoverable` voor klikbare rijen — geeft visuele affordance
+
+✅ Gebruik `isStriped` bij tabellen met veel rijen voor leesbaarheid
+
+✅ Combineer `isSelected` met een klik-handler voor rij-selectie
+
+❌ Gebruik Row niet standalone — het is een `<tr>` en hoort in een `<table>`
+
+❌ Mix niet handmatig Row met DataTable's eigen rij-rendering

@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/RadioButton/Rationale" />
+
+# RadioButton
+
+Een keuzerondje voor het selecteren van precies één optie uit een groep — de standaard voor exclusieve keuzes.
+
+## Wanneer gebruiken ✅
+
+- **Exclusieve keuze**: Geslacht, betaalmethode, bezorgoptie — precies één antwoord
+- **2-5 opties die altijd zichtbaar zijn**: Gebruiker moet alle opties tegelijk kunnen zien
+- **Formulieren**: Waar de keuze direct zichtbaar en begrijpelijk moet zijn
+- **Vergelijking stimuleren**: Alle opties naast/onder elkaar helpt bij bewuste keuze
+
+## Wanneer NIET gebruiken ❌
+
+- **Meer dan 5 opties** → gebruik [Select](?path=/docs/components-select-rationale--docs) dropdown
+- **Aan/uit toggle** → gebruik [ToggleSwitch](?path=/docs/components-toggleswitch-rationale--docs)
+- **Meerdere selecties mogelijk** → gebruik checkboxes of [MultiSelect](?path=/docs/components-multiselect-rationale--docs)
+- **Knoppen die er beter uitzien** → gebruik [SelectButton](?path=/docs/components-selectbutton-rationale--docs) voor visuele keuze
+
+## Alternatieven
+
+| In plaats van RadioButton... | Gebruik... | Wanneer... |
+|---|---|---|
+| Select | Dropdown | Meer dan 5 opties, ruimte besparen |
+| SelectButton | Knoppen naast elkaar | Visuele keuze (S/M/L/XL) |
+| ToggleSwitch | Aan/uit toggle | Binaire instelling |
+| Checkboxes | Meervoudige selectie | Meer dan één optie toegestaan |
+
+## Best practices
+
+✅ Groepeer radio buttons met hetzelfde `name` attribuut
+
+✅ Selecteer altijd een standaard-optie — laat geen "niets geselecteerd" toe
+
+✅ Gebruik `size` consistent binnen een formulier
+
+❌ Gebruik geen radio button voor een ja/nee keuze — een ToggleSwitch of checkbox is beter
+
+❌ Zet radio buttons niet horizontaal als de labels lang zijn — verticaal is leesbaarder

@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/MeterGroup/Rationale" />
+
+# MeterGroup
+
+Een gestapelde voortgangsbalk die meerdere waarden tegelijk toont — ideaal voor opslagverdeling, budgetten, of compositie-data.
+
+## Wanneer gebruiken ✅
+
+- **Verdeling tonen**: Hoe opslagruimte verdeeld is (foto's, video's, documenten)
+- **Budget/uitgaven**: Categorieën binnen een totaal visualiseren
+- **Samenstelling**: Teamverdeling, marktaandeel, of resource-allocatie
+- **Meerdere waarden in één balk**: Waar een enkele ProgressBar niet volstaat
+
+## Wanneer NIET gebruiken ❌
+
+- **Één enkele waarde** → gebruik [ProgressBar](?path=/docs/components-progressbar-rationale--docs)
+- **Vergelijking tussen losse items** → gebruik een staafdiagram
+- **Exacte percentages zijn cruciaal** — de balk is visueel, niet exact. Voeg labels toe.
+- **Meer dan 5-6 segmenten** — wordt onleesbaar, vat samen
+
+## Alternatieven
+
+| In plaats van MeterGroup... | Gebruik... | Wanneer... |
+|---|---|---|
+| ProgressBar | Enkele voortgangswaarde | Upload, laden |
+| Donut/Pie chart | Verdeling met meer detail | Rapportages |
+| DataTable | Exacte getallen per categorie | Wanneer precisie > visueel |
+
+## Best practices
+
+✅ Gebruik maximaal 4-5 segmenten met duidelijke kleuren
+
+✅ Toon labels met percentages boven of naast de balk
+
+✅ Gebruik semantische kleuren (success, warning, danger) waar logisch
+
+❌ Gebruik geen kleuren die te veel op elkaar lijken — segmenten moeten onderscheidbaar zijn
+
+❌ Laat de `max` prop niet weg als je totaal niet 100 is

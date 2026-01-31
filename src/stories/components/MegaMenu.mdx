@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/MegaMenu/Rationale" />
+
+# MegaMenu
+
+Een uitklapbaar navigatiemenu dat meerdere kolommen met submenu-items toont — voor sites met veel categorieën.
+
+## Wanneer gebruiken ✅
+
+- **Grote navigatiestructuur**: E-commerce, portals, of corporate sites met 20+ pagina's
+- **Categorieën met subcategorieën**: Producten → Elektronica → Laptops, Telefoons, etc.
+- **Desktop-first navigatie**: Waar hover-interactie natuurlijk aanvoelt
+- **Als je visuele hiërarchie wilt**: Kolommen groeperen gerelateerde links
+
+## Wanneer NIET gebruiken ❌
+
+- **Minder dan 5-7 navigatie-items** → gebruik [MenuBar](?path=/docs/components-menubar-rationale--docs)
+- **Mobiel-first apps** — MegaMenu's zijn desktop-patronen; op mobiel wordt het een hamburger
+- **Interne tools/dashboards** → gebruik [PanelMenu](?path=/docs/components-panelmenu-rationale--docs) als sidebar
+- **Simpele dropdowns** → gebruik [Menu](?path=/docs/components-menu-rationale--docs)
+
+## Alternatieven
+
+| In plaats van MegaMenu... | Gebruik... | Wanneer... |
+|---|---|---|
+| MenuBar | Platte navigatie zonder mega-dropdown | Minder dan ~7 items |
+| PanelMenu | Sidebar navigatie met accordeons | Dashboard/admin |
+| Menu | Simpele dropdown lijst | Eén niveau diep |
+| Breadcrumb | Locatie tonen in diepe structuur | Aanvulling, geen vervanging |
+
+## Best practices
+
+✅ Beperk tot maximaal 4-5 kolommen per dropdown — meer is overweldigend
+
+✅ Gebruik duidelijke categorie-labels boven elke kolom
+
+✅ Test de mobiele hamburger-variant grondig
+
+❌ Verstop geen cruciale navigatie alleen in het mega-menu — belangrijke pagina's moeten ook anders bereikbaar zijn
+
+❌ Gebruik geen MegaMenu voor minder dan 10 navigatielinks — overkill

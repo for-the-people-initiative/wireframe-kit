@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/PopOver/Rationale" />
+
+# PopOver
+
+Een zwevende content-ballon met pijl die verschijnt bij hover, klik, of focus op een trigger-element.
+
+## Wanneer gebruiken ✅
+
+- **Uitleg bij een element**: Extra context bij een icoon, label, of knop
+- **Rijkere tooltips**: Wanneer je meer wilt tonen dan platte tekst (links, afbeeldingen, etc.)
+- **Niet-blokkerende info**: Content die de pagina niet verstoort
+- **Hover-previews**: Snelle preview van een item zonder navigatie
+
+## Wanneer NIET gebruiken ❌
+
+- **Interactieve formulieren** → gebruik [OverlayPanel](?path=/docs/components-overlaypanel-rationale--docs) of [Dialog](?path=/docs/components-dialog-rationale--docs)
+- **Enkel platte tekst** → gebruik een native `title` attribuut of Tooltip
+- **Menu's met acties** → gebruik [Menu](?path=/docs/components-menu-rationale--docs)
+- **Content die altijd zichtbaar moet zijn** — PopOver is tijdelijk
+
+## Alternatieven
+
+| In plaats van PopOver... | Gebruik... | Wanneer... |
+|---|---|---|
+| Tooltip (title) | Native browser tooltip | Één regel tekst |
+| OverlayPanel | Zwevend paneel zonder pijl | Formulieren, complexe content |
+| Dialog | Modaal venster | Bevestiging, grote formulieren |
+| Menu | Actielijst | Keuze uit opties |
+
+## Best practices
+
+✅ Gebruik `position` om de pijl logisch te plaatsen (top bij elementen onderaan, etc.)
+
+✅ Gebruik `hover` trigger voor info, `click` trigger voor interactieve content
+
+✅ Houd PopOver-content compact — max 2-3 regels of een kleine preview
+
+❌ Maak cruciale informatie niet alleen beschikbaar via PopOver — niet iedereen hovert
+
+❌ Gebruik geen PopOver op touch devices met `hover` trigger — die werkt niet

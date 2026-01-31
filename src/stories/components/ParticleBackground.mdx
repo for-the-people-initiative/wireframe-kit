@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/ParticleBackground/Rationale" />
+
+# ParticleBackground
+
+Een canvas-gebaseerde achtergrond met bewegende deeltjes en sterren — voor visueel indrukwekkende hero-secties en landing pages.
+
+## Wanneer gebruiken ✅
+
+- **Hero secties**: Landing page header met wow-factor
+- **Login/onboarding schermen**: Sfeervolle achtergrond bij minimalistische UI
+- **Portfolio/creatieve sites**: Visuele flair die past bij het merk
+- **Donkere thema's**: Sterrenhemel-effect op donkere achtergronden
+
+## Wanneer NIET gebruiken ❌
+
+- **Content-heavy pagina's** — leidt af van de tekst
+- **Mobiel met beperkte performance** — canvas-animaties kosten batterij en CPU
+- **Zakelijke/formele applicaties** — ongepast voor een accountancy-dashboard
+- **Achter formulieren of tekst die gelezen moet worden** — leesbaarheid gaat voor
+
+## Alternatieven
+
+| In plaats van ParticleBackground... | Gebruik... | Wanneer... |
+|---|---|---|
+| CSS gradient | Simpele kleurovergang | Subtiele achtergrond |
+| Statische afbeelding | Hero image | Foto-gebaseerde branding |
+| CSS animation | Simpele beweging | Lichtgewicht effect |
+| Lottie animatie | Complexere animatie | Specifiek geanimeerd ontwerp |
+
+## Best practices
+
+✅ Gebruik `fixed` voor een achtergrond die niet meescrollt
+
+✅ Houd `particleCount` laag op mobiel (≤50) voor performance
+
+✅ Test performance op low-end devices — reduceer particles of schakel uit
+
+❌ Gebruik niet op elke pagina — het verliest zijn impact
+
+❌ Combineer niet met andere zware animaties op dezelfde pagina
+
+❌ Vergeet niet `parallax` uit te schakelen op touch devices
