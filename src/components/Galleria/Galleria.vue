@@ -83,7 +83,9 @@
       <Transition name="galleria-fullscreen">
         <div
           v-if="fullscreenVisible"
+          ref="fullscreenRef"
           class="galleria__fullscreen"
+          tabindex="0"
           @click="closeFullscreen"
           @keydown.escape="closeFullscreen"
           @keydown.left="prev"
@@ -142,7 +144,7 @@
 
 <script setup lang="ts">
 import type { GalleriaProps, GalleriaEmits } from '../../types';
-import { computed, ref, watch, onMounted, onUnmounted } from "vue";
+import { computed, ref, watch, onMounted, onUnmounted, nextTick } from "vue";
 
 defineOptions({ name: 'FtpGalleria' });
 
@@ -163,6 +165,7 @@ const emit = defineEmits(["update:activeIndex", "show", "hide"]);
 
 const internalIndex = ref(props.activeIndex);
 const fullscreenVisible = ref(false);
+const fullscreenRef = ref<HTMLElement | null>(null);
 const autoplayTimer = ref<ReturnType<typeof setInterval> | null>(null);
 
 const activeIndex = computed({
@@ -217,6 +220,7 @@ const onPreviewClick = () => {
 const openFullscreen = () => {
   fullscreenVisible.value = true;
   document.body.style.overflow = "hidden";
+  nextTick(() => fullscreenRef.value?.focus());
   emit("show");
 };
 
