@@ -1169,6 +1169,25 @@
   --knob-focus-ringColor: #f97316; /* Focus ring color */
   --knob-focus-ringOffset: 2px; /* Focus ring offset */
   --knob-transition-duration: 100ms; /* Value change transition */
+  --lightbox-overlay-background: rgba(0, 0, 0, 0.92); /* Lightbox overlay backdrop color */
+  --lightbox-zIndex-overlay: 2000; /* Overlay z-index (above dialogs) */
+  --lightbox-nav-size: 48px; /* Navigation button size */
+  --lightbox-nav-iconSize: 24px; /* Navigation icon size */
+  --lightbox-nav-color-default: rgba(255, 255, 255, 0.8); /* Nav button color */
+  --lightbox-nav-color-hover: #ffffff; /* Nav button hover color */
+  --lightbox-nav-background-default: rgba(255, 255, 255, 0.1); /* Nav button background */
+  --lightbox-nav-background-hover: rgba(255, 255, 255, 0.2); /* Nav button hover background */
+  --lightbox-nav-radius: 9999px; /* Nav button border radius */
+  --lightbox-closeButton-size: 40px; /* Close button size */
+  --lightbox-closeButton-iconSize: 20px; /* Close icon size */
+  --lightbox-counter-color: rgba(255, 255, 255, 0.7); /* Counter text color */
+  --lightbox-counter-fontSize: 14px; /* Counter font size */
+  --lightbox-thumbnail-size: 64px; /* Thumbnail width/height */
+  --lightbox-thumbnail-gap: 6px; /* Gap between thumbnails */
+  --lightbox-thumbnail-radius: 5px; /* Thumbnail border radius */
+  --lightbox-thumbnail-border-active: #ffffff; /* Active thumbnail border color */
+  --lightbox-thumbnail-opacity-default: 0.5; /* Inactive thumbnail opacity */
+  --lightbox-thumbnail-opacity-active: 1; /* Active thumbnail opacity */
   --listbox-padding: 6px; /* Container padding */
   --listbox-radius: 5px; /* Container border radius */
   --listbox-border-width: 1px;

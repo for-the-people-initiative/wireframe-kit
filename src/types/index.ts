@@ -957,6 +957,34 @@ export interface KnobEmits {
 }
 
 // ============================================================
+// Lightbox
+// ============================================================
+
+export interface LightboxImage {
+  src: string
+  thumbnail?: string
+  alt?: string
+  [key: string]: unknown
+}
+
+export interface LightboxProps {
+  images?: (string | LightboxImage)[]
+  visible?: boolean
+  activeIndex?: number
+  showThumbnails?: boolean
+  showCounter?: boolean
+  closeOnClickOutside?: boolean
+  zoom?: boolean
+}
+
+export interface LightboxEmits {
+  (e: 'update:visible', value: boolean): void
+  (e: 'update:activeIndex', value: number): void
+  (e: 'show'): void
+  (e: 'hide'): void
+}
+
+// ============================================================
 // ListBox
 // ============================================================
 

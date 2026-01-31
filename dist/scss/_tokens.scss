@@ -1283,6 +1283,27 @@ $knob-focus-ringColor: var(--knob-focus-ringColor); // Focus ring color
 $knob-focus-ringOffset: var(--knob-focus-ringOffset); // Focus ring offset
 $knob-transition-duration: var(--knob-transition-duration); // Value change transition
 
+// Lightbox
+$lightbox-overlay-background: var(--lightbox-overlay-background); // Lightbox overlay backdrop color
+$lightbox-zIndex-overlay: var(--lightbox-zIndex-overlay); // Overlay z-index (above dialogs)
+$lightbox-nav-size: var(--lightbox-nav-size); // Navigation button size
+$lightbox-nav-iconSize: var(--lightbox-nav-iconSize); // Navigation icon size
+$lightbox-nav-color-default: var(--lightbox-nav-color-default); // Nav button color
+$lightbox-nav-color-hover: var(--lightbox-nav-color-hover); // Nav button hover color
+$lightbox-nav-background-default: var(--lightbox-nav-background-default); // Nav button background
+$lightbox-nav-background-hover: var(--lightbox-nav-background-hover); // Nav button hover background
+$lightbox-nav-radius: var(--lightbox-nav-radius); // Nav button border radius
+$lightbox-closeButton-size: var(--lightbox-closeButton-size); // Close button size
+$lightbox-closeButton-iconSize: var(--lightbox-closeButton-iconSize); // Close icon size
+$lightbox-counter-color: var(--lightbox-counter-color); // Counter text color
+$lightbox-counter-fontSize: var(--lightbox-counter-fontSize); // Counter font size
+$lightbox-thumbnail-size: var(--lightbox-thumbnail-size); // Thumbnail width/height
+$lightbox-thumbnail-gap: var(--lightbox-thumbnail-gap); // Gap between thumbnails
+$lightbox-thumbnail-radius: var(--lightbox-thumbnail-radius); // Thumbnail border radius
+$lightbox-thumbnail-border-active: var(--lightbox-thumbnail-border-active); // Active thumbnail border color
+$lightbox-thumbnail-opacity-default: var(--lightbox-thumbnail-opacity-default); // Inactive thumbnail opacity
+$lightbox-thumbnail-opacity-active: var(--lightbox-thumbnail-opacity-active); // Active thumbnail opacity
+
 // Listbox
 $listbox-padding: var(--listbox-padding); // Container padding
 $listbox-radius: var(--listbox-radius); // Container border radius

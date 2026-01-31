@@ -1,0 +1,119 @@
+{
+  "lightbox": {
+    "overlay": {
+      "background": {
+        "value": "rgba(0, 0, 0, 0.92)",
+        "type": "color",
+        "description": "Lightbox overlay backdrop color"
+      }
+    },
+    "zIndex": {
+      "overlay": {
+        "value": "2000",
+        "type": "number",
+        "description": "Overlay z-index (above dialogs)"
+      }
+    },
+    "nav": {
+      "size": {
+        "value": "48px",
+        "type": "dimension",
+        "description": "Navigation button size"
+      },
+      "iconSize": {
+        "value": "24px",
+        "type": "dimension",
+        "description": "Navigation icon size"
+      },
+      "color": {
+        "default": {
+          "value": "rgba(255, 255, 255, 0.8)",
+          "type": "color",
+          "description": "Nav button color"
+        },
+        "hover": {
+          "value": "#ffffff",
+          "type": "color",
+          "description": "Nav button hover color"
+        }
+      },
+      "background": {
+        "default": {
+          "value": "rgba(255, 255, 255, 0.1)",
+          "type": "color",
+          "description": "Nav button background"
+        },
+        "hover": {
+          "value": "rgba(255, 255, 255, 0.2)",
+          "type": "color",
+          "description": "Nav button hover background"
+        }
+      },
+      "radius": {
+        "value": "{radius.full}",
+        "type": "dimension",
+        "description": "Nav button border radius"
+      }
+    },
+    "closeButton": {
+      "size": {
+        "value": "40px",
+        "type": "dimension",
+        "description": "Close button size"
+      },
+      "iconSize": {
+        "value": "20px",
+        "type": "dimension",
+        "description": "Close icon size"
+      }
+    },
+    "counter": {
+      "color": {
+        "value": "rgba(255, 255, 255, 0.7)",
+        "type": "color",
+        "description": "Counter text color"
+      },
+      "fontSize": {
+        "value": "14px",
+        "type": "dimension",
+        "description": "Counter font size"
+      }
+    },
+    "thumbnail": {
+      "size": {
+        "value": "64px",
+        "type": "dimension",
+        "description": "Thumbnail width/height"
+      },
+      "gap": {
+        "value": "{space.xs}",
+        "type": "dimension",
+        "description": "Gap between thumbnails"
+      },
+      "radius": {
+        "value": "{radius.default}",
+        "type": "dimension",
+        "description": "Thumbnail border radius"
+      },
+      "border": {
+        "active": {
+          "value": "#ffffff",
+          "type": "color",
+          "description": "Active thumbnail border color"
+        }
+      },
+      "opacity": {
+        "default": {
+          "value": "0.5",
+          "type": "number",
+          "description": "Inactive thumbnail opacity"
+        },
+        "active": {
+          "value": "1",
+          "type": "number",
+          "description": "Active thumbnail opacity"
+        }
+      }
+    }
+  }
+}
