@@ -707,10 +707,14 @@ export interface GalleriaProps {
   showThumbnails?: boolean
   showItemNavigators?: boolean
   showIndicators?: boolean
+  showCounter?: boolean
+  showFullscreenThumbnails?: boolean
+  enableZoom?: boolean
   circular?: boolean
   autoplay?: boolean
   autoplayInterval?: number
   thumbnailsPosition?: Position
+  transition?: 'fade' | 'slide' | 'none'
 }
 
 export interface GalleriaEmits {

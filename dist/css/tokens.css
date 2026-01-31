@@ -616,7 +616,7 @@
   --dataTable-header-borderColor: #1a2244; /* Header border color */
   --dataTable-body-background-default: #11162d; /* Row background color */
   --dataTable-body-background-hover: #060813; /* Row hover background */
-  --dataTable-body-background-striped: #0d1225; /* Alternate row background */
+  --dataTable-body-background-striped: #fafafa; /* Alternate row background */
   --dataTable-body-color: #ffffff; /* Body text color */
   --dataTable-body-padding: 16px; /* Body cell padding */
   --dataTable-body-fontSize: 14px; /* Body font size */
