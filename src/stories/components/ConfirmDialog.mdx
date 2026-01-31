@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/ConfirmDialog/Rationale" />
+
+# ConfirmDialog
+
+Een modale dialoog die de gebruiker vraagt een actie te bevestigen of af te wijzen — met header, bericht, icoon en twee knoppen.
+
+## Wanneer gebruiken ✅
+
+- **Destructieve acties**: "Weet je zeker dat je dit wilt verwijderen?"
+- **Onomkeerbare bewerkingen**: Account deactiveren, data wissen
+- **Kritieke beslissingen**: Bestelling plaatsen, contract ondertekenen
+- **Wanneer context nodig is**: Met `icon` (warning/danger) en uitleg in het bericht
+
+## Wanneer NIET gebruiken ❌
+
+- **Voor elke actie** — "confirm fatigue" maakt dat gebruikers blind op OK klikken
+- **Voor informatie tonen** → gebruik [Dialog](?path=/docs/components-dialog-rationale--docs) of [Alert](?path=/docs/components-alert-rationale--docs)
+- **Bij inline context** (bijv. naast een knop) → gebruik [ConfirmPopup](?path=/docs/components-confirmpopup-rationale--docs)
+- **Als de actie makkelijk ongedaan te maken is** — bevestiging is dan overbodig, bied undo aan
+
+## Alternatieven
+
+| In plaats van ConfirmDialog... | Gebruik... | Wanneer... |
+|---|---|---|
+| ConfirmPopup | Lichtgewicht bevestiging naast de trigger-knop |
+| Dialog | Complexere content dan alleen bevestiging |
+| Toast met undo | Actie direct uitvoeren + mogelijkheid om terug te draaien |
+| Inline bevestiging | Knop verandert in "Bevestig" na eerste klik |
+
+## Best practices
+
+✅ Gebruik `icon="warning"` voor waarschuwingen en `icon="danger"` voor destructief
+
+✅ Maak het bericht specifiek: "Verwijder project 'Mijn App'?" ipv "Weet je het zeker?"
+
+✅ Maak de reject-knop duidelijk — "Annuleren", niet "Nee"
+
+❌ Gebruik ConfirmDialog NIET voor routine-acties (opslaan, navigeren)
+
+❌ Maak de accept-knop niet groen bij destructieve acties — gebruik rood/danger

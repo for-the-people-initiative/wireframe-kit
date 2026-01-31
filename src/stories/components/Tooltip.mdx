@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Tooltip/Rationale" />
+
+# Tooltip
+
+Een kleine popup die extra informatie toont bij hover of focus op een element.
+
+## Wanneer gebruiken ✅
+
+- **Icon-only buttons**: Uitleg wat de knop doet
+- **Afgekapte tekst**: Volledige tekst tonen bij hover
+- **Formulierhulp**: Korte uitleg bij een label of icoon
+- **Afkortingen**: Wat betekent "KPI" of "SLA"
+
+## Wanneer NIET gebruiken ❌
+
+- **Essentiële informatie** — tooltips zijn niet zichtbaar op mobiel/touch
+- **Lange teksten** — meer dan één zin? Gebruik een popover of inline tekst
+- **Interactieve content** (links, knoppen) — een tooltip verdwijnt bij muisbeweging
+- **Formuliervalidatie** — gebruik inline foutmeldingen
+
+## Alternatieven
+
+| In plaats van Tooltip... | Gebruik... | Wanneer... |
+|---|---|---|
+| Inline tekst | Informatie is essentieel |
+| Popover | Langere tekst of interactieve content |
+| Help-icoon + Dialog | Uitgebreide uitleg nodig |
+| `title` attribuut | Simpele native tooltip volstaat |
+
+## Best practices
+
+✅ Houd tooltip-tekst kort (max 1-2 zinnen)
+
+✅ Voeg tooltips toe aan icon-only buttons — altijd
+
+✅ Gebruik `position` om overlap met andere elementen te voorkomen
+
+❌ Verberg geen cruciale informatie in tooltips — mobiele gebruikers zien ze niet
+
+❌ Zet geen tooltip op een element dat al een duidelijk label heeft
+
+❌ Gebruik geen `showDelay` >300ms — dat voelt traag

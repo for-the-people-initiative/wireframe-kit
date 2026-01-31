@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/TreeSelect/Rationale" />
+
+# TreeSelect
+
+Een dropdown die een boomstructuur toont — selecteer items uit een hiërarchie.
+
+## Wanneer gebruiken ✅
+
+- **Categorie-selectie**: Kies een subcategorie uit een geneste structuur
+- **Locatie-selectie**: Land → Provincie → Stad
+- **Afdeling kiezen**: Organisatie → Team → Rol
+- **Formulieren**: Waar een hiërarchische keuze nodig is
+
+## Wanneer NIET gebruiken ❌
+
+- **Platte lijst** → gebruik [Select](?path=/docs/components-select-rationale--docs)
+- **Altijd zichtbare boom** → gebruik [Tree](?path=/docs/components-tree-rationale--docs)
+- **Meerdere afhankelijke dropdowns** — gebruik cascading Selects (Land → Stad)
+- **Meer dan 3 niveaus** — wordt onwerkbaar in een dropdown
+
+## Alternatieven
+
+| In plaats van TreeSelect... | Gebruik... | Wanneer... |
+|---|---|---|
+| Select | Platte lijst volstaat |
+| Tree | Boom moet altijd zichtbaar zijn |
+| Cascading Selects | Niveaus apart selecteren |
+| Autocomplete | Zoeken in een grote hiërarchie |
+
+## Best practices
+
+✅ Gebruik `filter` zodat gebruikers snel kunnen zoeken
+
+✅ Toon het volledige pad in de trigger ("Elektronica > Telefoons > Samsung")
+
+✅ Klap het eerste niveau standaard open
+
+❌ Stop geen enorme bomen (500+ nodes) in een dropdown
+
+❌ Gebruik geen TreeSelect als een gewone Select volstaat — keep it simple

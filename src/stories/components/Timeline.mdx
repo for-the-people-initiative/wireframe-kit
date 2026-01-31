@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Timeline/Rationale" />
+
+# Timeline
+
+Een verticale of horizontale tijdlijn die events in chronologische volgorde toont.
+
+## Wanneer gebruiken ✅
+
+- **Activiteitenlog**: Wijzigingsgeschiedenis van een item
+- **Procesoverzicht**: Stappen die zijn doorlopen (bestelling, aanvraag)
+- **Bedrijfsgeschiedenis**: Mijlpalen op een about-pagina
+- **Projectplanning**: Milestones en deadlines visualiseren
+
+## Wanneer NIET gebruiken ❌
+
+- **Toekomstige stappen die de gebruiker moet doorlopen** → gebruik [Steps](?path=/docs/components-steps-rationale--docs)
+- **Kalender-events** — gebruik een kalender-component
+- **Meer dan 20 events** — wordt een eindeloze lijst, pagineer of filter
+- **Tabelvormige data** — als je wilt sorteren/filteren, gebruik een DataTable
+
+## Alternatieven
+
+| In plaats van Timeline... | Gebruik... | Wanneer... |
+|---|---|---|
+| Steps | Interactieve voortgang, niet historisch |
+| DataTable | Sorteerbare/filterbare eventlijst |
+| Card-lijst | Events met veel content per item |
+
+## Best practices
+
+✅ Sorteer chronologisch (nieuwste eerst óf oudste eerst, maar wees consistent)
+
+✅ Gebruik `opposite` slot voor datums en `content` slot voor details
+
+✅ Kleur markers per type event voor visueel onderscheid
+
+❌ Mix geen tijdschalen (uren en jaren) in dezelfde timeline
+
+❌ Overlaad events niet met te veel tekst — houd het scanbaar

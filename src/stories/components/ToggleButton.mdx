@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/ToggleButton/Rationale" />
+
+# ToggleButton
+
+Een button die aan/uit-toestanden toont — met aparte labels en iconen per staat.
+
+## Wanneer gebruiken ✅
+
+- **Favoriet/bookmark**: Hart-icoon dat wisselt tussen gevuld en leeg
+- **Mute/unmute**: Audio-toggle in een interface
+- **View-modus**: Lijst/grid weergave wisselen
+- **Feature toggles**: Optie aan/uitzetten met visuele feedback
+
+## Wanneer NIET gebruiken ❌
+
+- **Formulier-instellingen** (aan/uit) → gebruik [ToggleSwitch](?path=/docs/components-toggleswitch-rationale--docs) — dat is de conventie
+- **Meerkeuze uit een groep** → gebruik [SelectButton](?path=/docs/components-selectbutton-rationale--docs)
+- **Submit-acties** — een ToggleButton is geen actie-button
+
+## Alternatieven
+
+| In plaats van ToggleButton... | Gebruik... | Wanneer... |
+|---|---|---|
+| ToggleSwitch | Aan/uit in een formulier (settings) |
+| SelectButton | Keuze uit 2+ opties in een groep |
+| Checkbox | Formulier met label ernaast |
+| IconButton | Alleen icoon, geen tekst |
+
+## Best practices
+
+✅ Gebruik `aria-pressed` (wordt automatisch gezet) voor toegankelijkheid
+
+✅ Geef duidelijke `onLabel`/`offLabel` zodat de staat helder is
+
+✅ Gebruik verschillende iconen per staat (`onIcon`/`offIcon`)
+
+❌ Gebruik geen ToggleButton als de gebruiker niet kan zien welke staat actief is
+
+❌ Maak de button niet te groot — het is een toggle, geen call-to-action

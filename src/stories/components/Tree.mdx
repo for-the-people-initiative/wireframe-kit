@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Tree/Rationale" />
+
+# Tree
+
+Een hiërarchische boomstructuur met uitklapbare nodes — voor navigatie of selectie in geneste data.
+
+## Wanneer gebruiken ✅
+
+- **Bestandsbrowser**: Mappen en bestanden navigeren
+- **Categorieën**: Hiërarchische categorie-selectie
+- **Organisatiestructuur**: Afdelingen en teams
+- **Navigatie**: Documentatie met geneste secties
+
+## Wanneer NIET gebruiken ❌
+
+- **Platte lijst** — gebruik een gewone lijst of Select
+- **Minder dan 2 niveaus** — een Tree is overkill voor een simpele lijst
+- **Selectie van één item uit een platte lijst** → gebruik [Select](?path=/docs/components-select-rationale--docs)
+- **Tabulaire data** → gebruik [TreeTable](?path=/docs/components-treetable-rationale--docs)
+
+## Alternatieven
+
+| In plaats van Tree... | Gebruik... | Wanneer... |
+|---|---|---|
+| TreeSelect | Boom in een dropdown (selectie) |
+| TreeTable | Hiërarchische data met kolommen |
+| TieredMenu | Navigatie-menu met submenu's |
+| Accordion | Content tonen/verbergen per sectie |
+
+## Best practices
+
+✅ Gebruik `filter` bij grote bomen zodat gebruikers kunnen zoeken
+
+✅ Definieer duidelijke `keyField`, `labelField` en `childrenField`
+
+✅ Gebruik `selectionMode` (single/multiple) passend bij de use case
+
+❌ Laad geen bomen met 1000+ nodes in één keer — gebruik lazy loading
+
+❌ Klap niet alles standaard open — begin met level 0-1 open

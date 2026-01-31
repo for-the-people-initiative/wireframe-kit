@@ -1,0 +1,43 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Textarea/Rationale" />
+
+# Textarea
+
+Een meervoudig-regel tekstveld voor langere input.
+
+## Wanneer gebruiken ✅
+
+- **Opmerkingen/notities**: Vrije tekst invoer in formulieren
+- **Beschrijvingen**: Product- of profielbeschrijving
+- **Berichten**: Contact- of feedbackformulieren
+- **Code-invoer**: Korte code-snippets (zonder syntax highlighting)
+
+## Wanneer NIET gebruiken ❌
+
+- **Korte input** (naam, e-mail) → gebruik [InputText](?path=/docs/components-inputtext-rationale--docs)
+- **Rich text** (bold, links, afbeeldingen) — gebruik een rich text editor
+- **Wachtwoorden** — gebruik een password input
+- **Getallen** — gebruik een numeriek inputveld
+
+## Alternatieven
+
+| In plaats van Textarea... | Gebruik... | Wanneer... |
+|---|---|---|
+| InputText | Één regel volstaat |
+| Rich text editor | Opmaak nodig (WYSIWYG) |
+| Terminal | Command-line interactie |
+
+## Best practices
+
+✅ Gebruik `autoResize` zodat het veld meegroeit met de content
+
+✅ Stel een passend `rows` aantal in als startgrootte
+
+✅ Voeg een `placeholder` toe die het verwachte formaat aangeeft
+
+✅ Gebruik `isInvalid` met `aria-describedby` voor foutmeldingen
+
+❌ Stel geen maximale hoogte in die te klein is — laat het veld groeien
+
+❌ Gebruik geen Textarea voor gestructureerde data (JSON, CSV) — bouw daar een specifiek component voor

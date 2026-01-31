@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/SplitButton/Rationale" />
+
+# SplitButton
+
+Een button met twee delen: een primaire actie (links) en een dropdown met alternatieven (rechts).
+
+## Wanneer gebruiken ✅
+
+- **Eén hoofdactie + varianten**: "Opslaan" als primair, "Opslaan als concept" / "Opslaan & sluiten" in dropdown
+- **Export-opties**: "Download PDF" als primair, "CSV" / "Excel" in dropdown
+- **E-mail acties**: "Verstuur" als primair, "Plan in" / "Verstuur later" in dropdown
+
+## Wanneer NIET gebruiken ❌
+
+- **Gelijkwaardige opties** → gebruik [SelectButton](?path=/docs/components-selectbutton-rationale--docs) of [Menu](?path=/docs/components-menu-rationale--docs)
+- **Meer dan 5 opties** — wordt een verborgen menu, gebruik een echte Menu
+- **Alleen één actie** — gebruik een gewone Button
+- **Navigatie** — SplitButton is voor acties
+
+## Alternatieven
+
+| In plaats van SplitButton... | Gebruik... | Wanneer... |
+|---|---|---|
+| Button | Maar één actie nodig |
+| SpeedDial | Floating context met meerdere acties |
+| Menu + Button | Alle opties even belangrijk |
+| SelectButton | Gebruiker kiest modus, niet actie |
+
+## Best practices
+
+✅ De meest gebruikte actie is de primaire (linkerkant)
+
+✅ Houd dropdown-opties gerelateerd aan de hoofdactie
+
+✅ Gebruik duidelijke labels — geen "Meer opties"
+
+❌ Verstop geen destructieve acties (verwijderen) in de dropdown
+
+❌ Gebruik niet als vervanging voor een formulier met keuzes

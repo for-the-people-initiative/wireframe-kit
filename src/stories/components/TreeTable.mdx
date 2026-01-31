@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/TreeTable/Rationale" />
+
+# TreeTable
+
+Een tabel met uitklapbare rijen — hiërarchische data met kolommen.
+
+## Wanneer gebruiken ✅
+
+- **Bestandsbeheer**: Naam, grootte, type, datum in kolommen
+- **Budget-overzichten**: Categorie → Subcategorie → Post met bedragen
+- **Organisatie**: Afdeling → Team → Medewerker met details
+- **Project breakdown**: WBS met uren, kosten, status per level
+
+## Wanneer NIET gebruiken ❌
+
+- **Platte data** → gebruik [DataTable](?path=/docs/components-datatable-rationale--docs)
+- **Alleen hiërarchie zonder kolommen** → gebruik [Tree](?path=/docs/components-tree-rationale--docs)
+- **Meer dan 4 niveaus** — wordt visueel verwarrend door de indentatie
+- **Mobiel** — brede tabellen met nesting werken slecht op kleine schermen
+
+## Alternatieven
+
+| In plaats van TreeTable... | Gebruik... | Wanneer... |
+|---|---|---|
+| DataTable | Platte data zonder hiërarchie |
+| Tree | Hiërarchie zonder kolommen |
+| Accordion + tabel | Per sectie een platte tabel |
+| Grouped DataTable | Eén niveau groepering volstaat |
+
+## Best practices
+
+✅ Maak de eerste kolom de boom-kolom (met expand/collapse)
+
+✅ Gebruik `striped` voor betere leesbaarheid
+
+✅ Beperk tot 3-4 niveaus diep
+
+❌ Zet geen acties/knoppen in elke rij — dat wordt visuele chaos
+
+❌ Sorteer niet op kolommen die de hiërarchie breken

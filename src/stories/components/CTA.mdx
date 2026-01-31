@@ -1,0 +1,43 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/CTA/Rationale" />
+
+# CTA (Call to Action)
+
+Een opvallend blok met titel, beschrijving en actie-knoppen — ontworpen om de gebruiker naar één duidelijke actie te leiden.
+
+## Wanneer gebruiken ✅
+
+- **Landing pages**: "Start je gratis proefperiode" met prominente knop
+- **Einde van een pagina/sectie**: Afsluiter die de gebruiker aanzet tot actie
+- **Marketing-blokken**: Upgrade, contact, aanmelden
+- **Lege states**: "Nog geen projecten — maak er een aan" als variant
+
+## Wanneer NIET gebruiken ❌
+
+- **Voor gewone knoppen in een formulier** → gebruik [Button](?path=/docs/components-button-rationale--docs)
+- **Als navigatie-element** — CTA is voor conversie, niet voor navigatie
+- **Meerdere CTA's op één pagina** — als alles schreeuwt, hoort niemand iets
+- **In compacte UI** (tabellen, sidebars) — te groot en te prominent
+
+## Alternatieven
+
+| In plaats van CTA... | Gebruik... | Wanneer... |
+|---|---|---|
+| Button | Simpele actie zonder context/beschrijving |
+| Card | Content-blok met optionele actie |
+| Alert | Actie gekoppeld aan een melding (bijv. "Verifieer je email") |
+
+## Best practices
+
+✅ Gebruik `variant="banner"` voor brede, opvallende blokken
+
+✅ Houd de titel kort (max 8 woorden) en de beschrijving tot 1-2 zinnen
+
+✅ Eén primaire actie per CTA — niet twee gelijkwaardige knoppen
+
+✅ Gebruik `alignment` om de CTA passend te positioneren in de layout
+
+❌ Gebruik geen CTA voor informatie zonder actie — dan is het een Card of Alert
+
+❌ Stapel geen CTA's boven elkaar — kies de belangrijkste

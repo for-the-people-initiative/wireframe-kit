@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Steps/Rationale" />
+
+# Steps
+
+Een stappen-indicator die voortgang toont in een multi-step proces.
+
+## Wanneer gebruiken ✅
+
+- **Wizards**: Registratie, onboarding, checkout
+- **Formulieren in stappen**: Wanneer een formulier te lang is voor één pagina
+- **Processen**: Bestelstatus, aanvraagflow, goedkeuringsproces
+
+## Wanneer NIET gebruiken ❌
+
+- **Navigatie tussen ongerelateerde pagina's** → gebruik [TabMenu](?path=/docs/components-tabmenu-rationale--docs)
+- **Meer dan 7 stappen** — heroverweeg het proces, dat is te veel
+- **Lineaire content** (artikel lezen) → gebruik gewoon scrollen
+- **Wanneer stappen optioneel zijn** — Steps impliceert een vaste volgorde
+
+## Alternatieven
+
+| In plaats van Steps... | Gebruik... | Wanneer... |
+|---|---|---|
+| TabMenu | Stappen zijn niet lineair/volgorde-afhankelijk |
+| ProgressBar | Alleen percentage tonen, niet individuele stappen |
+| Timeline | Historische events, niet toekomstige stappen |
+| Breadcrumb | Navigatiehiërarchie, niet procesvoortgang |
+
+## Best practices
+
+✅ Toon duidelijk welke stap actief is en welke voltooid zijn
+
+✅ Maak voltooide stappen klikbaar zodat gebruikers terug kunnen
+
+✅ Houd staplabels kort (1-3 woorden)
+
+❌ Gebruik `readonly` niet standaard — gebruikers willen terug kunnen navigeren
+
+❌ Begin niet bij stap 3 van 5 — toon altijd alle stappen voor context

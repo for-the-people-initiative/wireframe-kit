@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/ConfirmPopup/Rationale" />
+
+# ConfirmPopup
+
+Een lichtgewicht bevestigingspopup die naast het trigger-element verschijnt — minder intrusief dan een ConfirmDialog.
+
+## Wanneer gebruiken ✅
+
+- **Inline verwijderknop**: "Verwijder dit item" in een lijst of tabel
+- **Snelle bevestiging**: Wanneer een volledige dialog overkill is
+- **Contextgerelateerde acties**: De popup verschijnt bij de knop, dus de context is duidelijk
+- **Niet-kritieke destructieve acties**: Item uit een lijst verwijderen (niet account wissen)
+
+## Wanneer NIET gebruiken ❌
+
+- **Voor kritieke/onomkeerbare acties** → gebruik [ConfirmDialog](?path=/docs/components-confirmdialog-rationale--docs) (meer visueel gewicht)
+- **Als er veel uitleg nodig is** — de popup is compact, niet geschikt voor lange teksten
+- **Op mobiel** — popups positioneren lastig, overweeg een Dialog
+- **Als de trigger niet zichtbaar is** — de popup heeft een anker-element nodig
+
+## Alternatieven
+
+| In plaats van ConfirmPopup... | Gebruik... | Wanneer... |
+|---|---|---|
+| ConfirmDialog | Kritieke actie die een modale context vereist |
+| Toast met undo | Direct uitvoeren + ongedaan maken |
+| Dubbele klik-patroon | Knop verandert tekst na eerste klik |
+
+## Best practices
+
+✅ Positioneer de popup dicht bij de trigger — de `target` prop koppelt aan het element
+
+✅ Houd het bericht kort (1 zin)
+
+✅ Gebruik duidelijke labels: "Verwijderen" / "Annuleren"
+
+❌ Gebruik niet voor acties die extra informatie van de gebruiker vereisen — dan is een Dialog beter
+
+❌ Toon niet meerdere ConfirmPopups tegelijk

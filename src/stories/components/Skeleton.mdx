@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Skeleton/Rationale" />
+
+# Skeleton
+
+Een placeholder-animatie die de vorm van content nabootst terwijl die aan het laden is.
+
+## Wanneer gebruiken ✅
+
+- **Initiële page load**: Toon skeletons in plaats van een lege pagina
+- **Kaarten en lijsten**: Simuleer de layout terwijl data binnenkomt
+- **Profielafbeeldingen**: Cirkel-skeleton als avatar placeholder
+- **Dashboards**: Stats en grafieken die nog laden
+
+## Wanneer NIET gebruiken ❌
+
+- **Acties die <200ms duren** — dan flitst de skeleton en is het verwarrend
+- **Na een user-actie** → gebruik een spinner of [ProgressBar](?path=/docs/components-progressbar-rationale--docs)
+- **Bij errors** — toon een error state, geen eeuwig ladende skeleton
+- **Als de layout onbekend is** — skeleton werkt alleen als je de vorm kent
+
+## Alternatieven
+
+| In plaats van Skeleton... | Gebruik... | Wanneer... |
+|---|---|---|
+| ProgressBar | Voortgang van een upload/proces |
+| Spinner | Korte actie na klik |
+| Lege state | Content is geladen maar leeg |
+
+## Best practices
+
+✅ Maak skeletons die de echte content qua vorm en grootte nabootsen
+
+✅ Gebruik `wave` animatie voor een subtiel laadeffect
+
+✅ Combineer meerdere skeletons om een kaart of lijst te simuleren
+
+❌ Toon skeletons niet langer dan 3-5 seconden — daarna is er waarschijnlijk een probleem
+
+❌ Gebruik geen skeleton als permanente placeholder voor optionele content

@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Sidebar/Rationale" />
+
+# Sidebar
+
+Een overlay-panel dat van de zijkant inschuift — voor formulieren, detail-views, of navigatie.
+
+## Wanneer gebruiken ✅
+
+- **Detail-weergave**: Item aanklikken in een lijst → details in sidebar tonen
+- **Formulieren**: Snel een item bewerken zonder de pagina te verlaten
+- **Mobiele navigatie**: Hamburger menu dat van links inschuift
+- **Filters**: Complex filterpanel op mobile
+
+## Wanneer NIET gebruiken ❌
+
+- **Korte bevestigingen** → gebruik [Dialog](?path=/docs/components-dialog-rationale--docs)
+- **Notificaties** → gebruik [Toast](?path=/docs/components-toast-rationale--docs)
+- **Permanente navigatie** — dat is een layout-sidebar, geen overlay
+- **Wanneer content de volle aandacht nodig heeft** — gebruik dan een volledige pagina
+
+## Alternatieven
+
+| In plaats van Sidebar... | Gebruik... | Wanneer... |
+|---|---|---|
+| Dialog | Korte actie of bevestiging |
+| Nieuwe pagina/route | Complexe formulieren met meerdere stappen |
+| Drawer (CSS) | Permanente sidebar die inklapt |
+
+## Best practices
+
+✅ Gebruik `position` prop (left/right/top/bottom) passend bij de use case
+
+✅ Maak de sidebar `closable` en sluit bij Escape
+
+✅ Geef altijd een `header` mee voor context
+
+❌ Zet geen hele CRUD-pagina in een sidebar — als het te complex wordt, maak een aparte route
+
+❌ Open geen sidebar vanuit een sidebar

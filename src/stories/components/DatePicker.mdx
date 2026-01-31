@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/DatePicker/Rationale" />
+
+# DatePicker
+
+Een simpele datum-invoer met een popup Calendar — de makkelijkste manier om een datum te selecteren in een formulier.
+
+## Wanneer gebruiken ✅
+
+- **Formuliervelden**: Geboortedatum, startdatum, deadline kiezen
+- **Filters**: Datum selecteren om data te filteren
+- **Wanneer je een nette input + calendar wilt**: DatePicker wraps Calendar met positionering en formatting
+
+## Wanneer NIET gebruiken ❌
+
+- **Als je meer controle nodig hebt** → gebruik [Calendar](?path=/docs/components-calendar-rationale--docs) direct (inline, range, etc.)
+- **Voor datum + tijd** — DatePicker doet alleen datums
+- **Als de gebruiker de datum al weet** — een tekstveld met validatie is sneller dan klikken
+- **Op mobiel** — overweeg native `<input type="date">` voor betere UX
+
+## Alternatieven
+
+| In plaats van DatePicker... | Gebruik... | Wanneer... |
+|---|---|---|
+| Calendar (inline) | Altijd zichtbare kalender nodig |
+| Calendar (popup) | Meer opties nodig (range, minDate, etc.) |
+| InputText | Datum wordt getypt, niet gekozen |
+| Native date input | Mobiel-first, OS-native picker |
+
+## Best practices
+
+✅ Gebruik `minDate` en `maxDate` om het bereik te beperken
+
+✅ Stel een logisch `format` in voor je doelgroep (bijv. `dd-MM-yyyy` voor NL)
+
+✅ Zorg voor een duidelijke `placeholder` ("Kies een datum")
+
+❌ Gebruik DatePicker niet voor datums ver in het verleden zonder jaar-navigatie
+
+❌ Vergeet niet `disabled` state te stijlen wanneer het veld niet beschikbaar is

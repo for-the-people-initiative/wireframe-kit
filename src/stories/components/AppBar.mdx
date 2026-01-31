@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/AppBar/Rationale" />
+
+# AppBar
+
+De vaste header bovenaan je applicatie — bevat logo, navigatie en acties via `start`, default en `end` slots.
+
+## Wanneer gebruiken ✅
+
+- **Applicatie-header**: Logo links, navigatie in het midden, user-acties rechts
+- **Vaste top-bar**: Met `fixed` altijd zichtbaar tijdens scrollen
+- **Branding-element**: Met `color` of `transparent` aanpassen aan de pagina
+
+## Wanneer NIET gebruiken ❌
+
+- **Als simpele navigatiebalk** zonder branding → gebruik een gewone `<nav>`
+- **Als toolbar binnen content** → gebruik een eigen flex-container
+- **Voor bottom-navigatie op mobiel** → gebruik [Dock](?path=/docs/components-dock-rationale--docs)
+
+## Alternatieven
+
+| In plaats van AppBar... | Gebruik... | Wanneer... |
+|---|---|---|
+| Dock | Navigatie onderaan het scherm (mobiel) |
+| Menu | Dropdown-navigatie zonder vaste bar |
+| Breadcrumb | Hiërarchische navigatie binnen content |
+
+## Best practices
+
+✅ Gebruik `fixed` voor apps waar de header altijd bereikbaar moet zijn
+
+✅ Combineer met `transparent` voor hero-secties waar de bar over content valt
+
+✅ Gebruik `elevated` (standaard aan) voor visuele scheiding — zet uit bij transparante headers
+
+❌ Prop niet te veel items in de AppBar — houd het bij logo, 3-5 nav-items, en 1-2 acties
+
+❌ Gebruik geen AppBar in een embedded widget of component — het is bedoeld als app-level element

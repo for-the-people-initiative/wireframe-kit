@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Checkbox/Rationale" />
+
+# Checkbox
+
+Een boolean invoerveld — aan of uit, met optionele indeterminate state voor "gedeeltelijk geselecteerd".
+
+## Wanneer gebruiken ✅
+
+- **Meerdere opties selecteren**: "Kies je interesses" (meerdere antwoorden mogelijk)
+- **Voorwaarden accepteren**: "Ik ga akkoord met de voorwaarden"
+- **Bulk-selectie in lijsten**: "Selecteer alle" met indeterminate state
+- **Instellingen aan/uit**: Wanneer het label beschrijft wat er gebeurt
+
+## Wanneer NIET gebruiken ❌
+
+- **Voor mutually exclusive opties** → gebruik Radio buttons
+- **Als een aan/uit switch logischer is** → gebruik [ToggleSwitch](?path=/docs/components-toggleswitch-rationale--docs) (directe visuele feedback)
+- **Voor keuze uit een lijst met 1 antwoord** → gebruik [Select](?path=/docs/components-select-rationale--docs)
+- **Zonder label** — een checkbox zonder tekst is zinloos
+
+## Alternatieven
+
+| In plaats van Checkbox... | Gebruik... | Wanneer... |
+|---|---|---|
+| ToggleSwitch | Directe aan/uit toggle met visuele staat |
+| Radio buttons | Slechts één optie uit een groep |
+| SelectButton | Keuze met knoppen (visueel prominenter) |
+| Select (multi) | Veel opties, compact weergeven |
+
+## Best practices
+
+✅ Gebruik altijd een `label` — via prop of slot
+
+✅ Gebruik `indeterminate` voor "select all" scenario's waar niet alles geselecteerd is
+
+✅ Groepeer checkboxen verticaal — horizontaal is moeilijk scanbaar bij 3+ opties
+
+❌ Gebruik geen checkbox voor acties die direct effect hebben (bijv. "donkere modus") → ToggleSwitch is hiervoor
+
+❌ Maak formulieren niet afhankelijk van een pre-checked checkbox die de gebruiker moet uitvinken

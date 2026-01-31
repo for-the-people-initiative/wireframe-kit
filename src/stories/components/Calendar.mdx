@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Calendar/Rationale" />
+
+# Calendar
+
+Een volledige datumkiezer met maandweergave, navigatie en dag/maand/jaar selectie. Kan inline of als popup werken.
+
+## Wanneer gebruiken ✅
+
+- **Datumvelden in formulieren**: Popup-modus met input-trigger
+- **Inline kalender**: Altijd zichtbare datumkiezer in een dashboard of sidebar
+- **Datum-range selectie**: Start- en einddatum voor boekingen of filters
+- **Wanneer dag-context belangrijk is**: Gebruiker moet de weekdag zien bij het kiezen
+
+## Wanneer NIET gebruiken ❌
+
+- **Voor alleen maand/jaar selectie** — overengineerd, gebruik een Select
+- **Als de datum al bekend is** (bijv. geboortedatum ver in het verleden) → gebruik [DatePicker](?path=/docs/components-datepicker-rationale--docs) of een tekstveld met validatie
+- **Voor tijdselectie** — Calendar doet alleen datums
+- **In een compacte mobiele UI** — een native date input kan beter zijn
+
+## Alternatieven
+
+| In plaats van Calendar... | Gebruik... | Wanneer... |
+|---|---|---|
+| DatePicker | Simpelere wrapper die Calendar als popup gebruikt |
+| InputText met masker | Geboortedatums of bekende datums (dd-mm-yyyy) |
+| Native `<input type="date">` | Mobiel-first, geen custom styling nodig |
+| Select (maand + jaar) | Alleen maand/jaar nodig |
+
+## Best practices
+
+✅ Gebruik `minDate` en `maxDate` om ongeldige datums te blokkeren
+
+✅ Gebruik `inline` modus wanneer de kalender altijd zichtbaar moet zijn
+
+✅ Toon de huidige datum als visuele referentie
+
+❌ Forceer geen Calendar voor datums ver in het verleden (geboortedatum 1970) — dat is 600 keer klikken
+
+❌ Vergeet `placeholder` niet in popup-modus — een leeg veld zonder hint is verwarrend

@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/TabMenu/Rationale" />
+
+# TabMenu
+
+Een horizontale tab-navigatie voor het schakelen tussen gerelateerde views.
+
+## Wanneer gebruiken ✅
+
+- **Sub-navigatie**: Binnen een pagina schakelen (Overzicht / Details / Instellingen)
+- **Categorieën filteren**: "Alle" / "Actief" / "Gearchiveerd"
+- **Dashboard secties**: Verschillende data-views op hetzelfde niveau
+
+## Wanneer NIET gebruiken ❌
+
+- **Meer dan 6 tabs** — wordt onoverzichtelijk, gebruik een Menu of Select
+- **Hiërarchische navigatie** → gebruik [Breadcrumb](?path=/docs/components-breadcrumb-rationale--docs)
+- **Content die tegelijk zichtbaar moet zijn** — tabs verbergen content
+- **Sequentiële stappen** → gebruik [Steps](?path=/docs/components-steps-rationale--docs)
+
+## Alternatieven
+
+| In plaats van TabMenu... | Gebruik... | Wanneer... |
+|---|---|---|
+| Tabs (met panels) | Content direct onder de tabs moet wisselen |
+| SelectButton | 2-4 opties als toggle |
+| Select | Te veel opties voor tabs (7+) |
+| Menu | Navigatie met hiërarchie |
+
+## Best practices
+
+✅ De eerste tab is standaard actief
+
+✅ Gebruik badges op tabs voor aantallen ("Berichten (3)")
+
+✅ Houd tablabels kort — één of twee woorden
+
+❌ Gebruik geen iconen zonder labels — tabs moeten leesbaar zijn
+
+❌ Disable tabs niet zonder uitleg — verberg ze liever als ze niet relevant zijn

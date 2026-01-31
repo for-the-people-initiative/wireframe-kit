@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/BlockUI/Rationale" />
+
+# BlockUI
+
+Een overlay die een sectie of de hele pagina blokkeert tijdens een bewerking — voorkomt interactie terwijl data geladen of opgeslagen wordt.
+
+## Wanneer gebruiken ✅
+
+- **Formulier opslaan**: Blokkeer het formulier terwijl de API-call loopt
+- **Sectie laden**: Een specifiek paneel blokkeren terwijl data ververst
+- **Destructieve actie bezig**: Voorkom dubbele klikken tijdens verwijdering
+- **Fullscreen loading**: Met `fullScreen` de hele pagina blokkeren bij zware operaties
+
+## Wanneer NIET gebruiken ❌
+
+- **Voor initiële pagina-load** → gebruik een skeleton loader of ProgressBar
+- **Als alleen een knop disabled moet zijn** → gebruik `isLoading` op de [Button](?path=/docs/components-button-rationale--docs)
+- **Voor korte acties (<500ms)** — de overlay flitst en voelt buggy
+- **Als de gebruiker ondertussen iets anders kan doen** — blokkeer niet onnodig
+
+## Alternatieven
+
+| In plaats van BlockUI... | Gebruik... | Wanneer... |
+|---|---|---|
+| Button met isLoading | Alleen de triggerknop moet wachten |
+| ProgressBar | Voortgang tonen zonder te blokkeren |
+| Skeleton loader | Initiële content-load simuleren |
+| Toast | Bevestiging na de actie, zonder blokkade |
+
+## Best practices
+
+✅ Gebruik `showSpinner` zodat de gebruiker weet dat er iets gebeurt
+
+✅ Gebruik `fullScreen` alleen bij operaties die de hele app raken
+
+✅ Combineer met een timeout — als het >10s duurt, toon een foutmelding
+
+❌ Blokkeer niet de hele pagina als alleen één sectie bezig is
+
+❌ Gebruik BlockUI niet als permanente "coming soon" overlay — dat is geen loading state

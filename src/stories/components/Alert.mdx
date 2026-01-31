@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Alert/Rationale" />
+
+# Alert
+
+Een statische melding in de pagina die de gebruiker informeert over een status, waarschuwing of fout. Blijft zichtbaar tot de gebruiker het sluit of de conditie verandert.
+
+## Wanneer gebruiken ✅
+
+- **Formuliervalidatie**: Bovenaan een formulier samenvatten wat er fout is
+- **Systeemstatus**: "Onderhoud gepland op vrijdag" — persistent, in-page
+- **Succesbevestiging**: Na een actie bevestigen dat het gelukt is (als Toast te vluchtig is)
+- **Waarschuwingen**: "Je account verloopt over 3 dagen"
+
+## Wanneer NIET gebruiken ❌
+
+- **Voor korte bevestigingen na een actie** → gebruik [Toast](?path=/docs/components-toast-rationale--docs) (verdwijnt vanzelf)
+- **Voor foutmeldingen bij individuele velden** — gebruik inline validatie onder het veld
+- **Als overlay/popup** → gebruik [Message](?path=/docs/components-message-rationale--docs) of Dialog
+- **Als decoratie** — een Alert zonder urgentie is ruis
+
+## Alternatieven
+
+| In plaats van Alert... | Gebruik... | Wanneer... |
+|---|---|---|
+| Toast | Korte bevestiging die vanzelf verdwijnt |
+| Message | Inline melding binnen een sectie (compacter) |
+| ConfirmDialog | Gebruiker moet een keuze maken |
+| Inline validatie | Foutmelding bij een specifiek formulierveld |
+
+## Best practices
+
+✅ Gebruik severity consistent: `info` voor neutrale info, `success` voor bevestiging, `warn` voor let-op, `error` voor fouten
+
+✅ Voeg een `title` toe bij complexe meldingen — geeft direct context
+
+✅ Maak het `closable` als de melding niet permanent relevant is
+
+❌ Stapel niet 3+ Alerts boven elkaar — prioriteer en toon de belangrijkste
+
+❌ Gebruik geen `error` Alert voor waarschuwingen — severity moet kloppen

@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/SpeedDial/Rationale" />
+
+# SpeedDial
+
+Een floating action button (FAB) die bij interactie meerdere acties onthult.
+
+## Wanneer gebruiken ✅
+
+- **Primaire acties**: "Nieuw bericht", "Nieuw item", "Upload" — wanneer er meerdere create-acties zijn
+- **Mobile apps**: Waar schermruimte beperkt is en een FAB-patroon past
+- **Dashboards**: Snelle acties die altijd beschikbaar moeten zijn
+
+## Wanneer NIET gebruiken ❌
+
+- **Eén enkele actie** — gebruik dan gewoon een Button
+- **Navigatie** — SpeedDial is voor acties, niet voor links
+- **Desktop-first apps** — op desktop is een toolbar of menu duidelijker
+- **Meer dan 5-6 acties** — wordt onoverzichtelijk, gebruik dan een Menu
+
+## Alternatieven
+
+| In plaats van SpeedDial... | Gebruik... | Wanneer... |
+|---|---|---|
+| Button | Maar één primaire actie |
+| SplitButton | Eén hoofdactie + dropdown alternatieven |
+| Menu | Meer dan 6 acties of complexe structuur |
+| Toolbar | Desktop context met meerdere acties |
+
+## Best practices
+
+✅ Beperk tot 3-5 acties
+
+✅ Gebruik duidelijke iconen met labels/tooltips
+
+✅ Positioneer rechtsonder (conventie vanuit Material Design)
+
+❌ Combineer niet met een ScrollTop op dezelfde positie
+
+❌ Gebruik geen SpeedDial voor destructieve acties (verwijderen)

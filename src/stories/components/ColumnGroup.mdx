@@ -1,0 +1,37 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/ColumnGroup/Rationale" />
+
+# ColumnGroup
+
+Een configuratie-component voor DataTable dat multi-row headers en footers mogelijk maakt met colspan/rowspan.
+
+## Wanneer gebruiken ✅
+
+- **Gegroepeerde tabelheaders**: "Contactgegevens" als overkoepelende header boven "Email" en "Telefoon"
+- **Samenvattende footers**: Totalen of gemiddelden onderaan een tabel met spanning
+- **Complexe rapportagetabellen**: Financiële overzichten met hiërarchische kolomkoppen
+
+## Wanneer NIET gebruiken ❌
+
+- **Bij simpele tabellen** → gewone DataTable kolommen zijn voldoende
+- **Als de tabel mobielvriendelijk moet zijn** — multi-row headers werken slecht op kleine schermen
+- **Voor layout-doeleinden** — ColumnGroup is alleen voor DataTable, niet voor generieke grids
+
+## Alternatieven
+
+| In plaats van ColumnGroup... | Gebruik... | Wanneer... |
+|---|---|---|
+| Gewone DataTable kolommen | Simpele tabel zonder gegroepeerde headers |
+| Accordion binnen tabel | Uitklapbare rijen voor detail |
+| Meerdere tabellen | Gescheiden data die niet in één tabel past |
+
+## Best practices
+
+✅ Gebruik `type="header"` of `type="footer"` om de positie te bepalen
+
+✅ Houd het bij max 2 header-rijen — meer wordt onoverzichtelijk
+
+❌ Gebruik geen ColumnGroup als de tabel op mobiel moet werken — het schaalt niet
+
+❌ Overdrijf niet met spanning — als elke cel een andere breedte heeft, is de tabel te complex

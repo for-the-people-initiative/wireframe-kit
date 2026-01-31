@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/DataView/Rationale" />
+
+# DataView
+
+Een flexibele data-container die items kan tonen als lijst of grid — met layout-switcher, paginering en custom templates.
+
+## Wanneer gebruiken ✅
+
+- **Productcatalogus**: Grid van kaarten met optie om naar lijst te wisselen
+- **Zoekresultaten**: Gebruiker kiest zelf hoe resultaten worden getoond
+- **Content overzichten**: Artikelen, projecten, bestanden in list of grid view
+- **Wanneer custom rendering nodig is**: Elke item krijgt z'n eigen template via slots
+
+## Wanneer NIET gebruiken ❌
+
+- **Voor tabulaire data** → gebruik [DataTable](?path=/docs/components-datatable-rationale--docs) (sortering, filtering, kolommen)
+- **Als er maar 1 layout nodig is** — bouw dan gewoon een grid of lijst met CSS
+- **Voor 3-5 items** — overkill, gebruik een simpele `v-for`
+- **Als paginering niet nodig is** — DataView voegt overhead toe
+
+## Alternatieven
+
+| In plaats van DataView... | Gebruik... | Wanneer... |
+|---|---|---|
+| DataTable | Tabulaire data met sortering en filtering |
+| Simpele v-for + CSS grid | Vaste layout zonder switcher |
+| Carousel | Items één voor één tonen |
+| Galleria | Foto-galerij met lightbox |
+
+## Best practices
+
+✅ Gebruik `showLayoutSwitcher` als beide layouts zinvol zijn — forceer het niet
+
+✅ Bied een `empty` slot met duidelijke lege-state boodschap
+
+✅ Gebruik paginering bij 20+ items
+
+✅ Maak de `list` en `grid` templates echt anders — niet dezelfde kaart in twee formaten
+
+❌ Gebruik geen DataView als een simpele grid voldoende is
+
+❌ Vergeet niet de mobiele layout — grid kan op kleine schermen naar 1 kolom moeten

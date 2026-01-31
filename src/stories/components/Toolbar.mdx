@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Toolbar/Rationale" />
+
+# Toolbar
+
+Een horizontale balk met slots (start, center, end) voor het groeperen van acties en controls.
+
+## Wanneer gebruiken ✅
+
+- **Boven een DataTable**: Filters links, acties rechts
+- **Editor-toolbar**: Bold, italic, links in een text editor
+- **Pagina-header**: Titel links, knoppen rechts
+- **Kaart-acties**: Onderaan of bovenaan een kaart
+
+## Wanneer NIET gebruiken ❌
+
+- **Navigatie** — gebruik een navbar of menu
+- **Eén enkele knop** — dan is een Toolbar overkill
+- **Verticale acties** — Toolbar is horizontaal by design
+
+## Alternatieven
+
+| In plaats van Toolbar... | Gebruik... | Wanneer... |
+|---|---|---|
+| Flexbox wrapper | Simpele left/right layout |
+| Menubar | Navigatie-menu met dropdown |
+| SpeedDial | Floating acties op mobile |
+| ButtonGroup | Gerelateerde knoppen zonder layout |
+
+## Best practices
+
+✅ Gebruik `start` slot voor primaire content/filters, `end` voor acties
+
+✅ Groepeer gerelateerde knoppen visueel
+
+✅ Houd de toolbar compact — niet elke actie hoeft zichtbaar te zijn
+
+❌ Stop geen formuliervelden in een toolbar (behalve search/filter)
+
+❌ Maak toolbars niet scrollbaar — als het niet past, reduceer de opties

@@ -1,0 +1,40 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Stats/Rationale" />
+
+# Stats
+
+Een rij met key-metrics: waarde, label, optioneel icoon en prefix/suffix.
+
+## Wanneer gebruiken ✅
+
+- **Dashboard headers**: "142 Klanten", "€28.500 Omzet", "98% Uptime"
+- **Landing pages**: Sociale bewijs-cijfers ("10.000+ gebruikers")
+- **Profielpagina's**: Statistieken van een gebruiker of organisatie
+- **Rapportages**: Samenvatting bovenaan een rapport
+
+## Wanneer NIET gebruiken ❌
+
+- **Dynamische data met grafieken** — Stats is voor snapshots, gebruik een chart-library voor trends
+- **Lange lijsten met getallen** — gebruik een DataTable
+- **Eén enkel getal** — dan is een heading + tekst genoeg
+
+## Alternatieven
+
+| In plaats van Stats... | Gebruik... | Wanneer... |
+|---|---|---|
+| Card met tekst | Meer context/uitleg bij het getal nodig |
+| DataTable | Meerdere rijen met vergelijkbare data |
+| Chart/grafiek | Trend over tijd belangrijker dan huidige waarde |
+
+## Best practices
+
+✅ Beperk tot 3-5 stats per rij — meer wordt visuele ruis
+
+✅ Gebruik prefix (€, $) en suffix (%, km) voor context
+
+✅ Houd labels kort (1-2 woorden)
+
+❌ Toon geen stats die de gebruiker niet kan beïnvloeden of begrijpen
+
+❌ Mix geen ongerelateerde metrics in dezelfde Stats-rij

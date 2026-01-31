@@ -1,0 +1,43 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/CommandPalette/Rationale" />
+
+# CommandPalette
+
+Een Cmd+K-stijl zoekinterface die commands, navigatie en acties bundelt in één snelle overlay — voor power users.
+
+## Wanneer gebruiken ✅
+
+- **Applicatie-breed zoeken**: Eén plek om pagina's, acties en content te vinden
+- **Keyboard-first workflows**: Power users die liever typen dan klikken
+- **Veel navigatie-opties**: Als het menu te groot wordt, biedt de palette snellere toegang
+- **Admin/dashboard tools**: Snel schakelen tussen secties, gebruikers, instellingen
+
+## Wanneer NIET gebruiken ❌
+
+- **Als je app maar 3-5 pagina's heeft** — overkill, gebruik gewoon een [Menu](?path=/docs/components-menu-rationale--docs)
+- **Voor eindgebruikers die niet keyboard-savvy zijn** — ze vinden het niet
+- **Als primaire navigatie** — het is een snelkoppeling, niet een vervanging
+- **Voor formulierinvoer** — het is voor zoeken en acties, niet voor data entry
+
+## Alternatieven
+
+| In plaats van CommandPalette... | Gebruik... | Wanneer... |
+|---|---|---|
+| Menu | Standaard navigatie voor alle gebruikers |
+| AutoComplete | Zoeken in een specifiek veld/dataset |
+| Zoekbalk | Prominente zoekfunctie in de UI |
+
+## Best practices
+
+✅ Activeer met `Cmd+K` (Mac) / `Ctrl+K` (Windows) — de standaard convention
+
+✅ Groepeer commands per categorie met labels
+
+✅ Toon keyboard shortcuts naast commands
+
+✅ Sluit automatisch na het uitvoeren van een command
+
+❌ Voeg geen 100+ commands toe — filter slim en toon max 10-15 resultaten
+
+❌ Vergeet niet de ESC-toets om te sluiten

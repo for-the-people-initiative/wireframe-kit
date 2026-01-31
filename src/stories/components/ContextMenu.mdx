@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/ContextMenu/Rationale" />
+
+# ContextMenu
+
+Een rechtermuisklik-menu met items, submenu's, sneltoetsen en separatoren — voor secundaire acties op een element.
+
+## Wanneer gebruiken ✅
+
+- **Rechtermuisklik op items**: Bewerken, verwijderen, kopiëren op een rij/kaart
+- **Bestandsbeheer**: Hernoem, verplaats, download acties op bestanden
+- **Rich text editors**: Opmaakopties via rechtermuisklik
+- **Desktop-achtige interfaces**: Apps die native context menu's nabootsen
+
+## Wanneer NIET gebruiken ❌
+
+- **Als primaire navigatie** — niet iedereen weet dat rechtermuisklik bestaat
+- **Op mobiel** — er is geen rechtermuisklik op touchscreens, gebruik een long-press of [Menu](?path=/docs/components-menu-rationale--docs)
+- **Voor simpele acties** → gebruik knoppen of een dropdown
+- **Als de acties altijd zichtbaar moeten zijn** — ContextMenu verbergt opties
+
+## Alternatieven
+
+| In plaats van ContextMenu... | Gebruik... | Wanneer... |
+|---|---|---|
+| Menu | Dropdown-menu op klik (niet rechtermuisklik) |
+| Dropdown | Trigger-knop met opties |
+| Toolbar met knoppen | Acties altijd zichtbaar |
+| ConfirmPopup | Eén bevestigingsactie bij een element |
+
+## Best practices
+
+✅ Bied dezelfde acties ook via andere UI aan — ContextMenu is een snelkoppeling, niet de enige route
+
+✅ Toon `shortcut` labels bij commands voor discoverability
+
+✅ Gebruik `separator` om acties visueel te groeperen
+
+✅ Ondersteun submenu's voor gerelateerde acties (bijv. "Exporteren → CSV / PDF")
+
+❌ Stop niet meer dan 10-12 items in een ContextMenu
+
+❌ Maak geen destructieve acties de eerste optie — zet ze onderaan met een separator

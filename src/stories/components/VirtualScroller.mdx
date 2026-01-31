@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/VirtualScroller/Rationale" />
+
+# VirtualScroller
+
+Een performante lijst die alleen zichtbare items rendert — voor grote datasets.
+
+## Wanneer gebruiken ✅
+
+- **Grote lijsten**: 1000+ items (contacten, producten, logregels)
+- **Oneindige scroll**: Data die geladen wordt bij scrollen
+- **Performantie-kritisch**: Wanneer een gewone lijst de pagina vertraagt
+- **Chat-geschiedenis**: Lange berichtenlijsten
+
+## Wanneer NIET gebruiken ❌
+
+- **Minder dan 100 items** — gewone rendering is snel genoeg
+- **Items met variabele hoogte** — VirtualScroller verwacht een vaste `itemSize`
+- **SEO-content** — niet-gerenderde items zijn onzichtbaar voor zoekmachines
+- **Print-layouts** — alleen zichtbare items worden gerenderd
+
+## Alternatieven
+
+| In plaats van VirtualScroller... | Gebruik... | Wanneer... |
+|---|---|---|
+| Gewone `v-for` | Minder dan 100-200 items |
+| Paginatie (DataTable) | Gebruiker bladert door pagina's |
+| ScrollPanel | Custom scrollbars zonder virtualisatie |
+| Lazy loading | Items laden bij scrollen, maar wel renderen |
+
+## Best practices
+
+✅ Stel `itemSize` correct in — dit is cruciaal voor de berekeningen
+
+✅ Gebruik `striped` voor visueel onderscheid tussen rijen
+
+✅ Combineer met `loading` slot voor data die nog binnenkomt
+
+✅ Geef een vaste hoogte aan de container
+
+❌ Gebruik niet voor lijsten die volledig doorzoekbaar moeten zijn (Ctrl+F werkt niet)
+
+❌ Mix geen items met verschillende hoogtes — dat breekt de virtualisatie

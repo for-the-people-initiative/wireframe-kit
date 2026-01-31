@@ -1,0 +1,37 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/ScrollTop/Rationale" />
+
+# ScrollTop
+
+Een floating button die verschijnt wanneer de gebruiker naar beneden scrollt, en terug naar boven scrollt bij klik.
+
+## Wanneer gebruiken ✅
+
+- **Lange pagina's**: Blog posts, documentatie, productlijsten
+- **Oneindige scroll**: Wanneer de gebruiker ver naar beneden kan scrollen
+- **Mobile-first layouts**: Op mobiel is terugscrollen vervelender dan op desktop
+
+## Wanneer NIET gebruiken ❌
+
+- **Korte pagina's** — als er nauwelijks gescrolled wordt, is de knop zinloos
+- **SPA's met router** — bij pagina-navigatie scroll je toch al naar boven
+- **Dashboards met vaste layout** — als de content niet scrollt
+
+## Alternatieven
+
+| In plaats van ScrollTop... | Gebruik... | Wanneer... |
+|---|---|---|
+| Sticky navigatie | Gebruiker wil navigeren, niet alleen naar boven |
+| Anchor links | Specifieke secties op de pagina |
+| Browser native | Gebruiker kent Home-toets / scroll-naar-boven |
+
+## Best practices
+
+✅ Stel een redelijke `threshold` in (bijv. 400px) zodat de knop niet te snel verschijnt
+
+✅ Positioneer rechtsonder — dat is de conventie
+
+❌ Combineer niet met een SpeedDial op dezelfde plek
+
+❌ Maak de knop niet te groot — het mag niet afleiden van de content

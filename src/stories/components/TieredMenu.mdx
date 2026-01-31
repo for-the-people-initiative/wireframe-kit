@@ -1,0 +1,43 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/TieredMenu/Rationale" />
+
+# TieredMenu
+
+Een menu met submenu's die uitklappen bij hover — voor geneste navigatie en acties.
+
+## Wanneer gebruiken ✅
+
+- **Applicatie-menubalken**: File → New / Open / Save
+- **Contextmenu's**: Rechtermuisklik met geneste opties
+- **Admin-navigatie**: Instellingen → Gebruikers → Rollen / Rechten
+
+## Wanneer NIET gebruiken ❌
+
+- **Platte lijst** → gebruik [Menu](?path=/docs/components-menu-rationale--docs)
+- **Meer dan 2 niveaus diep** — wordt onnavigeerbaar, herstructureer je informatie
+- **Mobiel** — hover-submenu's werken niet goed op touch devices
+- **Primaire navigatie** — gebruik een sidebar of topnav
+
+## Alternatieven
+
+| In plaats van TieredMenu... | Gebruik... | Wanneer... |
+|---|---|---|
+| Menu | Platte lijst zonder submenu's |
+| Sidebar navigatie | Permanente navigatie met hiërarchie |
+| Breadcrumb + Menu | Gebruiker navigeert door levels heen |
+| Tree | Diepe hiërarchie die altijd zichtbaar moet zijn |
+
+## Best practices
+
+✅ Beperk tot maximaal 2 niveaus diep
+
+✅ Gebruik separators om groepen visueel te scheiden
+
+✅ Markeer actieve items met `active: true`
+
+✅ Gebruik `popup` modus voor contextmenu's
+
+❌ Stop geen 20+ items in één menu — groepeer en beperk
+
+❌ Gebruik geen hover-gebaseerde submenu's als je mobiel moet ondersteunen

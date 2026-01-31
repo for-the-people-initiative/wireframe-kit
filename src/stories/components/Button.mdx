@@ -1,0 +1,45 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Button/Rationale" />
+
+# Button
+
+Het meest fundamentele interactie-element — triggert een actie wanneer de gebruiker klikt.
+
+## Wanneer gebruiken ✅
+
+- **Primaire acties**: Opslaan, Verzenden, Bevestigen — gebruik `variant="primary"`
+- **Secundaire acties**: Annuleren, Terug — gebruik `variant="secondary"` of `ghost`
+- **Destructieve acties**: Verwijderen — gebruik `variant="danger"`
+- **Met loading state**: Toon `isLoading` tijdens async operaties om dubbele klikken te voorkomen
+
+## Wanneer NIET gebruiken ❌
+
+- **Voor navigatie** → gebruik een `<a>` of `<router-link>`. Buttons zijn voor acties, links voor navigatie.
+- **Als call-to-action blok** → gebruik [CTA](?path=/docs/components-cta-rationale--docs) voor prominente marketing-blokken
+- **Voor toggles** → gebruik [ToggleSwitch](?path=/docs/components-toggleswitch-rationale--docs) of [SelectButton](?path=/docs/components-selectbutton-rationale--docs)
+
+## Alternatieven
+
+| In plaats van Button... | Gebruik... | Wanneer... |
+|---|---|---|
+| CTA | Prominente actie-sectie met titel en beschrijving |
+| Link (`<a>`) | Navigatie naar andere pagina |
+| SelectButton | Keuze tussen opties (toggle-groep) |
+| ToggleSwitch | Aan/uit instelling |
+
+## Best practices
+
+✅ Eén `primary` button per scherm/sectie — de gebruiker moet weten wat de hoofdactie is
+
+✅ Gebruik `size="sm"` in tabellen en compacte UI, `size="lg"` voor standalone acties
+
+✅ Gebruik `pill` voor een zachtere, modernere look (bijv. in cards)
+
+✅ Voeg altijd een `label` of slot-tekst toe — icon-only buttons moeten een `aria-label` hebben
+
+❌ Gebruik nooit meer dan 2 primaire buttons naast elkaar
+
+❌ Maak buttons niet disabled zonder uitleg waarom — toon een tooltip of hint
+
+❌ Gebruik geen `variant="danger"` voor niet-destructieve acties

@@ -1,0 +1,40 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/ColorPicker/Rationale" />
+
+# ColorPicker
+
+Een kleurkiezer met saturation/brightness gradient en hue slider — voor wanneer gebruikers een exacte kleur moeten kiezen.
+
+## Wanneer gebruiken ✅
+
+- **Thema-aanpassing**: Gebruiker kiest een merkkleur of accentkleur
+- **Design tools**: Kleur selecteren voor tekst, achtergrond of elementen
+- **Personalisatie**: Profielkleur, labelkleur, categorie-kleur
+- **Inline kleurpreview**: Met de trigger-button als visuele preview
+
+## Wanneer NIET gebruiken ❌
+
+- **Voor keuze uit 3-6 vaste kleuren** → gebruik knoppen met kleurswatches
+- **In formulieren waar kleur niet het doel is** — te complex voor een simpele voorkeur
+- **Op mobiel** — de gradient picker is lastig met touch, overweeg een preset-lijst
+
+## Alternatieven
+
+| In plaats van ColorPicker... | Gebruik... | Wanneer... |
+|---|---|---|
+| Preset kleurknoppen | Beperkte kleuropties (5-10 vaste kleuren) |
+| InputText met hex | Gebruiker kent de exacte kleurcode |
+| Select met kleurstalen | Dropdown met voorgedifineerde opties |
+
+## Best practices
+
+✅ Gebruik `inline` modus als de kleurkiezer altijd zichtbaar moet zijn
+
+✅ Toon de hex-waarde zodat gebruikers een exacte code kunnen kopiëren
+
+✅ Bied een "reset naar standaard" optie
+
+❌ Gebruik geen ColorPicker als de kleurkeuze niet vrij is — bied dan presets aan
+
+❌ Vergeet niet een standaardkleur in te stellen via `modelValue`

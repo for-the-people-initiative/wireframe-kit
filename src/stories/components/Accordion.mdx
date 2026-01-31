@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Accordion/Rationale" />
+
+# Accordion
+
+Een inklapbaar paneel dat content in secties organiseert — gebruikers openen alleen wat ze nodig hebben.
+
+## Wanneer gebruiken ✅
+
+- **FAQ-pagina's**: Vraag-antwoord paren die je niet allemaal tegelijk wilt tonen
+- **Instellingen/configuratie**: Groepen opties die per categorie in te klappen zijn
+- **Lange formulieren**: Secties die stap-voor-stap ingevuld worden
+- **Sidebar-navigatie**: Geneste menu-items in categorieën
+
+## Wanneer NIET gebruiken ❌
+
+- **Als er maar 1-2 secties zijn** — gebruik dan gewoon zichtbare content
+- **Als alle secties tegelijk zichtbaar moeten zijn** → gebruik headings of [Divider](?path=/docs/components-divider-rationale--docs)
+- **Voor tab-achtige navigatie** → gebruik [Tabs](?path=/docs/components-tabs-rationale--docs)
+- **Voor content die gebruikers snel moeten scannen** — accordion verbergt content en schaadt vindbaarheid
+
+## Alternatieven
+
+| In plaats van Accordion... | Gebruik... | Wanneer... |
+|---|---|---|
+| Tabs | Content is gelijkwaardig en gebruiker kiest er één |
+| Card | Elke sectie is een zelfstandig blok |
+| Gewone headings | Alle content moet zichtbaar en scanbaar zijn |
+
+## Best practices
+
+✅ Gebruik `multiple` als gebruikers meerdere secties tegelijk willen vergelijken
+
+✅ Open de belangrijkste sectie standaard (`activeIndex`)
+
+❌ Stop geen kritische informatie in een dichtgeklapte accordion — gebruikers missen het
+
+❌ Nest geen accordions in accordions — dat is UX-hel

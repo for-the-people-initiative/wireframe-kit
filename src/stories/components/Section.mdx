@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Section/Rationale" />
+
+# Section
+
+Een layout-component voor pagina-secties met titel, subtitel, en consistente padding/varianten.
+
+## Wanneer gebruiken ✅
+
+- **Landing pages**: Elke visuele sectie (hero, features, testimonials, CTA)
+- **Content pagina's**: Groepeer gerelateerde content met een titel en subtitel
+- **Afwisselende achtergronden**: Gebruik varianten (default, muted, accent) voor visueel ritme
+
+## Wanneer NIET gebruiken ❌
+
+- **Binnen kaarten of dialogs** — Section is voor pagina-niveau layout
+- **Als wrapper zonder titel** — gebruik dan gewoon een `<div>` met padding
+- **In herhalende lijsten** — Section is voor unieke pagina-blokken, niet voor items
+
+## Alternatieven
+
+| In plaats van Section... | Gebruik... | Wanneer... |
+|---|---|---|
+| Card | Content in een afgebakend vlak met shadow |
+| Gewone `<section>` | Geen titel/subtitel/variant nodig |
+| Container utility | Alleen max-width centering nodig |
+
+## Best practices
+
+✅ Wissel varianten af (default → muted → default) voor visueel ritme
+
+✅ Gebruik `padding` prop om secties ruimer of compacter te maken
+
+✅ Voeg altijd een `title` toe voor SEO en structuur
+
+❌ Nest geen Sections in Sections
+
+❌ Gebruik Section niet als generieke wrapper — het is specifiek voor pagina-secties

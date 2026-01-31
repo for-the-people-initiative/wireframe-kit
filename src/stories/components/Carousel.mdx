@@ -1,0 +1,43 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Carousel/Rationale" />
+
+# Carousel
+
+Een horizontale slider die items één voor één toont met navigatie-knoppen en indicators.
+
+## Wanneer gebruiken ✅
+
+- **Afbeeldingsgalerij**: Foto's van een product of project doorlopen
+- **Testimonials/reviews**: Eén quote tegelijk tonen met navigatie
+- **Feature highlights**: Nieuwe features of updates showcase
+- **Wanneer ruimte beperkt is**: Veel content, weinig plek — carousel comprimeert horizontaal
+
+## Wanneer NIET gebruiken ❌
+
+- **Voor kritische content** — gebruikers klikken zelden voorbij slide 1. Verberg geen belangrijke info.
+- **Als grid beter past** → gebruik [DataView](?path=/docs/components-dataview-rationale--docs) met grid-layout
+- **Voor vergelijking** — als gebruikers items moeten vergelijken, toon ze naast elkaar
+- **Auto-play carousels** → bijna altijd een slecht idee (accessibility + irritatie)
+- **Als de hele galerij zichtbaar moet zijn** → gebruik [Galleria](?path=/docs/components-galleria-rationale--docs)
+
+## Alternatieven
+
+| In plaats van Carousel... | Gebruik... | Wanneer... |
+|---|---|---|
+| Galleria | Foto-galerij met thumbnails en lightbox |
+| DataView (grid) | Alle items tegelijk tonen in een grid |
+| Tabs | Benoemde secties die de gebruiker kiest |
+| Gewone lijst | Alle items zichtbaar zonder navigatie |
+
+## Best practices
+
+✅ Gebruik `showIndicators` zodat de gebruiker weet hoeveel slides er zijn
+
+✅ Gebruik `circular` als de inhoud geen volgorde heeft
+
+✅ Houd het aantal slides beperkt (3-7) — meer dan dat wordt niemand bekeken
+
+❌ Gebruik geen autoplay tenzij het puur decoratief is en pauseerbaar
+
+❌ Verberg geen essentiële content in latere slides

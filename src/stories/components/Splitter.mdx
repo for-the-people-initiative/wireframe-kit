@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Splitter/Rationale" />
+
+# Splitter
+
+Een layout-component die content in verstelbare panels verdeelt met een sleepbare gutter.
+
+## Wanneer gebruiken ✅
+
+- **IDE-achtige layouts**: Code-editor + preview, master-detail views
+- **Vergelijkingen**: Twee documenten naast elkaar
+- **Dashboard panels**: Gebruiker wil zelf de ruimteverdeling bepalen
+- **Email clients**: Mappenlijst | berichtenlijst | leesvenster
+
+## Wanneer NIET gebruiken ❌
+
+- **Vaste layouts** — gebruik CSS grid/flexbox, niet alles hoeft verstelbaar te zijn
+- **Mobiel** — sleepbare gutters werken slecht op touch
+- **Meer dan 3 panels** — wordt snel onoverzichtelijk
+- **Simpele kolommen** — een CSS grid is eenvoudiger en performanter
+
+## Alternatieven
+
+| In plaats van Splitter... | Gebruik... | Wanneer... |
+|---|---|---|
+| CSS Grid | Vaste verhoudingen volstaan |
+| Sidebar (collapsible) | Eén panel klapt in/uit |
+| Tabs | Content hoeft niet tegelijk zichtbaar te zijn |
+
+## Best practices
+
+✅ Gebruik `stateKey` om de gebruikersvoorkeur op te slaan (session/local storage)
+
+✅ Stel minimale panelgroottes in zodat content niet onleesbaar wordt
+
+✅ Gebruik horizontaal voor master-detail, verticaal voor editor-preview
+
+❌ Maak de gutter niet te klein — de gebruiker moet het kunnen pakken
+
+❌ Gebruik geen Splitter voor responsive layouts — daar is CSS voor

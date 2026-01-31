@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Chart/Rationale" />
+
+# Chart
+
+Een wrapper rond Chart.js die bar, line, pie, doughnut en andere grafieken rendert via een canvas element.
+
+## Wanneer gebruiken ✅
+
+- **Dashboards**: KPI's, trends en vergelijkingen visueel maken
+- **Rapportages**: Omzet, bezoekers, performance over tijd
+- **Data-analyse**: Patronen en verhoudingen tonen die in tabellen niet opvallen
+- **Vergelijkingen**: Bar charts voor A/B, pie charts voor verdeling
+
+## Wanneer NIET gebruiken ❌
+
+- **Voor 1-2 getallen** → gebruik een groot getal met label, geen hele grafiek
+- **Als exacte waarden belangrijk zijn** → gebruik [DataTable](?path=/docs/components-datatable-rationale--docs)
+- **Voor real-time data met hoge frequentie** — Chart.js is niet gebouwd voor 60fps updates
+- **Als de data simpel genoeg is voor tekst** — "80% compleet" is duidelijker dan een pie chart
+
+## Alternatieven
+
+| In plaats van Chart... | Gebruik... | Wanneer... |
+|---|---|---|
+| DataTable | Exacte waarden en sortering nodig |
+| ProgressBar | Eén percentage tonen |
+| Getal + label | 1-2 KPI's zonder visualisatie |
+| Externe library (D3) | Zeer complexe of custom visualisaties |
+
+## Best practices
+
+✅ Gebruik `title` om context te geven — een grafiek zonder titel is onleesbaar
+
+✅ Gebruik de `isLoading` state bij async data — voorkomt lege canvas flicker
+
+✅ Kies het juiste chart-type: bar voor vergelijking, line voor trends, pie voor verhoudingen
+
+❌ Prop niet te veel datasets in één grafiek — max 3-4 lijnen/bars
+
+❌ Gebruik geen 3D-effecten of pie charts met 10+ slices — wordt onleesbaar
+
+❌ Vergeet niet de `empty` state — een lege grafiek zonder uitleg is verwarrend

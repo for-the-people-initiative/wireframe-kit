@@ -1,0 +1,37 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/ScrollPanel/Rationale" />
+
+# ScrollPanel
+
+Een container met custom scrollbars — vervangt de standaard browser-scrollbars voor een consistente look.
+
+## Wanneer gebruiken ✅
+
+- **Gestylede scrollbare gebieden**: Sidebar-content, code-blokken, lijsten met vaste hoogte
+- **Cross-browser consistentie**: Wanneer native scrollbars per OS/browser te veel variëren
+- **Ingebedde panels**: Content binnen een kaart of dialog die scrollbaar moet zijn
+
+## Wanneer NIET gebruiken ❌
+
+- **Hele pagina's** — laat de browser zijn eigen scrollbar doen, gebruikers verwachten dat
+- **Korte content** — als alles zichtbaar is, voegt een ScrollPanel niets toe
+- **Accessibility-kritische contexten** — custom scrollbars kunnen problematisch zijn voor screenreaders
+
+## Alternatieven
+
+| In plaats van ScrollPanel... | Gebruik... | Wanneer... |
+|---|---|---|
+| CSS `overflow: auto` | Geen custom styling nodig |
+| VirtualScroller | Lijst met 1000+ items |
+| Native scrollbar | Hele pagina of volledige layout |
+
+## Best practices
+
+✅ Stel altijd een expliciete hoogte in op de container
+
+✅ Gebruik voor sidebars, panels en ingebedde lijsten
+
+❌ Vervang niet de main-page scrollbar — dat voelt onnatuurlijk
+
+❌ Nest geen ScrollPanels in elkaar

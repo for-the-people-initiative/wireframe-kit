@@ -1,0 +1,40 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Avatar/Rationale" />
+
+# Avatar
+
+Een visuele representatie van een gebruiker of entiteit — foto, initialen of icoon in een rond of vierkant vlak.
+
+## Wanneer gebruiken ✅
+
+- **Gebruikersprofiel**: Foto of initialen naast een naam
+- **Commentaren/berichten**: Afzender visueel identificeren
+- **Lijsten met personen**: Teams, contacten, deelnemers
+- **Navigatie**: In de AppBar als profieltrigger
+
+## Wanneer NIET gebruiken ❌
+
+- **Als decoratief icoon** → gebruik een gewoon icoon
+- **Voor logo's of branding** → gebruik [Image](?path=/docs/components-image-rationale--docs)
+- **Als knop** — Avatar is niet interactief, wrap het in een button als je klikgedrag wilt
+
+## Alternatieven
+
+| In plaats van Avatar... | Gebruik... | Wanneer... |
+|---|---|---|
+| Image | Foto's die geen persoon/entiteit representeren |
+| Badge | Numerieke indicator (niet visuele identiteit) |
+| Icoon | Generiek symbool zonder persoonlijke context |
+
+## Best practices
+
+✅ Gebruik `image` met een fallback `label` (initialen) voor als de foto niet laadt
+
+✅ Gebruik `shape="circle"` voor personen, `shape="square"` voor organisaties/teams
+
+✅ Kies `size` consistent binnen een context — mix geen large en small avatars in dezelfde lijst
+
+❌ Gebruik geen Avatar zonder enige fallback — lege avatars zijn verwarrend
+
+❌ Maak avatars niet te klein (`small`) als ze het enige identificerende element zijn

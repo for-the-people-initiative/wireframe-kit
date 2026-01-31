@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Terminal/Rationale" />
+
+# Terminal
+
+Een command-line interface component — voer commando's in en toon responses.
+
+## Wanneer gebruiken ✅
+
+- **Documentatie**: Interactieve CLI-voorbeelden tonen
+- **Admin tools**: Server-commando's uitvoeren via een web-interface
+- **Educatie**: Programmeerlesomgeving met directe feedback
+- **Chatbot-achtige interface**: Command-driven interactie
+
+## Wanneer NIET gebruiken ❌
+
+- **Gewone chat** — gebruik een chat-component
+- **Formulieren** — een terminal is geen goed formulier
+- **Niet-technische gebruikers** — de meeste mensen weten niet wat een CLI is
+- **Productie-servers** — dit is een UI-component, geen veilige shell
+
+## Alternatieven
+
+| In plaats van Terminal... | Gebruik... | Wanneer... |
+|---|---|---|
+| Code block | Alleen tonen, niet interactief |
+| Chat interface | Natuurlijke taal conversatie |
+| Formulier | Gestructureerde input nodig |
+
+## Best practices
+
+✅ Stel een duidelijk `welcomeMessage` in dat uitlegt wat er mogelijk is
+
+✅ Geef een herkenbare `prompt` (bijv. "$ " of ">>> ")
+
+✅ Zorg voor duidelijke foutmeldingen bij onbekende commando's
+
+❌ Verwacht niet dat eindgebruikers CLI-syntax kennen
+
+❌ Gebruik niet voor gevoelige operaties zonder authenticatie

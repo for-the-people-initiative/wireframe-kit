@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/AutoComplete/Rationale" />
+
+# AutoComplete
+
+Een tekstveld met suggesties terwijl je typt — voor wanneer de gebruiker uit een grote lijst moet kiezen maar ook vrij mag typen.
+
+## Wanneer gebruiken ✅
+
+- **Zoeken in grote datasets**: Stad, postcode, productnaam — te veel opties voor een dropdown
+- **Tagging/multiple selectie**: Meerdere items kiezen met chips (denk aan email-ontvangers)
+- **Vrije invoer met suggesties**: Gebruiker mag ook iets typen dat niet in de lijst staat
+- **Server-side zoeken**: Suggesties laden via API terwijl gebruiker typt
+
+## Wanneer NIET gebruiken ❌
+
+- **Bij minder dan 10 opties** → gebruik [Select](?path=/docs/components-select-rationale--docs) of [Dropdown](?path=/docs/components-dropdown-rationale--docs)
+- **Als vrije invoer niet gewenst is** → gebruik Select (forceert keuze uit lijst)
+- **Voor simpele tekstvelden** → gebruik [InputText](?path=/docs/components-inputtext-rationale--docs)
+- **Als gebruiker de opties niet kent** — autocomplete werkt alleen als je weet wat je zoekt
+
+## Alternatieven
+
+| In plaats van AutoComplete... | Gebruik... | Wanneer... |
+|---|---|---|
+| Select / Dropdown | Beperkte lijst, gebruiker moet kiezen uit vaste opties |
+| InputText | Vrije tekst zonder suggesties |
+| CommandPalette | Zoeken + acties uitvoeren in één interface |
+
+## Best practices
+
+✅ Toon een loading-indicator bij server-side zoeken
+
+✅ Gebruik `multiple` mode met chips voor multi-select scenario's
+
+✅ Begin suggesties na 2-3 karakters, niet bij elke toetsaanslag
+
+❌ Vul de suggestielijst niet met 500+ items — beperk tot 10-20 resultaten
+
+❌ Gebruik AutoComplete niet als de gebruiker het exacte antwoord niet kan raden
