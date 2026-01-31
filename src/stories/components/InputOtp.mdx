@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/InputOtp/Rationale" />
+
+# InputOtp
+
+Invoerveld voor eenmalige codes (OTP/2FA). Toont individuele cellen per karakter met automatische focus-verplaatsing. Ondersteunt masking, paste en configureerbare lengte.
+
+## Wanneer gebruiken ✅
+
+- **Twee-factor authenticatie**: SMS/e-mail verificatiecode invoeren
+- **Bevestigingscodes**: Pincode, toegangscode
+- **E-mail verificatie**: 6-cijferige bevestigingscode
+
+## Wanneer NIET gebruiken ❌
+
+- **Wachtwoorden** → gebruik een InputText met `type="password"`
+- **Pincodes die je moet onthouden** → gebruik een gewoon wachtwoordveld
+- **Lange codes (>8 tekens)** → wordt onhandig, gebruik InputText
+
+## Alternatieven
+
+| In plaats van InputOtp... | Gebruik... | Wanneer... |
+|---|---|---|
+| InputText | Codes langer dan 8 tekens |
+| InputMask | Codes met vaste patronen (bijv. XXX-XXX) |
+| InputText type="password" | Permanente wachtwoorden/pincodes |
+
+## Best practices
+
+✅ Gebruik `integerOnly` voor numerieke codes (standaard aan)
+
+✅ Zet `autoFocus` aan zodat de gebruiker direct kan typen
+
+✅ Gebruik `mask` voor gevoelige codes (toont * in plaats van cijfers)
+
+✅ Emit `complete` event om automatisch te valideren wanneer alle cellen gevuld zijn
+
+❌ Gebruik geen separator tenzij het de leesbaarheid echt verbetert
+
+❌ Forceer geen OTP-component voor iets wat geen OTP is

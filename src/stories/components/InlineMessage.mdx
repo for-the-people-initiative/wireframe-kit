@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/InlineMessage/Rationale" />
+
+# InlineMessage
+
+Een compacte inline melding met icoon en tekst. Beschikbare severities: `success`, `info`, `warn`, `error`. Bedoeld voor contextgebonden feedback naast een element.
+
+## Wanneer gebruiken ✅
+
+- **Veldvalidatie**: Foutmelding direct onder een inputveld
+- **Inline hints**: "Wachtwoord moet minimaal 8 tekens zijn"
+- **Contextuele feedback**: Succesmelding naast een opgeslagen veld
+
+## Wanneer NIET gebruiken ❌
+
+- **Pagina-brede meldingen** → gebruik [Message](?path=/docs/components-message-rationale--docs)
+- **Tijdelijke notificaties** → gebruik [Toast](?path=/docs/components-toast-rationale--docs)
+- **Bevestigingsdialogen** → gebruik ConfirmDialog
+- **Lange teksten** — InlineMessage is voor korte, bondige feedback
+
+## Alternatieven
+
+| In plaats van InlineMessage... | Gebruik... | Wanneer... |
+|---|---|---|
+| Message | Pagina-brede of sectie-brede meldingen |
+| Toast | Tijdelijke meldingen die automatisch verdwijnen |
+| Tooltip | Korte uitleg bij hover |
+| Tekst onder input (helpText) | Altijd zichtbare hint zonder severity |
+
+## Best practices
+
+✅ Plaats direct onder of naast het gerelateerde element
+
+✅ Houd de tekst op één regel waar mogelijk
+
+✅ Gebruik de juiste severity — `error` voor validatie, `info` voor hints
+
+❌ Stapel niet meerdere InlineMessages onder één veld — combineer de tekst
+
+❌ Gebruik geen `success` InlineMessage die permanent zichtbaar blijft

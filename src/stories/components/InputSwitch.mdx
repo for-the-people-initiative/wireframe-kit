@@ -1,0 +1,40 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/InputSwitch/Rationale" />
+
+# InputSwitch
+
+Een toggle switch (aan/uit) als alternatief voor een checkbox. Visueel duidelijker voor instellingen die direct effect hebben.
+
+## Wanneer gebruiken ✅
+
+- **Instellingen**: Notificaties aan/uit, dark mode, features togglen
+- **Directe actie**: Waar de toggle onmiddellijk effect heeft (geen submit nodig)
+- **Binaire keuzes**: Aan/uit, actief/inactief, ja/nee
+
+## Wanneer NIET gebruiken ❌
+
+- **In formulieren met submit-knop** → gebruik een Checkbox (switch impliceert directe actie)
+- **Meerdere opties selecteren** → gebruik Checkboxes
+- **Drie of meer opties** → gebruik RadioButtons of SelectButton
+- **Terms & conditions akkoord** → gebruik een Checkbox
+
+## Alternatieven
+
+| In plaats van InputSwitch... | Gebruik... | Wanneer... |
+|---|---|---|
+| Checkbox | In formulieren met expliciete submit |
+| SelectButton | Keuze tussen 2-4 benoemde opties |
+| RadioButton | Keuze waar de opties labels nodig hebben |
+
+## Best practices
+
+✅ Label altijd wat de switch doet — "Notificaties", niet "Instelling 1"
+
+✅ Gebruik een switch alleen als de actie direct ingaat (geen save-knop nodig)
+
+✅ Zet de switch rechts van het label (conventie)
+
+❌ Gebruik geen switch als het onduidelijk is wat "aan" betekent
+
+❌ Gebruik geen negatieve labels ("Uitschakelen") — dat inverteert de logica en verward

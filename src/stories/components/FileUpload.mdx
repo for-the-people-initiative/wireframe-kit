@@ -1,0 +1,40 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/FileUpload/Rationale" />
+
+# FileUpload
+
+Drag-and-drop bestandsupload met bestandslijst, verwijderknop en configureerbare beperkingen (type, meerdere bestanden).
+
+## Wanneer gebruiken ✅
+
+- **Documenten uploaden**: CV's, contracten, bijlagen
+- **Afbeeldingen uploaden**: Profielfoto, productfoto's
+- **Formulieren met bijlagen**: Contactformulier met bestandsbijlage
+- **Bulk upload**: Meerdere bestanden tegelijk via drag-and-drop
+
+## Wanneer NIET gebruiken ❌
+
+- **Eén specifiek bestandstype met preview** (bijv. avatar) → bouw een specifieke avatar-uploader
+- **Grote bestanden (>100MB)** → gebruik een chunked upload oplossing
+- **Als je alleen een URL wilt** → gebruik een InputText met URL-validatie
+
+## Alternatieven
+
+| In plaats van FileUpload... | Gebruik... | Wanneer... |
+|---|---|---|
+| Native `<input type="file">` | Simpele single-file upload zonder drag-and-drop |
+| Externe upload service (S3 presigned) | Grote bestanden direct naar storage |
+| Image component + InputText | Gebruiker geeft een URL in plaats van upload |
+
+## Best practices
+
+✅ Toon duidelijk welke bestandstypes geaccepteerd worden via `accept`
+
+✅ Toon bestandsgrootte naast de bestandsnaam
+
+✅ Geef visuele feedback bij drag-over (al ingebouwd)
+
+❌ Vergeet niet server-side validatie — client-side is niet genoeg
+
+❌ Laat geen onbeperkte uploads toe — zet een `maxFileSize` limiet

@@ -1,0 +1,37 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Form/Rationale" />
+
+# Form
+
+Een `<form>` wrapper met layout-opties (vertical/horizontal). Vangt `submit` event op met `preventDefault`.
+
+## Wanneer gebruiken ✅
+
+- **Elk formulier**: Wrap je formuliervelden altijd in Form
+- **Consistente layout**: Vertical of horizontal formulieren
+- **Submit handling**: Automatische `preventDefault`
+
+## Wanneer NIET gebruiken ❌
+
+- **Enkele inline input** (bijv. zoekbalk) → een simpele `<form>` of `@keydown.enter` volstaat
+- **Niet-formulier content** — Form is semantisch een formulier
+
+## Alternatieven
+
+| In plaats van Form... | Gebruik... | Wanneer... |
+|---|---|---|
+| Native `<form>` | Je geen layout-hulp nodig hebt |
+| FieldSet | Je secties binnen een Form wilt groeperen |
+
+## Best practices
+
+✅ Gebruik altijd Form als wrapper — het geeft native formuliergedrag (Enter = submit)
+
+✅ Combineer met FieldSet voor grote formulieren met secties
+
+✅ Gebruik `layout="horizontal"` voor korte formulieren (login, zoek)
+
+❌ Nest geen Forms — dat is invalid HTML
+
+❌ Vergeet geen submit-button binnen het formulier

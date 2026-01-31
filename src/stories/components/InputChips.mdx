@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/InputChips/Rationale" />
+
+# InputChips
+
+Een invoerveld waar gebruikers meerdere waarden als chips/tags kunnen toevoegen. Ondersteunt toevoegen via Enter, verwijderen en paste.
+
+## Wanneer gebruiken ✅
+
+- **Tags invoeren**: Keywords, labels, categorieën
+- **E-mailadressen**: Meerdere ontvangers toevoegen
+- **Vrije tekst tokens**: Zoektermen, skills, ingrediënten
+
+## Wanneer NIET gebruiken ❌
+
+- **Selectie uit vaste opties** → gebruik [MultiSelect](?path=/docs/components-multiselect-rationale--docs) of [AutoComplete](?path=/docs/components-autocomplete-rationale--docs)
+- **Één waarde** → gebruik InputText
+- **Numerieke waarden** → gebruik InputNumber
+- **Als de mogelijke waarden beperkt zijn** — voorkom typefouten met een dropdown
+
+## Alternatieven
+
+| In plaats van InputChips... | Gebruik... | Wanneer... |
+|---|---|---|
+| MultiSelect | Gebruiker kiest uit voorgedefinieerde opties |
+| AutoComplete (multiple) | Combinatie van suggesties en vrije invoer |
+| InputText | Enkele waarde |
+| Chip component | Alleen weergave, geen invoer |
+
+## Best practices
+
+✅ Toon een placeholder die uitlegt wat je moet invoeren ("Typ en druk Enter")
+
+✅ Valideer input voor het toevoegen (bijv. e-mail format check)
+
+✅ Ondersteun paste van meerdere waarden (komma-gescheiden)
+
+❌ Gebruik geen InputChips als er een vaste keuzelijst is — dat leidt tot inconsistente data
+
+❌ Laat geen duplicaten toe tenzij dat logisch is

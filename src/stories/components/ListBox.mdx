@@ -1,0 +1,43 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/ListBox/Rationale" />
+
+# ListBox
+
+Een lijst van selecteerbare opties, altijd zichtbaar (geen dropdown). Ondersteunt single/multiple selectie, filtering en toetsenbordnavigatie.
+
+## Wanneer gebruiken ✅
+
+- **Altijd-zichtbare keuzelijst**: Waar de opties permanent zichtbaar moeten zijn
+- **Multiple selectie met overzicht**: Gebruiker moet alle opties tegelijk zien
+- **Filterbare lijst**: Bij 10+ opties met zoekfunctie
+- **Formulieren met veel ruimte**: Sidebar-selectie, settings-panelen
+
+## Wanneer NIET gebruiken ❌
+
+- **Beperkte ruimte** → gebruik [Dropdown](?path=/docs/components-dropdown-rationale--docs) of [Select](?path=/docs/components-select-rationale--docs)
+- **<5 opties** → gebruik RadioButtons (single) of Checkboxes (multiple)
+- **Drag & drop ordenen** → gebruik OrderList of PickList
+- **Complexe items met acties** → gebruik DataView of een custom lijst
+
+## Alternatieven
+
+| In plaats van ListBox... | Gebruik... | Wanneer... |
+|---|---|---|
+| Dropdown / Select | Ruimte beperkt is (opties verborgen tot klik) |
+| RadioButton groep | <5 opties, single select |
+| Checkbox groep | <5 opties, multiple select |
+| MultiSelect | Multiple select in compact formaat |
+| OrderList | Opties moeten worden herschikt |
+
+## Best practices
+
+✅ Gebruik `filter` bij >10 opties
+
+✅ Geef opties duidelijke labels — niet alleen IDs of codes
+
+✅ Toon een visuele indicatie van geselecteerde items (checkbox-icoon bij multiple)
+
+❌ Maak de ListBox niet te hoog — max ~8-10 zichtbare items met scroll
+
+❌ Gebruik geen ListBox als de lijst dynamisch groeit tot honderden items — dan is AutoComplete beter

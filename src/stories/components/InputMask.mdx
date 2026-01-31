@@ -1,0 +1,43 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/InputMask/Rationale" />
+
+# InputMask
+
+Een tekstveld met een masker dat invoer forceert in een vast patroon. Masker-definities: `9` = cijfer, `a` = letter, `*` = alfanumeriek.
+
+## Wanneer gebruiken ✅
+
+- **Telefoonnummers**: `(99) 9999-9999`
+- **Postcodes**: `9999 aa`
+- **IBAN/BSN**: Vaste patronen met mix van cijfers en letters
+- **Datums** (als DatePicker te zwaar is): `99-99-9999`
+
+## Wanneer NIET gebruiken ❌
+
+- **Vrije tekst** → gebruik InputText
+- **Numerieke waarden** → gebruik [InputNumber](?path=/docs/components-inputnumber-rationale--docs)
+- **Datums** → gebruik bij voorkeur [DatePicker](?path=/docs/components-datepicker-rationale--docs)
+- **E-mailadressen** — variabele lengte, geen vast masker mogelijk
+- **Internationale telefoonnummers** — te veel variatie voor één masker
+
+## Alternatieven
+
+| In plaats van InputMask... | Gebruik... | Wanneer... |
+|---|---|---|
+| InputText + validatie | Het formaat variabel is |
+| InputNumber | Alleen cijfers zonder vast patroon |
+| DatePicker | Datuminvoer — betere UX dan een masker |
+| AutoComplete | Suggesties baseren op gedeeltelijke invoer |
+
+## Best practices
+
+✅ Toon het maskerpatroon als placeholder zodat de gebruiker het formaat ziet
+
+✅ Gebruik `autoClear` om incomplete invoer te wissen bij blur
+
+✅ Geef een duidelijke foutmelding als het masker niet volledig is ingevuld
+
+❌ Gebruik geen maskers voor flexibele formaten — dat frustreert gebruikers
+
+❌ Combineer niet met een apart format-label als het masker al duidelijk is

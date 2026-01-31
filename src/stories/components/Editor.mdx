@@ -1,0 +1,40 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Editor/Rationale" />
+
+# Editor
+
+Een rich-text editor met toolbar voor bold, italic, underline, strikethrough, lijsten en meer. Gebaseerd op `contentEditable`.
+
+## Wanneer gebruiken ✅
+
+- **CMS-achtige invoer**: Gebruiker moet opmaak kunnen toepassen (blogposts, beschrijvingen)
+- **E-mail composer**: Waar rich formatting verwacht wordt
+- **Notities/opmerkingen**: Met basis opmaak (bold, lijsten)
+
+## Wanneer NIET gebruiken ❌
+
+- **Eenvoudige tekstvelden** → gebruik [InputText](?path=/docs/components-inputtext-rationale--docs) of `textarea`
+- **Markdown-invoer** — als je markdown opslaat, gebruik een markdown-editor
+- **Korte input** (naam, e-mail) — overkill, gebruik een gewoon inputveld
+- **Mobiel-first apps** — rich-text editors zijn op mobiel vaak frustrerend
+
+## Alternatieven
+
+| In plaats van Editor... | Gebruik... | Wanneer... |
+|---|---|---|
+| InputText / textarea | Platte tekst zonder opmaak |
+| Externe markdown editor | Je markdown wilt opslaan, niet HTML |
+| Tiptap / ProseMirror | Je geavanceerde features nodig hebt (tabellen, embeds) |
+
+## Best practices
+
+✅ Beperk de toolbar tot wat de gebruiker écht nodig heeft
+
+✅ Zet een max-height met scroll voor lange content
+
+✅ Sanitize HTML output server-side (XSS preventie)
+
+❌ Geef gebruikers geen volledige opmaakcontrole als je output consistent moet zijn
+
+❌ Gebruik geen Editor voor velden waar je structured data verwacht

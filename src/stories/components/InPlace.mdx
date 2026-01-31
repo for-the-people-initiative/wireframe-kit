@@ -1,0 +1,40 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/InPlace/Rationale" />
+
+# InPlace
+
+Een inline edit component: toont een display-modus die bij klik overschakelt naar een bewerkbare content-modus. Optioneel sluitbaar.
+
+## Wanneer gebruiken ✅
+
+- **Inline editing**: Klik op tekst om te bewerken (naam, beschrijving)
+- **Lazy content**: Toon een placeholder, laad content pas bij interactie
+- **Compacte UI**: Waar een apart bewerkscherm te veel is
+
+## Wanneer NIET gebruiken ❌
+
+- **Complexe formulieren** → gebruik een Dialog of aparte bewerkpagina
+- **Als de bewerkstatus niet duidelijk is** — gebruikers moeten snappen dat ze kunnen klikken
+- **Meerdere velden tegelijk bewerken** → gebruik een Form
+- **Mobiel** — klik-om-te-bewerken is minder intuïtief op touch
+
+## Alternatieven
+
+| In plaats van InPlace... | Gebruik... | Wanneer... |
+|---|---|---|
+| Dialog met formulier | Meerdere velden bewerken |
+| InputText (altijd zichtbaar) | Bewerken de primaire actie is |
+| PopOver met formulier | Bewerken in een floating panel |
+
+## Best practices
+
+✅ Maak visueel duidelijk dat content klikbaar is (underline, hover-effect)
+
+✅ Gebruik `closable` zodat gebruikers terug kunnen naar display-modus
+
+✅ Focus automatisch het invoerveld bij activering
+
+❌ Gebruik InPlace niet voor kritieke data zonder undo-mogelijkheid
+
+❌ Verstop geen verplichte velden achter InPlace — die moeten altijd zichtbaar zijn

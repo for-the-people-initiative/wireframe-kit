@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/InputNumber/Rationale" />
+
+# InputNumber
+
+Een numeriek invoerveld met optionele +/- knoppen, min/max grenzen, stappen, en locale-aware formatting (standaard `nl-NL`).
+
+## Wanneer gebruiken ✅
+
+- **Hoeveelheden**: Aantal producten, personen, items
+- **Bedragen**: Prijzen, budgetten (met `minFractionDigits`)
+- **Instellingen**: Numerieke parameters met grenzen (min/max)
+- **Formulieren**: Elk veld waar alleen getallen geldig zijn
+
+## Wanneer NIET gebruiken ❌
+
+- **Telefoonnummers** → gebruik [InputMask](?path=/docs/components-inputmask-rationale--docs) (het zijn geen "nummers")
+- **Postcodes** → gebruik InputMask
+- **Grote ranges** (0-1000) → overweeg een Slider
+- **Percentages met visuele feedback** → gebruik [Knob](?path=/docs/components-knob-rationale--docs)
+
+## Alternatieven
+
+| In plaats van InputNumber... | Gebruik... | Wanneer... |
+|---|---|---|
+| Slider | Visuele selectie binnen een range |
+| Knob | Circulaire visuele waarde-selectie |
+| InputText + validatie | Nummers met prefix/suffix (InputGroup) |
+| Rating | Score 1-5 sterren |
+
+## Best practices
+
+✅ Stel altijd `min` en `max` in waar logisch
+
+✅ Gebruik `showButtons` voor velden waar +/- intuïtief is (hoeveelheden)
+
+✅ Stel `step` in op logische intervallen (0.01 voor bedragen, 1 voor stuks)
+
+❌ Verberg de knoppen niet als de gebruiker kleine aanpassingen moet maken
+
+❌ Gebruik geen absurd grote ranges zonder default waarde

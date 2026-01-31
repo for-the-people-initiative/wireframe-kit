@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Hero/Rationale" />
+
+# Hero
+
+Een grote banner-sectie met titel, subtitel, acties en optionele achtergrondafbeelding met overlay. Ondersteunt verschillende alignments en full-height modus.
+
+## Wanneer gebruiken ✅
+
+- **Landingspagina's**: Eerste sectie met headline en CTA
+- **Productpagina's**: Hero met productafbeelding en beschrijving
+- **Campagnepagina's**: Visueel impactvolle header
+- **Homepage**: Introductie van je merk/dienst
+
+## Wanneer NIET gebruiken ❌
+
+- **Op elke pagina** — alleen waar je een sterke visuele opening wilt
+- **In dashboards/apps** → gebruik een AppBar of simpele heading
+- **Als je geen goede afbeelding hebt** — een slechte Hero is erger dan geen Hero
+- **Boven-de-vouw op mobiel** — test of de Hero niet te veel ruimte inneemt
+
+## Alternatieven
+
+| In plaats van Hero... | Gebruik... | Wanneer... |
+|---|---|---|
+| Simpele heading + tekst | Geen visuele nadruk nodig |
+| CTA component | Je alleen een call-to-action wilt, geen volledige banner |
+| Card met afbeelding | Content in een begrensde container moet |
+
+## Best practices
+
+✅ Gebruik `overlay` bij achtergrondafbeeldingen voor leesbare tekst
+
+✅ Houd de titel kort en krachtig (max ~8 woorden)
+
+✅ Zet altijd een duidelijke CTA in de `actions` slot
+
+❌ Gebruik niet meerdere Hero's op één pagina
+
+❌ Gebruik geen `fullHeight` als er belangrijke content onder zit die direct zichtbaar moet zijn

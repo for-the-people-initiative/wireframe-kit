@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/ImageCompare/Rationale" />
+
+# ImageCompare
+
+Een before/after slider om twee afbeeldingen over elkaar te vergelijken. Gebruiker sleept een handle om de scheiding te verplaatsen.
+
+## Wanneer gebruiken ✅
+
+- **Voor/na vergelijkingen**: Renovatie, retouche, behandelresultaten
+- **Design iteraties**: Oud vs nieuw ontwerp tonen
+- **Product vergelijkingen**: Visueel verschil tussen twee opties
+
+## Wanneer NIET gebruiken ❌
+
+- **Meer dan 2 afbeeldingen** → gebruik [Galleria](?path=/docs/components-galleria-rationale--docs) of Carousel
+- **Afbeeldingen die niet overlappen** (ander formaat/onderwerp) → plaats ze naast elkaar
+- **Op mobiel met kleine afbeeldingen** — de slider is dan moeilijk te bedienen
+
+## Alternatieven
+
+| In plaats van ImageCompare... | Gebruik... | Wanneer... |
+|---|---|---|
+| Twee afbeeldingen naast elkaar | Geen interactie nodig, gewoon vergelijken |
+| Galleria | Meer dan 2 afbeeldingen doorlopen |
+| Carousel | Sequentiële afbeeldingen tonen |
+
+## Best practices
+
+✅ Gebruik afbeeldingen met exact dezelfde afmetingen en uitsnede
+
+✅ Zet `initialPosition` op 50 voor een eerlijke startvergelijking
+
+✅ Voeg een duidelijk `ariaLabel` toe dat de vergelijking beschrijft
+
+❌ Gebruik geen afbeeldingen die nauwelijks van elkaar verschillen — dat is verwarrend
+
+❌ Vergeet niet dat dit component interactie vereist — toon context erbij

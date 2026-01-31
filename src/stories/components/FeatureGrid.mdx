@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/FeatureGrid/Rationale" />
+
+# FeatureGrid
+
+Een grid van features/USP's met icoon, titel en beschrijving. Configureerbaar aantal kolommen en varianten (`card`, etc.).
+
+## Wanneer gebruiken ✅
+
+- **Landingspagina USP's**: "Waarom ons kiezen?" sectie
+- **Product features**: Overzicht van mogelijkheden
+- **Diensten overzicht**: Wat bieden we aan?
+- **Voordelen sectie**: Visueel aantrekkelijke opsomming
+
+## Wanneer NIET gebruiken ❌
+
+- **Lange lijsten (>9 items)** → wordt onoverzichtelijk, groepeer of gebruik tabs
+- **Vergelijking tussen opties** → gebruik een tabel of [PricingTable](?path=/docs/components-pricingtable-rationale--docs)
+- **Als items clickable moeten zijn** → gebruik Cards met links
+- **Tekstzware content** — FeatureGrid is voor korte, scanbare blokken
+
+## Alternatieven
+
+| In plaats van FeatureGrid... | Gebruik... | Wanneer... |
+|---|---|---|
+| Card grid | Items clickable moeten zijn of meer content bevatten |
+| Gewone lijst | Je geen visuele nadruk nodig hebt |
+| PricingTable | Je features per prijsplan wilt vergelijken |
+| DataView | Items dynamisch gefilterd/gesorteerd moeten worden |
+
+## Best practices
+
+✅ Gebruik 3 of 6 features voor de beste visuele balans
+
+✅ Houd beschrijvingen op max 2 regels
+
+✅ Gebruik consistente iconen (zelfde stijl/grootte)
+
+❌ Mix geen items met en zonder icoon — houd het uniform
+
+❌ Gebruik geen FeatureGrid als marketing-filler zonder echte content

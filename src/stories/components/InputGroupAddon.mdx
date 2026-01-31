@@ -1,0 +1,34 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/InputGroupAddon/Rationale" />
+
+# InputGroupAddon
+
+Een addon-element voor gebruik binnen InputGroup. Toont tekst, iconen of andere content als prefix/suffix van een input.
+
+## Wanneer gebruiken ✅
+
+- **Binnen een InputGroup**: Als prefix (€, http://) of suffix (.nl, kg)
+- **Statische context bij een veld**: Valuta, eenheid, icoon
+
+## Wanneer NIET gebruiken ❌
+
+- **Buiten een InputGroup** — heeft geen zin standalone
+- **Als label** → gebruik een `<label>` element
+- **Interactieve content** → gebruik een Button naast de input
+
+## Alternatieven
+
+| In plaats van InputGroupAddon... | Gebruik... | Wanneer... |
+|---|---|---|
+| InputIcon | Alleen een icoon binnen de input (geen aparte blok) |
+| Label | Je het veld wilt labelen |
+| Button | De addon interactief moet zijn |
+
+## Best practices
+
+✅ Gebruik altijd binnen een InputGroup
+
+✅ Houd content kort — één icoon of max 3-4 tekens
+
+❌ Gebruik niet als placeholder-vervanging — de addon moet altijd zichtbaar zijn

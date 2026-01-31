@@ -1,0 +1,38 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Footer/Rationale" />
+
+# Footer
+
+Site-brede footer met logo, kolommen met links, social media iconen en copyright. Volledig configureerbaar via props of slots.
+
+## Wanneer gebruiken ✅
+
+- **Elke website**: De footer is standaard op elke pagina
+- **Multi-column navigatie**: Links gegroepeerd per categorie
+- **Social links en copyright**: Standaard footer-content
+
+## Wanneer NIET gebruiken ❌
+
+- **In een app/dashboard** → gebruik een minimale footer of helemaal geen
+- **Als de footer per pagina verschilt** → gebruik slots voor flexibiliteit of bouw custom
+- **Single-page apps met infinite scroll** — footer wordt nooit bereikt
+
+## Alternatieven
+
+| In plaats van Footer... | Gebruik... | Wanneer... |
+|---|---|---|
+| Simpele `<footer>` met tekst | Je alleen copyright nodig hebt |
+| Custom layout | Footer sterk afwijkt van het standaard kolompatroon |
+
+## Best practices
+
+✅ Houd footer-links beperkt tot de belangrijkste pagina's
+
+✅ Gebruik `socialLinks` voor consistente social media iconen
+
+✅ Voeg `copyright` toe met het huidige jaar
+
+❌ Dupliceer geen hoofdnavigatie volledig in de footer
+
+❌ Stop geen kritieke content in de footer die bovenaan thuishoort

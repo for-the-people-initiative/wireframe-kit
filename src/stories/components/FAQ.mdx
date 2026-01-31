@@ -1,0 +1,40 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/FAQ/Rationale" />
+
+# FAQ
+
+Een lijst van veelgestelde vragen, weergegeven als een Accordion. Ondersteunt varianten en accepteert een array van `{ question, answer }` objecten.
+
+## Wanneer gebruiken ✅
+
+- **Veelgestelde vragen pagina**: De klassieke use-case
+- **Product/dienst pagina**: Bezwaren wegnemen onderaan de pagina
+- **Support sectie**: Snelle antwoorden zonder een heel helpcenter
+
+## Wanneer NIET gebruiken ❌
+
+- **Lange documentatie** → gebruik een kennisbank of docs-pagina
+- **Eén vraag/antwoord** → gebruik gewoon een heading + paragraaf
+- **Interactieve troubleshooting** → bouw een wizard of decision tree
+- **Als je al een Accordion gebruikt** — FAQ is een wrapper om Accordion, niet nesten
+
+## Alternatieven
+
+| In plaats van FAQ... | Gebruik... | Wanneer... |
+|---|---|---|
+| Accordion | Je custom content per panel wilt (niet alleen tekst) |
+| Gewone headings + tekst | Je <5 items hebt die altijd zichtbaar moeten zijn |
+| Search/helpdesk | Je >20 vragen hebt — dan is zoeken effectiever |
+
+## Best practices
+
+✅ Houd antwoorden kort en scanbaar
+
+✅ Plaats FAQ onderaan landingspagina's als conversie-ondersteuning
+
+✅ Gebruik `multiple: true` zodat meerdere antwoorden tegelijk open kunnen
+
+❌ Stop geen essentiële informatie in een FAQ die eigenlijk prominent zichtbaar moet zijn
+
+❌ Gebruik geen HTML in antwoorden tenzij nodig — houd het simpel

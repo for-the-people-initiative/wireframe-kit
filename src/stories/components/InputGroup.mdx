@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/InputGroup/Rationale" />
+
+# InputGroup
+
+Een wrapper die een input combineert met addons (iconen, tekst, knoppen) tot één visueel geheel. Gebruikt met InputGroupAddon en InputIcon.
+
+## Wanneer gebruiken ✅
+
+- **Prefix/suffix bij input**: €-teken, .nl domein, zoekicoon
+- **Input + knop combinatie**: Zoekveld met zoekknop
+- **Eenheden tonen**: kg, cm, % naast een numeriek veld
+
+## Wanneer NIET gebruiken ❌
+
+- **Standalone inputs** — als je geen addon hebt, is InputGroup overbodig
+- **Complexe layouts** → gebruik een grid of flexbox layout
+- **Labels** — gebruik een `<label>` element, niet een InputGroupAddon
+
+## Alternatieven
+
+| In plaats van InputGroup... | Gebruik... | Wanneer... |
+|---|---|---|
+| InputIcon | Je alleen een icoon in de input wilt (geen addon-blok) |
+| Losse input + knop | De knop visueel los mag staan |
+| InputNumber | Je een numeriek veld met +/- knoppen wilt |
+
+## Best practices
+
+✅ Gebruik InputGroupAddon voor tekst/iconen en slot de input ertussen
+
+✅ Gebruik `fluid` voor full-width formulieren
+
+✅ Houd addons compact — max 1-2 tekens of een icoon
+
+❌ Stop geen complexe content in een addon (dropdowns, meerdere knoppen)
+
+❌ Gebruik niet meer dan 2 addons (prefix + suffix) per groep

@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Lightbox/Rationale" />
+
+# Lightbox
+
+Een fullscreen overlay om afbeeldingen groot te bekijken met navigatie (vorige/volgende), toetsenbord-bediening, swipe-support en teller.
+
+## Wanneer gebruiken ✅
+
+- **Afbeeldinggalerijen**: Klik op thumbnail → bekijk groot
+- **Productfoto's**: Detail bekijken van producten
+- **Portfolio's**: Foto's of ontwerpen in groot formaat tonen
+
+## Wanneer NIET gebruiken ❌
+
+- **Enkele afbeelding zonder zoom-behoefte** → gebruik gewoon een Image
+- **Video content** → gebruik een video player
+- **Vergelijking van afbeeldingen** → gebruik [ImageCompare](?path=/docs/components-imagecompare-rationale--docs)
+- **Inline galerij** → gebruik [Galleria](?path=/docs/components-galleria-rationale--docs) als je geen overlay wilt
+
+## Alternatieven
+
+| In plaats van Lightbox... | Gebruik... | Wanneer... |
+|---|---|---|
+| Galleria | Inline galerij met thumbnails (geen overlay) |
+| Image | Enkele afbeelding zonder lightbox |
+| Dialog met afbeelding | Je custom content rond de afbeelding wilt |
+| ImageCompare | Twee afbeeldingen vergelijken |
+
+## Best practices
+
+✅ Zorg dat thumbnails duidelijk klikbaar zijn (cursor, hover-effect)
+
+✅ Toon de teller (`showCounter`) bij meerdere afbeeldingen
+
+✅ Escape sluit de lightbox — dat verwachten gebruikers
+
+❌ Open geen lightbox automatisch — alleen op gebruikersactie
+
+❌ Gebruik geen Lightbox voor niet-afbeelding content

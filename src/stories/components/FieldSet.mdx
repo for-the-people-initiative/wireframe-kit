@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/FieldSet/Rationale" />
+
+# FieldSet
+
+Een native `<fieldset>` wrapper met legend, optioneel inklapbaar (toggleable). Groepeert formuliervelden visueel en semantisch.
+
+## Wanneer gebruiken ✅
+
+- **Formuliersecties groeperen**: Persoonlijke gegevens, adres, betaling als aparte blokken
+- **Inklapbare secties**: Optionele/geavanceerde velden verbergen
+- **Accessibility**: Screenreaders gebruiken fieldset+legend voor formulierstructuur
+
+## Wanneer NIET gebruiken ❌
+
+- **Niet-formulier content** → gebruik [Panel](?path=/docs/components-panel-rationale--docs) of [Accordion](?path=/docs/components-accordion-rationale--docs)
+- **Enkele velden** — een FieldSet om één input is zinloos
+- **Als container/card** → gebruik Card of Panel
+
+## Alternatieven
+
+| In plaats van FieldSet... | Gebruik... | Wanneer... |
+|---|---|---|
+| Panel | Niet-formulier content groeperen |
+| Accordion | Meerdere inklapbare secties die onafhankelijk zijn |
+| Divider + heading | Lichtgewicht visuele scheiding zonder box |
+
+## Best practices
+
+✅ Geef altijd een duidelijke `legend` — dat is het hele punt
+
+✅ Gebruik `toggleable` voor optionele/geavanceerde secties
+
+✅ Houd 3-6 velden per FieldSet — niet te veel, niet te weinig
+
+❌ Nest geen FieldSets in FieldSets — wordt verwarrend
+
+❌ Gebruik FieldSet niet puur voor styling — het heeft semantische betekenis

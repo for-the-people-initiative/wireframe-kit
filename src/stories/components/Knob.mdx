@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Knob/Rationale" />
+
+# Knob
+
+Een circulaire slider die een waarde visueel toont als een boogvulling. Bedienbaar met muis, touch en toetsenbord.
+
+## Wanneer gebruiken ✅
+
+- **Visuele percentage-weergave**: Voortgang, score, bereik
+- **Dashboards**: Compacte numerieke indicator met visuele feedback
+- **Instellingen**: Volume, intensiteit, drempelwaarde
+
+## Wanneer NIET gebruiken ❌
+
+- **Exacte waarde-invoer** → gebruik [InputNumber](?path=/docs/components-inputnumber-rationale--docs)
+- **Lineaire voortgang** → gebruik [ProgressBar](?path=/docs/components-progressbar-rationale--docs)
+- **Grote ranges met precisie** → een Slider is intuïtiever
+- **Alleen weergave zonder interactie** → overweeg een MeterGroup of ProgressBar
+
+## Alternatieven
+
+| In plaats van Knob... | Gebruik... | Wanneer... |
+|---|---|---|
+| ProgressBar | Lineaire voortgang tonen |
+| Slider | Lineaire range-selectie |
+| InputNumber | Exacte getallen invoeren |
+| MeterGroup | Meerdere waarden tegelijk visualiseren |
+
+## Best practices
+
+✅ Gebruik `showValue` om het getal in het midden te tonen
+
+✅ Stel logische `min`/`max` en `step` waarden in
+
+✅ Gebruik voor dashboards en visuele KPI's, niet als primaire input
+
+❌ Gebruik niet meer dan 3-4 Knobs naast elkaar — wordt druk
+
+❌ Maak de Knob niet te klein — de interactie wordt dan onbruikbaar
