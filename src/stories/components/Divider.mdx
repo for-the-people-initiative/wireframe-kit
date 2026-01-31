@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Divider/Rationale" />
+
+# Divider
+
+Een visuele scheidslijn — horizontaal of verticaal — optioneel met tekst in het midden.
+
+## Wanneer gebruiken ✅
+
+- **Secties scheiden**: Visuele pauze tussen content-blokken
+- **Met label**: "of" tussen login-opties, "meer info" als tussenkop
+- **Verticaal**: Elementen in een toolbar of header scheiden
+- **Subtiele structuur**: Wanneer een Card of container te zwaar is
+
+## Wanneer NIET gebruiken ❌
+
+- **Als witruimte voldoende is** — niet elke sectie heeft een lijn nodig
+- **In een Card** — de Card zelf geeft al visuele scheiding, een Divider erin is vaak overbodig
+- **Voor decoratie** — als het geen content scheidt, hoeft het er niet te zijn
+- **Tussen elke rij in een lijst** — gebruik CSS `border-bottom` of tabel-stijlen
+
+## Alternatieven
+
+| In plaats van Divider... | Gebruik... | Wanneer... |
+|---|---|---|
+| Witruimte (margin/padding) | Subtiele scheiding zonder visueel element |
+| Card | Content in een eigen container groeperen |
+| Heading | Sectie-titel die ook scheiding geeft |
+
+## Best practices
+
+✅ Gebruik `layout="vertical"` in toolbars en horizontale layouts
+
+✅ Gebruik de slot voor tekst als "of", "of kies" — houdt de flow naturlijk
+
+✅ Gebruik `type="dashed"` of `type="dotted"` voor een zachtere scheiding
+
+❌ Gebruik niet meer dan 2-3 Dividers per pagina-sectie — teveel lijnen maken het druk
+
+❌ Combineer geen Divider met al zware visuele scheiding (Cards + Dividers + witruimte)

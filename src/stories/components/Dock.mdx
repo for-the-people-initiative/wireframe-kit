@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Dock/Rationale" />
+
+# Dock
+
+Een macOS-stijl dock met iconen, magnification-effect en tooltips — voor snelle navigatie of app-switching.
+
+## Wanneer gebruiken ✅
+
+- **Dashboard-navigatie**: Snel schakelen tussen secties via iconen onderaan
+- **App launcher**: Overzicht van beschikbare tools/modules
+- **Creatieve/visuele apps**: Waar een dock-metafoor past bij de doelgroep
+- **Desktop-achtige interfaces**: Admin panels die een app-feel willen geven
+
+## Wanneer NIET gebruiken ❌
+
+- **Als primaire navigatie voor content-sites** — een gewone nav of sidebar is duidelijker
+- **Op mobiel** — het magnification-effect werkt niet op touch, gebruik een bottom tab bar
+- **Als je meer dan 8-10 items hebt** — een dock wordt onbruikbaar bij teveel iconen
+- **Voor gebruikers die iconen niet herkennen** — zonder labels is een Dock verwarrend
+
+## Alternatieven
+
+| In plaats van Dock... | Gebruik... | Wanneer... |
+|---|---|---|
+| AppBar | Traditionele top-navigatie met tekst |
+| Tabs | Sectie-navigatie met labels |
+| Menu/Sidebar | Uitgebreide navigatie met tekst en hiërarchie |
+| Bottom tab bar (custom) | Mobiele navigatie met labels |
+
+## Best practices
+
+✅ Gebruik `showTooltips` zodat gebruikers weten wat elk icoon doet
+
+✅ Markeer het actieve item met `active: true` in het model
+
+✅ Houd het bij 4-7 items — een dock is voor de meestgebruikte acties
+
+✅ Gebruik `position` om de dock te plaatsen waar het logisch is (bottom/left)
+
+❌ Gebruik geen tekst-iconen — de Dock is voor visuele iconen
+
+❌ Zet geen destructieve acties (verwijderen) in een Dock

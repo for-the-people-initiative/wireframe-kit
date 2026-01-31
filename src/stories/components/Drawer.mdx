@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Drawer/Rationale" />
+
+# Drawer
+
+Een zijpaneel dat van de rand van het scherm inschuift — voor secundaire content, navigatie of details zonder de hoofdpagina te verlaten.
+
+## Wanneer gebruiken ✅
+
+- **Detail-paneel**: Klik op een item in een lijst → details verschijnen in een Drawer
+- **Filters/instellingen**: Filterpaneel dat in- en uitschuift
+- **Mobiele navigatie**: Hamburger-menu dat als Drawer opent
+- **Formulieren naast een lijst**: Bewerk een item zonder weg te navigeren
+
+## Wanneer NIET gebruiken ❌
+
+- **Voor kritieke beslissingen** → gebruik [ConfirmDialog](?path=/docs/components-confirmdialog-rationale--docs) (modaal, gefocust)
+- **Voor korte berichten** → gebruik [Toast](?path=/docs/components-toast-rationale--docs) of [Alert](?path=/docs/components-alert-rationale--docs)
+- **Als de content een eigen pagina verdient** — als de Drawer te vol is, maak er een pagina van
+- **Voor popups met weinig content** → gebruik een Dialog
+
+## Alternatieven
+
+| In plaats van Drawer... | Gebruik... | Wanneer... |
+|---|---|---|
+| Dialog | Modale focus op één taak (gecentreerd) |
+| Nieuwe pagina/route | Te veel content voor een zijpaneel |
+| Accordion | Detail in-/uitklappen binnen de lijst zelf |
+| Tabs | Meerdere secties in de hoofdcontent |
+
+## Best practices
+
+✅ Gebruik `position` om de Drawer van de logische kant te laten komen (rechts voor details, links voor navigatie)
+
+✅ Voeg altijd een `header` toe voor context
+
+✅ Maak het `closable` — gebruikers moeten altijd terug kunnen
+
+✅ Gebruik de `footer` slot voor acties (Opslaan/Annuleren)
+
+❌ Maak Drawers niet breder dan 50% van het scherm — het is een zijpaneel, geen pagina
+
+❌ Open geen Drawer vanuit een Drawer — dat is navigatie-inception

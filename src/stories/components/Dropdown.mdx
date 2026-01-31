@@ -1,0 +1,46 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Components/Dropdown/Rationale" />
+
+# Dropdown
+
+Een trigger-knop die een lijst met opties opent — voor het selecteren van één waarde uit een lijst, met optionele filtering.
+
+## Wanneer gebruiken ✅
+
+- **Formuliervelden**: Kies een land, categorie of status uit een vaste lijst
+- **Compacte selectie**: Wanneer radio buttons teveel ruimte innemen (7+ opties)
+- **Met filter**: Grote lijsten doorzoekbaar maken via de `filter` optie
+- **Groepen**: Items groeperen met `optionGroupLabel` voor overzicht
+
+## Wanneer NIET gebruiken ❌
+
+- **Bij 2-3 opties** → gebruik radio buttons of [SelectButton](?path=/docs/components-selectbutton-rationale--docs)
+- **Als vrije invoer nodig is** → gebruik [AutoComplete](?path=/docs/components-autocomplete-rationale--docs)
+- **Voor navigatie-acties** → gebruik [Menu](?path=/docs/components-menu-rationale--docs)
+- **Voor multi-select** → gebruik [Select](?path=/docs/components-select-rationale--docs) met multi-mode of checkboxen
+
+## Alternatieven
+
+| In plaats van Dropdown... | Gebruik... | Wanneer... |
+|---|---|---|
+| Select | Vergelijkbaar maar met extra features (multi-select) |
+| SelectButton | 2-4 opties visueel als knoppen |
+| AutoComplete | Vrije invoer + suggesties |
+| Radio buttons | Alle opties altijd zichtbaar (3-6 items) |
+
+## Best practices
+
+✅ Gebruik `placeholder` om aan te geven wat geselecteerd moet worden
+
+✅ Activeer `filter` bij 10+ opties
+
+✅ Gebruik `optionLabel` en `optionValue` voor object-arrays
+
+✅ Toon een zinvolle `displayValue` — niet de interne ID
+
+❌ Nest geen Dropdowns in Dropdowns
+
+❌ Gebruik geen Dropdown voor ja/nee keuzes — een Checkbox of ToggleSwitch is beter
+
+❌ Maak de lijst niet langer dan 8-10 zichtbare items — scroll is OK maar niet 50+ items zonder filter
