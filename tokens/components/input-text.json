@@ -65,7 +65,7 @@
           "description": "Hover border color"
         },
         "focus": {
-          "value": "{brand.primary}",
+          "value": "{focus.ring}",
           "type": "color",
           "description": "Focus border color"
         },
@@ -122,7 +122,7 @@
         "description": "Focus ring width"
       },
       "ringColor": {
-        "value": "{brand.primary}",
+        "value": "{focus.ring}",
         "type": "color",
         "description": "Focus ring color"
       },
