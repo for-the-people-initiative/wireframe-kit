@@ -22,8 +22,7 @@ $c: input-text;
   }
 
   &:focus {
-    outline: var(--input-text-focus-ringWidth, $input-text-focus-ringWidth) solid var(--input-text-focus-ringColor, $input-text-focus-ringColor);
-    outline-offset: var(--input-text-focus-ringOffset, $input-text-focus-ringOffset);
+    outline: none;
     border-color: var(--input-text-border-color-focus, $input-text-border-color-focus);
   }
 
