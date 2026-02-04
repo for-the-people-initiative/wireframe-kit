@@ -65,9 +65,9 @@
           "description": "Hover border color"
         },
         "focus": {
-          "value": "{amber.400}",
+          "value": "{neutral.400}",
           "type": "color",
-          "description": "Focus border color"
+          "description": "Focus border color (same as hover)"
         },
         "disabled": {
           "value": "{neutral.200}",
@@ -119,17 +119,17 @@
       "ringWidth": {
         "value": "0",
         "type": "dimension",
-        "description": "Focus ring width (disabled - using border only)"
+        "description": "Focus ring width"
       },
       "ringColor": {
         "value": "transparent",
         "type": "color",
-        "description": "Focus ring color (disabled)"
+        "description": "Focus ring color"
       },
       "ringOffset": {
         "value": "0",
         "type": "dimension",
-        "description": "Focus ring offset (disabled)"
+        "description": "Focus ring offset"
       }
     }
   }

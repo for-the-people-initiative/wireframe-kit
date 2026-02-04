@@ -1138,7 +1138,7 @@
   --input-text-border-width: 1px;
   --input-text-border-color-default: #d4d4d4; /* Default border color */
   --input-text-border-color-hover: #a3a3a3; /* Hover border color */
-  --input-text-border-color-focus: #fbbf24; /* Focus border color */
+  --input-text-border-color-focus: #a3a3a3; /* Focus border color (same as hover) */
   --input-text-border-color-disabled: #e5e5e5; /* Disabled border color */
   --input-text-border-color-error: #ef4444; /* Error/invalid border color */
   --input-text-background-default: #0a0e1f; /* Default background */
@@ -1147,9 +1147,9 @@
   --input-text-text-default: #ffffff; /* Default text color */
   --input-text-text-placeholder: #7680a9; /* Placeholder text color */
   --input-text-text-disabled: #7680a9; /* Disabled text color */
-  --input-text-focus-ringWidth: 0; /* Focus ring width (disabled - using border only) */
-  --input-text-focus-ringColor: transparent; /* Focus ring color (disabled) */
-  --input-text-focus-ringOffset: 0; /* Focus ring offset (disabled) */
+  --input-text-focus-ringWidth: 0; /* Focus ring width */
+  --input-text-focus-ringColor: transparent; /* Focus ring color */
+  --input-text-focus-ringOffset: 0; /* Focus ring offset */
   --knob-size-sm: 80px; /* Small knob size */
   --knob-size-md: 120px; /* Medium knob size */
   --knob-size-lg: 160px; /* Large knob size */

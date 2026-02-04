@@ -1249,7 +1249,7 @@ $input-text-radius: var(--input-text-radius); // Input border radius
 $input-text-border-width: var(--input-text-border-width);
 $input-text-border-color-default: var(--input-text-border-color-default); // Default border color
 $input-text-border-color-hover: var(--input-text-border-color-hover); // Hover border color
-$input-text-border-color-focus: var(--input-text-border-color-focus); // Focus border color
+$input-text-border-color-focus: var(--input-text-border-color-focus); // Focus border color (same as hover)
 $input-text-border-color-disabled: var(--input-text-border-color-disabled); // Disabled border color
 $input-text-border-color-error: var(--input-text-border-color-error); // Error/invalid border color
 $input-text-background-default: var(--input-text-background-default); // Default background
@@ -1258,9 +1258,9 @@ $input-text-background-hover: var(--input-text-background-hover); // Hover backg
 $input-text-text-default: var(--input-text-text-default); // Default text color
 $input-text-text-placeholder: var(--input-text-text-placeholder); // Placeholder text color
 $input-text-text-disabled: var(--input-text-text-disabled); // Disabled text color
-$input-text-focus-ringWidth: var(--input-text-focus-ringWidth); // Focus ring width (disabled - using border only)
-$input-text-focus-ringColor: var(--input-text-focus-ringColor); // Focus ring color (disabled)
-$input-text-focus-ringOffset: var(--input-text-focus-ringOffset); // Focus ring offset (disabled)
+$input-text-focus-ringWidth: var(--input-text-focus-ringWidth); // Focus ring width
+$input-text-focus-ringColor: var(--input-text-focus-ringColor); // Focus ring color
+$input-text-focus-ringOffset: var(--input-text-focus-ringOffset); // Focus ring offset
 
 // Knob
 $knob-size-sm: var(--knob-size-sm); // Small knob size
