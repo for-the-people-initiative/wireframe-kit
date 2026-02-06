@@ -1,7 +1,7 @@
 {
   "name": "@for-the-people-initiative/design-system",
   "private": false,
-  "version": "1.3.4",
+  "version": "1.4.0",
   "type": "module",
   "description": "Design system with design tokens, SCSS utilities, and Vue 3 components",
   "author": "For The People",
@@ -17,8 +17,6 @@
   "files": [
     "dist",
     "src/scss",
-    "src/components",
-    "src/types",
     "tokens"
   ],
   "exports": {
@@ -32,15 +30,32 @@
     "./scss": "./dist/scss/_tokens.scss",
     "./scss/tokens": "./dist/scss/_tokens.scss",
     "./scss/mixins/*": "./src/scss/mixins/*",
-    "./components/*": "./src/components/*"
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/types/index.d.ts"
+    },
+    "./components/*": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/components/*/index.js",
+      "style": "./dist/components/*/style.css"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "types": ["./dist/types/index.d.ts"],
+      "components/*": ["./dist/types/index.d.ts"]
+    }
   },
   "main": "./dist/ts/tokens.ts",
   "scripts": {
     "build:tokens": "tsx scripts/build-tokens.ts",
+    "build:components": "vite build",
+    "build:types": "tsc -p tsconfig.build.json",
+    "build:lib": "npm run build:tokens && npm run build:components && npm run build:types",
     "dev": "npm run build:tokens && npm --prefix server run dev",
     "build": "npm run build:tokens && npm --prefix server install && npm --prefix server run build",
     "preview": "npm --prefix server run preview",
-    "prepublishOnly": "npm run build:tokens",
+    "prepublishOnly": "npm run build:lib",
     "publish-all": "npm run build:tokens && npm publish && node ./workflow/DeploymentCDN/preprocessUtilityClasses.cjs && node ./workflow/DeploymentCDN/deployUtilityClassesToCDN.cjs",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -73,7 +88,8 @@
     "typescript": "^5.6.0",
     "uglifycss": "^0.0.29",
     "vite": "^4.4.5",
-    "vue": "^3.5.0"
+    "vue": "^3.5.0",
+    "vue-tsc": "^3.2.4"
   },
   "dependencies": {
     "chart.js": "^4.5.1"

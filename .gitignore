@@ -4,3 +4,9 @@ node_modules/
 # Local Netlify folder
 .netlify
 storybook-static/
+
+# Build output (regenerated on publish)
+dist/components/
+dist/types/
+dist/auto-*.js
+dist/*.js
