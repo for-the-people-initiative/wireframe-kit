@@ -70,6 +70,12 @@ $brand-secondary: var(--brand-secondary); // Secondary brand color (CTA)
 $brand-accent: var(--brand-accent); // Accent brand color
 $brand-subtle: var(--brand-subtle); // Subtle brand background
 
+// Gradient
+$gradient-success-start: var(--gradient-success-start); // Success gradient start
+$gradient-success-end: var(--gradient-success-end); // Success gradient end
+$gradient-streak-start: var(--gradient-streak-start); // Streak gradient start (success green)
+$gradient-streak-end: var(--gradient-streak-end); // Streak gradient end (warning yellow)
+
 // Radius
 $radius-none: var(--radius-none); // No rounding
 $radius-subtle: var(--radius-subtle); // Subtle rounding

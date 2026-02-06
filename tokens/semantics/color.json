@@ -38,9 +38,9 @@
     "success": { "value": "{green.500}", "type": "color", "description": "Success state" },
     "successSubtle": { "value": "rgba(34, 197, 94, 0.15)", "type": "color", "description": "Success background" },
     "successEmphasis": { "value": "{green.400}", "type": "color", "description": "Success text" },
-    "warning": { "value": "{amber.500}", "type": "color", "description": "Warning state" },
-    "warningSubtle": { "value": "rgba(245, 158, 11, 0.15)", "type": "color", "description": "Warning background" },
-    "warningEmphasis": { "value": "{amber.400}", "type": "color", "description": "Warning text" },
+    "warning": { "value": "{yellow.500}", "type": "color", "description": "Warning state" },
+    "warningSubtle": { "value": "rgba(234, 179, 8, 0.15)", "type": "color", "description": "Warning background" },
+    "warningEmphasis": { "value": "{yellow.400}", "type": "color", "description": "Warning text" },
     "error": { "value": "{red.500}", "type": "color", "description": "Error state" },
     "errorSubtle": { "value": "rgba(239, 68, 68, 0.15)", "type": "color", "description": "Error background" },
     "errorEmphasis": { "value": "{red.400}", "type": "color", "description": "Error text" },
@@ -77,5 +77,15 @@
     "secondary": { "value": "{orange.500}", "type": "color", "description": "Secondary brand color (CTA)" },
     "accent": { "value": "{amber.400}", "type": "color", "description": "Accent brand color" },
     "subtle": { "value": "{navy.700}", "type": "color", "description": "Subtle brand background" }
+  },
+  "gradient": {
+    "success": {
+      "start": { "value": "{green.500}", "type": "color", "description": "Success gradient start" },
+      "end": { "value": "{green.400}", "type": "color", "description": "Success gradient end" }
+    },
+    "streak": {
+      "start": { "value": "{green.500}", "type": "color", "description": "Streak gradient start (success green)" },
+      "end": { "value": "{yellow.500}", "type": "color", "description": "Streak gradient end (warning yellow)" }
+    }
   }
 }

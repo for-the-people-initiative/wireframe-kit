@@ -29,9 +29,9 @@
   --feedback-success: #22c55e; /* Success state */
   --feedback-successSubtle: rgba(34, 197, 94, 0.15); /* Success background */
   --feedback-successEmphasis: #4ade80; /* Success text */
-  --feedback-warning: #f59e0b; /* Warning state */
-  --feedback-warningSubtle: rgba(245, 158, 11, 0.15); /* Warning background */
-  --feedback-warningEmphasis: #fbbf24; /* Warning text */
+  --feedback-warning: #eab308; /* Warning state */
+  --feedback-warningSubtle: rgba(234, 179, 8, 0.15); /* Warning background */
+  --feedback-warningEmphasis: #facc15; /* Warning text */
   --feedback-error: #ef4444; /* Error state */
   --feedback-errorSubtle: rgba(239, 68, 68, 0.15); /* Error background */
   --feedback-errorEmphasis: #f87171; /* Error text */
@@ -54,6 +54,10 @@
   --brand-secondary: #f97316; /* Secondary brand color (CTA) */
   --brand-accent: #fbbf24; /* Accent brand color */
   --brand-subtle: #1a2244; /* Subtle brand background */
+  --gradient-success-start: #22c55e; /* Success gradient start */
+  --gradient-success-end: #4ade80; /* Success gradient end */
+  --gradient-streak-start: #22c55e; /* Streak gradient start (success green) */
+  --gradient-streak-end: #eab308; /* Streak gradient end (warning yellow) */
   --radius-none: 0; /* No rounding */
   --radius-subtle: 2px; /* Subtle rounding */
   --radius-default: 5px; /* Default border radius */
@@ -196,7 +200,7 @@
   --avatar-group-ringColor: #0a0e1f; /* Ring color matches canvas */
   --badge-background-primary: #f97316; /* Primary badge background - visible accent color */
   --badge-background-success: #22c55e; /* Success badge background */
-  --badge-background-warning: #f59e0b; /* Warning badge background */
+  --badge-background-warning: #eab308; /* Warning badge background */
   --badge-background-danger: #ef4444; /* Danger badge background */
   --badge-background-info: #3b82f6; /* Info badge background */
   --badge-text-primary: #ffffff; /* Text on primary badge - white */
@@ -548,7 +552,7 @@
   --confirmDialog-header-borderColor: #1a2244; /* Header bottom border color */
   --confirmDialog-header-title-color: #ffffff; /* Header title text color */
   --confirmDialog-icon-size: 48px; /* Icon size */
-  --confirmDialog-icon-color-warning: #f59e0b; /* Warning icon color */
+  --confirmDialog-icon-color-warning: #eab308; /* Warning icon color */
   --confirmDialog-icon-color-danger: #ef4444; /* Danger icon color */
   --confirmDialog-icon-color-info: #3b82f6; /* Info icon color */
   --confirmDialog-message-color: #ffffff; /* Message text color */
@@ -569,7 +573,7 @@
   --confirmPopup-message-color: #ffffff; /* Message text color */
   --confirmPopup-message-fontSize: 14px; /* Message font size */
   --confirmPopup-icon-size: 20px; /* Icon size */
-  --confirmPopup-icon-color: #f59e0b; /* Icon color */
+  --confirmPopup-icon-color: #eab308; /* Icon color */
   --confirmPopup-arrow-size: 8px; /* Arrow/pointer size */
   --confirmPopup-offset: 10px; /* Distance from target element */
   --confirmPopup-maxWidth: 300px; /* Maximum width */
@@ -967,15 +971,15 @@
   --inline-message-iconSize: 16px; /* Icon size */
   --inline-message-background-success: rgba(34, 197, 94, 0.15); /* Success background */
   --inline-message-background-info: rgba(59, 130, 246, 0.15); /* Info background */
-  --inline-message-background-warn: rgba(245, 158, 11, 0.15); /* Warning background */
+  --inline-message-background-warn: rgba(234, 179, 8, 0.15); /* Warning background */
   --inline-message-background-error: rgba(239, 68, 68, 0.15); /* Error background */
   --inline-message-text-success: #4ade80; /* Success text color */
   --inline-message-text-info: #60a5fa; /* Info text color */
-  --inline-message-text-warn: #fbbf24; /* Warning text color */
+  --inline-message-text-warn: #facc15; /* Warning text color */
   --inline-message-text-error: #f87171; /* Error text color */
   --inline-message-icon-success: #22c55e; /* Success icon color */
   --inline-message-icon-info: #3b82f6; /* Info icon color */
-  --inline-message-icon-warn: #f59e0b; /* Warning icon color */
+  --inline-message-icon-warn: #eab308; /* Warning icon color */
   --inline-message-icon-error: #ef4444; /* Error icon color */
   --input-chips-height-sm: 32px; /* Small container min-height */
   --input-chips-height-md: 40px; /* Medium container min-height (default) */
@@ -1330,19 +1334,19 @@
   --message-borderWidth: 1px; /* Border width */
   --message-background-success: rgba(34, 197, 94, 0.15); /* Success message background */
   --message-background-info: rgba(59, 130, 246, 0.15); /* Info message background */
-  --message-background-warn: rgba(245, 158, 11, 0.15); /* Warning message background */
+  --message-background-warn: rgba(234, 179, 8, 0.15); /* Warning message background */
   --message-background-error: rgba(239, 68, 68, 0.15); /* Error message background */
   --message-text-success: #4ade80; /* Success message text color */
   --message-text-info: #60a5fa; /* Info message text color */
-  --message-text-warn: #fbbf24; /* Warning message text color */
+  --message-text-warn: #facc15; /* Warning message text color */
   --message-text-error: #f87171; /* Error message text color */
   --message-icon-success: #22c55e; /* Success icon color */
   --message-icon-info: #3b82f6; /* Info icon color */
-  --message-icon-warn: #f59e0b; /* Warning icon color */
+  --message-icon-warn: #eab308; /* Warning icon color */
   --message-icon-error: #ef4444; /* Error icon color */
   --message-border-success: #22c55e; /* Success message border color */
   --message-border-info: #3b82f6; /* Info message border color */
-  --message-border-warn: #f59e0b; /* Warning message border color */
+  --message-border-warn: #eab308; /* Warning message border color */
   --message-border-error: #ef4444; /* Error message border color */
   --message-closeButton-color: #7680a9; /* Close button icon color */
   --message-closeButton-hoverColor: #ffffff; /* Close button icon hover color */
@@ -1362,7 +1366,7 @@
   --meter-group-legend-marker-radius: 9999px; /* Border radius of the legend marker */
   --meter-group-colors-primary: #11162d; /* Primary meter color */
   --meter-group-colors-success: #22c55e; /* Success meter color */
-  --meter-group-colors-warning: #f59e0b; /* Warning meter color */
+  --meter-group-colors-warning: #eab308; /* Warning meter color */
   --meter-group-colors-danger: #ef4444; /* Danger meter color */
   --multi-select-height-sm: 32px;
   --multi-select-height-md: 40px;
@@ -1997,7 +2001,7 @@
   --tag-background-accent: #f59e0b; /* Accent color tag */
   --tag-background-neutral: rgba(255, 255, 255, 0.12); /* Neutral/muted tag */
   --tag-background-success: #22c55e; /* Success status tag */
-  --tag-background-warning: #f59e0b; /* Warning status tag */
+  --tag-background-warning: #eab308; /* Warning status tag */
   --tag-background-danger: #ef4444; /* Danger/error status tag */
   --tag-background-info: #3b82f6; /* Info status tag */
   --tag-text-brand: #ffffff; /* Text on brand background */
@@ -2086,7 +2090,7 @@
   --timeline-event-description-fontSize: 14px; /* Event description font size */
   --timeline-colors-primary: #11162d; /* Primary marker color */
   --timeline-colors-success: #22c55e; /* Success marker color */
-  --timeline-colors-warning: #f59e0b; /* Warning marker color */
+  --timeline-colors-warning: #eab308; /* Warning marker color */
   --timeline-colors-danger: #ef4444; /* Danger marker color */
   --toast-container-gap: 10px; /* Gap between stacked toasts */
   --toast-container-padding: 16px; /* Container padding from screen edge */
@@ -2095,13 +2099,13 @@
   --toast-background-default: #1a2244; /* Default toast background */
   --toast-background-success: rgba(34, 197, 94, 0.15); /* Success toast background */
   --toast-background-info: rgba(59, 130, 246, 0.15); /* Info toast background */
-  --toast-background-warning: rgba(245, 158, 11, 0.15); /* Warning toast background */
+  --toast-background-warning: rgba(234, 179, 8, 0.15); /* Warning toast background */
   --toast-background-error: rgba(239, 68, 68, 0.15); /* Error toast background */
   --toast-border-width: 1px; /* Toast border width */
   --toast-border-color-default: #1a2244; /* Default border color */
   --toast-border-color-success: #22c55e; /* Success border color */
   --toast-border-color-info: #3b82f6; /* Info border color */
-  --toast-border-color-warning: #f59e0b; /* Warning border color */
+  --toast-border-color-warning: #eab308; /* Warning border color */
   --toast-border-color-error: #ef4444; /* Error border color */
   --toast-radius: 5px; /* Toast border radius */
   --toast-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08); /* Toast elevation shadow */
@@ -2111,14 +2115,14 @@
   --toast-icon-color-default: #7680a9; /* Default icon color */
   --toast-icon-color-success: #22c55e; /* Success icon color */
   --toast-icon-color-info: #3b82f6; /* Info icon color */
-  --toast-icon-color-warning: #f59e0b; /* Warning icon color */
+  --toast-icon-color-warning: #eab308; /* Warning icon color */
   --toast-icon-color-error: #ef4444; /* Error icon color */
   --toast-icon-gap: 10px; /* Gap between icon and content */
   --toast-content-gap: 4px; /* Gap between summary and detail */
   --toast-summary-color-default: #ffffff; /* Summary text color */
   --toast-summary-color-success: #4ade80; /* Success summary color */
   --toast-summary-color-info: #60a5fa; /* Info summary color */
-  --toast-summary-color-warning: #fbbf24; /* Warning summary color */
+  --toast-summary-color-warning: #facc15; /* Warning summary color */
   --toast-summary-color-error: #f87171; /* Error summary color */
   --toast-summary-fontSize: 14px; /* Summary font size */
   --toast-summary-fontWeight: 600; /* Summary font weight */
@@ -2135,7 +2139,7 @@
   --toast-progress-fill-default: #11162d; /* Default progress fill */
   --toast-progress-fill-success: #22c55e; /* Success progress fill */
   --toast-progress-fill-info: #3b82f6; /* Info progress fill */
-  --toast-progress-fill-warning: #f59e0b; /* Warning progress fill */
+  --toast-progress-fill-warning: #eab308; /* Warning progress fill */
   --toast-progress-fill-error: #ef4444; /* Error progress fill */
   --toggleButton-height-sm: 32px; /* Small toggle button height */
   --toggleButton-height-md: 40px; /* Medium toggle button height */
