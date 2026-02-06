@@ -1,7 +1,7 @@
 {
   "name": "@for-the-people-initiative/design-system",
   "private": false,
-  "version": "1.4.0",
+  "version": "1.4.1",
   "type": "module",
   "description": "Design system with design tokens, SCSS utilities, and Vue 3 components",
   "author": "For The People",
@@ -42,8 +42,12 @@
   },
   "typesVersions": {
     "*": {
-      "types": ["./dist/types/index.d.ts"],
-      "components/*": ["./dist/types/index.d.ts"]
+      "types": [
+        "./dist/types/index.d.ts"
+      ],
+      "components/*": [
+        "./dist/types/index.d.ts"
+      ]
     }
   },
   "main": "./dist/ts/tokens.ts",
@@ -88,6 +92,7 @@
     "typescript": "^5.6.0",
     "uglifycss": "^0.0.29",
     "vite": "^4.4.5",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
     "vue": "^3.5.0",
     "vue-tsc": "^3.2.4"
   },
