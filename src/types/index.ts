@@ -961,6 +961,62 @@ export interface KnobEmits {
 }
 
 // ============================================================
+// LiveTile
+// ============================================================
+
+/**
+ * Badge value for LiveTile
+ * - 'dot': Shows a small dot indicator
+ * - 'check': Shows a checkmark icon
+ * - string/number: Shows the value as text
+ */
+export type LiveTileBadge = 'dot' | 'check' | string | number | null;
+
+export interface LiveTileProps {
+  /**
+   * URL to navigate to when clicked. If not provided, component renders as a button.
+   */
+  href?: string;
+  /**
+   * Title shown in the branding footer
+   */
+  title?: string;
+  /**
+   * Icon class for the branding footer (e.g., 'pi pi-chart-line')
+   */
+  icon?: string;
+  /**
+   * Badge content - 'dot', 'check', or custom text/number
+   */
+  badge?: LiveTileBadge;
+  /**
+   * Additional CSS class for the badge (e.g., 'warning', 'success')
+   */
+  badgeClass?: string;
+  /**
+   * When true, stops auto-rotation and shows loading state
+   */
+  loading?: boolean;
+  /**
+   * Number of faces/slides in the tile
+   * @default 2
+   */
+  faceCount?: number;
+  /**
+   * Hide the branding footer
+   * @default false
+   */
+  hideBranding?: boolean;
+}
+
+export interface LiveTileEmits {
+  /**
+   * Emitted when tile is clicked (only when no href is provided)
+   */
+  (e: 'click'): void;
+}
+
+// ============================================================
 // Lightbox
 // ============================================================
 
