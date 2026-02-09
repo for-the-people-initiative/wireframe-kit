@@ -23,6 +23,9 @@ componentDirs.forEach(dir => {
 // Add types entry
 entries['types/index'] = resolve(__dirname, 'src/types/index.ts')
 
+// Add composables entry
+entries['composables/index'] = resolve(__dirname, 'src/composables/index.ts')
+
 export default defineConfig({
   plugins: [
     vue(),

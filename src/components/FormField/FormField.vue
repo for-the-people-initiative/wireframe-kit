@@ -7,7 +7,11 @@
       'form-field--disabled': disabled
     }"
   >
-    <label v-if="label" :for="computedLabelFor" class="form-field__label">
+    <label
+      v-if="label"
+      :for="computedLabelFor"
+      class="form-field__label"
+    >
       {{ label }}
       <span v-if="required" class="form-field__required" aria-hidden="true">*</span>
     </label>
@@ -32,6 +36,8 @@
     </div>
   </div>
 </template>
+
+<style src="./FormField.scss"></style>
 
 <script setup lang="ts">
 import type { FormFieldProps } from '../../types';

@@ -4,10 +4,9 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "strict": true,
-    "jsx": "preserve",
     "declaration": true,
     "emitDeclarationOnly": true,
-    "declarationDir": "./dist/types",
+    "declarationDir": "./dist/composables",
     "outDir": "./dist",
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -17,7 +16,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src/types/**/*.ts"],
+  "include": ["src/composables/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
-

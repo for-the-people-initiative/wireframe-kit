@@ -38,6 +38,10 @@
       "types": "./dist/types/index.d.ts",
       "import": "./dist/components/*/index.js",
       "style": "./dist/components/*/style.css"
+    },
+    "./composables": {
+      "types": "./dist/composables/index.d.ts",
+      "import": "./dist/composables/index.js"
     }
   },
   "typesVersions": {
@@ -47,6 +51,9 @@
       ],
       "components/*": [
         "./dist/types/index.d.ts"
+      ],
+      "composables": [
+        "./dist/composables/index.d.ts"
       ]
     }
   },
@@ -54,7 +61,7 @@
   "scripts": {
     "build:tokens": "tsx scripts/build-tokens.ts",
     "build:components": "vite build",
-    "build:types": "tsc -p tsconfig.build.json",
+    "build:types": "tsc -p tsconfig.build.json && tsc -p tsconfig.composables.json",
     "build:lib": "npm run build:tokens && npm run build:components && npm run build:types",
     "dev": "npm run build:tokens && npm --prefix server run dev",
     "build": "npm run build:tokens && npm --prefix server install && npm --prefix server run build",

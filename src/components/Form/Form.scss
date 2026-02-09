@@ -70,3 +70,23 @@ $f: form-field;
     color: var(--color-error, #ef4444);
   }
 }
+
+.#{$f}--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  
+  .#{$f}__label {
+    color: var(--text-muted, rgba(255, 255, 255, 0.5));
+  }
+}
+
+.#{$f}__error-icon {
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.#{$f}__error {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}

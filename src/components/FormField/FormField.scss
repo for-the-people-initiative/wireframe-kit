@@ -1,0 +1,74 @@
+@use "../../../dist/scss/tokens" as *;
+
+// FormField component
+$c: form-field;
+
+.#{$c} {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs, 0.375rem);
+}
+
+// Label
+.#{$c}__label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xxs, 0.25rem);
+  font-size: var(--font-size-sm, 0.875rem);
+  font-weight: 500;
+  color: var(--text-default, #fff);
+  margin-bottom: var(--space-xs, 0.375rem);
+}
+
+// Required asterisk
+.#{$c}__required {
+  color: var(--feedback-error, #ef4444);
+  font-weight: 600;
+}
+
+// Control wrapper (holds the slot)
+.#{$c}__control {
+  display: flex;
+  flex-direction: column;
+}
+
+// Error message
+.#{$c}__error {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xxs, 0.25rem);
+  font-size: var(--font-size-xs, 0.75rem);
+  color: var(--feedback-error, #ef4444);
+  margin-top: var(--space-xs, 0.375rem);
+}
+
+.#{$c}__error-icon {
+  font-size: var(--font-size-xs, 0.75rem);
+  flex-shrink: 0;
+}
+
+// Hint text
+.#{$c}__hint {
+  font-size: var(--font-size-xs, 0.75rem);
+  color: var(--text-muted, rgba(255, 255, 255, 0.5));
+  margin-top: var(--space-xs, 0.375rem);
+}
+
+// Modifiers
+
+// Error state - label turns red
+.#{$c}--error {
+  .#{$c}__label {
+    color: var(--feedback-error, #ef4444);
+  }
+}
+
+// Disabled state - grey out the entire field
+.#{$c}--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  
+  .#{$c}__label {
+    color: var(--text-muted, rgba(255, 255, 255, 0.5));
+  }
+}

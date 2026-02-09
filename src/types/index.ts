@@ -114,10 +114,12 @@ export interface FormProps {
 
 export interface FormFieldProps {
   label?: string
-  error?: string
-  hint?: string
-  required?: boolean
-  htmlFor?: string
+  labelFor?: string         // id of input for accessibility
+  htmlFor?: string          // alias for labelFor (deprecated)
+  required?: boolean        // shows * indicator
+  error?: string            // error message (shown in red below input)
+  hint?: string             // helper text (shown below input, grey)
+  disabled?: boolean        // grey out entire field
 }
 
 export interface FormEmits {
@@ -2035,4 +2037,39 @@ export interface FAQItem {
 export interface FAQProps {
   items?: FAQItem[]
   variant?: 'default' | 'separated' | 'bordered'
+}
+
+// ============================================================
+// PasswordInput
+// ============================================================
+
+export type PasswordStrength = 'weak' | 'fair' | 'strong' | 'very-strong';
+export type RequireStrength = 'none' | 'weak' | 'fair' | 'strong';
+
+export interface PasswordInputProps {
+  modelValue?: string
+  showStrength?: boolean
+  showCriteria?: boolean
+  minLength?: number
+  confirmValue?: string
+  placeholder?: string
+  confirmPlaceholder?: string
+  isDisabled?: boolean
+  isInvalid?: boolean
+  label?: string
+  size?: Size
+  /** Require password to meet minimum strength level for validation */
+  requireStrength?: RequireStrength
+  /** Custom error message when strength requirement not met (also available as slot) */
+  errorMessage?: string
+}
+
+export interface PasswordInputEmits {
+  (e: 'update:modelValue', value: string): void
+  (e: 'update:confirmValue', value: string): void
+  (e: 'strength-change', level: PasswordStrength): void
+  /** Emitted when overall validity changes (strength + confirm match) */
+  (e: 'valid', isValid: boolean): void
+  (e: 'focus', payload: { originalEvent: FocusEvent }): void
+  (e: 'blur', payload: { originalEvent: FocusEvent }): void
 }
