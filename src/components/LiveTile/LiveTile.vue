@@ -366,11 +366,7 @@ function stopRotation() {
   cursor: pointer;
 }
 
-.live-tile:hover {
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
-}
+/* No hover transform/shadow - keeps tile static */
 
 /* Badge */
 .tile-badge {
@@ -525,9 +521,7 @@ function stopRotation() {
     transition: none;
   }
 
-  .live-tile:hover {
-    transform: none;
-  }
+  /* No hover effects to disable */
 
   .tile-face > * {
     animation: none;
