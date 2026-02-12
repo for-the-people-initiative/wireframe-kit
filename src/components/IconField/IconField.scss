@@ -1,0 +1,31 @@
+$c: icon-field;
+
+.#{$c} {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+
+  // When icon is on the left, add padding to the input
+  > .input-icon--position-left ~ .input-text {
+    padding-left: 2.5rem;
+  }
+
+  // When icon is on the right, add padding to the input
+  > .input-icon--position-right ~ .input-text,
+  > .input-text:has(~ .input-icon--position-right) {
+    padding-right: 2.5rem;
+  }
+
+  // Also handle when input comes before a right-positioned icon
+  > .input-text:first-child {
+    + .input-icon--position-right {
+      // icon is already absolutely positioned
+    }
+  }
+
+  // Ensure input takes full width
+  > .input-text {
+    width: 100%;
+  }
+}
