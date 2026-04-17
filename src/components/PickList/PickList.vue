@@ -1,7 +1,7 @@
 <template>
   <div class="picklist" :class="additionalClasses">
     <!-- Source List -->
-    <div class="picklist__list picklist__list--source">
+    <div v-rough class="picklist__list picklist__list--source">
       <div v-if="sourceHeader" class="picklist__header">
         <slot name="sourceHeader">{{ sourceHeader }}</slot>
       </div>
@@ -81,7 +81,7 @@
     </div>
 
     <!-- Target List -->
-    <div class="picklist__list picklist__list--target">
+    <div v-rough class="picklist__list picklist__list--target">
       <div v-if="targetHeader" class="picklist__header">
         <slot name="targetHeader">{{ targetHeader }}</slot>
       </div>

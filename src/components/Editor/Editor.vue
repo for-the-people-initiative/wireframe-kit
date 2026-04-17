@@ -1,5 +1,5 @@
 <template>
-  <div class="editor" :class="additionalClasses">
+  <div v-rough class="editor" :class="additionalClasses">
     <!-- Toolbar -->
     <div class="editor__toolbar">
       <button

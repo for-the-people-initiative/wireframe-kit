@@ -1,5 +1,5 @@
 <template>
-  <div class="icon-field" :class="additionalClasses">
+  <div v-rough class="icon-field" :class="additionalClasses">
     <slot />
   </div>
 </template>

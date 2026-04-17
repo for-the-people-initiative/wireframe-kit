@@ -1,6 +1,7 @@
 <template>
   <div
     v-if="!popup || visible"
+    v-rough
     ref="menuRef"
     class="tieredmenu"
     :class="additionalClasses"

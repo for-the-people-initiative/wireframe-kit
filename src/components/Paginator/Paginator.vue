@@ -1,5 +1,5 @@
 <template>
-  <nav class="paginator" :class="additionalClasses" aria-label="Pagination">
+  <nav v-rough class="paginator" :class="additionalClasses" aria-label="Pagination">
     <div v-if="showInfo" class="paginator__info">
       {{ infoText }}
     </div>

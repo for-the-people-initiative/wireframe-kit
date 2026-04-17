@@ -1,5 +1,5 @@
 <template>
-  <blockquote class="testimonial" :class="`testimonial--${variant}`">
+  <blockquote v-rough="{ disabled: variant !== 'card' }" class="testimonial" :class="`testimonial--${variant}`">
     <div v-if="rating" class="testimonial__rating" :aria-label="`${rating} out of 5 stars`">
       <span v-for="i in 5" :key="i" class="testimonial__star" :class="{ 'testimonial__star--filled': i <= rating }">★</span>
     </div>

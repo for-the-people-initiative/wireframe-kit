@@ -3,6 +3,7 @@
     <Transition name="confirm-popup-fade">
       <div
         v-if="isVisible"
+        v-rough
         ref="popupRef"
         class="confirm-popup"
         :class="positionClass"

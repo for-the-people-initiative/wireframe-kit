@@ -1,5 +1,6 @@
 <template>
   <div
+    v-rough
     class="in-place"
     :class="additionalClasses"
     aria-live="polite"

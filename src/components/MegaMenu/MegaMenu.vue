@@ -56,6 +56,7 @@
         <Transition name="mega-menu-panel">
           <div
             v-if="item.items?.length && activeRootItem === item"
+            v-rough
             class="mega-menu__panel"
             role="menu"
             @mouseenter="onPanelMouseEnter"

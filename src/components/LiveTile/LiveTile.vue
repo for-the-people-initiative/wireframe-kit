@@ -1,6 +1,7 @@
 <template>
   <component
     :is="linkComponent"
+    v-rough
     :href="href || undefined"
     class="live-tile"
     :class="{ clickable: !href }"

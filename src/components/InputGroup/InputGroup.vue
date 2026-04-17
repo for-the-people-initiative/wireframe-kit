@@ -1,5 +1,5 @@
 <template>
-  <div class="input-group" :class="additionalClasses">
+  <div v-rough class="input-group" :class="additionalClasses">
     <slot />
   </div>
 </template>

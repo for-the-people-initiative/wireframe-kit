@@ -5,7 +5,6 @@ import PasswordInput from '../../components/PasswordInput/PasswordInput.vue';
 const meta = {
   title: 'Components/PasswordInput',
   component: PasswordInput,
-  tags: ['autodocs'],
   argTypes: {
     modelValue: { control: 'text' },
     placeholder: { control: 'text' },

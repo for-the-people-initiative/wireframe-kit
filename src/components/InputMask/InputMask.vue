@@ -1,5 +1,6 @@
 <template>
   <input
+    v-rough
     ref="inputRef"
     class="input-mask"
     :class="additionalClasses"

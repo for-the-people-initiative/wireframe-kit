@@ -1,5 +1,5 @@
 <template>
-  <div class="chart" :class="additionalClasses">
+  <div v-rough class="chart" :class="additionalClasses">
     <div v-if="title" class="chart__title">{{ title }}</div>
 
     <div class="chart__wrapper" :style="wrapperStyle">

@@ -1,5 +1,6 @@
 <template>
   <span
+    v-rough
     class="image"
     :class="{ 'image--preview': preview }"
     :style="boxStyle"

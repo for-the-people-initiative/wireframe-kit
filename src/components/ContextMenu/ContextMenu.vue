@@ -3,6 +3,7 @@
     <Transition name="context-menu-fade">
       <div
         v-if="isVisible"
+        v-rough
         ref="menuRef"
         class="context-menu"
         :class="menuClasses"

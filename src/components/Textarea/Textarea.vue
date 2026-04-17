@@ -1,6 +1,7 @@
 <template>
   <textarea
     ref="textareaRef"
+    v-rough
     class="textarea"
     :class="additionalClasses"
     :value="modelValue"

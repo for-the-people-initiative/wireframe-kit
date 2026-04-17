@@ -1,5 +1,5 @@
 <template>
-  <article class="pricing-card" :class="{ 'pricing-card--highlighted': highlighted }">
+  <article v-rough class="pricing-card" :class="{ 'pricing-card--highlighted': highlighted }">
     <div class="pricing-card__header">
       <h3 class="pricing-card__name">{{ name }}</h3>
       <div class="pricing-card__price">

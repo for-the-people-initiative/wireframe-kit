@@ -2,6 +2,7 @@
   <transition name="message">
     <div
       v-if="visible"
+      v-rough
       class="message"
       :class="additionalClasses"
       role="alert"

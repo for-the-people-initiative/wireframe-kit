@@ -5,6 +5,7 @@
     :class="additionalClasses"
   >
     <div
+      v-rough
       class="tree-select__trigger"
       role="combobox"
       :aria-expanded="isOpen"
@@ -28,6 +29,7 @@
     <Teleport to="body">
       <div
         v-if="isOpen"
+        v-rough
         ref="dropdownRef"
         class="tree-select__dropdown"
         :style="dropdownStyle"

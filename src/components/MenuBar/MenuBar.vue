@@ -1,5 +1,5 @@
 <template>
-  <nav class="menubar" :class="additionalClasses" role="menubar" aria-label="Menu">
+  <nav v-rough class="menubar" :class="additionalClasses" role="menubar" aria-label="Menu">
     <ul class="menubar__list">
       <template v-for="(item, index) in model" :key="item.key || index">
         <!-- Separator -->

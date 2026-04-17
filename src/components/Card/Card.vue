@@ -1,5 +1,5 @@
 <template>
-  <article class="card" :class="additionalClasses" :aria-labelledby="$slots.title ? cardTitleId : undefined">
+  <article v-rough class="card" :class="additionalClasses" :aria-labelledby="$slots.title ? cardTitleId : undefined">
     <div v-if="$slots.header" class="card__header">
       <slot name="header" />
     </div>

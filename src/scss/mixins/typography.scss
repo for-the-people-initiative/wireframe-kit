@@ -1,16 +1,18 @@
 @use "../../../dist/scss/tokens" as *;
 @use "./breakpoint.scss" as *;
 
-// Wireframe typography: single handwritten family, size scale bumped ~1.25x
-// to compensate for Caveat's small x-height.
+// Wireframe typography:
+// - Body/UI text: Caveat (flowing handwritten feel).
+// - Headings: Permanent Marker (bold marker-pen feel).
 
 $wireframe-font: "Caveat", "Comic Sans MS", cursive;
+$wireframe-heading-font: "Permanent Marker", "Caveat", "Comic Sans MS", cursive;
 
 @mixin heading($name) {
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.2;
   color: var(--text-heading, $text-heading);
-  font-family: $wireframe-font;
+  font-family: $wireframe-heading-font;
   @if ($name == "xs") {
     font-size: 26px;
   } @else if ($name == "s") {
@@ -57,7 +59,6 @@ $wireframe-font: "Caveat", "Comic Sans MS", cursive;
 }
 
 @mixin static-typography($category: "heading", $type: "l", $isStrong: false) {
-  font-family: $wireframe-font;
   @if ($category == "heading") {
     @include heading($type);
   } @else {

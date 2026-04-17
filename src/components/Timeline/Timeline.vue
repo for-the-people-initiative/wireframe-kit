@@ -12,13 +12,13 @@
         </slot>
       </div>
       <div class="timeline__separator">
-        <div class="timeline__connector timeline__connector--before" v-if="index > 0" />
+        <div v-rough="{ shape: layout === 'horizontal' ? 'hline' : 'vline', strokeWidth: 1.5 }" class="timeline__connector timeline__connector--before" v-if="index > 0" />
         <div class="timeline__marker" :style="getMarkerStyle(event)">
           <slot name="marker" :item="event" :index="index">
             <span class="timeline__marker-dot" />
           </slot>
         </div>
-        <div class="timeline__connector timeline__connector--after" v-if="index < value.length - 1" />
+        <div v-rough="{ shape: layout === 'horizontal' ? 'hline' : 'vline', strokeWidth: 1.5 }" class="timeline__connector timeline__connector--after" v-if="index < value.length - 1" />
       </div>
       <div class="timeline__content">
         <slot name="content" :item="event" :index="index">

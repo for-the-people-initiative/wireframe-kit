@@ -1,21 +1,27 @@
 // Wireframe mode global styles.
-// Consumer must render <WireframeFilter /> once at app root for the filter id
-// referenced here to resolve.
-//
-// The `filter` property on body creates a containing block for position: fixed
-// descendants, but since body already spans the viewport, fixed-position
-// teleported elements (Dialog, Toast, etc.) continue to behave correctly.
+// Hand-drawn borders are rendered per-element by the v-rough directive
+// (registered via WireframePlugin). This file only handles global typography
+// and page colors.
 
 @use "../../dist/scss/tokens" as *;
 
 body {
-  filter: url(#wireframe-sketchy);
   background: var(--surface-canvas, $surface-canvas);
   color: var(--text-default, $text-default);
+  font-family: "Caveat", "Comic Sans MS", cursive;
 }
 
-// Opt out of the wobble locally (icons, focus rings, tight pixel-level UI).
-.wf-crisp,
-.wf-crisp * {
-  filter: none !important;
+// Form controls don't inherit font-family by default — opt them in so the
+// handwritten family flows everywhere without per-component overrides.
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Permanent Marker", "Caveat", "Comic Sans MS", cursive;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }

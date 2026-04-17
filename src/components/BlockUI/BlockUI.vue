@@ -1,5 +1,6 @@
 <template>
   <div
+    v-rough
     class="block-ui"
     :class="additionalClasses"
   >

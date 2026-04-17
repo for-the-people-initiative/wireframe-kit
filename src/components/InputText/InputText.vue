@@ -1,6 +1,7 @@
 <template>
   <input
     ref="inputRef"
+    v-rough
     class="input-text"
     :class="additionalClasses"
     :type="type"

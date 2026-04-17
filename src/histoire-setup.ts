@@ -1,9 +1,9 @@
-import './scss/fonts.scss'
-import '../dist/css/tokens.css'
-import '../dist/css/theme-dark.css'
+import { defineSetupVue3 } from '@histoire/plugin-vue';
+import './scss/fonts.scss';
+import '../dist/css/tokens.css';
+import './scss/wireframe.scss';
+import { vRough } from './directives/rough';
 
-// Apply dark theme and base styles
-document.documentElement.setAttribute('data-theme', 'dark')
-document.body.style.backgroundColor = 'var(--surface-canvas, #0a0e1f)'
-document.body.style.color = 'var(--text-default, #ffffff)'
-document.body.style.fontFamily = '"DM Sans", sans-serif'
+export const setupVue3 = defineSetupVue3(({ app }) => {
+  app.directive('rough', vRough);
+});

@@ -26,6 +26,9 @@ entries['types/index'] = resolve(__dirname, 'src/types/index.ts')
 // Add composables entry
 entries['composables/index'] = resolve(__dirname, 'src/composables/index.ts')
 
+// Add plugin entry (registers v-rough directive globally)
+entries['plugin/index'] = resolve(__dirname, 'src/plugin.ts')
+
 export default defineConfig({
   plugins: [
     vue(),
@@ -43,7 +46,7 @@ export default defineConfig({
       fileName: (format, entryName) => `${entryName}.js`
     },
     rollupOptions: {
-      external: ['vue', 'chart.js'],
+      external: ['vue', 'chart.js', 'roughjs', 'roughjs/bin/rough'],
       output: {
         preserveModules: false,
         assetFileNames: (assetInfo) => {

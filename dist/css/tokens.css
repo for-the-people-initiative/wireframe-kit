@@ -66,10 +66,10 @@
   --gradient-streak-start: #171717; /* Wireframe: solid ink */
   --gradient-streak-end: #171717; /* Wireframe: solid ink */
   --radius-none: 0; /* No rounding */
-  --radius-subtle: 2px; /* Subtle rounding */
-  --radius-default: 5px; /* Default border radius */
-  --radius-rounded: 8px; /* More rounded corners */
-  --radius-large: 13px; /* Large radius for cards */
+  --radius-subtle: 2px; /* Subtle rounding (2px) */
+  --radius-default: 2px; /* Default border radius — kept near-sharp for the wireframe aesthetic (2px) */
+  --radius-rounded: 3px; /* Slightly more rounded (3px) */
+  --radius-large: 3px; /* Cards/dialogs — still near-sharp (3px) */
   --radius-pill: 9999px; /* Fully rounded (pills, circles) */
   --shadow-xs: none; /* Wireframe: no shadow */
   --shadow-s: 2px 2px 0 #171717; /* Wireframe: flat offset ink */
@@ -104,7 +104,7 @@
   --accordion-content-color: #171717; /* Content text color */
   --accordion-border-width: 1px; /* Border width */
   --accordion-border-color: #d4d4d4; /* Border color */
-  --accordion-border-radius: 5px; /* Border radius */
+  --accordion-border-radius: 2px; /* Border radius */
   --accordion-icon-size: 16px; /* Toggle icon size */
   --accordion-icon-color-default: #737373; /* Icon color */
   --accordion-icon-color-hover: #171717; /* Icon color on hover */
@@ -119,7 +119,7 @@
   --autocomplete-padding-x: 16px;
   --autocomplete-padding-y: 10px;
   --autocomplete-gap: 6px;
-  --autocomplete-radius: 5px;
+  --autocomplete-radius: 2px;
   --autocomplete-border-width: 1px;
   --autocomplete-border-color-default: #d4d4d4;
   --autocomplete-border-color-hover: #a3a3a3;
@@ -137,7 +137,7 @@
   --autocomplete-dropdown-background: #fafafa;
   --autocomplete-dropdown-border: #e5e5e5;
   --autocomplete-dropdown-shadow: 3px 3px 0 #171717;
-  --autocomplete-dropdown-radius: 5px;
+  --autocomplete-dropdown-radius: 2px;
   --autocomplete-dropdown-maxHeight: 280px;
   --autocomplete-option-padding-x: 16px;
   --autocomplete-option-padding-y: 10px;
@@ -175,7 +175,7 @@
   --avatar-border-default: #d4d4d4; /* Default border color */
   --avatar-border-ring: #ffffff; /* Ring/outline around avatar */
   --avatar-border-width: 2px; /* Border width */
-  --avatar-radius-square: 8px; /* Rounded square avatar */
+  --avatar-radius-square: 3px; /* Rounded square avatar */
   --avatar-radius-circle: 9999px; /* Circular avatar */
   --avatar-size-xs: 24px; /* Extra small avatar */
   --avatar-size-sm: 32px; /* Small avatar */
@@ -285,7 +285,7 @@
   --button-border-text-active: transparent; /* Text button active border */
   --button-border-text-disabled: transparent; /* Text button disabled border */
   --button-border-width: 1px; /* Button border width */
-  --button-radius-default: 5px; /* Button border radius */
+  --button-radius-default: 2px; /* Button border radius */
   --button-radius-pill: 9999px; /* Pill button border radius */
   --button-size-sm-height: 32px; /* Small button height */
   --button-size-sm-paddingX: 10px; /* Small button horizontal padding */
@@ -312,7 +312,7 @@
   --button-transition-duration: 150ms; /* Button transition duration */
   --calendar-width: 280px;
   --calendar-padding: 16px;
-  --calendar-radius: 5px;
+  --calendar-radius: 2px;
   --calendar-background: #fafafa;
   --calendar-border-width: 1px;
   --calendar-border-color: #e5e5e5;
@@ -323,7 +323,7 @@
   --calendar-header-fontSize: 16px;
   --calendar-header-fontWeight: 600;
   --calendar-nav-size: 32px;
-  --calendar-nav-radius: 5px;
+  --calendar-nav-radius: 2px;
   --calendar-nav-background-default: transparent;
   --calendar-nav-background-hover: #f5f5f5;
   --calendar-nav-color-default: #737373;
@@ -333,7 +333,7 @@
   --calendar-weekday-fontSize: 12px;
   --calendar-weekday-fontWeight: 500;
   --calendar-day-size: 36px;
-  --calendar-day-radius: 5px;
+  --calendar-day-radius: 2px;
   --calendar-day-fontSize: 14px;
   --calendar-day-text-default: #171717;
   --calendar-day-text-muted: #737373;
@@ -351,7 +351,7 @@
   --calendar-input-fontSize-sm: 14px;
   --calendar-input-fontSize-md: 15px;
   --calendar-input-fontSize-lg: 16px;
-  --calendar-input-radius: 5px;
+  --calendar-input-radius: 2px;
   --calendar-input-border-color-default: #d4d4d4;
   --calendar-input-border-color-hover: #a3a3a3;
   --calendar-input-border-color-focus: #171717;
@@ -372,7 +372,7 @@
   --card-highlighted-border-end: #fb923c; /* Highlighted card border end - bright orange */
   --card-highlighted-border-width: 2px; /* Highlighted card border width */
   --card-highlighted-glow: 0 0 15px rgba(249, 115, 22, 0.5), 0 0 30px rgba(249, 115, 22, 0.3), 0 0 45px rgba(249, 115, 22, 0.15); /* Highlighted card glow effect - vibrant orange */
-  --card-radius: 13px; /* Card border radius */
+  --card-radius: 3px; /* Card border radius */
   --card-shadow: 2px 2px 0 #171717; /* Card shadow */
   --card-padding: 26px; /* Card inner padding */
   --card-header-padding: 16px; /* Header section padding */
@@ -393,11 +393,11 @@
   --card-footer-borderColor: #d4d4d4; /* Footer top border color */
   --card-footer-borderWidth: 1px; /* Footer top border width */
   --carousel-container-background: #ffffff; /* Carousel container background */
-  --carousel-container-radius: 5px; /* Carousel container border radius */
+  --carousel-container-radius: 2px; /* Carousel container border radius */
   --carousel-content-gap: 16px; /* Gap between carousel items */
   --carousel-content-padding: 16px; /* Content area padding */
   --carousel-item-background: #fafafa; /* Carousel item background */
-  --carousel-item-radius: 5px; /* Carousel item border radius */
+  --carousel-item-radius: 2px; /* Carousel item border radius */
   --carousel-item-padding: 10px; /* Carousel item padding */
   --carousel-navigator-size: 40px; /* Navigator button size */
   --carousel-navigator-iconSize: 20px; /* Navigator icon size */
@@ -420,7 +420,7 @@
   --carousel-transition-duration: 300ms; /* Slide transition duration */
   --chart-container-background: #ffffff; /* Chart container background */
   --chart-container-padding: 16px; /* Chart container padding */
-  --chart-container-radius: 5px; /* Chart container border radius */
+  --chart-container-radius: 2px; /* Chart container border radius */
   --chart-container-border-color: #d4d4d4; /* Chart container border color */
   --chart-container-border-width: 1px; /* Chart container border width */
   --chart-title-color: #171717; /* Chart title color */
@@ -484,7 +484,7 @@
   --color-picker-width: 240px;
   --color-picker-padding: 16px;
   --color-picker-gap: 16px;
-  --color-picker-radius: 5px;
+  --color-picker-radius: 2px;
   --color-picker-background: #fafafa;
   --color-picker-border-width: 1px;
   --color-picker-border-color: #e5e5e5;
@@ -492,7 +492,7 @@
   --color-picker-trigger-size-sm: 24px;
   --color-picker-trigger-size-md: 32px;
   --color-picker-trigger-size-lg: 40px;
-  --color-picker-trigger-radius: 5px;
+  --color-picker-trigger-radius: 2px;
   --color-picker-trigger-border-width: 1px;
   --color-picker-trigger-border-color-default: #d4d4d4;
   --color-picker-trigger-border-color-hover: #a3a3a3;
@@ -551,7 +551,7 @@
   --confirmDialog-padding-content: 26px; /* Content area padding */
   --confirmDialog-padding-footer: 26px; /* Footer section padding */
   --confirmDialog-background-default: #fafafa; /* Dialog background color */
-  --confirmDialog-radius: 13px; /* Dialog border radius */
+  --confirmDialog-radius: 3px; /* Dialog border radius */
   --confirmDialog-shadow: 4px 4px 0 #171717; /* Dialog elevation shadow */
   --confirmDialog-border-color: #d4d4d4; /* Dialog border color */
   --confirmDialog-border-width: 1px; /* Dialog border width */
@@ -573,7 +573,7 @@
   --confirmPopup-padding-x: 16px; /* Horizontal padding */
   --confirmPopup-padding-y: 10px; /* Vertical padding */
   --confirmPopup-background: #fafafa; /* Popup background color */
-  --confirmPopup-radius: 5px; /* Popup border radius */
+  --confirmPopup-radius: 2px; /* Popup border radius */
   --confirmPopup-shadow: 3px 3px 0 #171717; /* Popup elevation shadow */
   --confirmPopup-border-color: #d4d4d4; /* Popup border color */
   --confirmPopup-border-width: 1px; /* Popup border width */
@@ -590,7 +590,7 @@
   --context-menu-background: #ffffff; /* Context menu background */
   --context-menu-border-color: #d4d4d4; /* Context menu border color */
   --context-menu-border-width: 1px; /* Context menu border width */
-  --context-menu-radius: 5px; /* Context menu border radius */
+  --context-menu-radius: 2px; /* Context menu border radius */
   --context-menu-shadow: 3px 3px 0 #171717; /* Context menu elevation shadow */
   --context-menu-padding-y: 4px; /* Vertical padding */
   --context-menu-minWidth: 180px; /* Minimum menu width */
@@ -618,7 +618,7 @@
   --dataTable-background: #ffffff; /* Table background color */
   --dataTable-border-color: #d4d4d4; /* Table border color */
   --dataTable-border-width: 1px; /* Table border width */
-  --dataTable-radius: 5px; /* Table border radius */
+  --dataTable-radius: 2px; /* Table border radius */
   --dataTable-header-background: #f5f5f5; /* Header background color */
   --dataTable-header-color: #171717; /* Header text color */
   --dataTable-header-padding: 16px; /* Header cell padding */
@@ -645,7 +645,7 @@
   --dataView-background: #ffffff; /* DataView container background */
   --dataView-border-color: #d4d4d4; /* Container border color */
   --dataView-border-width: 1px; /* Container border width */
-  --dataView-radius: 5px; /* Container border radius */
+  --dataView-radius: 2px; /* Container border radius */
   --dataView-header-background: #f5f5f5; /* Header background color */
   --dataView-header-padding: 16px; /* Header padding */
   --dataView-header-borderColor: #d4d4d4; /* Header border color */
@@ -674,7 +674,7 @@
   --dialog-padding-content: 26px; /* Content area padding */
   --dialog-padding-footer: 26px; /* Footer section padding */
   --dialog-background-default: #fafafa; /* Dialog background color */
-  --dialog-radius: 13px; /* Dialog border radius */
+  --dialog-radius: 3px; /* Dialog border radius */
   --dialog-shadow: 4px 4px 0 #171717; /* Dialog elevation shadow */
   --dialog-border-color: #d4d4d4; /* Dialog border color */
   --dialog-border-width: 1px; /* Dialog border width */
@@ -686,7 +686,7 @@
   --dialog-closeButton-color-default: #737373; /* Close button icon color */
   --dialog-closeButton-color-hover: #171717; /* Close button hover color */
   --dialog-closeButton-background-hover: #f5f5f5; /* Close button hover background */
-  --dialog-closeButton-radius: 5px; /* Close button border radius */
+  --dialog-closeButton-radius: 2px; /* Close button border radius */
   --dialog-overlay-background: rgba(23, 23, 23, 0.3); /* Modal overlay backdrop color */
   --dialog-width-sm: 400px; /* Small dialog width */
   --dialog-width-md: 560px; /* Medium dialog width (default) */
@@ -705,7 +705,7 @@
   --dock-background: #ffffff; /* Dock background */
   --dock-border-color: #d4d4d4; /* Dock border color */
   --dock-border-width: 1px; /* Dock border width */
-  --dock-radius: 13px; /* Dock border radius */
+  --dock-radius: 3px; /* Dock border radius */
   --dock-shadow: 4px 4px 0 #171717; /* Dock elevation shadow */
   --dock-padding: 10px; /* Dock inner padding */
   --dock-gap: 4px; /* Gap between dock items */
@@ -713,7 +713,7 @@
   --dock-position-offset: 16px; /* Distance from screen edge */
   --dock-item-size-default: 48px; /* Default item size */
   --dock-item-size-magnified: 72px; /* Magnified item size on hover */
-  --dock-item-radius: 8px; /* Item border radius */
+  --dock-item-radius: 3px; /* Item border radius */
   --dock-item-background-default: transparent; /* Item background */
   --dock-item-background-hover: #f5f5f5; /* Item hover background */
   --dock-item-background-active: #f5f5f5; /* Active item background */
@@ -749,7 +749,7 @@
   --drawer-closeButton-color-default: #737373; /* Close button icon color */
   --drawer-closeButton-color-hover: #171717; /* Close button hover color */
   --drawer-closeButton-background-hover: #f5f5f5; /* Close button hover background */
-  --drawer-closeButton-radius: 5px; /* Close button border radius */
+  --drawer-closeButton-radius: 2px; /* Close button border radius */
   --drawer-overlay-background: rgba(23, 23, 23, 0.3); /* Overlay backdrop color */
   --drawer-size-sm: 280px; /* Small drawer size */
   --drawer-size-md: 400px; /* Medium drawer size (default) */
@@ -766,7 +766,7 @@
   --dropdown-fontSize-sm: 14px;
   --dropdown-fontSize-md: 15px;
   --dropdown-fontSize-lg: 16px;
-  --dropdown-radius: 5px;
+  --dropdown-radius: 2px;
   --dropdown-border-width: 1px;
   --dropdown-border-color-default: #d4d4d4;
   --dropdown-border-color-hover: #a3a3a3;
@@ -785,14 +785,14 @@
   --dropdown-panel-background: #fafafa;
   --dropdown-panel-border: #e5e5e5;
   --dropdown-panel-shadow: 3px 3px 0 #171717;
-  --dropdown-panel-radius: 5px;
+  --dropdown-panel-radius: 2px;
   --dropdown-panel-maxHeight: 280px;
   --dropdown-panel-padding: 6px;
   --dropdown-filter-height: 36px;
   --dropdown-filter-padding-x: 10px;
   --dropdown-filter-background: #fafafa;
   --dropdown-filter-border: #e5e5e5;
-  --dropdown-filter-radius: 5px;
+  --dropdown-filter-radius: 2px;
   --dropdown-filter-marginBottom: 6px;
   --dropdown-option-padding-x: 16px;
   --dropdown-option-padding-y: 10px;
@@ -807,7 +807,7 @@
   --dropdown-focus-ringColor: #171717;
   --dropdown-focus-ringOffset: 1px;
   --editor-minHeight: 200px;
-  --editor-radius: 5px;
+  --editor-radius: 2px;
   --editor-border-width: 1px;
   --editor-border-color-default: #d4d4d4;
   --editor-border-color-hover: #a3a3a3;
@@ -845,7 +845,7 @@
   --field-set-background: #fafafa; /* FieldSet background color */
   --field-set-border-color: #d4d4d4; /* Border color */
   --field-set-border-width: 1px; /* Border width */
-  --field-set-border-radius: 5px; /* Border radius */
+  --field-set-border-radius: 2px; /* Border radius */
   --field-set-legend-padding-x: 16px; /* Legend horizontal padding */
   --field-set-legend-padding-y: 10px; /* Legend vertical padding */
   --field-set-legend-background: #ffffff; /* Legend background */
@@ -854,7 +854,7 @@
   --field-set-legend-fontWeight: 600; /* Legend font weight */
   --field-set-legend-border-color: #d4d4d4; /* Legend border color */
   --field-set-legend-border-width: 1px; /* Legend border width */
-  --field-set-legend-border-radius: 5px; /* Legend border radius */
+  --field-set-legend-border-radius: 2px; /* Legend border radius */
   --field-set-toggle-icon-size: 16px; /* Toggle icon size */
   --field-set-toggle-icon-color-default: #737373; /* Toggle icon color */
   --field-set-toggle-icon-color-hover: #171717; /* Toggle icon hover color */
@@ -868,7 +868,7 @@
   --fileUpload-dropzone-border-color-active: #171717; /* Dropzone active border color */
   --fileUpload-dropzone-border-width: 2px; /* Dropzone border width */
   --fileUpload-dropzone-border-style: dashed; /* Dropzone border style */
-  --fileUpload-dropzone-radius: 5px; /* Dropzone border radius */
+  --fileUpload-dropzone-radius: 2px; /* Dropzone border radius */
   --fileUpload-dropzone-padding: 42px; /* Dropzone padding */
   --fileUpload-icon-size: 48px; /* Upload icon size */
   --fileUpload-icon-color-default: #737373; /* Upload icon color */
@@ -880,7 +880,7 @@
   --fileUpload-fileList-gap: 10px; /* Gap between file items */
   --fileUpload-fileList-item-background: #f5f5f5; /* File item background */
   --fileUpload-fileList-item-padding: 10px; /* File item padding */
-  --fileUpload-fileList-item-radius: 5px; /* File item border radius */
+  --fileUpload-fileList-item-radius: 2px; /* File item border radius */
   --fileUpload-fileList-item-border-color: #d4d4d4; /* File item border color */
   --fileUpload-fileList-item-border-width: 1px; /* File item border width */
   --fileUpload-fileList-fileName-color: #171717; /* File name color */
@@ -892,12 +892,12 @@
   --fileUpload-fileList-removeButton-size: 20px; /* Remove button icon size */
   --fileUpload-transition-duration: 200ms; /* Transition duration */
   --galleria-container-background: #ffffff; /* Galleria container background */
-  --galleria-container-radius: 5px; /* Galleria container border radius */
+  --galleria-container-radius: 2px; /* Galleria container border radius */
   --galleria-container-border-color: #d4d4d4; /* Container border color */
   --galleria-container-border-width: 1px; /* Container border width */
   --galleria-preview-background: #fafafa; /* Preview area background */
   --galleria-preview-padding: 10px; /* Preview area padding */
-  --galleria-preview-radius: 5px; /* Preview image border radius */
+  --galleria-preview-radius: 2px; /* Preview image border radius */
   --galleria-thumbnail-container-gap: 6px; /* Gap between thumbnails */
   --galleria-thumbnail-container-padding: 10px; /* Thumbnail container padding */
   --galleria-thumbnail-item-width: 80px; /* Thumbnail width */
@@ -933,7 +933,7 @@
   --image-compare-background: #ffffff; /* Container background color */
   --image-compare-border-color: #d4d4d4; /* Border color */
   --image-compare-border-width: 1px; /* Border width */
-  --image-compare-border-radius: 5px; /* Border radius */
+  --image-compare-border-radius: 2px; /* Border radius */
   --image-compare-handle-width: 4px; /* Handle divider width */
   --image-compare-handle-color-default: #ffffff; /* Handle color */
   --image-compare-handle-color-hover: #171717; /* Handle hover color */
@@ -942,7 +942,7 @@
   --image-compare-icon-color: #404040; /* Handle icon color */
   --image-compare-icon-background: #ffffff; /* Handle icon background */
   --image-compare-transition-duration: 150ms; /* Handle state transition duration */
-  --image-radius: 5px; /* Image border radius */
+  --image-radius: 2px; /* Image border radius */
   --image-placeholder-background: #f5f5f5; /* Placeholder background color while loading */
   --image-preview-icon-size: 24px; /* Preview indicator icon size */
   --image-preview-icon-color: #ffffff; /* Preview indicator icon color */
@@ -960,19 +960,19 @@
   --in-place-display-color-default: #171717; /* Display text color */
   --in-place-display-color-hover: #171717; /* Display hover text color */
   --in-place-display-color-disabled: #737373; /* Display disabled text color */
-  --in-place-display-border-radius: 5px; /* Display border radius */
+  --in-place-display-border-radius: 2px; /* Display border radius */
   --in-place-closeButton-size: 28px; /* Close button size */
   --in-place-closeButton-iconSize: 14px; /* Close icon size */
   --in-place-closeButton-color-default: #737373; /* Close button color */
   --in-place-closeButton-color-hover: #171717; /* Close button hover color */
   --in-place-closeButton-background-hover: #f5f5f5; /* Close button hover background */
-  --in-place-closeButton-radius: 5px; /* Close button border radius */
+  --in-place-closeButton-radius: 2px; /* Close button border radius */
   --in-place-closeButton-gap: 10px; /* Gap between content and close button */
   --in-place-transition-duration: 150ms; /* State transition duration */
   --inline-message-padding-x: 10px; /* Horizontal padding */
   --inline-message-padding-y: 6px; /* Vertical padding */
   --inline-message-gap: 6px; /* Gap between icon and text */
-  --inline-message-radius: 5px; /* Border radius */
+  --inline-message-radius: 2px; /* Border radius */
   --inline-message-fontSize: 14px; /* Text font size */
   --inline-message-fontWeight: 500; /* Text font weight */
   --inline-message-iconSize: 16px; /* Icon size */
@@ -994,7 +994,7 @@
   --input-chips-padding-x: 10px; /* Horizontal padding */
   --input-chips-padding-y: 6px; /* Vertical padding */
   --input-chips-gap: 6px; /* Gap between chips and input */
-  --input-chips-radius: 5px; /* Container border radius */
+  --input-chips-radius: 2px; /* Container border radius */
   --input-chips-border-width: 1px;
   --input-chips-border-color-default: #d4d4d4; /* Default border color */
   --input-chips-border-color-hover: #a3a3a3; /* Hover border color */
@@ -1031,7 +1031,7 @@
   --input-group-addon-padding-y: 10px; /* Vertical padding */
   --input-group-addon-fontSize: 14px; /* Addon font size */
   --input-group-display: flex; /* Display type for input group container */
-  --input-group-border-radius: 5px; /* Border radius for grouped elements */
+  --input-group-border-radius: 2px; /* Border radius for grouped elements */
   --input-group-gap: 0; /* Gap between input group items (none for seamless grouping) */
   --input-icon-color-default: #737373; /* Default icon color */
   --input-icon-color-focus: #171717; /* Icon color when input is focused */
@@ -1047,7 +1047,7 @@
   --input-mask-fontSize-sm: 14px;
   --input-mask-fontSize-md: 15px;
   --input-mask-fontSize-lg: 16px;
-  --input-mask-radius: 5px; /* Input border radius */
+  --input-mask-radius: 2px; /* Input border radius */
   --input-mask-border-width: 1px;
   --input-mask-border-color-default: #d4d4d4; /* Default border color */
   --input-mask-border-color-hover: #a3a3a3; /* Hover border color */
@@ -1070,7 +1070,7 @@
   --inputNumber-fontSize-sm: 14px;
   --inputNumber-fontSize-md: 15px;
   --inputNumber-fontSize-lg: 16px;
-  --inputNumber-radius: 5px;
+  --inputNumber-radius: 2px;
   --inputNumber-border-width: 1px;
   --inputNumber-border-color-default: #d4d4d4;
   --inputNumber-border-color-hover: #a3a3a3;
@@ -1096,7 +1096,7 @@
   --input-otp-cell-size: 48px; /* Cell width and height */
   --input-otp-cell-fontSize: 20px; /* Cell character font size */
   --input-otp-cell-fontWeight: 600; /* Cell character font weight */
-  --input-otp-cell-radius: 5px; /* Cell border radius */
+  --input-otp-cell-radius: 2px; /* Cell border radius */
   --input-otp-cell-background-default: #fafafa; /* Default cell background */
   --input-otp-cell-background-focus: #fafafa; /* Focused cell background */
   --input-otp-cell-background-filled: #fafafa; /* Filled cell background */
@@ -1145,7 +1145,7 @@
   --input-text-fontSize-sm: 14px;
   --input-text-fontSize-md: 15px;
   --input-text-fontSize-lg: 16px;
-  --input-text-radius: 5px; /* Input border radius */
+  --input-text-radius: 2px; /* Input border radius */
   --input-text-border-width: 1px;
   --input-text-border-color-default: #d4d4d4; /* Default border color */
   --input-text-border-color-hover: #a3a3a3; /* Hover border color */
@@ -1195,12 +1195,12 @@
   --lightbox-counter-fontSize: 14px; /* Counter font size */
   --lightbox-thumbnail-size: 64px; /* Thumbnail width/height */
   --lightbox-thumbnail-gap: 6px; /* Gap between thumbnails */
-  --lightbox-thumbnail-radius: 5px; /* Thumbnail border radius */
+  --lightbox-thumbnail-radius: 2px; /* Thumbnail border radius */
   --lightbox-thumbnail-border-active: #ffffff; /* Active thumbnail border color */
   --lightbox-thumbnail-opacity-default: 0.5; /* Inactive thumbnail opacity */
   --lightbox-thumbnail-opacity-active: 1; /* Active thumbnail opacity */
   --listbox-padding: 6px; /* Container padding */
-  --listbox-radius: 5px; /* Container border radius */
+  --listbox-radius: 2px; /* Container border radius */
   --listbox-border-width: 1px;
   --listbox-border-color-default: #d4d4d4; /* Default border color */
   --listbox-border-color-focus: #171717; /* Focus border color */
@@ -1212,7 +1212,7 @@
   --listbox-filter-padding-x: 10px;
   --listbox-filter-background: #fafafa;
   --listbox-filter-border: #e5e5e5;
-  --listbox-filter-radius: 5px;
+  --listbox-filter-radius: 2px;
   --listbox-filter-text: #171717;
   --listbox-filter-placeholder: #737373;
   --listbox-filter-marginBottom: 6px;
@@ -1253,7 +1253,7 @@
   --mega-menu-panel-background: #ffffff; /* Dropdown panel background */
   --mega-menu-panel-border-color: #d4d4d4; /* Panel border color */
   --mega-menu-panel-border-width: 1px; /* Panel border width */
-  --mega-menu-panel-radius: 5px; /* Panel border radius */
+  --mega-menu-panel-radius: 2px; /* Panel border radius */
   --mega-menu-panel-shadow: 3px 3px 0 #171717; /* Panel shadow */
   --mega-menu-panel-padding: 26px; /* Panel padding */
   --mega-menu-panel-gap: 26px; /* Gap between columns */
@@ -1282,7 +1282,7 @@
   --menu-background: #ffffff; /* Menu popup background */
   --menu-border-width: 1px; /* Menu border width */
   --menu-border-color: #e5e5e5; /* Menu border color */
-  --menu-radius: 5px; /* Menu border radius */
+  --menu-radius: 2px; /* Menu border radius */
   --menu-shadow: 3px 3px 0 #171717; /* Menu popup shadow */
   --menu-padding: 6px; /* Menu content padding */
   --menu-minWidth: 180px; /* Minimum menu width */
@@ -1308,7 +1308,7 @@
   --menubar-padding: 10px; /* Menubar container padding */
   --menubar-border-width: 1px; /* Border width */
   --menubar-border-color: #d4d4d4; /* Border color */
-  --menubar-border-radius: 5px; /* Border radius */
+  --menubar-border-radius: 2px; /* Border radius */
   --menubar-item-padding: 6px 10px; /* Menu item padding */
   --menubar-item-gap: 4px; /* Gap between icon and label */
   --menubar-item-color-default: #171717; /* Item text color */
@@ -1318,14 +1318,14 @@
   --menubar-item-background-default: transparent; /* Item background */
   --menubar-item-background-hover: #f5f5f5; /* Item background on hover */
   --menubar-item-background-active: #f5f5f5; /* Item background when active */
-  --menubar-item-borderRadius: 5px; /* Item border radius */
+  --menubar-item-borderRadius: 2px; /* Item border radius */
   --menubar-icon-size: 16px; /* Icon size */
   --menubar-icon-color-default: #737373; /* Icon color */
   --menubar-icon-color-hover: #171717; /* Icon color on hover */
   --menubar-submenu-background: #ffffff; /* Submenu background */
   --menubar-submenu-minWidth: 200px; /* Submenu minimum width */
   --menubar-submenu-padding: 4px; /* Submenu container padding */
-  --menubar-submenu-borderRadius: 5px; /* Submenu border radius */
+  --menubar-submenu-borderRadius: 2px; /* Submenu border radius */
   --menubar-submenu-shadow: 3px 3px 0 #171717; /* Submenu shadow */
   --menubar-separator-color: #d4d4d4; /* Separator color */
   --menubar-separator-margin: 4px; /* Separator vertical margin */
@@ -1333,7 +1333,7 @@
   --message-padding-x: 16px; /* Horizontal padding */
   --message-padding-y: 10px; /* Vertical padding */
   --message-gap: 10px; /* Gap between icon and text */
-  --message-radius: 5px; /* Border radius */
+  --message-radius: 2px; /* Border radius */
   --message-fontSize: 14px; /* Message text font size */
   --message-fontWeight: 400; /* Message text font weight */
   --message-iconSize: 20px; /* Icon size */
@@ -1384,7 +1384,7 @@
   --multi-select-fontSize-sm: 14px;
   --multi-select-fontSize-md: 15px;
   --multi-select-fontSize-lg: 16px;
-  --multi-select-radius: 5px;
+  --multi-select-radius: 2px;
   --multi-select-border-width: 1px;
   --multi-select-border-color-default: #d4d4d4;
   --multi-select-border-color-hover: #a3a3a3;
@@ -1412,7 +1412,7 @@
   --multi-select-dropdown-background: #fafafa;
   --multi-select-dropdown-border: #e5e5e5;
   --multi-select-dropdown-shadow: 3px 3px 0 #171717;
-  --multi-select-dropdown-radius: 5px;
+  --multi-select-dropdown-radius: 2px;
   --multi-select-dropdown-maxHeight: 280px;
   --multi-select-option-padding-x: 16px;
   --multi-select-option-padding-y: 10px;
@@ -1428,7 +1428,7 @@
   --orderList-background: #ffffff; /* OrderList container background */
   --orderList-border-color: #d4d4d4; /* Container border color */
   --orderList-border-width: 1px; /* Container border width */
-  --orderList-radius: 5px; /* Container border radius */
+  --orderList-radius: 2px; /* Container border radius */
   --orderList-header-background: #f5f5f5; /* Header background color */
   --orderList-header-padding: 16px; /* Header padding */
   --orderList-header-color: #171717; /* Header text color */
@@ -1467,7 +1467,7 @@
   --organizationChart-node-border-color-default: #d4d4d4; /* Node default border color */
   --organizationChart-node-border-color-hover: #171717; /* Node hover border color */
   --organizationChart-node-border-color-selected: #171717; /* Node selected border color */
-  --organizationChart-node-radius: 5px; /* Node border radius */
+  --organizationChart-node-radius: 2px; /* Node border radius */
   --organizationChart-node-padding: 16px; /* Node content padding */
   --organizationChart-node-shadow-default: none; /* Node default shadow */
   --organizationChart-node-shadow-hover: 2px 2px 0 #171717; /* Node hover shadow */
@@ -1493,7 +1493,7 @@
   --overlayPanel-padding-x: 26px; /* Horizontal padding */
   --overlayPanel-padding-y: 16px; /* Vertical padding */
   --overlayPanel-background: #fafafa; /* Panel background color */
-  --overlayPanel-radius: 5px; /* Panel border radius */
+  --overlayPanel-radius: 2px; /* Panel border radius */
   --overlayPanel-shadow: 4px 4px 0 #171717; /* Panel elevation shadow */
   --overlayPanel-border-color: #d4d4d4; /* Panel border color */
   --overlayPanel-border-width: 1px; /* Panel border width */
@@ -1511,7 +1511,7 @@
   --paginator-gap: 6px; /* Gap between paginator elements */
   --paginator-border-width: 1px; /* Border width */
   --paginator-border-color: #e5e5e5; /* Border color */
-  --paginator-border-radius: 5px; /* Border radius */
+  --paginator-border-radius: 2px; /* Border radius */
   --paginator-page-size: 36px; /* Page button size */
   --paginator-page-background-default: transparent; /* Page button default background */
   --paginator-page-background-hover: #f5f5f5; /* Page button hover background */
@@ -1522,7 +1522,7 @@
   --paginator-page-text-disabled: #a3a3a3; /* Disabled page button text color */
   --paginator-page-fontSize: 14px; /* Page button font size */
   --paginator-page-fontWeight: 500; /* Page button font weight */
-  --paginator-page-radius: 5px; /* Page button border radius */
+  --paginator-page-radius: 2px; /* Page button border radius */
   --paginator-nav-size: 36px; /* Navigation button size */
   --paginator-nav-background-default: transparent; /* Nav button default background */
   --paginator-nav-background-hover: #f5f5f5; /* Nav button hover background */
@@ -1531,7 +1531,7 @@
   --paginator-nav-icon-color-hover: #171717; /* Nav icon hover color */
   --paginator-nav-icon-color-disabled: #a3a3a3; /* Nav icon disabled color */
   --paginator-nav-icon-size: 18px; /* Nav icon size */
-  --paginator-nav-radius: 5px; /* Nav button border radius */
+  --paginator-nav-radius: 2px; /* Nav button border radius */
   --paginator-info-color: #737373; /* Info text color */
   --paginator-info-fontSize: 14px; /* Info text font size */
   --paginator-focus-ringColor: #171717; /* Focus ring color */
@@ -1541,7 +1541,7 @@
   --panel-background: #ffffff; /* Panel background color */
   --panel-border-color: #d4d4d4; /* Panel border color */
   --panel-border-width: 1px; /* Panel border width */
-  --panel-radius: 5px; /* Panel border radius */
+  --panel-radius: 2px; /* Panel border radius */
   --panel-header-padding: 16px; /* Header section padding */
   --panel-header-background-default: #11162d; /* Header background */
   --panel-header-background-hover: #1a2244; /* Header hover background when toggleable */
@@ -1561,7 +1561,7 @@
   --panelmenu-background: #ffffff; /* PanelMenu background */
   --panelmenu-border-width: 1px; /* Border width */
   --panelmenu-border-color: #d4d4d4; /* Border color */
-  --panelmenu-border-radius: 5px; /* Border radius */
+  --panelmenu-border-radius: 2px; /* Border radius */
   --panelmenu-gap: 0px; /* Gap between panels */
   --panelmenu-header-padding: 16px; /* Panel header padding */
   --panelmenu-header-background-default: #ffffff; /* Header background */
@@ -1592,7 +1592,7 @@
   --panelmenu-transition-duration: 200ms; /* Animation duration */
   --picklist-padding: 16px; /* Container padding */
   --picklist-gap: 16px; /* Gap between source, controls, and target */
-  --picklist-radius: 5px; /* Container border radius */
+  --picklist-radius: 2px; /* Container border radius */
   --picklist-border-width: 1px;
   --picklist-border-color-default: #d4d4d4; /* Default border color */
   --picklist-border-color-disabled: #e5e5e5; /* Disabled border color */
@@ -1622,14 +1622,14 @@
   --picklist-controls-button-border: #d4d4d4;
   --picklist-controls-button-icon-default: #525252;
   --picklist-controls-button-icon-disabled: #d4d4d4;
-  --picklist-controls-button-radius: 5px;
+  --picklist-controls-button-radius: 2px;
   --picklist-focus-ringWidth: 2px;
   --picklist-focus-ringColor: #171717;
   --picklist-focus-ringOffset: 1px;
   --popover-padding-x: 16px; /* Horizontal padding */
   --popover-padding-y: 10px; /* Vertical padding */
   --popover-background: #fafafa; /* Popover background color */
-  --popover-radius: 5px; /* Popover border radius */
+  --popover-radius: 2px; /* Popover border radius */
   --popover-shadow: 3px 3px 0 #171717; /* Popover elevation shadow */
   --popover-border-color: #d4d4d4; /* Popover border color */
   --popover-border-width: 1px; /* Popover border width */
@@ -1723,7 +1723,7 @@
   --selectButton-gap: 4px; /* Gap between option buttons */
   --selectButton-padding-x: 16px; /* Horizontal padding for option buttons */
   --selectButton-padding-y: 6px; /* Vertical padding for option buttons */
-  --selectButton-radius: 5px; /* Border radius for option buttons */
+  --selectButton-radius: 2px; /* Border radius for option buttons */
   --selectButton-border-width: 1px; /* Border width for option buttons */
   --selectButton-border-color-default: #d4d4d4; /* Default border color */
   --selectButton-border-color-hover: #a3a3a3; /* Hover border color */
@@ -1753,7 +1753,7 @@
   --select-fontSize-sm: 14px;
   --select-fontSize-md: 15px;
   --select-fontSize-lg: 16px;
-  --select-radius: 5px;
+  --select-radius: 2px;
   --select-border-width: 1px;
   --select-border-color-default: #d4d4d4;
   --select-border-color-hover: #a3a3a3;
@@ -1772,7 +1772,7 @@
   --select-dropdown-background: #fafafa;
   --select-dropdown-border: #e5e5e5;
   --select-dropdown-shadow: 3px 3px 0 #171717;
-  --select-dropdown-radius: 5px;
+  --select-dropdown-radius: 2px;
   --select-dropdown-maxHeight: 280px;
   --select-option-padding-x: 16px;
   --select-option-padding-y: 10px;
@@ -1801,7 +1801,7 @@
   --sidebar-closeButton-color-default: #7680a9; /* Close button icon color */
   --sidebar-closeButton-color-hover: #ffffff; /* Close button hover color */
   --sidebar-closeButton-background-hover: #1a2244; /* Close button hover background */
-  --sidebar-closeButton-radius: 5px; /* Close button border radius */
+  --sidebar-closeButton-radius: 2px; /* Close button border radius */
   --sidebar-overlay-background: rgba(23, 23, 23, 0.3); /* Overlay backdrop color */
   --sidebar-width-default: 320px; /* Default sidebar width */
   --sidebar-width-fullScreen: 100%; /* Full screen width */
@@ -1810,7 +1810,7 @@
   --sidebar-transition-duration: 300ms; /* Slide animation duration */
   --skeleton-background: #e5e5e5; /* Base skeleton background color */
   --skeleton-highlight: #d4d4d4; /* Animation highlight/shimmer color */
-  --skeleton-radius: 5px; /* Default border radius for rectangle skeleton */
+  --skeleton-radius: 2px; /* Default border radius for rectangle skeleton */
   --skeleton-animation-duration: 1.5s; /* Wave animation duration */
   --slider-track-height: 6px;
   --slider-track-background-default: rgba(255, 255, 255, 0.15); /* Inactive track - semi-transparent white works on any dark background */
@@ -1885,7 +1885,7 @@
   --split-button-border-outlined-hover: #171717;
   --split-button-border-outlined-disabled: #d4d4d4;
   --split-button-border-width: 1px;
-  --split-button-radius: 5px;
+  --split-button-radius: 2px;
   --split-button-divider-primary: rgba(255, 255, 255, 0.2);
   --split-button-divider-secondary: #d4d4d4;
   --split-button-divider-outlined: #171717;
@@ -1908,7 +1908,7 @@
   --split-button-dropdown-background: #fafafa;
   --split-button-dropdown-border: #e5e5e5;
   --split-button-dropdown-shadow: 3px 3px 0 #171717;
-  --split-button-dropdown-radius: 5px;
+  --split-button-dropdown-radius: 2px;
   --split-button-menu-item-padding-x: 16px;
   --split-button-menu-item-padding-y: 10px;
   --split-button-menu-item-gap: 10px;
@@ -1925,7 +1925,7 @@
   --splitter-background: #fafafa; /* Splitter container background */
   --splitter-border-color: #d4d4d4; /* Splitter border color */
   --splitter-border-width: 1px; /* Splitter border width */
-  --splitter-border-radius: 5px; /* Splitter border radius */
+  --splitter-border-radius: 2px; /* Splitter border radius */
   --splitter-gutter-size: 10px; /* Default gutter width/height */
   --splitter-gutter-background-default: #f5f5f5; /* Gutter background color */
   --splitter-gutter-background-hover: #e5e5e5; /* Gutter hover background */
@@ -2021,7 +2021,7 @@
   --terminal-background: #171717; /* Terminal background color */
   --terminal-border-color: #404040; /* Terminal border color */
   --terminal-border-width: 1px; /* Terminal border width */
-  --terminal-border-radius: 5px; /* Terminal border radius */
+  --terminal-border-radius: 2px; /* Terminal border radius */
   --terminal-padding: 16px; /* Terminal content padding */
   --terminal-font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; /* Terminal font family */
   --terminal-font-size: 14px; /* Terminal font size */
@@ -2039,7 +2039,7 @@
   --textarea-minHeight: 80px;
   --textarea-fontSize: 15px;
   --textarea-lineHeight: 1.5;
-  --textarea-radius: 5px;
+  --textarea-radius: 2px;
   --textarea-border-width: 1px;
   --textarea-border-color-default: #d4d4d4;
   --textarea-border-color-hover: #a3a3a3;
@@ -2058,7 +2058,7 @@
   --tieredmenu-padding: 4px; /* Menu container padding */
   --tieredmenu-border-width: 1px; /* Border width */
   --tieredmenu-border-color: #d4d4d4; /* Border color */
-  --tieredmenu-border-radius: 5px; /* Border radius */
+  --tieredmenu-border-radius: 2px; /* Border radius */
   --tieredmenu-shadow: 3px 3px 0 #171717; /* Menu shadow (popup mode) */
   --tieredmenu-minWidth: 200px; /* Minimum menu width */
   --tieredmenu-item-padding: 6px 10px; /* Item padding */
@@ -2070,7 +2070,7 @@
   --tieredmenu-item-background-default: transparent; /* Item background */
   --tieredmenu-item-background-hover: #f5f5f5; /* Item background on hover */
   --tieredmenu-item-background-active: #f5f5f5; /* Active item background */
-  --tieredmenu-item-borderRadius: 5px; /* Item border radius */
+  --tieredmenu-item-borderRadius: 2px; /* Item border radius */
   --tieredmenu-icon-size: 16px; /* Icon size */
   --tieredmenu-icon-color-default: #737373; /* Icon color */
   --tieredmenu-icon-color-hover: #171717; /* Icon color on hover */
@@ -2114,7 +2114,7 @@
   --toast-border-color-info: #171717; /* Info border color */
   --toast-border-color-warning: #171717; /* Warning border color */
   --toast-border-color-error: #171717; /* Error border color */
-  --toast-radius: 5px; /* Toast border radius */
+  --toast-radius: 2px; /* Toast border radius */
   --toast-shadow: 4px 4px 0 #171717; /* Toast elevation shadow */
   --toast-padding-x: 16px; /* Horizontal padding */
   --toast-padding-y: 16px; /* Vertical padding */
@@ -2172,7 +2172,7 @@
   --toggleButton-border-on-default: #171717; /* Toggle button on state border color */
   --toggleButton-border-on-hover: #11162d; /* Toggle button on state hover border color */
   --toggleButton-border-disabled: #e5e5e5; /* Toggle button disabled border color */
-  --toggleButton-radius: 5px; /* Toggle button border radius */
+  --toggleButton-radius: 2px; /* Toggle button border radius */
   --toggleButton-fontSize-sm: 14px; /* Small toggle button font size */
   --toggleButton-fontSize-md: 16px; /* Medium toggle button font size */
   --toggleButton-fontSize-lg: 18px; /* Large toggle button font size */
@@ -2205,7 +2205,7 @@
   --toolbar-background: #ffffff; /* Toolbar background color */
   --toolbar-border-color: #d4d4d4; /* Toolbar border color */
   --toolbar-border-width: 1px; /* Toolbar border width */
-  --toolbar-radius: 5px; /* Toolbar border radius */
+  --toolbar-radius: 2px; /* Toolbar border radius */
   --toolbar-padding: 16px; /* Toolbar inner padding */
   --toolbar-gap: 16px; /* Gap between toolbar items */
   --toolbar-minHeight: 48px; /* Minimum toolbar height */
@@ -2227,7 +2227,7 @@
   --tree-select-fontSize-sm: 14px;
   --tree-select-fontSize-md: 15px;
   --tree-select-fontSize-lg: 16px;
-  --tree-select-radius: 5px;
+  --tree-select-radius: 2px;
   --tree-select-border-width: 1px;
   --tree-select-border-color-default: #d4d4d4;
   --tree-select-border-color-hover: #a3a3a3;
@@ -2246,7 +2246,7 @@
   --tree-select-dropdown-background: #fafafa;
   --tree-select-dropdown-border: #e5e5e5;
   --tree-select-dropdown-shadow: 3px 3px 0 #171717;
-  --tree-select-dropdown-radius: 5px;
+  --tree-select-dropdown-radius: 2px;
   --tree-select-dropdown-maxHeight: 320px;
   --tree-select-node-padding-x: 16px;
   --tree-select-node-padding-y: 10px;
@@ -2266,7 +2266,7 @@
   --tree-select-focus-ringColor: #171717;
   --tree-select-focus-ringOffset: 1px;
   --tree-padding: 10px; /* Container padding */
-  --tree-radius: 5px; /* Container border radius */
+  --tree-radius: 2px; /* Container border radius */
   --tree-border-width: 1px;
   --tree-border-color-default: #d4d4d4; /* Default border color */
   --tree-border-color-disabled: #e5e5e5; /* Disabled border color */
@@ -2294,7 +2294,7 @@
   --tree-focus-ringWidth: 2px;
   --tree-focus-ringColor: #171717;
   --tree-focus-ringOffset: 1px;
-  --treetable-radius: 5px; /* Container border radius */
+  --treetable-radius: 2px; /* Container border radius */
   --treetable-border-width: 1px;
   --treetable-border-color-default: #d4d4d4;
   --treetable-background-default: #fafafa;
@@ -2327,7 +2327,7 @@
   --virtualscroller-background-default: #fafafa; /* Default background */
   --virtualscroller-border-width: 1px;
   --virtualscroller-border-color-default: #d4d4d4;
-  --virtualscroller-border-radius: 5px;
+  --virtualscroller-border-radius: 2px;
   --virtualscroller-item-padding-x: 16px;
   --virtualscroller-item-padding-y: 10px;
   --virtualscroller-item-background-default: transparent;

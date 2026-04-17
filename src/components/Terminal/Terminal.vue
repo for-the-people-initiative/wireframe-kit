@@ -1,5 +1,5 @@
 <template>
-  <div class="terminal" @click="focusInput">
+  <div v-rough class="terminal" @click="focusInput">
     <div v-if="welcomeMessage" class="terminal__welcome">
       {{ welcomeMessage }}
     </div>

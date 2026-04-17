@@ -1,6 +1,7 @@
 <template>
   <div
     v-if="!dismissed"
+    v-rough
     class="alert"
     :class="additionalClasses"
     role="alert"

@@ -1,5 +1,6 @@
 <template>
   <div
+    v-rough
     class="dock"
     :class="[
       `dock--${position}`,

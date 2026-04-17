@@ -12,6 +12,7 @@
       </svg>
     </button>
     <input
+      v-rough
       ref="inputRef"
       type="text"
       inputmode="decimal"

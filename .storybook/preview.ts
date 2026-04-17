@@ -1,14 +1,21 @@
 import type { Preview } from '@storybook/vue3';
+import { setup } from '@storybook/vue3';
 import '../dist/css/tokens.css';
+import '../src/scss/fonts.scss';
+import '../src/scss/wireframe.scss';
+import { vRough } from '../src/directives/rough';
+
+setup((app) => {
+  app.directive('rough', vRough);
+});
 
 const preview: Preview = {
   parameters: {
     backgrounds: {
-      default: 'dark',
+      default: 'paper',
       values: [
+        { name: 'paper', value: '#ffffff' },
         { name: 'dark', value: '#0a0e1f' },
-        { name: 'panel', value: '#11162d' },
-        { name: 'light', value: '#ffffff' },
       ],
     },
     controls: {
@@ -17,22 +24,7 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    designToken: {
-      defaultTab: 'Colors',
-      styleInjection: '@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap");',
-    },
   },
-  decorators: [
-    (story) => ({
-      components: { story },
-      template: `
-        <div style="font-family: 'Manrope', sans-serif; color: #ffffff;">
-          <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-          <story />
-        </div>
-      `,
-    }),
-  ],
 };
 
 export default preview;

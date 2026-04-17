@@ -1,5 +1,6 @@
 <template>
   <section
+    v-rough="{ strokeWidth: 2 }"
     class="hero"
     :class="additionalClasses"
     :style="backgroundStyles"

@@ -10,6 +10,7 @@
         <Transition name="confirm-dialog-scale">
           <div
             v-if="visible"
+            v-rough="{ strokeWidth: 2 }"
             ref="dialogRef"
             class="confirm-dialog"
             role="alertdialog"

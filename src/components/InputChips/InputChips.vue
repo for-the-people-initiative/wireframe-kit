@@ -1,5 +1,6 @@
 <template>
   <div
+    v-rough
     class="input-chips"
     :class="additionalClasses"
     @click="focusInput"

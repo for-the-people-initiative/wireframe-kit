@@ -12,6 +12,7 @@
           <div
             v-if="visible"
             ref="dialogRef"
+            v-rough="{ strokeWidth: 2 }"
             class="dialog"
             :class="additionalClasses"
             role="dialog"

@@ -1,5 +1,5 @@
 <template>
-  <span class="tag" :class="additionalClasses">
+  <span v-rough="{ disabled: rounded, strokeWidth: 1.4, roughness: 1.3 }" class="tag" :class="additionalClasses">
     <slot name="icon">
       <i v-if="icon" :class="icon" class="tag__icon"></i>
     </slot>

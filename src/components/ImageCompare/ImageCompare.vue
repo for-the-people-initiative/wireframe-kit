@@ -1,5 +1,6 @@
 <template>
   <div
+    v-rough
     class="image-compare"
     :class="additionalClasses"
     :aria-label="ariaLabel"

@@ -10,6 +10,7 @@
         <Transition :name="transitionName">
           <div
             v-if="visible"
+            v-rough="{ strokeWidth: 2 }"
             ref="drawerRef"
             class="drawer"
             :class="additionalClasses"

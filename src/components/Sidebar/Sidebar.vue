@@ -10,6 +10,7 @@
         <Transition :name="transitionName">
           <div
             v-if="visible"
+            v-rough="{ strokeWidth: 2 }"
             ref="sidebarRef"
             class="sidebar"
             :class="additionalClasses"

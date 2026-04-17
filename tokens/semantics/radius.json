@@ -1,10 +1,10 @@
 {
   "radius": {
     "none": { "value": "{radius.0}", "type": "dimension", "description": "No rounding" },
-    "subtle": { "value": "{radius.1}", "type": "dimension", "description": "Subtle rounding" },
-    "default": { "value": "{radius.3}", "type": "dimension", "description": "Default border radius" },
-    "rounded": { "value": "{radius.4}", "type": "dimension", "description": "More rounded corners" },
-    "large": { "value": "{radius.5}", "type": "dimension", "description": "Large radius for cards" },
+    "subtle": { "value": "{radius.1}", "type": "dimension", "description": "Subtle rounding (2px)" },
+    "default": { "value": "{radius.1}", "type": "dimension", "description": "Default border radius — kept near-sharp for the wireframe aesthetic (2px)" },
+    "rounded": { "value": "{radius.2}", "type": "dimension", "description": "Slightly more rounded (3px)" },
+    "large": { "value": "{radius.2}", "type": "dimension", "description": "Cards/dialogs — still near-sharp (3px)" },
     "pill": { "value": "{radius.full}", "type": "dimension", "description": "Fully rounded (pills, circles)" }
   }
 }

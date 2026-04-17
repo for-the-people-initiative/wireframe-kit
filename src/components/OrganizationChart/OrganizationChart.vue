@@ -29,7 +29,7 @@
 
 <script setup lang="ts">
 import type { OrganizationChartProps, OrganizationChartEmits } from '../../types';
-import { ref, watch, h, defineComponent } from "vue";
+import { ref, watch, h, defineComponent, withDirectives, resolveDirective } from "vue";
 
 const props = withDefaults(defineProps<OrganizationChartProps>(), {
   value: null,
@@ -148,7 +148,8 @@ const OrganizationChartNode = defineComponent({
         .filter(Boolean)
         .join(" ");
 
-      const nodeBox = h(
+      const roughDirective = resolveDirective("rough");
+      const nodeBoxVNode = h(
         "div",
         {
           class: [
@@ -166,6 +167,9 @@ const OrganizationChartNode = defineComponent({
             : h("span", nodeProps.node!.label),
         ]
       );
+      const nodeBox = roughDirective
+        ? withDirectives(nodeBoxVNode, [[roughDirective]])
+        : nodeBoxVNode;
 
       const toggleButton =
         hasChildren() &&

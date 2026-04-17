@@ -1,5 +1,5 @@
 <template>
-  <div class="accordion__tab" :class="tabClasses">
+  <div v-rough class="accordion__tab" :class="tabClasses">
     <button
       type="button"
       class="accordion__header"

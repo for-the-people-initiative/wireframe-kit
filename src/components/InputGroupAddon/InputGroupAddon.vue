@@ -1,5 +1,5 @@
 <template>
-  <span class="input-group-addon" :class="additionalClasses">
+  <span v-rough class="input-group-addon" :class="additionalClasses">
     <slot />
   </span>
 </template>

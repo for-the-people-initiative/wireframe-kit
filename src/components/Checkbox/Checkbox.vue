@@ -10,7 +10,7 @@
       :aria-invalid="isInvalid || undefined"
       @change="onChange"
     />
-    <span class="checkbox__box">
+    <span v-rough="{ strokeWidth: 1.5, roughness: 1.2 }" class="checkbox__box">
       <svg
         class="checkbox__icon"
         viewBox="0 0 12 12"

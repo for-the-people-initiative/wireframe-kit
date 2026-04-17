@@ -1,5 +1,5 @@
 <template>
-  <span class="inline-message" :class="additionalClasses" role="status">
+  <span v-rough class="inline-message" :class="additionalClasses" role="status">
     <slot name="icon">
       <span v-if="hasIcon" class="inline-message__icon">
         <!-- Success icon -->

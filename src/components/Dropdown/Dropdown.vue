@@ -5,6 +5,7 @@
     :class="additionalClasses"
   >
     <button
+      v-rough
       ref="triggerRef"
       type="button"
       class="dropdown__trigger"
@@ -40,6 +41,7 @@
     <Teleport to="body">
       <div
         v-if="isOpen"
+        v-rough
         ref="panelRef"
         class="dropdown__panel"
         :style="panelStyle"

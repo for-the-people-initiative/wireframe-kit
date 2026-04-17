@@ -1,6 +1,7 @@
 <template>
   <div class="select" :class="additionalClasses">
     <select
+      v-rough
       ref="selectRef"
       class="select__input"
       :value="modelValue"

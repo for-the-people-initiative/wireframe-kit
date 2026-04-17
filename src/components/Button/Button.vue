@@ -1,5 +1,6 @@
 <template>
   <button
+    v-rough="{ disabled: pill }"
     class="button"
     :class="additionalClasses"
     :disabled="isDisabled || isLoading"

@@ -10,7 +10,7 @@
       :aria-invalid="isInvalid || undefined"
       @change="onChange"
     />
-    <span class="radio__circle">
+    <span v-rough="{ shape: 'circle', strokeWidth: 1.5, roughness: 1.2 }" class="radio__circle">
       <span class="radio__dot"></span>
     </span>
     <span v-if="label || $slots.default" class="radio__label">

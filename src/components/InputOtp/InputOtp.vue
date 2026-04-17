@@ -9,6 +9,7 @@
         ></span>
 
         <input
+          v-rough
           ref="inputRefs"
           type="text"
           :inputmode="integerOnly ? 'numeric' : 'text'"

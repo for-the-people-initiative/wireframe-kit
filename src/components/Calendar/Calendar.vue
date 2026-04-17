@@ -1,7 +1,7 @@
 <template>
   <div ref="containerRef" class="calendar" :class="additionalClasses">
     <!-- Input trigger -->
-    <div v-if="!inline" class="calendar__input-wrapper" @click="togglePanel">
+    <div v-if="!inline" v-rough class="calendar__input-wrapper" @click="togglePanel">
       <input
         ref="inputRef"
         class="calendar__input"
@@ -34,6 +34,7 @@
     <Teleport :to="inline ? null : 'body'" :disabled="inline">
       <div
         v-if="inline || isPanelOpen"
+        v-rough
         ref="panelRef"
         class="calendar__panel"
         :class="{ 'calendar__panel--inline': inline }"

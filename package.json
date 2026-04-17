@@ -45,6 +45,10 @@
     "./composables": {
       "types": "./dist/composables/index.d.ts",
       "import": "./dist/composables/index.js"
+    },
+    "./plugin": {
+      "types": "./dist/plugin/index.d.ts",
+      "import": "./dist/plugin/index.js"
     }
   },
   "typesVersions": {
@@ -103,5 +107,7 @@
     "vue": "^3.5.0",
     "vue-tsc": "^3.2.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "roughjs": "^4.6.6"
+  }
 }

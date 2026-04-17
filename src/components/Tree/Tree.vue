@@ -1,5 +1,5 @@
 <template>
-  <div class="tree" :class="additionalClasses" role="tree" :aria-multiselectable="selectionMode === 'multiple'">
+  <div v-rough class="tree" :class="additionalClasses" role="tree" :aria-multiselectable="selectionMode === 'multiple'">
     <div v-if="filter" class="tree__filter">
       <input
         v-model="filterValue"

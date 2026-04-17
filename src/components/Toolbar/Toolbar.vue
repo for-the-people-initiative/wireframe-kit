@@ -1,5 +1,5 @@
 <template>
-  <div class="toolbar" role="toolbar">
+  <div v-rough class="toolbar" role="toolbar">
     <div v-if="$slots.start" class="toolbar__start">
       <slot name="start" />
     </div>

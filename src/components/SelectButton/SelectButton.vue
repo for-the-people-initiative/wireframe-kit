@@ -8,6 +8,7 @@
     <button
       v-for="(option, index) in options"
       :key="getOptionValue(option)"
+      v-rough
       type="button"
       class="select-button__option"
       :class="{

@@ -1,5 +1,6 @@
 <template>
   <div
+    v-rough
     class="splitter__panel"
     :style="panelStyle"
   >

@@ -1,5 +1,5 @@
 <template>
-  <div class="treetable" :class="additionalClasses">
+  <div v-rough class="treetable" :class="additionalClasses">
     <table class="treetable__table" role="treegrid">
       <thead class="treetable__head">
         <tr class="treetable__row treetable__row--header">

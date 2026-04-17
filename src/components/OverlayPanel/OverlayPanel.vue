@@ -3,6 +3,7 @@
     <Transition name="overlay-panel-fade">
       <div
         v-if="isVisible"
+        v-rough
         ref="panelRef"
         class="overlay-panel"
         :style="panelStyle"

@@ -1,6 +1,6 @@
 <template>
   <div class="date-picker" :class="{ 'date-picker--disabled': disabled }">
-    <div class="date-picker__input-wrapper" @click="toggleCalendar">
+    <div v-rough class="date-picker__input-wrapper" @click="toggleCalendar">
       <input
         ref="inputRef"
         class="date-picker__input"
@@ -25,6 +25,7 @@
       <Transition name="date-picker-dropdown">
         <div
           v-if="isOpen"
+          v-rough
           ref="dropdownRef"
           class="date-picker__dropdown"
           :style="dropdownStyle"

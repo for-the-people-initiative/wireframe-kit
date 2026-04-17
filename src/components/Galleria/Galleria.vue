@@ -1,5 +1,5 @@
 <template>
-  <div class="galleria" :class="additionalClasses">
+  <div v-rough class="galleria" :class="additionalClasses">
     <div class="galleria__main">
       <!-- Preview area -->
       <div

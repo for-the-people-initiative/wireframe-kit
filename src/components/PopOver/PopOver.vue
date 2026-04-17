@@ -12,6 +12,7 @@
       <Transition name="popover-fade">
         <div
           v-if="isVisible"
+          v-rough
           ref="popoverRef"
           class="popover"
           :class="positionClass"

@@ -5,6 +5,7 @@
     :class="additionalClasses"
   >
     <button
+      v-rough
       type="button"
       class="split-button__main"
       :disabled="isDisabled"
@@ -19,6 +20,7 @@
       <span v-if="label" class="split-button__label">{{ label }}</span>
     </button>
     <button
+      v-rough
       type="button"
       class="split-button__dropdown"
       :disabled="isDisabled"
@@ -48,6 +50,7 @@
     <Teleport to="body">
       <div
         v-if="isOpen"
+        v-rough
         ref="menuRef"
         class="split-button__menu"
         :style="menuStyle"

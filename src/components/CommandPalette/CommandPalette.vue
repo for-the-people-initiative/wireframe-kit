@@ -10,6 +10,7 @@
         <Transition name="command-palette-scale">
           <div
             v-if="open"
+            v-rough="{ strokeWidth: 2 }"
             ref="paletteRef"
             class="command-palette"
             role="dialog"

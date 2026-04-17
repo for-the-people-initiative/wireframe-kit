@@ -1,5 +1,5 @@
 <template>
-  <div class="data-table" :class="additionalClasses">
+  <div v-rough class="data-table" :class="additionalClasses">
     <div v-if="$slots.header" class="data-table__header">
       <slot name="header" />
     </div>

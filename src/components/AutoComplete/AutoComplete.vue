@@ -4,7 +4,7 @@
     class="autocomplete"
     :class="additionalClasses"
   >
-    <div class="autocomplete__input-wrapper" @click="focusInput">
+    <div v-rough class="autocomplete__input-wrapper" @click="focusInput">
       <!-- Multiple mode chips -->
       <span
         v-for="(item, index) in selectedItems"
@@ -114,6 +114,7 @@
     <Teleport to="body">
       <div
         v-if="isOpen && filteredSuggestions.length > 0"
+        v-rough
         ref="dropdownRef"
         class="autocomplete__dropdown"
         :style="dropdownStyle"

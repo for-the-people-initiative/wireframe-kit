@@ -5,6 +5,7 @@
     :class="additionalClasses"
   >
     <div
+      v-rough
       class="multi-select__trigger"
       role="combobox"
       :aria-expanded="isOpen"
@@ -53,6 +54,7 @@
     <Teleport to="body">
       <div
         v-if="isOpen"
+        v-rough
         ref="dropdownRef"
         class="multi-select__dropdown"
         :style="dropdownStyle"

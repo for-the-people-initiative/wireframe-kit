@@ -8,6 +8,7 @@
         <div
           v-for="toast in toasts"
           :key="toast.id"
+          v-rough
           class="toast"
           :class="[
             `toast--${toast.severity || 'default'}`,

@@ -1,5 +1,5 @@
 <template>
-  <div class="color-picker color-picker--stub" :class="{ 'color-picker--disabled': isDisabled }">
+  <div v-rough class="color-picker color-picker--stub" :class="{ 'color-picker--disabled': isDisabled }">
     <span class="color-picker__swatch" aria-hidden="true" />
     <span class="color-picker__label">[ Color Picker ]</span>
   </div>

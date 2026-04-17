@@ -9,6 +9,7 @@
     <div class="password-input__field-wrapper">
       <input
         :id="inputId"
+        v-rough
         ref="inputRef"
         class="password-input__field"
         :class="inputClasses"
@@ -94,6 +95,7 @@
       <div class="password-input__field-wrapper">
         <input
           :id="`${inputId}-confirm`"
+          v-rough
           class="password-input__field"
           :class="confirmInputClasses"
           :type="showConfirmPassword ? 'text' : 'password'"

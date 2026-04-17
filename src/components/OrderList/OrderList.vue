@@ -49,7 +49,7 @@
       </button>
     </div>
 
-    <div class="order-list__container">
+    <div v-rough class="order-list__container">
       <div v-if="$slots.header || header" class="order-list__header">
         <slot name="header">
           {{ header }}

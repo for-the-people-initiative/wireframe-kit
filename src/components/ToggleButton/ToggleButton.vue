@@ -1,5 +1,6 @@
 <template>
   <button
+    v-rough
     type="button"
     class="toggle-button"
     :class="additionalClasses"

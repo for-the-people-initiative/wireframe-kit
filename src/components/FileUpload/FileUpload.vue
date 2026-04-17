@@ -2,6 +2,7 @@
   <div class="file-upload" :class="additionalClasses">
     <!-- Dropzone -->
     <div
+      v-rough
       class="file-upload__dropzone"
       :class="{ 'file-upload__dropzone--active': isDragging }"
       @dragenter.prevent="onDragEnter"

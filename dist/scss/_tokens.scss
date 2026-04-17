@@ -78,10 +78,10 @@ $gradient-streak-end: var(--gradient-streak-end); // Wireframe: solid ink
 
 // Radius
 $radius-none: var(--radius-none); // No rounding
-$radius-subtle: var(--radius-subtle); // Subtle rounding
-$radius-default: var(--radius-default); // Default border radius
-$radius-rounded: var(--radius-rounded); // More rounded corners
-$radius-large: var(--radius-large); // Large radius for cards
+$radius-subtle: var(--radius-subtle); // Subtle rounding (2px)
+$radius-default: var(--radius-default); // Default border radius — kept near-sharp for the wireframe aesthetic (2px)
+$radius-rounded: var(--radius-rounded); // Slightly more rounded (3px)
+$radius-large: var(--radius-large); // Cards/dialogs — still near-sharp (3px)
 $radius-pill: var(--radius-pill); // Fully rounded (pills, circles)
 
 // Shadow

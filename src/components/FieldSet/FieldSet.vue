@@ -1,5 +1,5 @@
 <template>
-  <fieldset class="field-set" :class="additionalClasses">
+  <fieldset v-rough class="field-set" :class="additionalClasses">
     <legend v-if="legend || $slots.legend" class="field-set__legend">
       <button
         v-if="toggleable"

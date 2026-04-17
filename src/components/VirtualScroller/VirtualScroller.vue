@@ -1,5 +1,6 @@
 <template>
   <div
+    v-rough
     ref="containerRef"
     class="virtualscroller"
     :class="additionalClasses"

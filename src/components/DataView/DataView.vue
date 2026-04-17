@@ -1,5 +1,5 @@
 <template>
-  <div class="data-view" :class="additionalClasses">
+  <div v-rough class="data-view" :class="additionalClasses">
     <div v-if="$slots.header || showLayoutSwitcher" class="data-view__header">
       <div class="data-view__header-content">
         <slot name="header" />

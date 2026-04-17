@@ -4,6 +4,7 @@
       <div
         v-for="(feature, index) in features"
         :key="index"
+        v-rough="{ disabled: variant !== 'card' }"
         class="feature-grid__item"
       >
         <div v-if="feature.icon" class="feature-grid__icon">

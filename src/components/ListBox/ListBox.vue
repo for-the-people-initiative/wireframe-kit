@@ -1,5 +1,6 @@
 <template>
   <div
+    v-rough
     class="listbox"
     :class="additionalClasses"
     role="listbox"

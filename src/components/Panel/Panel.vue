@@ -1,5 +1,5 @@
 <template>
-  <div class="panel" :class="additionalClasses">
+  <div v-rough class="panel" :class="additionalClasses">
     <div
       v-if="$slots.header || header"
       class="panel__header"

@@ -3,6 +3,7 @@
     <div
       v-for="(panel, panelIndex) in model"
       :key="panel.key || panelIndex"
+      v-rough
       class="panelmenu__panel"
       :class="{
         'panelmenu__panel--expanded': isExpanded(panelIndex),

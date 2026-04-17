@@ -1,5 +1,6 @@
 <template>
   <div
+    v-rough="{ shape: layout === 'vertical' ? 'vline' : 'hline' }"
     class="divider"
     :class="additionalClasses"
     role="separator"

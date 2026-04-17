@@ -1,5 +1,5 @@
 <template>
-  <div class="cta" :class="additionalClasses">
+  <div v-rough class="cta" :class="additionalClasses">
     <div class="cta__content">
       <h2 v-if="title" class="cta__title">{{ title }}</h2>
       <p v-if="description" class="cta__description">{{ description }}</p>
