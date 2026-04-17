@@ -10,7 +10,7 @@
       :aria-invalid="isInvalid || undefined"
       @change="onChange"
     />
-    <span v-rough="{ strokeWidth: 1.5, roughness: 1.2 }" class="checkbox__box">
+    <span v-rough="{ severity: 1 }" class="checkbox__box">
       <svg
         class="checkbox__icon"
         viewBox="0 0 12 12"
@@ -46,7 +46,7 @@
 import type { CheckboxProps, CheckboxEmits } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpCheckbox' });
+defineOptions({ name: 'Checkbox' });
 
 const props = withDefaults(defineProps<CheckboxProps>(), {
   modelValue: false,

@@ -5,7 +5,7 @@
     :class="additionalClasses"
   >
     <button
-      v-rough
+      v-rough="{ severity: 2 }"
       type="button"
       class="split-button__main"
       :disabled="isDisabled"
@@ -20,7 +20,7 @@
       <span v-if="label" class="split-button__label">{{ label }}</span>
     </button>
     <button
-      v-rough
+      v-rough="{ severity: 2 }"
       type="button"
       class="split-button__dropdown"
       :disabled="isDisabled"
@@ -84,7 +84,7 @@
 import type { SplitButtonProps, SplitButtonEmits } from '../../types';
 import { computed, ref, onMounted, onBeforeUnmount, nextTick, watch } from "vue";
 
-defineOptions({ name: 'FtpSplitButton' });
+defineOptions({ name: 'SplitButton' });
 
 const props = withDefaults(defineProps<SplitButtonProps>(), {
   model: () => [],

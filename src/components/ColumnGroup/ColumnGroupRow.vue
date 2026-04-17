@@ -6,7 +6,7 @@
  * to define multi-row headers and footers with spanning columns.
  */
 
-defineOptions({ name: 'FtpColumnGroupRow' });
+defineOptions({ name: 'ColumnGroupRow' });
 
 // Expose for parent ColumnGroup to access
 defineExpose({});

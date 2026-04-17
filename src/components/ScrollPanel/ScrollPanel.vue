@@ -62,7 +62,7 @@
 import type { ScrollPanelProps } from '../../types';
 import { ref, computed, onMounted, onUnmounted, nextTick } from "vue";
 
-defineOptions({ name: 'FtpScrollPanel' });
+defineOptions({ name: 'ScrollPanel' });
 
 const props = withDefaults(defineProps<ScrollPanelProps>(), {
   style: () => ({}),

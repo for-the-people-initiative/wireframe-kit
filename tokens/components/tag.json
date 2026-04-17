@@ -56,7 +56,7 @@
         "description": "Accent color tag"
       },
       "neutral": {
-        "value": "rgba(255, 255, 255, 0.12)",
+        "value": "{neutral.200}",
         "type": "color",
         "description": "Neutral/muted tag"
       },

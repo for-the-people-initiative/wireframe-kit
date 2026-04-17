@@ -33,17 +33,17 @@ $border-vibrant-start: var(--border-vibrant-start); // Wireframe: solid ink, no 
 $border-vibrant-end: var(--border-vibrant-end); // Wireframe: solid ink, no gradient
 
 // Feedback
-$feedback-success: var(--feedback-success); // Wireframe: monochrome feedback (position/label conveys intent)
-$feedback-successSubtle: var(--feedback-successSubtle); // Success background
+$feedback-success: var(--feedback-success); // Success base (border/icon)
+$feedback-successSubtle: var(--feedback-successSubtle); // Success background (box)
 $feedback-successEmphasis: var(--feedback-successEmphasis); // Success text
-$feedback-warning: var(--feedback-warning); // Wireframe: monochrome
-$feedback-warningSubtle: var(--feedback-warningSubtle); // Warning background
+$feedback-warning: var(--feedback-warning); // Warning base (border/icon)
+$feedback-warningSubtle: var(--feedback-warningSubtle); // Warning background (box)
 $feedback-warningEmphasis: var(--feedback-warningEmphasis); // Warning text
-$feedback-error: var(--feedback-error); // Wireframe: monochrome
-$feedback-errorSubtle: var(--feedback-errorSubtle); // Error background
+$feedback-error: var(--feedback-error); // Error base (border/icon)
+$feedback-errorSubtle: var(--feedback-errorSubtle); // Error background (box)
 $feedback-errorEmphasis: var(--feedback-errorEmphasis); // Error text
-$feedback-info: var(--feedback-info); // Wireframe: monochrome
-$feedback-infoSubtle: var(--feedback-infoSubtle); // Info background
+$feedback-info: var(--feedback-info); // Info base (border/icon)
+$feedback-infoSubtle: var(--feedback-infoSubtle); // Info background (box)
 $feedback-infoEmphasis: var(--feedback-infoEmphasis); // Info text
 
 // Accent
@@ -116,7 +116,7 @@ $inline-s: var(--inline-s); // Inline (horizontal) gap 6px
 // Accordion
 $accordion-header-padding: var(--accordion-header-padding); // Header padding
 $accordion-header-background-default: var(--accordion-header-background-default); // Header background
-$accordion-header-background-hover: var(--accordion-header-background-hover); // Header hover background - semi-transparent for dark mode
+$accordion-header-background-hover: var(--accordion-header-background-hover); // Header hover background
 $accordion-header-background-active: var(--accordion-header-background-active); // Header active/expanded background
 $accordion-header-color-default: var(--accordion-header-color-default); // Header text color
 $accordion-header-color-hover: var(--accordion-header-color-hover); // Header text color on hover
@@ -135,6 +135,30 @@ $accordion-icon-rotation-collapsed: var(--accordion-icon-rotation-collapsed); //
 $accordion-icon-rotation-expanded: var(--accordion-icon-rotation-expanded); // Icon rotation when expanded
 $accordion-transition-duration: var(--accordion-transition-duration); // Animation duration
 $accordion-gap: var(--accordion-gap); // Gap between accordion tabs
+
+// Alert
+$alert-padding-x: var(--alert-padding-x); // Horizontal padding
+$alert-padding-y: var(--alert-padding-y); // Vertical padding
+$alert-gap: var(--alert-gap); // Gap between icon and content
+$alert-radius: var(--alert-radius); // Border radius
+$alert-borderWidth: var(--alert-borderWidth); // Border width
+$alert-iconSize: var(--alert-iconSize); // Icon size
+$alert-background-success: var(--alert-background-success); // Success alert background
+$alert-background-info: var(--alert-background-info); // Info alert background
+$alert-background-warn: var(--alert-background-warn); // Warning alert background
+$alert-background-error: var(--alert-background-error); // Error alert background
+$alert-text-success: var(--alert-text-success); // Alert text color (black for wireframe legibility)
+$alert-text-info: var(--alert-text-info); // Alert text color (black for wireframe legibility)
+$alert-text-warn: var(--alert-text-warn); // Alert text color (black for wireframe legibility)
+$alert-text-error: var(--alert-text-error); // Alert text color (black for wireframe legibility)
+$alert-icon-success: var(--alert-icon-success); // Alert icon color (black)
+$alert-icon-info: var(--alert-icon-info); // Alert icon color (black)
+$alert-icon-warn: var(--alert-icon-warn); // Alert icon color (black)
+$alert-icon-error: var(--alert-icon-error); // Alert icon color (black)
+$alert-border-success: var(--alert-border-success); // Alert border color (black; rendered sketchy via v-rough)
+$alert-border-info: var(--alert-border-info); // Alert border color (black; rendered sketchy via v-rough)
+$alert-border-warn: var(--alert-border-warn); // Alert border color (black; rendered sketchy via v-rough)
+$alert-border-error: var(--alert-border-error); // Alert border color (black; rendered sketchy via v-rough)
 
 // Autocomplete
 $autocomplete-height-sm: var(--autocomplete-height-sm);
@@ -613,9 +637,9 @@ $confirmDialog-header-background: var(--confirmDialog-header-background); // Hea
 $confirmDialog-header-borderColor: var(--confirmDialog-header-borderColor); // Header bottom border color
 $confirmDialog-header-title-color: var(--confirmDialog-header-title-color); // Header title text color
 $confirmDialog-icon-size: var(--confirmDialog-icon-size); // Icon size
-$confirmDialog-icon-color-warning: var(--confirmDialog-icon-color-warning); // Warning icon color
-$confirmDialog-icon-color-danger: var(--confirmDialog-icon-color-danger); // Danger icon color
-$confirmDialog-icon-color-info: var(--confirmDialog-icon-color-info); // Info icon color
+$confirmDialog-icon-color-warning: var(--confirmDialog-icon-color-warning); // ConfirmDialog icon color (black)
+$confirmDialog-icon-color-danger: var(--confirmDialog-icon-color-danger); // ConfirmDialog icon color (black)
+$confirmDialog-icon-color-info: var(--confirmDialog-icon-color-info); // ConfirmDialog icon color (black)
 $confirmDialog-message-color: var(--confirmDialog-message-color); // Message text color
 $confirmDialog-message-fontSize: var(--confirmDialog-message-fontSize); // Message font size
 $confirmDialog-overlay-background: var(--confirmDialog-overlay-background); // Modal overlay backdrop color
@@ -1068,14 +1092,14 @@ $inline-message-background-success: var(--inline-message-background-success); //
 $inline-message-background-info: var(--inline-message-background-info); // Info background
 $inline-message-background-warn: var(--inline-message-background-warn); // Warning background
 $inline-message-background-error: var(--inline-message-background-error); // Error background
-$inline-message-text-success: var(--inline-message-text-success); // Success text color
-$inline-message-text-info: var(--inline-message-text-info); // Info text color
-$inline-message-text-warn: var(--inline-message-text-warn); // Warning text color
-$inline-message-text-error: var(--inline-message-text-error); // Error text color
-$inline-message-icon-success: var(--inline-message-icon-success); // Success icon color
-$inline-message-icon-info: var(--inline-message-icon-info); // Info icon color
-$inline-message-icon-warn: var(--inline-message-icon-warn); // Warning icon color
-$inline-message-icon-error: var(--inline-message-icon-error); // Error icon color
+$inline-message-text-success: var(--inline-message-text-success); // InlineMessage text color (black)
+$inline-message-text-info: var(--inline-message-text-info); // InlineMessage text color (black)
+$inline-message-text-warn: var(--inline-message-text-warn); // InlineMessage text color (black)
+$inline-message-text-error: var(--inline-message-text-error); // InlineMessage text color (black)
+$inline-message-icon-success: var(--inline-message-icon-success); // InlineMessage icon color (black)
+$inline-message-icon-info: var(--inline-message-icon-info); // InlineMessage icon color (black)
+$inline-message-icon-warn: var(--inline-message-icon-warn); // InlineMessage icon color (black)
+$inline-message-icon-error: var(--inline-message-icon-error); // InlineMessage icon color (black)
 
 // Input-chips
 $input-chips-height-sm: var(--input-chips-height-sm); // Small container min-height
@@ -1463,18 +1487,18 @@ $message-background-success: var(--message-background-success); // Success messa
 $message-background-info: var(--message-background-info); // Info message background
 $message-background-warn: var(--message-background-warn); // Warning message background
 $message-background-error: var(--message-background-error); // Error message background
-$message-text-success: var(--message-text-success); // Success message text color
-$message-text-info: var(--message-text-info); // Info message text color
-$message-text-warn: var(--message-text-warn); // Warning message text color
-$message-text-error: var(--message-text-error); // Error message text color
-$message-icon-success: var(--message-icon-success); // Success icon color
-$message-icon-info: var(--message-icon-info); // Info icon color
-$message-icon-warn: var(--message-icon-warn); // Warning icon color
-$message-icon-error: var(--message-icon-error); // Error icon color
-$message-border-success: var(--message-border-success); // Success message border color
-$message-border-info: var(--message-border-info); // Info message border color
-$message-border-warn: var(--message-border-warn); // Warning message border color
-$message-border-error: var(--message-border-error); // Error message border color
+$message-text-success: var(--message-text-success); // Message text color (black for wireframe legibility)
+$message-text-info: var(--message-text-info); // Message text color (black for wireframe legibility)
+$message-text-warn: var(--message-text-warn); // Message text color (black for wireframe legibility)
+$message-text-error: var(--message-text-error); // Message text color (black for wireframe legibility)
+$message-icon-success: var(--message-icon-success); // Message icon color (black)
+$message-icon-info: var(--message-icon-info); // Message icon color (black)
+$message-icon-warn: var(--message-icon-warn); // Message icon color (black)
+$message-icon-error: var(--message-icon-error); // Message icon color (black)
+$message-border-success: var(--message-border-success); // Message border color (black; rendered sketchy via v-rough)
+$message-border-info: var(--message-border-info); // Message border color (black; rendered sketchy via v-rough)
+$message-border-warn: var(--message-border-warn); // Message border color (black; rendered sketchy via v-rough)
+$message-border-error: var(--message-border-error); // Message border color (black; rendered sketchy via v-rough)
 $message-closeButton-color: var(--message-closeButton-color); // Close button icon color
 $message-closeButton-hoverColor: var(--message-closeButton-hoverColor); // Close button icon hover color
 
@@ -1780,7 +1804,7 @@ $popover-zIndex: var(--popover-zIndex); // Z-index for stacking
 
 // Progress-bar
 $progress-bar-track-height: var(--progress-bar-track-height);
-$progress-bar-track-background: var(--progress-bar-track-background); // Track background - semi-transparent for dark backgrounds
+$progress-bar-track-background: var(--progress-bar-track-background); // Track background
 $progress-bar-track-radius: var(--progress-bar-track-radius);
 $progress-bar-fill-background: var(--progress-bar-fill-background); // Fill color - visible accent
 $progress-bar-label-color: var(--progress-bar-label-color); // Label text on fill
@@ -1977,14 +2001,14 @@ $skeleton-animation-duration: var(--skeleton-animation-duration); // Wave animat
 
 // Slider
 $slider-track-height: var(--slider-track-height);
-$slider-track-background-default: var(--slider-track-background-default); // Inactive track - semi-transparent white works on any dark background
-$slider-track-background-fill: var(--slider-track-background-fill); // Active/filled track - visible accent color
-$slider-track-background-disabled: var(--slider-track-background-disabled); // Disabled track - subtle semi-transparent
+$slider-track-background-default: var(--slider-track-background-default); // Inactive track
+$slider-track-background-fill: var(--slider-track-background-fill); // Active/filled track
+$slider-track-background-disabled: var(--slider-track-background-disabled); // Disabled track
 $slider-track-radius: var(--slider-track-radius);
 $slider-thumb-size: var(--slider-thumb-size);
-$slider-thumb-background-default: var(--slider-thumb-background-default); // Thumb - visible accent color
-$slider-thumb-background-hover: var(--slider-thumb-background-hover); // Thumb hover - lighter accent
-$slider-thumb-background-disabled: var(--slider-thumb-background-disabled); // Disabled thumb - semi-transparent
+$slider-thumb-background-default: var(--slider-thumb-background-default); // Thumb
+$slider-thumb-background-hover: var(--slider-thumb-background-hover); // Thumb hover
+$slider-thumb-background-disabled: var(--slider-thumb-background-disabled); // Disabled thumb
 $slider-thumb-border-width: var(--slider-thumb-border-width);
 $slider-thumb-border-color: var(--slider-thumb-border-color);
 $slider-thumb-shadow: var(--slider-thumb-shadow);
@@ -2298,27 +2322,27 @@ $toast-background-warning: var(--toast-background-warning); // Warning toast bac
 $toast-background-error: var(--toast-background-error); // Error toast background
 $toast-border-width: var(--toast-border-width); // Toast border width
 $toast-border-color-default: var(--toast-border-color-default); // Default border color
-$toast-border-color-success: var(--toast-border-color-success); // Success border color
-$toast-border-color-info: var(--toast-border-color-info); // Info border color
-$toast-border-color-warning: var(--toast-border-color-warning); // Warning border color
-$toast-border-color-error: var(--toast-border-color-error); // Error border color
+$toast-border-color-success: var(--toast-border-color-success); // Toast border color (black; sketchy via v-rough)
+$toast-border-color-info: var(--toast-border-color-info); // Toast border color (black; sketchy via v-rough)
+$toast-border-color-warning: var(--toast-border-color-warning); // Toast border color (black; sketchy via v-rough)
+$toast-border-color-error: var(--toast-border-color-error); // Toast border color (black; sketchy via v-rough)
 $toast-radius: var(--toast-radius); // Toast border radius
 $toast-shadow: var(--toast-shadow); // Toast elevation shadow
 $toast-padding-x: var(--toast-padding-x); // Horizontal padding
 $toast-padding-y: var(--toast-padding-y); // Vertical padding
 $toast-icon-size: var(--toast-icon-size); // Icon size
 $toast-icon-color-default: var(--toast-icon-color-default); // Default icon color
-$toast-icon-color-success: var(--toast-icon-color-success); // Success icon color
-$toast-icon-color-info: var(--toast-icon-color-info); // Info icon color
-$toast-icon-color-warning: var(--toast-icon-color-warning); // Warning icon color
-$toast-icon-color-error: var(--toast-icon-color-error); // Error icon color
+$toast-icon-color-success: var(--toast-icon-color-success); // Toast icon color (black)
+$toast-icon-color-info: var(--toast-icon-color-info); // Toast icon color (black)
+$toast-icon-color-warning: var(--toast-icon-color-warning); // Toast icon color (black)
+$toast-icon-color-error: var(--toast-icon-color-error); // Toast icon color (black)
 $toast-icon-gap: var(--toast-icon-gap); // Gap between icon and content
 $toast-content-gap: var(--toast-content-gap); // Gap between summary and detail
 $toast-summary-color-default: var(--toast-summary-color-default); // Summary text color
-$toast-summary-color-success: var(--toast-summary-color-success); // Success summary color
-$toast-summary-color-info: var(--toast-summary-color-info); // Info summary color
-$toast-summary-color-warning: var(--toast-summary-color-warning); // Warning summary color
-$toast-summary-color-error: var(--toast-summary-color-error); // Error summary color
+$toast-summary-color-success: var(--toast-summary-color-success); // Toast summary color (black)
+$toast-summary-color-info: var(--toast-summary-color-info); // Toast summary color (black)
+$toast-summary-color-warning: var(--toast-summary-color-warning); // Toast summary color (black)
+$toast-summary-color-error: var(--toast-summary-color-error); // Toast summary color (black)
 $toast-summary-fontSize: var(--toast-summary-fontSize); // Summary font size
 $toast-summary-fontWeight: var(--toast-summary-fontWeight); // Summary font weight
 $toast-detail-color: var(--toast-detail-color); // Detail text color
@@ -2332,10 +2356,10 @@ $toast-closeButton-radius: var(--toast-closeButton-radius); // Close button bord
 $toast-progress-height: var(--toast-progress-height); // Progress bar height
 $toast-progress-background: var(--toast-progress-background); // Progress bar track background
 $toast-progress-fill-default: var(--toast-progress-fill-default); // Default progress fill
-$toast-progress-fill-success: var(--toast-progress-fill-success); // Success progress fill
-$toast-progress-fill-info: var(--toast-progress-fill-info); // Info progress fill
-$toast-progress-fill-warning: var(--toast-progress-fill-warning); // Warning progress fill
-$toast-progress-fill-error: var(--toast-progress-fill-error); // Error progress fill
+$toast-progress-fill-success: var(--toast-progress-fill-success); // Toast progress fill (black)
+$toast-progress-fill-info: var(--toast-progress-fill-info); // Toast progress fill (black)
+$toast-progress-fill-warning: var(--toast-progress-fill-warning); // Toast progress fill (black)
+$toast-progress-fill-error: var(--toast-progress-fill-error); // Toast progress fill (black)
 
 // ToggleButton
 $toggleButton-height-sm: var(--toggleButton-height-sm); // Small toggle button height
@@ -2388,9 +2412,9 @@ $toggleSwitch-thumb-size-lg: var(--toggleSwitch-thumb-size-lg);
 $toggleSwitch-thumb-offset: var(--toggleSwitch-thumb-offset);
 $toggleSwitch-thumb-color-default: var(--toggleSwitch-thumb-color-default);
 $toggleSwitch-thumb-shadow: var(--toggleSwitch-thumb-shadow);
-$toggleSwitch-track-background-off: var(--toggleSwitch-track-background-off); // Off state - semi-transparent for dark backgrounds
-$toggleSwitch-track-background-on: var(--toggleSwitch-track-background-on); // On state - visible accent color
-$toggleSwitch-track-background-disabled: var(--toggleSwitch-track-background-disabled); // Disabled state - subtle semi-transparent
+$toggleSwitch-track-background-off: var(--toggleSwitch-track-background-off); // Off state
+$toggleSwitch-track-background-on: var(--toggleSwitch-track-background-on); // On state
+$toggleSwitch-track-background-disabled: var(--toggleSwitch-track-background-disabled); // Disabled state
 $toggleSwitch-focus-ringWidth: var(--toggleSwitch-focus-ringWidth);
 $toggleSwitch-focus-ringColor: var(--toggleSwitch-focus-ringColor);
 $toggleSwitch-focus-ringOffset: var(--toggleSwitch-focus-ringOffset);

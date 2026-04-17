@@ -10,7 +10,7 @@
 import type { IconFieldProps } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpIconField' });
+defineOptions({ name: 'IconField' });
 
 const props = withDefaults(defineProps<IconFieldProps>(), {});
 

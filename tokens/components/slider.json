@@ -7,19 +7,19 @@
       },
       "background": {
         "default": {
-          "value": "rgba(255, 255, 255, 0.15)",
+          "value": "{neutral.200}",
           "type": "color",
-          "description": "Inactive track - semi-transparent white works on any dark background"
+          "description": "Inactive track"
         },
         "fill": {
-          "value": "{orange.500}",
+          "value": "{neutral.900}",
           "type": "color",
-          "description": "Active/filled track - visible accent color"
+          "description": "Active/filled track"
         },
         "disabled": {
-          "value": "rgba(255, 255, 255, 0.08)",
+          "value": "{neutral.100}",
           "type": "color",
-          "description": "Disabled track - subtle semi-transparent"
+          "description": "Disabled track"
         }
       },
       "radius": {
@@ -34,19 +34,19 @@
       },
       "background": {
         "default": {
-          "value": "{orange.500}",
+          "value": "{neutral.900}",
           "type": "color",
-          "description": "Thumb - visible accent color"
+          "description": "Thumb"
         },
         "hover": {
-          "value": "{orange.400}",
+          "value": "{neutral.700}",
           "type": "color",
-          "description": "Thumb hover - lighter accent"
+          "description": "Thumb hover"
         },
         "disabled": {
-          "value": "rgba(255, 255, 255, 0.25)",
+          "value": "{neutral.400}",
           "type": "color",
-          "description": "Disabled thumb - semi-transparent"
+          "description": "Disabled thumb"
         }
       },
       "border": {

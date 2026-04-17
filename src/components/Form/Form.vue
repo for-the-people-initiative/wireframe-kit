@@ -14,7 +14,7 @@
 import type { FormProps } from '../../types';
 import { computed } from 'vue';
 
-defineOptions({ name: 'FtpForm' });
+defineOptions({ name: 'Form' });
 
 const props = withDefaults(defineProps<FormProps>(), {
   layout: 'vertical',

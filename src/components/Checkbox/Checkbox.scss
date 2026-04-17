@@ -94,7 +94,7 @@ $c: checkbox;
 // Invalid state
 .#{$c}--invalid {
   .#{$c}__box {
-    border-color: var(--checkbox-border-color-error, $checkbox-border-color-error);
+    background-color: var(--feedback-errorSubtle, $feedback-errorSubtle);
   }
 }
 

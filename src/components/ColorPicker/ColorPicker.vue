@@ -1,5 +1,5 @@
 <template>
-  <div v-rough class="color-picker color-picker--stub" :class="{ 'color-picker--disabled': isDisabled }">
+  <div v-rough="{ severity: 2 }" class="color-picker color-picker--stub" :class="{ 'color-picker--disabled': isDisabled }">
     <span class="color-picker__swatch" aria-hidden="true" />
     <span class="color-picker__label">[ Color Picker ]</span>
   </div>
@@ -11,7 +11,7 @@
 import type { ColorPickerProps } from '../../types';
 import { onMounted } from 'vue';
 
-defineOptions({ name: 'FtpColorPicker' });
+defineOptions({ name: 'ColorPicker' });
 
 const props = withDefaults(defineProps<ColorPickerProps>(), {
   modelValue: '#000000',

@@ -30,12 +30,12 @@
       },
       "background": {
         "default": {
-          "value": "{navy.800}",
+          "value": "{neutral.100}",
           "type": "color",
           "description": "Header background"
         },
         "hover": {
-          "value": "{navy.700}",
+          "value": "{neutral.200}",
           "type": "color",
           "description": "Header hover background when toggleable"
         }

@@ -39,7 +39,7 @@
 import type { VirtualScrollerProps, VirtualScrollerEmits } from '../../types';
 import { ref, computed, onMounted, onBeforeUnmount, watch, nextTick } from "vue";
 
-defineOptions({ name: 'FtpVirtualScroller' });
+defineOptions({ name: 'VirtualScroller' });
 
 const props = withDefaults(defineProps<VirtualScrollerProps>(), {
   items: () => [],

@@ -5,7 +5,7 @@
     :class="additionalClasses"
   >
     <div
-      v-rough
+      v-rough="{ severity: 2 }"
       class="tree-select__trigger"
       role="combobox"
       :aria-expanded="isOpen"
@@ -74,7 +74,7 @@
 import type { TreeSelectProps, TreeSelectEmits } from '../../types';
 import { computed, ref, watch, onMounted, onBeforeUnmount, nextTick, h } from "vue";
 
-defineOptions({ name: 'FtpTreeSelect' });
+defineOptions({ name: 'TreeSelect' });
 
 // TreeNode subcomponent
 const TreeNode = {

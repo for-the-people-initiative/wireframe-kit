@@ -41,7 +41,7 @@
 import type { ChipProps, ChipEmits } from '../../types';
 import { computed, ref } from "vue";
 
-defineOptions({ name: 'FtpChip' });
+defineOptions({ name: 'Chip' });
 
 const props = defineProps<ChipProps>();
 

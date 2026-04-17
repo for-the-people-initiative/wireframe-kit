@@ -34,11 +34,7 @@ $c: input-chips;
 }
 
 .#{$c}--invalid {
-  border-color: var(--input-chips-border-color-error, $input-chips-border-color-error);
-
-  &.#{$c}--focused {
-    border-color: var(--input-chips-border-color-error, $input-chips-border-color-error);
-  }
+  background-color: var(--feedback-errorSubtle, $feedback-errorSubtle);
 }
 
 // Sizes

@@ -1,5 +1,5 @@
 <template>
-  <span v-rough="{ disabled: rounded, strokeWidth: 1.4, roughness: 1.3 }" class="tag" :class="additionalClasses">
+  <span v-rough="{ disabled: rounded, severity: 1 }" class="tag" :class="additionalClasses">
     <slot name="icon">
       <i v-if="icon" :class="icon" class="tag__icon"></i>
     </slot>
@@ -15,7 +15,7 @@
 import type { TagProps } from '../../types';
 import { computed, useSlots } from "vue";
 
-defineOptions({ name: 'FtpTag' });
+defineOptions({ name: 'Tag' });
 
 const props = withDefaults(defineProps<TagProps>(), {
   value: null,

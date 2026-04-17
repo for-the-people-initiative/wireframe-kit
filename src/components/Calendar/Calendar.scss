@@ -298,12 +298,8 @@ $c: calendar;
 }
 
 .#{$c}--invalid {
-  .#{$c}__input {
-    border-color: var(--calendar-input-border-color-error, $calendar-input-border-color-error);
-
-    &:focus {
-      border-color: var(--calendar-input-border-color-error, $calendar-input-border-color-error);
-    }
+  .#{$c}__input-wrapper {
+    background-color: var(--feedback-errorSubtle, $feedback-errorSubtle);
   }
 }
 

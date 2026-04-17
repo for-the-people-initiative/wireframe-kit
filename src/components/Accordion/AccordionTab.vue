@@ -40,7 +40,7 @@
 import type { AccordionTabProps } from '../../types';
 import { computed, inject, onMounted, ref } from "vue";
 
-defineOptions({ name: 'FtpAccordionTab' });
+defineOptions({ name: 'AccordionTab' });
 
 const props = withDefaults(defineProps<AccordionTabProps>(), {
   header: "",

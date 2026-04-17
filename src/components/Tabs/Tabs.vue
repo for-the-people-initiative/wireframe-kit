@@ -38,7 +38,7 @@
 import type { TabsProps, TabsEmits } from '../../types';
 import { ref, computed, provide, onMounted, nextTick, watch } from "vue";
 
-defineOptions({ name: 'FtpTabs' });
+defineOptions({ name: 'Tabs' });
 
 const props = withDefaults(defineProps<TabsProps>(), {
   activeIndex: 0,

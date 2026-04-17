@@ -93,7 +93,7 @@
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue';
 import type { LiveTileProps, LiveTileEmits } from '../../types';
 
-defineOptions({ name: 'FtpLiveTile' });
+defineOptions({ name: 'LiveTile' });
 
 const props = withDefaults(defineProps<LiveTileProps>(), {
   href: undefined,

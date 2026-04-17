@@ -210,7 +210,7 @@
 import type { GalleriaProps, GalleriaEmits } from '../../types';
 import { computed, ref, watch, onMounted, onUnmounted, nextTick } from "vue";
 
-defineOptions({ name: 'FtpGalleria' });
+defineOptions({ name: 'Galleria' });
 
 const props = withDefaults(defineProps<GalleriaProps>(), {
   items: () => [],

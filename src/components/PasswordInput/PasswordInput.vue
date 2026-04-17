@@ -9,7 +9,7 @@
     <div class="password-input__field-wrapper">
       <input
         :id="inputId"
-        v-rough
+        v-rough="{ severity: 2 }"
         ref="inputRef"
         class="password-input__field"
         :class="inputClasses"
@@ -95,7 +95,7 @@
       <div class="password-input__field-wrapper">
         <input
           :id="`${inputId}-confirm`"
-          v-rough
+          v-rough="{ severity: 2 }"
           class="password-input__field"
           :class="confirmInputClasses"
           :type="showConfirmPassword ? 'text' : 'password'"
@@ -130,7 +130,7 @@
 import type { PasswordInputProps, PasswordInputEmits, PasswordStrength } from '../../types';
 import { computed, ref, watch } from 'vue';
 
-defineOptions({ name: 'FtpPasswordInput' });
+defineOptions({ name: 'PasswordInput' });
 
 const props = withDefaults(defineProps<PasswordInputProps>(), {
   modelValue: '',

@@ -45,7 +45,7 @@
 import type { OverlayPanelProps, OverlayPanelEmits } from '../../types';
 import { ref, computed, watch, nextTick, onMounted, onUnmounted } from "vue";
 
-defineOptions({ name: 'FtpOverlayPanel' });
+defineOptions({ name: 'OverlayPanel' });
 
 const props = withDefaults(defineProps<OverlayPanelProps>(), {
   appendTo: "body",

@@ -1,6 +1,6 @@
 <template>
   <div
-    v-rough
+    v-rough="{ severity: 2 }"
     class="input-chips"
     :class="additionalClasses"
     @click="focusInput"
@@ -55,7 +55,7 @@
 import type { InputChipsProps, InputChipsEmits } from '../../types';
 import { computed, ref, nextTick } from "vue";
 
-defineOptions({ name: 'FtpInputChips' });
+defineOptions({ name: 'InputChips' });
 
 const props = withDefaults(defineProps<InputChipsProps>(), {
   modelValue: () => [],

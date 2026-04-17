@@ -1,6 +1,6 @@
 <template>
   <button
-    v-rough="{ disabled: pill }"
+    v-rough="{ disabled: pill, severity: 2 }"
     class="button"
     :class="additionalClasses"
     :disabled="isDisabled || isLoading"
@@ -44,7 +44,7 @@
 import type { ButtonProps } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpButton' });
+defineOptions({ name: 'Button' });
 
 const props = withDefaults(defineProps<ButtonProps>(), {
   iconPos: "left",

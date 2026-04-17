@@ -113,7 +113,7 @@
 import type { MegaMenuProps, MegaMenuEmits } from '../../types';
 import { ref, onMounted, onUnmounted } from "vue";
 
-defineOptions({ name: 'FtpMegaMenu' });
+defineOptions({ name: 'MegaMenu' });
 
 const props = withDefaults(defineProps<MegaMenuProps>(), {
   model: () => [],

@@ -38,7 +38,7 @@
 import type { ImageCompareProps, ImageCompareEmits } from '../../types';
 import { ref, computed } from "vue";
 
-defineOptions({ name: 'FtpImageCompare' });
+defineOptions({ name: 'ImageCompare' });
 
 const props = withDefaults(defineProps<ImageCompareProps>(), {
   initialPosition: 50,

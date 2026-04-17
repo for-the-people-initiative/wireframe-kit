@@ -14,7 +14,7 @@
 import type { SplitterProps, SplitterEmits } from '../../types';
 import { computed, provide, ref, onMounted, onUnmounted } from "vue";
 
-defineOptions({ name: 'FtpSplitter' });
+defineOptions({ name: 'Splitter' });
 
 const props = withDefaults(defineProps<SplitterProps>(), {
   layout: "horizontal",

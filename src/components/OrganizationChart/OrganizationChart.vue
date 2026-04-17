@@ -49,7 +49,7 @@ const emit = defineEmits([
 ]);
 
 defineOptions({
-  name: "FtpOrganizationChart",
+  name: "OrganizationChart",
 });
 
 const internalExpandedKeys = ref({ ...props.expandedKeys });

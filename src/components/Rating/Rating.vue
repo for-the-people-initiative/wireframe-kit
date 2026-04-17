@@ -64,7 +64,7 @@
 import type { RatingProps, RatingEmits } from '../../types';
 import { computed, ref } from "vue";
 
-defineOptions({ name: 'FtpRating' });
+defineOptions({ name: 'Rating' });
 
 const props = withDefaults(defineProps<RatingProps>(), {
   modelValue: null,

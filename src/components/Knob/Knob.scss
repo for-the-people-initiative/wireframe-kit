@@ -28,12 +28,13 @@ $c: knob;
 }
 
 .#{$c}__track {
-  stroke: var(--knob-track-color, $knob-track-color);
+  color: var(--knob-track-color, $knob-track-color);
+  fill: none;
 }
 
 .#{$c}__fill {
-  stroke: var(--knob-fill-color-default, $knob-fill-color-default);
-  transition: stroke-dashoffset var(--knob-transition-duration, $knob-transition-duration) ease;
+  color: var(--knob-fill-color-default, $knob-fill-color-default);
+  fill: none;
 }
 
 .#{$c}__value {
@@ -83,7 +84,7 @@ $c: knob;
   }
 
   .#{$c}__fill {
-    stroke: var(--knob-fill-color-disabled, $knob-fill-color-disabled);
+    color: var(--knob-fill-color-disabled, $knob-fill-color-disabled);
   }
 
   .#{$c}__value {

@@ -33,18 +33,18 @@
   --border-focus: #171717; /* Focus ring color */
   --border-vibrant-start: #171717; /* Wireframe: solid ink, no gradient */
   --border-vibrant-end: #171717; /* Wireframe: solid ink, no gradient */
-  --feedback-success: #171717; /* Wireframe: monochrome feedback (position/label conveys intent) */
-  --feedback-successSubtle: #f5f5f5; /* Success background */
-  --feedback-successEmphasis: #171717; /* Success text */
-  --feedback-warning: #171717; /* Wireframe: monochrome */
-  --feedback-warningSubtle: #f5f5f5; /* Warning background */
-  --feedback-warningEmphasis: #171717; /* Warning text */
-  --feedback-error: #171717; /* Wireframe: monochrome */
-  --feedback-errorSubtle: #f5f5f5; /* Error background */
-  --feedback-errorEmphasis: #171717; /* Error text */
-  --feedback-info: #171717; /* Wireframe: monochrome */
-  --feedback-infoSubtle: #f5f5f5; /* Info background */
-  --feedback-infoEmphasis: #171717; /* Info text */
+  --feedback-success: #15803d; /* Success base (border/icon) */
+  --feedback-successSubtle: #f0fdf4; /* Success background (box) */
+  --feedback-successEmphasis: #166534; /* Success text */
+  --feedback-warning: #b45309; /* Warning base (border/icon) */
+  --feedback-warningSubtle: #fffbeb; /* Warning background (box) */
+  --feedback-warningEmphasis: #92400e; /* Warning text */
+  --feedback-error: #b91c1c; /* Error base (border/icon) */
+  --feedback-errorSubtle: #fef2f2; /* Error background (box) */
+  --feedback-errorEmphasis: #991b1b; /* Error text */
+  --feedback-info: #1d4ed8; /* Info base (border/icon) */
+  --feedback-infoSubtle: #eff6ff; /* Info background (box) */
+  --feedback-infoEmphasis: #1e40af; /* Info text */
   --accent-gradient-start: #171717; /* Wireframe: solid ink */
   --accent-gradient-end: #171717; /* Wireframe: solid ink */
   --accent-gradient-hoverStart: #404040; /* Wireframe hover */
@@ -94,7 +94,7 @@
   --inline-s: 6px; /* Inline (horizontal) gap 6px */
   --accordion-header-padding: 16px; /* Header padding */
   --accordion-header-background-default: #ffffff; /* Header background */
-  --accordion-header-background-hover: rgba(255, 255, 255, 0.05); /* Header hover background - semi-transparent for dark mode */
+  --accordion-header-background-hover: #f5f5f5; /* Header hover background */
   --accordion-header-background-active: #f5f5f5; /* Header active/expanded background */
   --accordion-header-color-default: #171717; /* Header text color */
   --accordion-header-color-hover: #171717; /* Header text color on hover */
@@ -108,11 +108,33 @@
   --accordion-icon-size: 16px; /* Toggle icon size */
   --accordion-icon-color-default: #737373; /* Icon color */
   --accordion-icon-color-hover: #171717; /* Icon color on hover */
-  --accordion-icon-color-disabled: rgba(255, 255, 255, 0.25); /* Icon color when disabled */
+  --accordion-icon-color-disabled: #a3a3a3; /* Icon color when disabled */
   --accordion-icon-rotation-collapsed: 0deg; /* Icon rotation when collapsed */
   --accordion-icon-rotation-expanded: 180deg; /* Icon rotation when expanded */
   --accordion-transition-duration: 200ms; /* Animation duration */
   --accordion-gap: 0px; /* Gap between accordion tabs */
+  --alert-padding-x: 16px; /* Horizontal padding */
+  --alert-padding-y: 10px; /* Vertical padding */
+  --alert-gap: 10px; /* Gap between icon and content */
+  --alert-radius: 2px; /* Border radius */
+  --alert-borderWidth: 1px; /* Border width */
+  --alert-iconSize: 20px; /* Icon size */
+  --alert-background-success: #f0fdf4; /* Success alert background */
+  --alert-background-info: #eff6ff; /* Info alert background */
+  --alert-background-warn: #fffbeb; /* Warning alert background */
+  --alert-background-error: #fef2f2; /* Error alert background */
+  --alert-text-success: #171717; /* Alert text color (black for wireframe legibility) */
+  --alert-text-info: #171717; /* Alert text color (black for wireframe legibility) */
+  --alert-text-warn: #171717; /* Alert text color (black for wireframe legibility) */
+  --alert-text-error: #171717; /* Alert text color (black for wireframe legibility) */
+  --alert-icon-success: #171717; /* Alert icon color (black) */
+  --alert-icon-info: #171717; /* Alert icon color (black) */
+  --alert-icon-warn: #171717; /* Alert icon color (black) */
+  --alert-icon-error: #171717; /* Alert icon color (black) */
+  --alert-border-success: #171717; /* Alert border color (black; rendered sketchy via v-rough) */
+  --alert-border-info: #171717; /* Alert border color (black; rendered sketchy via v-rough) */
+  --alert-border-warn: #171717; /* Alert border color (black; rendered sketchy via v-rough) */
+  --alert-border-error: #171717; /* Alert border color (black; rendered sketchy via v-rough) */
   --autocomplete-height-sm: 32px;
   --autocomplete-height-md: 40px;
   --autocomplete-height-lg: 48px;
@@ -125,7 +147,7 @@
   --autocomplete-border-color-hover: #a3a3a3;
   --autocomplete-border-color-focus: #171717;
   --autocomplete-border-color-disabled: #e5e5e5;
-  --autocomplete-border-color-error: #171717;
+  --autocomplete-border-color-error: #b91c1c;
   --autocomplete-background-default: #fafafa;
   --autocomplete-background-disabled: #f5f5f5;
   --autocomplete-text-default: #171717;
@@ -206,10 +228,10 @@
   --avatar-group-ringWidth: 2px; /* Ring width in groups */
   --avatar-group-ringColor: #fafafa; /* Ring color matches canvas */
   --badge-background-primary: #f97316; /* Primary badge background - visible accent color */
-  --badge-background-success: #171717; /* Success badge background */
-  --badge-background-warning: #171717; /* Warning badge background */
-  --badge-background-danger: #171717; /* Danger badge background */
-  --badge-background-info: #171717; /* Info badge background */
+  --badge-background-success: #15803d; /* Success badge background */
+  --badge-background-warning: #b45309; /* Warning badge background */
+  --badge-background-danger: #b91c1c; /* Danger badge background */
+  --badge-background-info: #1d4ed8; /* Info badge background */
   --badge-text-primary: #ffffff; /* Text on primary badge - white */
   --badge-text-success: #ffffff; /* Text on success badge */
   --badge-text-warning: #171717; /* Text on warning badge (dark for contrast) */
@@ -356,7 +378,7 @@
   --calendar-input-border-color-hover: #a3a3a3;
   --calendar-input-border-color-focus: #171717;
   --calendar-input-border-color-disabled: #e5e5e5;
-  --calendar-input-border-color-error: #171717;
+  --calendar-input-border-color-error: #b91c1c;
   --calendar-input-background-default: #fafafa;
   --calendar-input-background-disabled: #f5f5f5;
   --calendar-input-text-default: #171717;
@@ -453,7 +475,7 @@
   --checkbox-border-color-checked: #f97316; /* Accent color when checked */
   --checkbox-border-color-focus: #f97316;
   --checkbox-border-color-disabled: #1a2244;
-  --checkbox-border-color-error: #171717;
+  --checkbox-border-color-error: #b91c1c;
   --checkbox-background-default: transparent; /* Transparent to show dark page background */
   --checkbox-background-checked: #f97316; /* Bright accent for visibility on dark backgrounds */
   --checkbox-background-disabled: #11162d;
@@ -559,9 +581,9 @@
   --confirmDialog-header-borderColor: #d4d4d4; /* Header bottom border color */
   --confirmDialog-header-title-color: #171717; /* Header title text color */
   --confirmDialog-icon-size: 48px; /* Icon size */
-  --confirmDialog-icon-color-warning: #171717; /* Warning icon color */
-  --confirmDialog-icon-color-danger: #171717; /* Danger icon color */
-  --confirmDialog-icon-color-info: #171717; /* Info icon color */
+  --confirmDialog-icon-color-warning: #171717; /* ConfirmDialog icon color (black) */
+  --confirmDialog-icon-color-danger: #171717; /* ConfirmDialog icon color (black) */
+  --confirmDialog-icon-color-info: #171717; /* ConfirmDialog icon color (black) */
   --confirmDialog-message-color: #171717; /* Message text color */
   --confirmDialog-message-fontSize: 16px; /* Message font size */
   --confirmDialog-overlay-background: rgba(23, 23, 23, 0.3); /* Modal overlay backdrop color */
@@ -580,7 +602,7 @@
   --confirmPopup-message-color: #171717; /* Message text color */
   --confirmPopup-message-fontSize: 14px; /* Message font size */
   --confirmPopup-icon-size: 20px; /* Icon size */
-  --confirmPopup-icon-color: #171717; /* Icon color */
+  --confirmPopup-icon-color: #b45309; /* Icon color */
   --confirmPopup-arrow-size: 8px; /* Arrow/pointer size */
   --confirmPopup-offset: 10px; /* Distance from target element */
   --confirmPopup-maxWidth: 300px; /* Maximum width */
@@ -772,7 +794,7 @@
   --dropdown-border-color-hover: #a3a3a3;
   --dropdown-border-color-focus: #171717;
   --dropdown-border-color-disabled: #e5e5e5;
-  --dropdown-border-color-error: #171717;
+  --dropdown-border-color-error: #b91c1c;
   --dropdown-background-default: #fafafa;
   --dropdown-background-disabled: #f5f5f5;
   --dropdown-background-hover: #fafafa;
@@ -813,7 +835,7 @@
   --editor-border-color-hover: #a3a3a3;
   --editor-border-color-focus: #171717;
   --editor-border-color-disabled: #e5e5e5;
-  --editor-border-color-error: #171717;
+  --editor-border-color-error: #b91c1c;
   --editor-background-default: #fafafa;
   --editor-background-disabled: #f5f5f5;
   --editor-toolbar-padding-x: 10px;
@@ -888,7 +910,7 @@
   --fileUpload-fileList-fileSize-color: #737373; /* File size color */
   --fileUpload-fileList-fileSize-size: 12px; /* File size font size */
   --fileUpload-fileList-removeButton-color-default: #737373; /* Remove button color */
-  --fileUpload-fileList-removeButton-color-hover: #171717; /* Remove button hover color */
+  --fileUpload-fileList-removeButton-color-hover: #b91c1c; /* Remove button hover color */
   --fileUpload-fileList-removeButton-size: 20px; /* Remove button icon size */
   --fileUpload-transition-duration: 200ms; /* Transition duration */
   --galleria-container-background: #ffffff; /* Galleria container background */
@@ -976,18 +998,18 @@
   --inline-message-fontSize: 14px; /* Text font size */
   --inline-message-fontWeight: 500; /* Text font weight */
   --inline-message-iconSize: 16px; /* Icon size */
-  --inline-message-background-success: #f5f5f5; /* Success background */
-  --inline-message-background-info: #f5f5f5; /* Info background */
-  --inline-message-background-warn: #f5f5f5; /* Warning background */
-  --inline-message-background-error: #f5f5f5; /* Error background */
-  --inline-message-text-success: #171717; /* Success text color */
-  --inline-message-text-info: #171717; /* Info text color */
-  --inline-message-text-warn: #171717; /* Warning text color */
-  --inline-message-text-error: #171717; /* Error text color */
-  --inline-message-icon-success: #171717; /* Success icon color */
-  --inline-message-icon-info: #171717; /* Info icon color */
-  --inline-message-icon-warn: #171717; /* Warning icon color */
-  --inline-message-icon-error: #171717; /* Error icon color */
+  --inline-message-background-success: #f0fdf4; /* Success background */
+  --inline-message-background-info: #eff6ff; /* Info background */
+  --inline-message-background-warn: #fffbeb; /* Warning background */
+  --inline-message-background-error: #fef2f2; /* Error background */
+  --inline-message-text-success: #171717; /* InlineMessage text color (black) */
+  --inline-message-text-info: #171717; /* InlineMessage text color (black) */
+  --inline-message-text-warn: #171717; /* InlineMessage text color (black) */
+  --inline-message-text-error: #171717; /* InlineMessage text color (black) */
+  --inline-message-icon-success: #171717; /* InlineMessage icon color (black) */
+  --inline-message-icon-info: #171717; /* InlineMessage icon color (black) */
+  --inline-message-icon-warn: #171717; /* InlineMessage icon color (black) */
+  --inline-message-icon-error: #171717; /* InlineMessage icon color (black) */
   --input-chips-height-sm: 32px; /* Small container min-height */
   --input-chips-height-md: 40px; /* Medium container min-height (default) */
   --input-chips-height-lg: 48px; /* Large container min-height */
@@ -1000,7 +1022,7 @@
   --input-chips-border-color-hover: #a3a3a3; /* Hover border color */
   --input-chips-border-color-focus: #171717; /* Focus border color */
   --input-chips-border-color-disabled: #e5e5e5; /* Disabled border color */
-  --input-chips-border-color-error: #171717; /* Error/invalid border color */
+  --input-chips-border-color-error: #b91c1c; /* Error/invalid border color */
   --input-chips-background-default: #fafafa; /* Default background */
   --input-chips-background-disabled: #f5f5f5; /* Disabled background */
   --input-chips-text-default: #171717; /* Default text color */
@@ -1053,7 +1075,7 @@
   --input-mask-border-color-hover: #a3a3a3; /* Hover border color */
   --input-mask-border-color-focus: #171717; /* Focus border color */
   --input-mask-border-color-disabled: #e5e5e5; /* Disabled border color */
-  --input-mask-border-color-error: #171717; /* Error/invalid border color */
+  --input-mask-border-color-error: #b91c1c; /* Error/invalid border color */
   --input-mask-background-default: #fafafa; /* Default background */
   --input-mask-background-disabled: #f5f5f5; /* Disabled background */
   --input-mask-background-hover: #fafafa; /* Hover background */
@@ -1076,7 +1098,7 @@
   --inputNumber-border-color-hover: #a3a3a3;
   --inputNumber-border-color-focus: #171717;
   --inputNumber-border-color-disabled: #e5e5e5;
-  --inputNumber-border-color-error: #171717;
+  --inputNumber-border-color-error: #b91c1c;
   --inputNumber-background-default: #fafafa;
   --inputNumber-background-disabled: #f5f5f5;
   --inputNumber-text-default: #171717;
@@ -1088,7 +1110,7 @@
   --inputNumber-button-background-active: #d4d4d4;
   --inputNumber-button-background-disabled: #fafafa;
   --inputNumber-button-icon-color-default: #525252;
-  --inputNumber-button-icon-color-disabled: #d4d4d4;
+  --inputNumber-button-icon-color-disabled: #737373;
   --inputNumber-focus-ringWidth: 2px;
   --inputNumber-focus-ringColor: #171717;
   --inputNumber-focus-ringOffset: 1px;
@@ -1107,7 +1129,7 @@
   --input-otp-cell-border-color-focus: #171717; /* Focused cell border color */
   --input-otp-cell-border-color-filled: #a3a3a3; /* Filled cell border color */
   --input-otp-cell-border-color-disabled: #e5e5e5; /* Disabled cell border color */
-  --input-otp-cell-border-color-error: #171717; /* Error cell border color */
+  --input-otp-cell-border-color-error: #b91c1c; /* Error cell border color */
   --input-otp-cell-text-default: #171717; /* Default text color */
   --input-otp-cell-text-disabled: #737373; /* Disabled text color */
   --input-otp-cell-text-mask: #171717; /* Masked character color */
@@ -1151,7 +1173,7 @@
   --input-text-border-color-hover: #a3a3a3; /* Hover border color */
   --input-text-border-color-focus: #a3a3a3; /* Focus border color (same as hover) */
   --input-text-border-color-disabled: #e5e5e5; /* Disabled border color */
-  --input-text-border-color-error: #171717; /* Error/invalid border color */
+  --input-text-border-color-error: #b91c1c; /* Error/invalid border color */
   --input-text-background-default: #fafafa; /* Default background */
   --input-text-background-disabled: #f5f5f5; /* Disabled background */
   --input-text-background-hover: #fafafa; /* Hover background */
@@ -1339,22 +1361,22 @@
   --message-iconSize: 20px; /* Icon size */
   --message-closeButtonSize: 24px; /* Close button size */
   --message-borderWidth: 1px; /* Border width */
-  --message-background-success: #f5f5f5; /* Success message background */
-  --message-background-info: #f5f5f5; /* Info message background */
-  --message-background-warn: #f5f5f5; /* Warning message background */
-  --message-background-error: #f5f5f5; /* Error message background */
-  --message-text-success: #171717; /* Success message text color */
-  --message-text-info: #171717; /* Info message text color */
-  --message-text-warn: #171717; /* Warning message text color */
-  --message-text-error: #171717; /* Error message text color */
-  --message-icon-success: #171717; /* Success icon color */
-  --message-icon-info: #171717; /* Info icon color */
-  --message-icon-warn: #171717; /* Warning icon color */
-  --message-icon-error: #171717; /* Error icon color */
-  --message-border-success: #171717; /* Success message border color */
-  --message-border-info: #171717; /* Info message border color */
-  --message-border-warn: #171717; /* Warning message border color */
-  --message-border-error: #171717; /* Error message border color */
+  --message-background-success: #f0fdf4; /* Success message background */
+  --message-background-info: #eff6ff; /* Info message background */
+  --message-background-warn: #fffbeb; /* Warning message background */
+  --message-background-error: #fef2f2; /* Error message background */
+  --message-text-success: #171717; /* Message text color (black for wireframe legibility) */
+  --message-text-info: #171717; /* Message text color (black for wireframe legibility) */
+  --message-text-warn: #171717; /* Message text color (black for wireframe legibility) */
+  --message-text-error: #171717; /* Message text color (black for wireframe legibility) */
+  --message-icon-success: #171717; /* Message icon color (black) */
+  --message-icon-info: #171717; /* Message icon color (black) */
+  --message-icon-warn: #171717; /* Message icon color (black) */
+  --message-icon-error: #171717; /* Message icon color (black) */
+  --message-border-success: #171717; /* Message border color (black; rendered sketchy via v-rough) */
+  --message-border-info: #171717; /* Message border color (black; rendered sketchy via v-rough) */
+  --message-border-warn: #171717; /* Message border color (black; rendered sketchy via v-rough) */
+  --message-border-error: #171717; /* Message border color (black; rendered sketchy via v-rough) */
   --message-closeButton-color: #737373; /* Close button icon color */
   --message-closeButton-hoverColor: #171717; /* Close button icon hover color */
   --meter-group-track-height: 8px; /* Height of the meter track */
@@ -1372,9 +1394,9 @@
   --meter-group-legend-marker-size: 8px; /* Size of the legend color marker */
   --meter-group-legend-marker-radius: 9999px; /* Border radius of the legend marker */
   --meter-group-colors-primary: #171717; /* Primary meter color */
-  --meter-group-colors-success: #171717; /* Success meter color */
-  --meter-group-colors-warning: #171717; /* Warning meter color */
-  --meter-group-colors-danger: #171717; /* Danger meter color */
+  --meter-group-colors-success: #15803d; /* Success meter color */
+  --meter-group-colors-warning: #b45309; /* Warning meter color */
+  --meter-group-colors-danger: #b91c1c; /* Danger meter color */
   --multi-select-height-sm: 32px;
   --multi-select-height-md: 40px;
   --multi-select-height-lg: 48px;
@@ -1390,7 +1412,7 @@
   --multi-select-border-color-hover: #a3a3a3;
   --multi-select-border-color-focus: #171717;
   --multi-select-border-color-disabled: #e5e5e5;
-  --multi-select-border-color-error: #171717;
+  --multi-select-border-color-error: #b91c1c;
   --multi-select-background-default: #fafafa;
   --multi-select-background-disabled: #f5f5f5;
   --multi-select-background-hover: #fafafa;
@@ -1543,8 +1565,8 @@
   --panel-border-width: 1px; /* Panel border width */
   --panel-radius: 2px; /* Panel border radius */
   --panel-header-padding: 16px; /* Header section padding */
-  --panel-header-background-default: #11162d; /* Header background */
-  --panel-header-background-hover: #1a2244; /* Header hover background when toggleable */
+  --panel-header-background-default: #f5f5f5; /* Header background */
+  --panel-header-background-hover: #e5e5e5; /* Header hover background when toggleable */
   --panel-header-color: #171717; /* Header text color */
   --panel-header-borderColor: #d4d4d4; /* Header bottom border color */
   --panel-header-fontSize: 16px; /* Header font size */
@@ -1638,7 +1660,7 @@
   --popover-maxWidth: 350px; /* Maximum width */
   --popover-zIndex: 1100; /* Z-index for stacking */
   --progress-bar-track-height: 8px;
-  --progress-bar-track-background: rgba(255, 255, 255, 0.15); /* Track background - semi-transparent for dark backgrounds */
+  --progress-bar-track-background: #e5e5e5; /* Track background */
   --progress-bar-track-radius: 9999px;
   --progress-bar-fill-background: #f97316; /* Fill color - visible accent */
   --progress-bar-label-color: #ffffff; /* Label text on fill */
@@ -1660,7 +1682,7 @@
   --radio-border-color-checked: #f97316; /* Accent color when checked */
   --radio-border-color-focus: #f97316;
   --radio-border-color-disabled: #1a2244;
-  --radio-border-color-error: #171717;
+  --radio-border-color-error: #b91c1c;
   --radio-background-default: transparent; /* Transparent to show dark page background */
   --radio-background-checked: #f97316; /* Bright accent for visibility on dark backgrounds */
   --radio-background-disabled: #11162d;
@@ -1677,8 +1699,8 @@
   --rating-star-color-default: #d4d4d4; /* Empty star color */
   --rating-star-color-active: #fbbf24; /* Filled/active star color */
   --rating-star-color-hover: #f59e0b; /* Star hover color */
-  --rating-star-color-disabled: #e5e5e5; /* Disabled star color */
-  --rating-star-color-disabledActive: #a3a3a3; /* Disabled active star color */
+  --rating-star-color-disabled: #a3a3a3; /* Disabled star color */
+  --rating-star-color-disabledActive: #525252; /* Disabled active star color */
   --rating-cancel-size: 20px; /* Size of cancel button icon */
   --rating-cancel-color-default: #a3a3a3; /* Cancel button default color */
   --rating-cancel-color-hover: #ef4444; /* Cancel button hover color */
@@ -1759,7 +1781,7 @@
   --select-border-color-hover: #a3a3a3;
   --select-border-color-focus: #171717;
   --select-border-color-disabled: #e5e5e5;
-  --select-border-color-error: #171717;
+  --select-border-color-error: #b91c1c;
   --select-background-default: #fafafa;
   --select-background-disabled: #f5f5f5;
   --select-background-hover: #fafafa;
@@ -1813,14 +1835,14 @@
   --skeleton-radius: 2px; /* Default border radius for rectangle skeleton */
   --skeleton-animation-duration: 1.5s; /* Wave animation duration */
   --slider-track-height: 6px;
-  --slider-track-background-default: rgba(255, 255, 255, 0.15); /* Inactive track - semi-transparent white works on any dark background */
-  --slider-track-background-fill: #f97316; /* Active/filled track - visible accent color */
-  --slider-track-background-disabled: rgba(255, 255, 255, 0.08); /* Disabled track - subtle semi-transparent */
+  --slider-track-background-default: #e5e5e5; /* Inactive track */
+  --slider-track-background-fill: #171717; /* Active/filled track */
+  --slider-track-background-disabled: #f5f5f5; /* Disabled track */
   --slider-track-radius: 9999px;
   --slider-thumb-size: 20px;
-  --slider-thumb-background-default: #f97316; /* Thumb - visible accent color */
-  --slider-thumb-background-hover: #fb923c; /* Thumb hover - lighter accent */
-  --slider-thumb-background-disabled: rgba(255, 255, 255, 0.25); /* Disabled thumb - semi-transparent */
+  --slider-thumb-background-default: #171717; /* Thumb */
+  --slider-thumb-background-hover: #404040; /* Thumb hover */
+  --slider-thumb-background-disabled: #a3a3a3; /* Disabled thumb */
   --slider-thumb-border-width: 0px;
   --slider-thumb-border-color: transparent;
   --slider-thumb-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -1886,7 +1908,7 @@
   --split-button-border-outlined-disabled: #d4d4d4;
   --split-button-border-width: 1px;
   --split-button-radius: 2px;
-  --split-button-divider-primary: rgba(255, 255, 255, 0.2);
+  --split-button-divider-primary: #525252;
   --split-button-divider-secondary: #d4d4d4;
   --split-button-divider-outlined: #171717;
   --split-button-divider-width: 1px;
@@ -1986,9 +2008,9 @@
   --tabs-tab-text-default: #404040; /* Inactive tab text */
   --tabs-tab-text-hover: #171717; /* Tab text on hover */
   --tabs-tab-text-active: #f97316; /* Active tab text - visible accent */
-  --tabs-tab-text-disabled: rgba(255, 255, 255, 0.38);
+  --tabs-tab-text-disabled: #a3a3a3;
   --tabs-tab-background-default: transparent;
-  --tabs-tab-background-hover: rgba(255, 255, 255, 0.05);
+  --tabs-tab-background-hover: #f5f5f5;
   --tabs-tab-background-active: transparent;
   --tabs-indicator-color: #f97316; /* Active tab indicator - visible accent */
   --tabs-indicator-height: 2px; /* Active tab indicator thickness */
@@ -2006,11 +2028,11 @@
   --tag-iconSize: 12px; /* Icon size inside tag */
   --tag-background-brand: #f97316; /* Brand color tag */
   --tag-background-accent: #f59e0b; /* Accent color tag */
-  --tag-background-neutral: rgba(255, 255, 255, 0.12); /* Neutral/muted tag */
-  --tag-background-success: #171717; /* Success status tag */
-  --tag-background-warning: #171717; /* Warning status tag */
-  --tag-background-danger: #171717; /* Danger/error status tag */
-  --tag-background-info: #171717; /* Info status tag */
+  --tag-background-neutral: #e5e5e5; /* Neutral/muted tag */
+  --tag-background-success: #15803d; /* Success status tag */
+  --tag-background-warning: #b45309; /* Warning status tag */
+  --tag-background-danger: #b91c1c; /* Danger/error status tag */
+  --tag-background-info: #1d4ed8; /* Info status tag */
   --tag-text-brand: #ffffff; /* Text on brand background */
   --tag-text-accent: #171717; /* Text on accent background (dark for contrast) */
   --tag-text-neutral: #171717; /* Text on neutral background */
@@ -2045,7 +2067,7 @@
   --textarea-border-color-hover: #a3a3a3;
   --textarea-border-color-focus: #171717;
   --textarea-border-color-disabled: #e5e5e5;
-  --textarea-border-color-error: #171717;
+  --textarea-border-color-error: #b91c1c;
   --textarea-background-default: #fafafa;
   --textarea-background-disabled: #f5f5f5;
   --textarea-text-default: #171717;
@@ -2096,41 +2118,41 @@
   --timeline-event-description-color: #737373; /* Event description color */
   --timeline-event-description-fontSize: 14px; /* Event description font size */
   --timeline-colors-primary: #171717; /* Primary marker color */
-  --timeline-colors-success: #171717; /* Success marker color */
-  --timeline-colors-warning: #171717; /* Warning marker color */
-  --timeline-colors-danger: #171717; /* Danger marker color */
+  --timeline-colors-success: #15803d; /* Success marker color */
+  --timeline-colors-warning: #b45309; /* Warning marker color */
+  --timeline-colors-danger: #b91c1c; /* Danger marker color */
   --toast-container-gap: 10px; /* Gap between stacked toasts */
   --toast-container-padding: 16px; /* Container padding from screen edge */
   --toast-container-zIndex: 1200; /* Toast container z-index */
   --toast-container-maxWidth: 400px; /* Maximum toast width */
   --toast-background-default: #ffffff; /* Default toast background */
-  --toast-background-success: #f5f5f5; /* Success toast background */
-  --toast-background-info: #f5f5f5; /* Info toast background */
-  --toast-background-warning: #f5f5f5; /* Warning toast background */
-  --toast-background-error: #f5f5f5; /* Error toast background */
+  --toast-background-success: #f0fdf4; /* Success toast background */
+  --toast-background-info: #eff6ff; /* Info toast background */
+  --toast-background-warning: #fffbeb; /* Warning toast background */
+  --toast-background-error: #fef2f2; /* Error toast background */
   --toast-border-width: 1px; /* Toast border width */
   --toast-border-color-default: #d4d4d4; /* Default border color */
-  --toast-border-color-success: #171717; /* Success border color */
-  --toast-border-color-info: #171717; /* Info border color */
-  --toast-border-color-warning: #171717; /* Warning border color */
-  --toast-border-color-error: #171717; /* Error border color */
+  --toast-border-color-success: #171717; /* Toast border color (black; sketchy via v-rough) */
+  --toast-border-color-info: #171717; /* Toast border color (black; sketchy via v-rough) */
+  --toast-border-color-warning: #171717; /* Toast border color (black; sketchy via v-rough) */
+  --toast-border-color-error: #171717; /* Toast border color (black; sketchy via v-rough) */
   --toast-radius: 2px; /* Toast border radius */
   --toast-shadow: 4px 4px 0 #171717; /* Toast elevation shadow */
   --toast-padding-x: 16px; /* Horizontal padding */
   --toast-padding-y: 16px; /* Vertical padding */
   --toast-icon-size: 20px; /* Icon size */
   --toast-icon-color-default: #737373; /* Default icon color */
-  --toast-icon-color-success: #171717; /* Success icon color */
-  --toast-icon-color-info: #171717; /* Info icon color */
-  --toast-icon-color-warning: #171717; /* Warning icon color */
-  --toast-icon-color-error: #171717; /* Error icon color */
+  --toast-icon-color-success: #171717; /* Toast icon color (black) */
+  --toast-icon-color-info: #171717; /* Toast icon color (black) */
+  --toast-icon-color-warning: #171717; /* Toast icon color (black) */
+  --toast-icon-color-error: #171717; /* Toast icon color (black) */
   --toast-icon-gap: 10px; /* Gap between icon and content */
   --toast-content-gap: 4px; /* Gap between summary and detail */
   --toast-summary-color-default: #171717; /* Summary text color */
-  --toast-summary-color-success: #171717; /* Success summary color */
-  --toast-summary-color-info: #171717; /* Info summary color */
-  --toast-summary-color-warning: #171717; /* Warning summary color */
-  --toast-summary-color-error: #171717; /* Error summary color */
+  --toast-summary-color-success: #171717; /* Toast summary color (black) */
+  --toast-summary-color-info: #171717; /* Toast summary color (black) */
+  --toast-summary-color-warning: #171717; /* Toast summary color (black) */
+  --toast-summary-color-error: #171717; /* Toast summary color (black) */
   --toast-summary-fontSize: 14px; /* Summary font size */
   --toast-summary-fontWeight: 600; /* Summary font weight */
   --toast-detail-color: #737373; /* Detail text color */
@@ -2144,10 +2166,10 @@
   --toast-progress-height: 3px; /* Progress bar height */
   --toast-progress-background: #f5f5f5; /* Progress bar track background */
   --toast-progress-fill-default: #171717; /* Default progress fill */
-  --toast-progress-fill-success: #171717; /* Success progress fill */
-  --toast-progress-fill-info: #171717; /* Info progress fill */
-  --toast-progress-fill-warning: #171717; /* Warning progress fill */
-  --toast-progress-fill-error: #171717; /* Error progress fill */
+  --toast-progress-fill-success: #171717; /* Toast progress fill (black) */
+  --toast-progress-fill-info: #171717; /* Toast progress fill (black) */
+  --toast-progress-fill-warning: #171717; /* Toast progress fill (black) */
+  --toast-progress-fill-error: #171717; /* Toast progress fill (black) */
   --toggleButton-height-sm: 32px; /* Small toggle button height */
   --toggleButton-height-md: 40px; /* Medium toggle button height */
   --toggleButton-height-lg: 48px; /* Large toggle button height */
@@ -2196,9 +2218,9 @@
   --toggleSwitch-thumb-offset: 2px;
   --toggleSwitch-thumb-color-default: #ffffff;
   --toggleSwitch-thumb-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  --toggleSwitch-track-background-off: rgba(255, 255, 255, 0.15); /* Off state - semi-transparent for dark backgrounds */
-  --toggleSwitch-track-background-on: #f97316; /* On state - visible accent color */
-  --toggleSwitch-track-background-disabled: rgba(255, 255, 255, 0.08); /* Disabled state - subtle semi-transparent */
+  --toggleSwitch-track-background-off: #d4d4d4; /* Off state */
+  --toggleSwitch-track-background-on: #171717; /* On state */
+  --toggleSwitch-track-background-disabled: #e5e5e5; /* Disabled state */
   --toggleSwitch-focus-ringWidth: 2px;
   --toggleSwitch-focus-ringColor: #f97316;
   --toggleSwitch-focus-ringOffset: 2px;
@@ -2233,7 +2255,7 @@
   --tree-select-border-color-hover: #a3a3a3;
   --tree-select-border-color-focus: #171717;
   --tree-select-border-color-disabled: #e5e5e5;
-  --tree-select-border-color-error: #171717;
+  --tree-select-border-color-error: #b91c1c;
   --tree-select-background-default: #fafafa;
   --tree-select-background-disabled: #f5f5f5;
   --tree-select-background-hover: #fafafa;

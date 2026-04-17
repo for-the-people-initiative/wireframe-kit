@@ -41,11 +41,7 @@ $c: input-mask;
 
 // Invalid state
 .#{$c}--invalid {
-  border-color: var(--input-mask-border-color-error, $input-mask-border-color-error);
-
-  &:focus {
-    border-color: var(--input-mask-border-color-error, $input-mask-border-color-error);
-  }
+  background-color: var(--feedback-errorSubtle, $feedback-errorSubtle);
 }
 
 // Sizes

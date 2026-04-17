@@ -1,4 +1,4 @@
-// For the People Design System — TypeScript Interfaces
+// Wireframe Design System — TypeScript Interfaces
 // Auto-generated component prop, emit, and slot interfaces
 
 // ============================================================

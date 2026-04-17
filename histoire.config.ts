@@ -19,7 +19,7 @@ export default defineConfig({
     ],
   },
   theme: {
-    title: 'Wireframe Kit',
+    title: 'Wireframe Design System',
     darkClass: 'dark',
     defaultColorScheme: 'light',
   },

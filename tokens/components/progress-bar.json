@@ -6,9 +6,9 @@
         "type": "dimension"
       },
       "background": {
-        "value": "rgba(255, 255, 255, 0.15)",
+        "value": "{neutral.200}",
         "type": "color",
-        "description": "Track background - semi-transparent for dark backgrounds"
+        "description": "Track background"
       },
       "radius": {
         "value": "{radius.pill}",

@@ -231,13 +231,7 @@ $c: autocomplete;
 
 .#{$c}--invalid {
   .#{$c}__input-wrapper {
-    border-color: var(--autocomplete-border-color-error, $autocomplete-border-color-error);
-  }
-
-  &.#{$c}--focused {
-    .#{$c}__input-wrapper {
-      border-color: var(--autocomplete-border-color-error, $autocomplete-border-color-error);
-    }
+    background-color: var(--feedback-errorSubtle, $feedback-errorSubtle);
   }
 }
 

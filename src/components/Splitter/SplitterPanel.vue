@@ -24,7 +24,7 @@
 import type { SplitterPanelProps } from '../../types';
 import { computed, inject, onMounted, onBeforeUnmount, ref, watch, nextTick } from "vue";
 
-defineOptions({ name: 'FtpSplitterPanel' });
+defineOptions({ name: 'SplitterPanel' });
 
 const props = withDefaults(defineProps<SplitterPanelProps>(), {
   minSize: 5,

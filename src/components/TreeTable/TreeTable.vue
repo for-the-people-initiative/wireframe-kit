@@ -45,7 +45,7 @@
 import type { TreeTableProps, TreeTableEmits } from '../../types';
 import { computed, ref, watch, h } from "vue";
 
-defineOptions({ name: 'FtpTreeTable' });
+defineOptions({ name: 'TreeTable' });
 
 // TreeTableRow subcomponent
 const TreeTableRow = {

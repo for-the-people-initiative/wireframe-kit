@@ -115,7 +115,7 @@ const props = withDefaults(defineProps<OrderListProps>(), {
 const emit = defineEmits(["update:modelValue", "reorder", "selection-change"]);
 
 defineOptions({
-  name: "FtpOrderList",
+  name: "OrderList",
 });
 
 const internalValue = ref([...props.modelValue]);

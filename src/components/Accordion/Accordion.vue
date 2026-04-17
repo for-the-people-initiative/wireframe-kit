@@ -10,7 +10,7 @@
 import type { AccordionProps, AccordionEmits } from '../../types';
 import { computed, provide, ref, watch } from "vue";
 
-defineOptions({ name: 'FtpAccordion' });
+defineOptions({ name: 'Accordion' });
 
 const props = withDefaults(defineProps<AccordionProps>(), {
   activeIndex: null,

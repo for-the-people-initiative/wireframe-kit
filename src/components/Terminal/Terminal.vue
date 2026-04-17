@@ -42,7 +42,7 @@
 import type { TerminalProps, TerminalEmits } from '../../types';
 import { ref, nextTick, onMounted } from "vue";
 
-defineOptions({ name: 'FtpTerminal' });
+defineOptions({ name: 'Terminal' });
 
 const props = withDefaults(defineProps<TerminalProps>(), {
   prompt: "$",

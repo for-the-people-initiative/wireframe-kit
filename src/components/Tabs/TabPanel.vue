@@ -15,7 +15,7 @@
 import type { TabPanelProps } from '../../types';
 import { computed, inject, onMounted, onBeforeUnmount, ref } from "vue";
 
-defineOptions({ name: 'FtpTabPanel' });
+defineOptions({ name: 'TabPanel' });
 
 const props = withDefaults(defineProps<TabPanelProps>(), {
   disabled: false,

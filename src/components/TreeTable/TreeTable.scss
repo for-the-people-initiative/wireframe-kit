@@ -41,12 +41,15 @@ $c: treetable;
     cursor: pointer;
     transition: background-color 0.15s ease;
 
-    &:hover {
+    &:hover:not(.#{$c}__row--selected) {
       background-color: var(--treetable-row-background-hover, $treetable-row-background-hover);
     }
 
     &:focus {
       outline: none;
+    }
+
+    &:focus:not(.#{$c}__row--selected) {
       background-color: var(--treetable-row-background-hover, $treetable-row-background-hover);
     }
 

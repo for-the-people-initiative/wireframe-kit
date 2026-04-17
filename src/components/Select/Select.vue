@@ -1,7 +1,7 @@
 <template>
   <div class="select" :class="additionalClasses">
     <select
-      v-rough
+      v-rough="{ severity: 2 }"
       ref="selectRef"
       class="select__input"
       :value="modelValue"
@@ -49,7 +49,7 @@
 import type { SelectProps, SelectEmits } from '../../types';
 import { computed, ref } from "vue";
 
-defineOptions({ name: 'FtpSelect' });
+defineOptions({ name: 'Select' });
 
 const props = withDefaults(defineProps<SelectProps>(), {
   modelValue: null,

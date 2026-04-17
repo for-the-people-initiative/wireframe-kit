@@ -46,7 +46,7 @@
 import type { MenuProps, MenuEmits } from '../../types';
 import { computed, ref, onMounted, onBeforeUnmount, watch, nextTick } from "vue";
 
-defineOptions({ name: 'FtpMenu' });
+defineOptions({ name: 'Menu' });
 
 const props = withDefaults(defineProps<MenuProps>(), {
   model: () => [],

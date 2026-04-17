@@ -17,29 +17,11 @@
       @touchstart="onTouchStart"
       @keydown="onKeyDown"
     >
-      <!-- Background track -->
-      <circle
-        class="knob__track"
-        cx="50"
-        cy="50"
-        :r="radius"
-        fill="none"
-        :stroke-width="strokeWidthValue"
-      />
+      <!-- Sketchy background track -->
+      <g ref="trackGroup" class="knob__track" />
 
-      <!-- Fill arc -->
-      <circle
-        class="knob__fill"
-        cx="50"
-        cy="50"
-        :r="radius"
-        fill="none"
-        :stroke-width="strokeWidthValue"
-        :stroke-dasharray="circumference"
-        :stroke-dashoffset="dashOffset"
-        stroke-linecap="round"
-        transform="rotate(-90 50 50)"
-      />
+      <!-- Sketchy fill arc -->
+      <g ref="fillGroup" class="knob__fill" />
     </svg>
 
     <!-- Value display -->
@@ -55,9 +37,10 @@
 
 <script setup lang="ts">
 import type { KnobProps, KnobEmits } from '../../types';
-import { computed, ref } from "vue";
+import { computed, ref, watchEffect } from "vue";
+import rough from "roughjs";
 
-defineOptions({ name: 'FtpKnob' });
+defineOptions({ name: 'Knob' });
 
 const props = withDefaults(defineProps<KnobProps>(), {
   modelValue: 0,
@@ -94,17 +77,11 @@ const strokeWidthValue = computed(() => {
 });
 
 const radius = computed(() => 50 - strokeWidthValue.value / 2);
-const circumference = computed(() => 2 * Math.PI * radius.value);
 
 const percentage = computed(() => {
   const range = props.max - props.min;
   if (range === 0) return 0;
   return ((props.modelValue - props.min) / range) * 100;
-});
-
-const dashOffset = computed(() => {
-  const offset = circumference.value * (1 - percentage.value / 100);
-  return offset;
 });
 
 const displayValue = computed(() => {
@@ -121,7 +98,66 @@ const additionalClasses = computed(() =>
 );
 
 const isDragging = ref(false);
-const knobElement = ref(null);
+
+const trackGroup = ref<SVGGElement | null>(null);
+const fillGroup = ref<SVGGElement | null>(null);
+const trackSeed = Math.floor(Math.random() * 2 ** 31);
+const fillSeed = Math.floor(Math.random() * 2 ** 31);
+
+watchEffect(() => {
+  const tg = trackGroup.value;
+  const fg = fillGroup.value;
+  if (!tg || !fg) return;
+  const svg = tg.ownerSVGElement;
+  if (!svg) return;
+
+  const rc = rough.svg(svg);
+  while (tg.firstChild) tg.removeChild(tg.firstChild);
+  while (fg.firstChild) fg.removeChild(fg.firstChild);
+
+  const cx = 50;
+  const cy = 50;
+  const r = radius.value;
+  const sw = strokeWidthValue.value;
+
+  tg.appendChild(
+    rc.circle(cx, cy, 2 * r, {
+      stroke: 'currentColor',
+      strokeWidth: sw,
+      roughness: 1.5,
+      bowing: 1,
+      fill: undefined,
+      seed: trackSeed,
+    }),
+  );
+
+  const pct = percentage.value / 100;
+  if (pct <= 0) return;
+  const startAngle = -Math.PI / 2;
+  if (pct >= 1) {
+    fg.appendChild(
+      rc.circle(cx, cy, 2 * r, {
+        stroke: 'currentColor',
+        strokeWidth: sw * 1.15,
+        roughness: 1.2,
+        bowing: 0.8,
+        fill: undefined,
+        seed: fillSeed,
+      }),
+    );
+    return;
+  }
+  const endAngle = startAngle + pct * 2 * Math.PI;
+  fg.appendChild(
+    rc.arc(cx, cy, 2 * r, 2 * r, startAngle, endAngle, false, {
+      stroke: 'currentColor',
+      strokeWidth: sw * 1.15,
+      roughness: 1.2,
+      bowing: 0.8,
+      seed: fillSeed,
+    }),
+  );
+});
 
 const updateValue = (event: MouseEvent | TouchEvent) => {
   if (props.isDisabled) return;

@@ -107,7 +107,7 @@
 import type { LightboxProps } from '../../types';
 import { computed, ref, watch, onUnmounted, nextTick } from "vue";
 
-defineOptions({ name: 'FtpLightbox' });
+defineOptions({ name: 'Lightbox' });
 
 const props = withDefaults(defineProps<LightboxProps>(), {
   images: () => [],

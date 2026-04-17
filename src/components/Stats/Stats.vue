@@ -19,7 +19,7 @@
 <script setup lang="ts">
 import type { StatsProps } from '../../types';
 
-defineOptions({ name: 'FtpStats' });
+defineOptions({ name: 'Stats' });
 
 withDefaults(defineProps<StatsProps>(), {
   stats: () => [],

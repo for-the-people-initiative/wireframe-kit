@@ -61,19 +61,19 @@
     "track": {
       "background": {
         "off": {
-          "value": "rgba(255, 255, 255, 0.15)",
+          "value": "{neutral.300}",
           "type": "color",
-          "description": "Off state - semi-transparent for dark backgrounds"
+          "description": "Off state"
         },
         "on": {
-          "value": "{orange.500}",
+          "value": "{neutral.900}",
           "type": "color",
-          "description": "On state - visible accent color"
+          "description": "On state"
         },
         "disabled": {
-          "value": "rgba(255, 255, 255, 0.08)",
+          "value": "{neutral.200}",
           "type": "color",
-          "description": "Disabled state - subtle semi-transparent"
+          "description": "Disabled state"
         }
       }
     },

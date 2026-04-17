@@ -13,9 +13,9 @@
           "description": "Header background"
         },
         "hover": {
-          "value": "rgba(255, 255, 255, 0.05)",
+          "value": "{neutral.100}",
           "type": "color",
-          "description": "Header hover background - semi-transparent for dark mode"
+          "description": "Header hover background"
         },
         "active": {
           "value": "{surface.muted}",
@@ -93,7 +93,7 @@
           "description": "Icon color on hover"
         },
         "disabled": {
-          "value": "rgba(255, 255, 255, 0.25)",
+          "value": "{neutral.400}",
           "type": "color",
           "description": "Icon color when disabled"
         }

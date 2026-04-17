@@ -5,7 +5,7 @@
     :class="additionalClasses"
   >
     <div
-      v-rough
+      v-rough="{ severity: 2 }"
       class="multi-select__trigger"
       role="combobox"
       :aria-expanded="isOpen"
@@ -105,7 +105,7 @@
 import type { MultiSelectProps, MultiSelectEmits } from '../../types';
 import { computed, ref, watch, onMounted, onBeforeUnmount, nextTick } from "vue";
 
-defineOptions({ name: 'FtpMultiSelect' });
+defineOptions({ name: 'MultiSelect' });
 
 const props = withDefaults(defineProps<MultiSelectProps>(), {
   modelValue: () => [],

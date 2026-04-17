@@ -1,4 +1,4 @@
-# wireframe-kit
+# Wireframe Design System
 
 A Vue 3 component library with a hand-drawn, sketchy aesthetic — for building low-fidelity mockups and wireframes of web apps.
 

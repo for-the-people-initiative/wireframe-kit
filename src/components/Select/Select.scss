@@ -67,11 +67,7 @@ $c: select;
 // Invalid state
 .#{$c}--invalid {
   .#{$c}__input {
-    border-color: var(--select-border-color-error, $select-border-color-error);
-
-    &:focus {
-      border-color: var(--select-border-color-error, $select-border-color-error);
-    }
+    background-color: var(--feedback-errorSubtle, $feedback-errorSubtle);
   }
 }
 

@@ -41,7 +41,7 @@
           "description": "Active tab text - visible accent"
         },
         "disabled": {
-          "value": "rgba(255, 255, 255, 0.38)",
+          "value": "{neutral.400}",
           "type": "color"
         }
       },
@@ -51,7 +51,7 @@
           "type": "color"
         },
         "hover": {
-          "value": "rgba(255, 255, 255, 0.05)",
+          "value": "{neutral.100}",
           "type": "color"
         },
         "active": {

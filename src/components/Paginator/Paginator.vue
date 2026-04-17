@@ -105,7 +105,7 @@
 import type { PaginatorProps, PaginatorEmits } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpPaginator' });
+defineOptions({ name: 'Paginator' });
 
 const props = withDefaults(defineProps<PaginatorProps>(), {
   rows: 10,

@@ -83,7 +83,7 @@
 import type { ToastProps } from '../../types';
 import { ref, onMounted, onUnmounted } from "vue";
 
-defineOptions({ name: 'FtpToast' });
+defineOptions({ name: 'Toast' });
 
 const props = withDefaults(defineProps<ToastProps>(), {
   position: "top-right",

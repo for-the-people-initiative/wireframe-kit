@@ -10,7 +10,7 @@
         <Transition :name="transitionName">
           <div
             v-if="visible"
-            v-rough="{ strokeWidth: 2 }"
+            v-rough="{ severity: 4 }"
             ref="drawerRef"
             class="drawer"
             :class="additionalClasses"
@@ -65,7 +65,7 @@
 import type { DrawerProps, DrawerEmits } from '../../types';
 import { computed, ref, watch, onUnmounted } from "vue";
 
-defineOptions({ name: 'FtpDrawer' });
+defineOptions({ name: 'Drawer' });
 
 const props = withDefaults(defineProps<DrawerProps>(), {
   visible: false,

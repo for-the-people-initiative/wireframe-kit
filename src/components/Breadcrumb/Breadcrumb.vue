@@ -133,7 +133,7 @@
 <script setup lang="ts">
 import type { BreadcrumbProps } from '../../types';
 
-defineOptions({ name: 'FtpBreadcrumb' });
+defineOptions({ name: 'Breadcrumb' });
 
 const props = withDefaults(defineProps<BreadcrumbProps>(), {
   model: () => [],

@@ -10,7 +10,7 @@
         <!-- Connector (before step, except first) -->
         <div
           v-if="index > 0"
-          v-rough="{ shape: 'hline', strokeWidth: 1.5 }"
+          v-rough="{ shape: 'hline', severity: 1 }"
           class="steps__connector"
           :class="{ 'steps__connector--complete': index <= activeIndex }"
         ></div>
@@ -56,7 +56,7 @@
 import type { StepsProps, StepsEmits } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpSteps' });
+defineOptions({ name: 'Steps' });
 
 const props = withDefaults(defineProps<StepsProps>(), {
   model: () => [],

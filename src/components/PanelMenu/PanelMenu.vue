@@ -167,7 +167,7 @@
 import type { PanelMenuProps, PanelMenuEmits } from '../../types';
 import { ref, computed, watch } from "vue";
 
-defineOptions({ name: 'FtpPanelMenu' });
+defineOptions({ name: 'PanelMenu' });
 
 const props = withDefaults(defineProps<PanelMenuProps>(), {
   model: () => [],

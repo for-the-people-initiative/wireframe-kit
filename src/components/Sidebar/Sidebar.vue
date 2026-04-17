@@ -10,7 +10,7 @@
         <Transition :name="transitionName">
           <div
             v-if="visible"
-            v-rough="{ strokeWidth: 2 }"
+            v-rough="{ severity: 4 }"
             ref="sidebarRef"
             class="sidebar"
             :class="additionalClasses"
@@ -65,7 +65,7 @@
 import type { SidebarProps, SidebarEmits } from '../../types';
 import { computed, ref, watch, onUnmounted } from "vue";
 
-defineOptions({ name: 'FtpSidebar' });
+defineOptions({ name: 'Sidebar' });
 
 const props = withDefaults(defineProps<SidebarProps>(), {
   visible: false,

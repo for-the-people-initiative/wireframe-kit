@@ -51,11 +51,7 @@ $c: textarea;
 
 // Invalid state modifier
 .#{$c}--invalid {
-  border-color: var(--textarea-border-color-error, $textarea-border-color-error);
-
-  &:focus {
-    border-color: var(--textarea-border-color-error, $textarea-border-color-error);
-  }
+  background-color: var(--feedback-errorSubtle, $feedback-errorSubtle);
 }
 
 // Auto-resize modifier

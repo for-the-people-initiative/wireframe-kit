@@ -4,8 +4,7 @@ $c: app-bar;
 
 .#{$c} {
   width: 100%;
-  background: var(--surface-overlay, #1e1e2e);
-  border-bottom: 1px solid var(--surface-border, rgba(255, 255, 255, 0.1));
+  background: var(--surface-panel, $surface-panel);
   z-index: 1000;
 
   &--fixed {
@@ -15,14 +14,8 @@ $c: app-bar;
     right: 0;
   }
 
-  &--elevated {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  }
-
   &--transparent {
     background: transparent;
-    border-bottom-color: transparent;
-    box-shadow: none;
   }
 }
 
@@ -49,7 +42,7 @@ $c: app-bar;
   min-width: 0;
   font-size: 1.125rem;
   font-weight: 600;
-  color: var(--text-primary, #fff);
+  color: var(--text-default, $text-default);
 }
 
 .#{$c}__end {

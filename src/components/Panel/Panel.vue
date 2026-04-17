@@ -51,7 +51,7 @@
 import type { PanelProps, PanelEmits } from '../../types';
 import { computed, ref, watch } from "vue";
 
-defineOptions({ name: 'FtpPanel' });
+defineOptions({ name: 'Panel' });
 
 const props = withDefaults(defineProps<PanelProps>(), {
   header: "",

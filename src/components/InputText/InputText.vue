@@ -1,7 +1,7 @@
 <template>
   <input
     ref="inputRef"
-    v-rough
+    v-rough="{ severity: 2 }"
     class="input-text"
     :class="additionalClasses"
     :type="type"
@@ -24,7 +24,7 @@
 import type { InputTextProps, InputTextEmits } from '../../types';
 import { computed, ref } from "vue";
 
-defineOptions({ name: 'FtpInputText' });
+defineOptions({ name: 'InputText' });
 
 const props = withDefaults(defineProps<InputTextProps>(), {
   modelValue: "",

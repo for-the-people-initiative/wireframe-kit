@@ -74,7 +74,7 @@
 import type { CarouselProps, CarouselEmits } from '../../types';
 import { computed, ref, watch, onMounted, onUnmounted } from "vue";
 
-defineOptions({ name: 'FtpCarousel' });
+defineOptions({ name: 'Carousel' });
 
 const props = withDefaults(defineProps<CarouselProps>(), {
   items: () => [],

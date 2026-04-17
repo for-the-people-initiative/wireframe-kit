@@ -12,7 +12,7 @@
           <div
             v-if="visible"
             ref="dialogRef"
-            v-rough="{ strokeWidth: 2 }"
+            v-rough="{ severity: 4 }"
             class="dialog"
             :class="additionalClasses"
             role="dialog"
@@ -67,11 +67,11 @@
 import type { DialogProps, DialogEmits } from '../../types';
 import { computed, ref, watch, onMounted, onUnmounted, nextTick } from "vue";
 
-defineOptions({ name: 'FtpDialog' });
+defineOptions({ name: 'Dialog' });
 
 // Bug #2: SSR-safe ID generation (atomic counter instead of Math.random)
 let idCounter = 0;
-const useId = () => 'ftp-' + idCounter++;
+const useId = () => 'dialog-' + idCounter++;
 
 // Bug #3: Body scroll lock counter (shared across all Dialog instances)
 let scrollLockCount = 0;

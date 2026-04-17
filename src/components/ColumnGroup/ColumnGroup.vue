@@ -9,7 +9,7 @@ import type { ColumnGroupProps } from '../../types';
  * Like Column, it's a configuration component used by DataTable.
  */
 
-defineOptions({ name: 'FtpColumnGroup' });
+defineOptions({ name: 'ColumnGroup' });
 
 const props = withDefaults(defineProps<ColumnGroupProps>(), {
   type: "header",

@@ -5,7 +5,7 @@
     :class="additionalClasses"
   >
     <button
-      v-rough
+      v-rough="{ severity: 2 }"
       ref="triggerRef"
       type="button"
       class="dropdown__trigger"
@@ -112,7 +112,7 @@
 import type { DropdownProps, DropdownEmits } from '../../types';
 import { computed, ref, watch, nextTick, onMounted, onUnmounted } from "vue";
 
-defineOptions({ name: 'FtpDropdown' });
+defineOptions({ name: 'Dropdown' });
 
 const props = withDefaults(defineProps<DropdownProps>(), {
   modelValue: null,

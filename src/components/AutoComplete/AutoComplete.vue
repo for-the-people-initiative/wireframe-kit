@@ -4,7 +4,7 @@
     class="autocomplete"
     :class="additionalClasses"
   >
-    <div v-rough class="autocomplete__input-wrapper" @click="focusInput">
+    <div v-rough="{ severity: 2 }" class="autocomplete__input-wrapper" @click="focusInput">
       <!-- Multiple mode chips -->
       <span
         v-for="(item, index) in selectedItems"
@@ -150,7 +150,7 @@
 import type { AutoCompleteProps, AutoCompleteEmits } from '../../types';
 import { computed, ref, watch, nextTick, onMounted, onUnmounted } from "vue";
 
-defineOptions({ name: 'FtpAutoComplete' });
+defineOptions({ name: 'AutoComplete' });
 
 const props = withDefaults(defineProps<AutoCompleteProps>(), {
   modelValue: null,

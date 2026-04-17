@@ -93,7 +93,7 @@
 import type { ContextMenuProps, ContextMenuEmits } from '../../types';
 import { ref, computed, onMounted, onUnmounted, nextTick } from "vue";
 
-defineOptions({ name: 'FtpContextMenu' });
+defineOptions({ name: 'ContextMenu' });
 
 const props = withDefaults(defineProps<ContextMenuProps>(), {
   model: () => [],

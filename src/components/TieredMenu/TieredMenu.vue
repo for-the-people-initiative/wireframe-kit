@@ -117,7 +117,7 @@ import type { TieredMenuProps, TieredMenuEmits } from '../../types';
 import { ref, computed, onMounted, onUnmounted, watch } from "vue";
 import TieredMenuSub from "./TieredMenuSub.vue";
 
-defineOptions({ name: 'FtpTieredMenu' });
+defineOptions({ name: 'TieredMenu' });
 
 const props = withDefaults(defineProps<TieredMenuProps>(), {
   model: () => [],

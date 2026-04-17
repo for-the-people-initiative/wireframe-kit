@@ -4,7 +4,7 @@
       <div
         v-for="(feature, index) in features"
         :key="index"
-        v-rough="{ disabled: variant !== 'card' }"
+        v-rough="{ disabled: variant !== 'card', severity: 4 }"
         class="feature-grid__item"
       >
         <div v-if="feature.icon" class="feature-grid__icon">
@@ -23,7 +23,7 @@
 import type { FeatureGridProps } from '../../types';
 import { computed } from 'vue';
 
-defineOptions({ name: 'FtpFeatureGrid' });
+defineOptions({ name: 'FeatureGrid' });
 
 const props = withDefaults(defineProps<FeatureGridProps>(), {
   columns: 3,

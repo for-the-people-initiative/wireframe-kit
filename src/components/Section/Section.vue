@@ -23,7 +23,7 @@
 import type { SectionProps } from '../../types';
 import { computed } from 'vue';
 
-defineOptions({ name: 'FtpSection' });
+defineOptions({ name: 'Section' });
 
 const props = withDefaults(defineProps<SectionProps>(), {
   variant: 'default',

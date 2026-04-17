@@ -38,7 +38,7 @@
 import type { BlockUIProps, BlockUIEmits } from '../../types';
 import { computed, watch, onMounted, onUnmounted } from "vue";
 
-defineOptions({ name: 'FtpBlockUI' });
+defineOptions({ name: 'BlockUI' });
 
 const props = withDefaults(defineProps<BlockUIProps>(), {
   blocked: false,

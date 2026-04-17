@@ -54,7 +54,7 @@
 import type { AlertProps } from '../../types';
 import { computed, ref } from 'vue';
 
-defineOptions({ name: 'FtpAlert' });
+defineOptions({ name: 'Alert' });
 
 const props = withDefaults(defineProps<AlertProps>(), {
   severity: 'info',

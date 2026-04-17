@@ -91,11 +91,7 @@ $c: input-number;
 // Invalid state
 .#{$c}--invalid {
   .#{$c}__input {
-    border-color: var(--inputNumber-border-color-error, $inputNumber-border-color-error);
-
-    &:focus {
-      border-color: var(--inputNumber-border-color-error, $inputNumber-border-color-error);
-    }
+    background-color: var(--feedback-errorSubtle, $feedback-errorSubtle);
   }
 }
 

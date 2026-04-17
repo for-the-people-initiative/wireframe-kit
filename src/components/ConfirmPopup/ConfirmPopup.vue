@@ -57,7 +57,7 @@
 import type { ConfirmPopupProps, ConfirmPopupEmits } from '../../types';
 import { ref, computed, watch, nextTick, onMounted, onUnmounted } from "vue";
 
-defineOptions({ name: 'FtpConfirmPopup' });
+defineOptions({ name: 'ConfirmPopup' });
 
 const props = withDefaults(defineProps<ConfirmPopupProps>(), {
   target: null,

@@ -80,11 +80,7 @@ $c: dropdown;
 // Invalid state
 .#{$c}--invalid {
   .#{$c}__trigger {
-    border-color: var(--dropdown-border-color-error, $dropdown-border-color-error);
-
-    &:focus {
-      border-color: var(--dropdown-border-color-error, $dropdown-border-color-error);
-    }
+    background-color: var(--feedback-errorSubtle, $feedback-errorSubtle);
   }
 }
 

@@ -1,6 +1,6 @@
 <template>
   <section
-    v-rough="{ strokeWidth: 2 }"
+    v-rough="{ severity: 4 }"
     class="hero"
     :class="additionalClasses"
     :style="backgroundStyles"
@@ -31,7 +31,7 @@
 import type { HeroProps } from '../../types';
 import { computed } from 'vue';
 
-defineOptions({ name: 'FtpHero' });
+defineOptions({ name: 'Hero' });
 
 const heroTitleId = `hero-title-${Math.random().toString(36).substring(2, 9)}`;
 

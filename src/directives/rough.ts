@@ -1,6 +1,9 @@
 import rough from 'roughjs';
 import type { Directive, DirectiveBinding } from 'vue';
 
+export type RoughSeverity = 1 | 2 | 3 | 4 | 5;
+export type RoughEdge = 'top' | 'right' | 'bottom' | 'left';
+
 export type RoughValue = Partial<{
   stroke: string;
   strokeWidth: number;
@@ -13,9 +16,21 @@ export type RoughValue = Partial<{
   seed: number;
   disabled: boolean;
   shape: 'rectangle' | 'hline' | 'vline' | 'circle';
+  severity: RoughSeverity;
+  edges: RoughEdge[];
 }>;
 
+const SEVERITY_PRESETS: Record<RoughSeverity, { roughness: number; bowing: number; strokeWidth: number; opacity: number }> = {
+  1: { roughness: 0.5, bowing: 0.3, strokeWidth: 1.0, opacity: 0.4 },
+  2: { roughness: 1.0, bowing: 0.7, strokeWidth: 1.4, opacity: 0.7 },
+  3: { roughness: 1.6, bowing: 1.2, strokeWidth: 1.8, opacity: 1.0 },
+  4: { roughness: 2.3, bowing: 1.7, strokeWidth: 2.0, opacity: 1.0 },
+  5: { roughness: 3.0, bowing: 2.2, strokeWidth: 2.2, opacity: 1.0 },
+};
+
 type State = {
+  host: HTMLElement;
+  wrap: HTMLSpanElement | null;
   svg: SVGSVGElement;
   observer: ResizeObserver;
   seed: number;
@@ -32,8 +47,8 @@ function drawRough(el: HTMLElement, opts: RoughValue) {
     while (st.svg.firstChild) st.svg.removeChild(st.svg.firstChild);
     return;
   }
-  const w = el.clientWidth;
-  const h = el.clientHeight;
+  const w = st.host.clientWidth;
+  const h = st.host.clientHeight;
   if (w === 0 || h === 0) return;
   if (w === st.lastW && h === st.lastH && st.svg.firstChild) return;
   st.lastW = w;
@@ -44,19 +59,34 @@ function drawRough(el: HTMLElement, opts: RoughValue) {
   while (st.svg.firstChild) st.svg.removeChild(st.svg.firstChild);
 
   const rc = rough.svg(st.svg);
-  const sw = opts.strokeWidth ?? 1.8;
+  const preset = SEVERITY_PRESETS[opts.severity ?? 3];
+  st.svg.style.opacity = String(preset.opacity);
+  const sw = opts.strokeWidth ?? preset.strokeWidth;
   const shape = opts.shape ?? 'rectangle';
   const drawOpts = {
     stroke: opts.stroke ?? 'currentColor',
     strokeWidth: sw,
-    roughness: opts.roughness ?? 1.6,
-    bowing: opts.bowing ?? 1.2,
+    roughness: opts.roughness ?? preset.roughness,
+    bowing: opts.bowing ?? preset.bowing,
     fill: opts.fill,
     fillStyle: opts.fillStyle ?? 'hachure',
     hachureGap: opts.hachureGap,
     hachureAngle: opts.hachureAngle,
     seed: opts.seed ?? st.seed,
   };
+
+  if (opts.edges) {
+    const pad = Math.ceil(sw / 2);
+    for (const edge of opts.edges) {
+      let line: SVGGElement;
+      if (edge === 'top') line = rc.line(0, pad, w, pad, drawOpts);
+      else if (edge === 'bottom') line = rc.line(0, h - pad, w, h - pad, drawOpts);
+      else if (edge === 'left') line = rc.line(pad, 0, pad, h, drawOpts);
+      else line = rc.line(w - pad, 0, w - pad, h, drawOpts);
+      st.svg.appendChild(line);
+    }
+    return;
+  }
 
   let node: SVGGElement;
   if (shape === 'hline') {
@@ -80,6 +110,25 @@ function drawRough(el: HTMLElement, opts: RoughValue) {
 }
 
 function mount(el: HTMLElement, binding: DirectiveBinding<RoughValue | undefined>) {
+  // Native inputs/textareas can't contain child elements, so wrap them in a
+  // span and render the SVG there instead.
+  const needsWrap = el.tagName === 'INPUT' || el.tagName === 'TEXTAREA';
+  let host: HTMLElement = el;
+  let wrap: HTMLSpanElement | null = null;
+
+  if (needsWrap && el.parentNode) {
+    const cs = getComputedStyle(el);
+    wrap = document.createElement('span');
+    wrap.classList.add('rough-wrap');
+    wrap.style.display = cs.display === 'inline' ? 'inline-block' : cs.display;
+    wrap.style.position = 'relative';
+    wrap.style.verticalAlign = 'middle';
+    wrap.style.boxSizing = 'border-box';
+    el.parentNode.insertBefore(wrap, el);
+    wrap.appendChild(el);
+    host = wrap;
+  }
+
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svg.setAttribute('aria-hidden', 'true');
   svg.setAttribute('focusable', 'false');
@@ -90,17 +139,19 @@ function mount(el: HTMLElement, binding: DirectiveBinding<RoughValue | undefined
   svg.style.pointerEvents = 'none';
   svg.style.overflow = 'visible';
   svg.style.zIndex = '0';
-  svg.classList.add('wf-rough-svg');
-  el.prepend(svg);
+  svg.classList.add('rough-svg');
+  host.prepend(svg);
 
-  const cs = getComputedStyle(el);
-  if (cs.position === 'static') el.style.position = 'relative';
-  if (cs.isolation !== 'isolate') el.style.isolation = 'isolate';
+  const cs = getComputedStyle(host);
+  if (cs.position === 'static') host.style.position = 'relative';
+  if (cs.isolation !== 'isolate') host.style.isolation = 'isolate';
   el.style.borderColor = 'transparent';
 
   const observer = new ResizeObserver(() => drawRough(el, binding.value ?? {}));
-  observer.observe(el);
+  observer.observe(host);
   state.set(el, {
+    host,
+    wrap,
     svg,
     observer,
     seed: Math.floor(Math.random() * 2 ** 31),
@@ -115,6 +166,10 @@ function unmount(el: HTMLElement) {
   if (!st) return;
   st.observer.disconnect();
   st.svg.remove();
+  if (st.wrap && st.wrap.parentNode) {
+    st.wrap.parentNode.insertBefore(el, st.wrap);
+    st.wrap.remove();
+  }
   state.delete(el);
 }
 

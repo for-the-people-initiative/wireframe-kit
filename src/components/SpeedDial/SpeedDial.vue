@@ -58,7 +58,7 @@
 import type { SpeedDialProps, SpeedDialEmits } from '../../types';
 import { computed, ref } from "vue";
 
-defineOptions({ name: 'FtpSpeedDial' });
+defineOptions({ name: 'SpeedDial' });
 
 const props = withDefaults(defineProps<SpeedDialProps>(), {
   model: () => [],

@@ -12,7 +12,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    copyright: '© 2025 For the People. All rights reserved.',
+    copyright: '© 2025 Wireframe Design System. All rights reserved.',
     columns: [
       { title: 'Product', links: [{ label: 'Features', href: '#' }, { label: 'Pricing', href: '#' }, { label: 'Changelog', href: '#' }] },
       { title: 'Resources', links: [{ label: 'Documentation', href: '#' }, { label: 'Guides', href: '#' }, { label: 'API Reference', href: '#' }] },

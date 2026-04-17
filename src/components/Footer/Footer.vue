@@ -50,7 +50,7 @@
 <script setup lang="ts">
 import type { FooterProps } from '../../types';
 
-defineOptions({ name: 'FtpFooter' });
+defineOptions({ name: 'Footer' });
 
 withDefaults(defineProps<FooterProps>(), {
   columns: () => [],

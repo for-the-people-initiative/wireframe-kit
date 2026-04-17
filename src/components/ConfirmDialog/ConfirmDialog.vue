@@ -10,7 +10,7 @@
         <Transition name="confirm-dialog-scale">
           <div
             v-if="visible"
-            v-rough="{ strokeWidth: 2 }"
+            v-rough="{ severity: 4 }"
             ref="dialogRef"
             class="confirm-dialog"
             role="alertdialog"
@@ -97,7 +97,7 @@
 import type { ConfirmDialogProps, ConfirmDialogEmits } from '../../types';
 import { computed, watch, onUnmounted } from "vue";
 
-defineOptions({ name: 'FtpConfirmDialog' });
+defineOptions({ name: 'ConfirmDialog' });
 
 const props = withDefaults(defineProps<ConfirmDialogProps>(), {
   visible: false,

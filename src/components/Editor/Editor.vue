@@ -144,7 +144,7 @@
 import type { EditorProps, EditorEmits } from '../../types';
 import { computed, ref, watch, onMounted, nextTick } from "vue";
 
-defineOptions({ name: 'FtpEditor' });
+defineOptions({ name: 'Editor' });
 
 const props = withDefaults(defineProps<EditorProps>(), {
   modelValue: "",

@@ -58,7 +58,7 @@
 import type { MessageProps, MessageEmits } from '../../types';
 import { computed, ref, onMounted, onUnmounted } from "vue";
 
-defineOptions({ name: 'FtpMessage' });
+defineOptions({ name: 'Message' });
 
 const props = withDefaults(defineProps<MessageProps>(), {
   severity: "info",

@@ -25,7 +25,7 @@
 import type { InputSwitchProps, InputSwitchEmits } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpInputSwitch' });
+defineOptions({ name: 'InputSwitch' });
 
 const props = withDefaults(defineProps<InputSwitchProps>(), {
   modelValue: false,

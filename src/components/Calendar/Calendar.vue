@@ -1,7 +1,7 @@
 <template>
   <div ref="containerRef" class="calendar" :class="additionalClasses">
     <!-- Input trigger -->
-    <div v-if="!inline" v-rough class="calendar__input-wrapper" @click="togglePanel">
+    <div v-if="!inline" v-rough="{ severity: 2 }" class="calendar__input-wrapper" @click="togglePanel">
       <input
         ref="inputRef"
         class="calendar__input"
@@ -140,7 +140,7 @@
 import type { CalendarProps, CalendarEmits } from '../../types';
 import { computed, ref, watch, onMounted, onUnmounted } from "vue";
 
-defineOptions({ name: 'FtpCalendar' });
+defineOptions({ name: 'Calendar' });
 
 const props = withDefaults(defineProps<CalendarProps>(), {
   modelValue: null,

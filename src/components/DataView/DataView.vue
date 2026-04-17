@@ -131,7 +131,7 @@ const props = withDefaults(defineProps<DataViewProps>(), {
 const emit = defineEmits(["update:layout", "page"]);
 
 defineOptions({
-  name: "FtpDataView",
+  name: "DataView",
 });
 
 const currentPage = ref(1);

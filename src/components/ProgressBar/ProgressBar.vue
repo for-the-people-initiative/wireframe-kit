@@ -28,7 +28,7 @@
 import type { ProgressBarProps } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpProgressBar' });
+defineOptions({ name: 'ProgressBar' });
 
 const props = withDefaults(defineProps<ProgressBarProps>(), {
   value: 0,

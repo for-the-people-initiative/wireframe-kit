@@ -62,7 +62,7 @@
 import type { ChartProps } from '../../types';
 import { computed } from 'vue';
 
-defineOptions({ name: 'FtpChart' });
+defineOptions({ name: 'Chart' });
 
 const emit = defineEmits(['select', 'loaded']);
 

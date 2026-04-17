@@ -35,7 +35,6 @@ $c: data-table;
   font-size: var(--dataTable-header-fontSize, $dataTable-header-fontSize);
   font-weight: var(--dataTable-header-fontWeight, $dataTable-header-fontWeight);
   color: var(--dataTable-header-color, $dataTable-header-color);
-  border-bottom: var(--dataTable-border-width, $dataTable-border-width) solid var(--dataTable-header-borderColor, $dataTable-header-borderColor);
   white-space: nowrap;
 }
 
@@ -96,7 +95,6 @@ $c: data-table;
   padding: var(--dataTable-body-padding, $dataTable-body-padding);
   font-size: var(--dataTable-body-fontSize, $dataTable-body-fontSize);
   color: var(--dataTable-body-color, $dataTable-body-color);
-  border-bottom: var(--dataTable-border-width, $dataTable-border-width) solid var(--dataTable-body-borderColor, $dataTable-body-borderColor);
 }
 
 .#{$c}__empty-row {

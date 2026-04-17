@@ -13,7 +13,7 @@
 import type { SkeletonProps } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpSkeleton' });
+defineOptions({ name: 'Skeleton' });
 
 const props = withDefaults(defineProps<SkeletonProps>(), {
   shape: "rectangle",

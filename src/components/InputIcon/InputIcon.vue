@@ -10,7 +10,7 @@
 import type { InputIconProps } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpInputIcon' });
+defineOptions({ name: 'InputIcon' });
 
 const props = withDefaults(defineProps<InputIconProps>(), {
   size: "md",

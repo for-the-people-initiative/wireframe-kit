@@ -28,12 +28,12 @@
           "description": "Star hover color"
         },
         "disabled": {
-          "value": "{neutral.200}",
+          "value": "{neutral.400}",
           "type": "color",
           "description": "Disabled star color"
         },
         "disabledActive": {
-          "value": "{neutral.400}",
+          "value": "{neutral.600}",
           "type": "color",
           "description": "Disabled active star color"
         }

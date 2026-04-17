@@ -62,24 +62,24 @@
           "description": "Default border color"
         },
         "success": {
-          "value": "{feedback.success}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Success border color"
+          "description": "Toast border color (black; sketchy via v-rough)"
         },
         "info": {
-          "value": "{feedback.info}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Info border color"
+          "description": "Toast border color (black; sketchy via v-rough)"
         },
         "warning": {
-          "value": "{feedback.warning}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Warning border color"
+          "description": "Toast border color (black; sketchy via v-rough)"
         },
         "error": {
-          "value": "{feedback.error}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Error border color"
+          "description": "Toast border color (black; sketchy via v-rough)"
         }
       }
     },
@@ -118,24 +118,24 @@
           "description": "Default icon color"
         },
         "success": {
-          "value": "{feedback.success}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Success icon color"
+          "description": "Toast icon color (black)"
         },
         "info": {
-          "value": "{feedback.info}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Info icon color"
+          "description": "Toast icon color (black)"
         },
         "warning": {
-          "value": "{feedback.warning}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Warning icon color"
+          "description": "Toast icon color (black)"
         },
         "error": {
-          "value": "{feedback.error}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Error icon color"
+          "description": "Toast icon color (black)"
         }
       },
       "gap": {
@@ -159,24 +159,24 @@
           "description": "Summary text color"
         },
         "success": {
-          "value": "{feedback.successEmphasis}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Success summary color"
+          "description": "Toast summary color (black)"
         },
         "info": {
-          "value": "{feedback.infoEmphasis}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Info summary color"
+          "description": "Toast summary color (black)"
         },
         "warning": {
-          "value": "{feedback.warningEmphasis}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Warning summary color"
+          "description": "Toast summary color (black)"
         },
         "error": {
-          "value": "{feedback.errorEmphasis}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Error summary color"
+          "description": "Toast summary color (black)"
         }
       },
       "fontSize": {
@@ -256,24 +256,24 @@
           "description": "Default progress fill"
         },
         "success": {
-          "value": "{feedback.success}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Success progress fill"
+          "description": "Toast progress fill (black)"
         },
         "info": {
-          "value": "{feedback.info}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Info progress fill"
+          "description": "Toast progress fill (black)"
         },
         "warning": {
-          "value": "{feedback.warning}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Warning progress fill"
+          "description": "Toast progress fill (black)"
         },
         "error": {
-          "value": "{feedback.error}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Error progress fill"
+          "description": "Toast progress fill (black)"
         }
       }
     }

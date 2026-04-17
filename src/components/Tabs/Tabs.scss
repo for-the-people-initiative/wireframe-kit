@@ -43,14 +43,11 @@ $c: tabs;
 }
 
 .#{$c}__tab--active {
-  background: linear-gradient(
-    90deg,
-    var(--accent-gradient-start, $accent-gradient-start),
-    var(--accent-gradient-end, $accent-gradient-end)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--tabs-tab-text-active, $tabs-tab-text-active);
+
+  &:hover:not(.#{$c}__tab--disabled) {
+    color: var(--tabs-tab-text-active, $tabs-tab-text-active);
+  }
 }
 
 .#{$c}__tab--disabled {

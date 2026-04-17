@@ -1,7 +1,7 @@
 <template>
   <textarea
     ref="textareaRef"
-    v-rough
+    v-rough="{ severity: 2 }"
     class="textarea"
     :class="additionalClasses"
     :value="modelValue"
@@ -21,7 +21,7 @@
 import type { TextareaProps, TextareaEmits } from '../../types';
 import { computed, ref, watch, onMounted, onUpdated, onBeforeUnmount, nextTick } from "vue";
 
-defineOptions({ name: 'FtpTextarea' });
+defineOptions({ name: 'Textarea' });
 
 const props = withDefaults(defineProps<TextareaProps>(), {
   modelValue: "",

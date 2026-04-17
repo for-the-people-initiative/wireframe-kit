@@ -10,7 +10,7 @@
         <Transition name="command-palette-scale">
           <div
             v-if="open"
-            v-rough="{ strokeWidth: 2 }"
+            v-rough="{ severity: 4 }"
             ref="paletteRef"
             class="command-palette"
             role="dialog"
@@ -71,7 +71,7 @@
 import type { CommandPaletteProps, CommandPaletteCommand } from '../../types';
 import { computed, ref, watch, nextTick, onMounted, onUnmounted } from 'vue';
 
-defineOptions({ name: 'FtpCommandPalette' });
+defineOptions({ name: 'CommandPalette' });
 
 const props = withDefaults(defineProps<CommandPaletteProps>(), {
   placeholder: 'Type a command or search…',

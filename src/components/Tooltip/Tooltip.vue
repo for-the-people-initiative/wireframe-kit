@@ -31,7 +31,7 @@
 import type { TooltipProps } from '../../types';
 import { ref, computed, onMounted, onUnmounted, nextTick } from "vue";
 
-defineOptions({ name: 'FtpTooltip' });
+defineOptions({ name: 'Tooltip' });
 
 const props = withDefaults(defineProps<TooltipProps>(), {
   position: "top",

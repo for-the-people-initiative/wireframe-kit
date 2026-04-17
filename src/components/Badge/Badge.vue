@@ -10,7 +10,7 @@
 import type { BadgeProps } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpBadge' });
+defineOptions({ name: 'Badge' });
 
 const props = withDefaults(defineProps<BadgeProps>(), {
   value: null,

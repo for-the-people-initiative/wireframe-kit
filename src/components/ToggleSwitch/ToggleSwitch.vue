@@ -22,7 +22,7 @@
 import type { ToggleSwitchProps, ToggleSwitchEmits } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpToggleSwitch' });
+defineOptions({ name: 'ToggleSwitch' });
 
 const props = withDefaults(defineProps<ToggleSwitchProps>(), {
   modelValue: false,

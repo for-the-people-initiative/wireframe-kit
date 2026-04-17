@@ -19,7 +19,7 @@ import type { FAQProps } from '../../types';
 import Accordion from '../Accordion/Accordion.vue';
 import AccordionTab from '../Accordion/AccordionTab.vue';
 
-defineOptions({ name: 'FtpFAQ' });
+defineOptions({ name: 'FAQ' });
 
 withDefaults(defineProps<FAQProps>(), {
   items: () => [],

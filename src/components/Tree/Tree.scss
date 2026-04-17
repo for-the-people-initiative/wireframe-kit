@@ -63,12 +63,15 @@ $c: tree;
   user-select: none;
   transition: background-color 0.15s ease;
 
-  &:hover {
+  &:hover:not(.#{$c}__node--selected) {
     background-color: var(--tree-node-background-hover, $tree-node-background-hover);
   }
 
   &:focus {
     outline: none;
+  }
+
+  &:focus:not(.#{$c}__node--selected) {
     background-color: var(--tree-node-background-hover, $tree-node-background-hover);
   }
 

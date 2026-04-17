@@ -15,7 +15,7 @@
 import type { AvatarProps } from '../../types';
 import { computed } from 'vue';
 
-defineOptions({ name: 'FtpAvatar' });
+defineOptions({ name: 'Avatar' });
 
 const props = withDefaults(defineProps<AvatarProps>(), {
   size: 'medium',

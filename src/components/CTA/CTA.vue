@@ -17,7 +17,7 @@
 import type { CTAProps } from '../../types';
 import { computed } from 'vue';
 
-defineOptions({ name: 'FtpCTA' });
+defineOptions({ name: 'CTA' });
 
 const props = withDefaults(defineProps<CTAProps>(), {
   variant: 'banner',

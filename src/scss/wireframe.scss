@@ -20,8 +20,20 @@ button {
   font-family: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+th,
+[class*="__title"]:not([class*="__title-"]),
+[class*="__name"]:not([class*="__name-"]),
+[class*="__legend-text"],
+[class*="__header-text"] {
   font-family: "Permanent Marker", "Caveat", "Comic Sans MS", cursive;
   font-weight: 400;
   letter-spacing: 0.5px;
+}
+
+// Wireframes don't animate. Kill all transitions and animations globally so
+// the hand-drawn aesthetic isn't undercut by easing curves.
+*, *::before, *::after {
+  animation: none !important;
+  transition: none !important;
 }

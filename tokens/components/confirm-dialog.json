@@ -73,19 +73,19 @@
       },
       "color": {
         "warning": {
-          "value": "{feedback.warning}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Warning icon color"
+          "description": "ConfirmDialog icon color (black)"
         },
         "danger": {
-          "value": "{feedback.error}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Danger icon color"
+          "description": "ConfirmDialog icon color (black)"
         },
         "info": {
-          "value": "{feedback.info}",
+          "value": "{text.default}",
           "type": "color",
-          "description": "Info icon color"
+          "description": "ConfirmDialog icon color (black)"
         }
       }
     },

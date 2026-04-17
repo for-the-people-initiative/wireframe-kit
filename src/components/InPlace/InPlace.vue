@@ -58,7 +58,7 @@
 import type { InPlaceProps, InPlaceEmits } from '../../types';
 import { computed, ref, watch, nextTick } from "vue";
 
-defineOptions({ name: 'FtpInPlace' });
+defineOptions({ name: 'InPlace' });
 
 const props = withDefaults(defineProps<InPlaceProps>(), {
   active: false,

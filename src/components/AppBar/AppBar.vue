@@ -1,5 +1,6 @@
 <template>
   <header
+    v-rough="{ edges: ['bottom'], severity: 3 }"
     class="app-bar"
     :class="additionalClasses"
     :style="colorStyle"
@@ -27,7 +28,7 @@
 import type { AppBarProps } from '../../types';
 import { computed } from 'vue';
 
-defineOptions({ name: 'FtpAppBar' });
+defineOptions({ name: 'AppBar' });
 
 const props = withDefaults(defineProps<AppBarProps>(), {
   fixed: false,

@@ -1,6 +1,6 @@
 <template>
   <div
-    v-rough="{ shape: layout === 'vertical' ? 'vline' : 'hline' }"
+    v-rough="{ shape: layout === 'vertical' ? 'vline' : 'hline', severity: 1 }"
     class="divider"
     :class="additionalClasses"
     role="separator"
@@ -18,7 +18,7 @@
 import type { DividerProps } from '../../types';
 import { computed, useSlots } from "vue";
 
-defineOptions({ name: 'FtpDivider' });
+defineOptions({ name: 'Divider' });
 
 const props = withDefaults(defineProps<DividerProps>(), {
   layout: "horizontal",

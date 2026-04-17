@@ -74,11 +74,7 @@ $c: input-otp;
 // Invalid state
 .#{$c}--invalid {
   .#{$c}__cell {
-    border-color: var(--input-otp-cell-border-color-error, $input-otp-cell-border-color-error);
-
-    &:focus {
-      border-color: var(--input-otp-cell-border-color-error, $input-otp-cell-border-color-error);
-    }
+    background-color: var(--feedback-errorSubtle, $feedback-errorSubtle);
   }
 }
 

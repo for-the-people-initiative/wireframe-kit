@@ -37,7 +37,7 @@
 import type { ProgressSpinnerProps } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpProgressSpinner' });
+defineOptions({ name: 'ProgressSpinner' });
 
 const props = withDefaults(defineProps<ProgressSpinnerProps>(), {
   strokeWidth: 4,

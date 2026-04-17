@@ -61,46 +61,46 @@
     },
     "text": {
       "success": {
-        "value": "{feedback.successEmphasis}",
+        "value": "{text.default}",
         "type": "color",
-        "description": "Success text color"
+        "description": "InlineMessage text color (black)"
       },
       "info": {
-        "value": "{feedback.infoEmphasis}",
+        "value": "{text.default}",
         "type": "color",
-        "description": "Info text color"
+        "description": "InlineMessage text color (black)"
       },
       "warn": {
-        "value": "{feedback.warningEmphasis}",
+        "value": "{text.default}",
         "type": "color",
-        "description": "Warning text color"
+        "description": "InlineMessage text color (black)"
       },
       "error": {
-        "value": "{feedback.errorEmphasis}",
+        "value": "{text.default}",
         "type": "color",
-        "description": "Error text color"
+        "description": "InlineMessage text color (black)"
       }
     },
     "icon": {
       "success": {
-        "value": "{feedback.success}",
+        "value": "{text.default}",
         "type": "color",
-        "description": "Success icon color"
+        "description": "InlineMessage icon color (black)"
       },
       "info": {
-        "value": "{feedback.info}",
+        "value": "{text.default}",
         "type": "color",
-        "description": "Info icon color"
+        "description": "InlineMessage icon color (black)"
       },
       "warn": {
-        "value": "{feedback.warning}",
+        "value": "{text.default}",
         "type": "color",
-        "description": "Warning icon color"
+        "description": "InlineMessage icon color (black)"
       },
       "error": {
-        "value": "{feedback.error}",
+        "value": "{text.default}",
         "type": "color",
-        "description": "Error icon color"
+        "description": "InlineMessage icon color (black)"
       }
     }
   }

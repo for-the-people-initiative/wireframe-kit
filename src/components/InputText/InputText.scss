@@ -36,11 +36,7 @@ $c: input-text;
 
 // Invalid state
 .#{$c}--invalid {
-  border-color: var(--input-text-border-color-error, $input-text-border-color-error);
-
-  &:focus {
-    border-color: var(--input-text-border-color-error, $input-text-border-color-error);
-  }
+  background-color: var(--feedback-errorSubtle, $feedback-errorSubtle);
 }
 
 // Sizes

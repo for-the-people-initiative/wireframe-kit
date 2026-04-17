@@ -30,7 +30,7 @@
 import type { CardProps } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpCard' });
+defineOptions({ name: 'Card' });
 
 const cardTitleId = `card-title-${Math.random().toString(36).substring(2, 9)}`;
 

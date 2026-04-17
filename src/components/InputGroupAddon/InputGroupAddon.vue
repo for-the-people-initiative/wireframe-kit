@@ -1,5 +1,5 @@
 <template>
-  <span v-rough class="input-group-addon" :class="additionalClasses">
+  <span v-rough="{ severity: 2 }" class="input-group-addon" :class="additionalClasses">
     <slot />
   </span>
 </template>
@@ -10,7 +10,7 @@
 import type { InputGroupAddonProps } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpInputGroupAddon' });
+defineOptions({ name: 'InputGroupAddon' });
 
 const props = withDefaults(defineProps<InputGroupAddonProps>(), {
   size: "md",

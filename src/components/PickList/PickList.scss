@@ -53,12 +53,15 @@ $c: picklist;
   user-select: none;
   transition: background-color 0.15s ease;
 
-  &:hover {
+  &:hover:not(.#{$c}__item--selected) {
     background-color: var(--picklist-item-background-hover, $picklist-item-background-hover);
   }
 
   &:focus {
     outline: none;
+  }
+
+  &:focus:not(.#{$c}__item--selected) {
     background-color: var(--picklist-item-background-hover, $picklist-item-background-hover);
   }
 

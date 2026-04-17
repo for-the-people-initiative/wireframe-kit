@@ -11,6 +11,7 @@
             <th
               v-for="col in columns"
               :key="col.field"
+              v-rough="{ edges: ['bottom'], severity: 3 }"
               class="data-table__th"
               :class="{ 'data-table__th--sortable': col.sortable }"
               :style="col.width ? { width: col.width } : {}"
@@ -57,6 +58,7 @@
             <td
               v-for="col in columns"
               :key="col.field"
+              v-rough="{ edges: rowIndex < paginatedData.length - 1 ? ['bottom'] : [], severity: 1 }"
               class="data-table__td"
             >
               <slot :name="`column-${col.field}`" :data="row" :field="col.field">
@@ -153,7 +155,7 @@ const props = withDefaults(defineProps<DataTableProps>(), {
 const emit = defineEmits(["sort", "page"]);
 
 defineOptions({
-  name: "FtpDataTable",
+  name: "DataTable",
 });
 
 const currentPage = ref(1);

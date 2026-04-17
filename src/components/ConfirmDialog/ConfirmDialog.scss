@@ -38,8 +38,8 @@ $c: confirm-dialog;
 }
 
 .#{$c}__title {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 400;
   color: var(--confirmDialog-header-title-color, $confirmDialog-header-title-color);
   margin: 0;
   line-height: 1.4;

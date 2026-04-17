@@ -34,7 +34,7 @@
 import type { ScrollTopProps, ScrollTopEmits } from '../../types';
 import { ref, onMounted, onUnmounted, computed } from "vue";
 
-defineOptions({ name: 'FtpScrollTop' });
+defineOptions({ name: 'ScrollTop' });
 
 const props = withDefaults(defineProps<ScrollTopProps>(), {
   threshold: 400,

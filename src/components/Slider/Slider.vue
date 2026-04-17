@@ -25,7 +25,7 @@
 import type { SliderProps, SliderEmits } from '../../types';
 import { computed, ref } from "vue";
 
-defineOptions({ name: 'FtpSlider' });
+defineOptions({ name: 'Slider' });
 
 const props = withDefaults(defineProps<SliderProps>(), {
   modelValue: 0,

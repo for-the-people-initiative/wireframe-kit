@@ -33,7 +33,7 @@
 import type { FieldSetProps, FieldSetEmits } from '../../types';
 import { computed, ref, watch } from "vue";
 
-defineOptions({ name: 'FtpFieldSet' });
+defineOptions({ name: 'FieldSet' });
 
 const props = withDefaults(defineProps<FieldSetProps>(), {
   legend: "",

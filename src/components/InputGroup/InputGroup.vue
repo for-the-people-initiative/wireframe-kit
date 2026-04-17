@@ -10,7 +10,7 @@
 import type { InputGroupProps } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpInputGroup' });
+defineOptions({ name: 'InputGroup' });
 
 const props = withDefaults(defineProps<InputGroupProps>(), {
   fluid: false,

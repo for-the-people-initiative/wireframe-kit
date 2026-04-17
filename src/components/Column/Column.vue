@@ -9,7 +9,7 @@ import type { ColumnProps } from '../../types';
  * its props and slots to configure column rendering.
  */
 
-defineOptions({ name: 'FtpColumn' });
+defineOptions({ name: 'Column' });
 
 const props = withDefaults(defineProps<ColumnProps>(), {
   field: null,

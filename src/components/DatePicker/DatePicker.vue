@@ -1,6 +1,6 @@
 <template>
   <div class="date-picker" :class="{ 'date-picker--disabled': disabled }">
-    <div v-rough class="date-picker__input-wrapper" @click="toggleCalendar">
+    <div v-rough="{ severity: 2 }" class="date-picker__input-wrapper" @click="toggleCalendar">
       <input
         ref="inputRef"
         class="date-picker__input"
@@ -51,7 +51,7 @@ import type { DatePickerProps } from '../../types';
 import Calendar from '../Calendar/Calendar.vue';
 import { computed, ref, onMounted, onUnmounted, nextTick } from 'vue';
 
-defineOptions({ name: 'FtpDatePicker' });
+defineOptions({ name: 'DatePicker' });
 
 const props = withDefaults(defineProps<DatePickerProps>(), {
   placeholder: 'Select a date',

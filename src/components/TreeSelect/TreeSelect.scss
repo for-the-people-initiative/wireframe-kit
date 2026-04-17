@@ -207,11 +207,7 @@ $c: tree-select;
 // Invalid state
 .#{$c}--invalid {
   .#{$c}__trigger {
-    border-color: var(--tree-select-border-color-error, $tree-select-border-color-error);
-
-    &:focus {
-      border-color: var(--tree-select-border-color-error, $tree-select-border-color-error);
-    }
+    background-color: var(--feedback-errorSubtle, $feedback-errorSubtle);
   }
 }
 

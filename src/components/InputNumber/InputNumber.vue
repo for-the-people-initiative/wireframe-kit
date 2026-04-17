@@ -12,7 +12,7 @@
       </svg>
     </button>
     <input
-      v-rough
+      v-rough="{ severity: 2 }"
       ref="inputRef"
       type="text"
       inputmode="decimal"
@@ -46,7 +46,7 @@
 import type { InputNumberProps, InputNumberEmits } from '../../types';
 import { computed, ref } from "vue";
 
-defineOptions({ name: 'FtpInputNumber' });
+defineOptions({ name: 'InputNumber' });
 
 const props = withDefaults(defineProps<InputNumberProps>(), {
   modelValue: null,

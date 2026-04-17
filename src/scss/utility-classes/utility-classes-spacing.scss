@@ -1,5 +1,5 @@
 // Spacing utility classes using design tokens (CSS custom properties)
-// Prefix: ftp- (For the People)
+// No prefix — DS is end-node
 
 // Spacing scale mapped to CSS custom properties
 $_spacing-scale: (
@@ -20,15 +20,15 @@ $_spacing-scale: (
 );
 
 @each $size, $value in $_spacing-scale {
-  .ftp-m-#{$size} { margin: #{$value}; }
-  .ftp-mt-#{$size} { margin-top: #{$value}; }
-  .ftp-mr-#{$size} { margin-right: #{$value}; }
-  .ftp-mb-#{$size} { margin-bottom: #{$value}; }
-  .ftp-ml-#{$size} { margin-left: #{$value}; }
+  .m-#{$size} { margin: #{$value}; }
+  .mt-#{$size} { margin-top: #{$value}; }
+  .mr-#{$size} { margin-right: #{$value}; }
+  .mb-#{$size} { margin-bottom: #{$value}; }
+  .ml-#{$size} { margin-left: #{$value}; }
 
-  .ftp-p-#{$size} { padding: #{$value}; }
-  .ftp-pt-#{$size} { padding-top: #{$value}; }
-  .ftp-pr-#{$size} { padding-right: #{$value}; }
-  .ftp-pb-#{$size} { padding-bottom: #{$value}; }
-  .ftp-pl-#{$size} { padding-left: #{$value}; }
+  .p-#{$size} { padding: #{$value}; }
+  .pt-#{$size} { padding-top: #{$value}; }
+  .pr-#{$size} { padding-right: #{$value}; }
+  .pb-#{$size} { padding-bottom: #{$value}; }
+  .pl-#{$size} { padding-left: #{$value}; }
 }

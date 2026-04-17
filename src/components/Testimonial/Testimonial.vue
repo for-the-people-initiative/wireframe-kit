@@ -1,5 +1,5 @@
 <template>
-  <blockquote v-rough="{ disabled: variant !== 'card' }" class="testimonial" :class="`testimonial--${variant}`">
+  <blockquote v-rough="{ disabled: variant !== 'card', severity: 4 }" class="testimonial" :class="`testimonial--${variant}`">
     <div v-if="rating" class="testimonial__rating" :aria-label="`${rating} out of 5 stars`">
       <span v-for="i in 5" :key="i" class="testimonial__star" :class="{ 'testimonial__star--filled': i <= rating }">★</span>
     </div>
@@ -21,7 +21,7 @@
 <script setup lang="ts">
 import type { TestimonialProps } from '../../types';
 
-defineOptions({ name: 'FtpTestimonial' });
+defineOptions({ name: 'Testimonial' });
 
 withDefaults(defineProps<TestimonialProps>(), {
   variant: 'card',

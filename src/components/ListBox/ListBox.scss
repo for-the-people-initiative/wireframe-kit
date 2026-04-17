@@ -76,12 +76,15 @@ $c: listbox;
   transition: background-color 0.15s ease;
   user-select: none;
 
-  &:hover:not(.#{$c}__option--disabled) {
+  &:hover:not(.#{$c}__option--disabled):not(.#{$c}__option--selected) {
     background-color: var(--listbox-option-background-hover, $listbox-option-background-hover);
   }
 
   &:focus {
     outline: none;
+  }
+
+  &:focus:not(.#{$c}__option--selected) {
     background-color: var(--listbox-option-background-focus, $listbox-option-background-focus);
   }
 
@@ -91,13 +94,20 @@ $c: listbox;
   }
 }
 
+.#{$c}__option--focused:not(.#{$c}__option--selected) {
+  background-color: var(--listbox-option-background-focus, $listbox-option-background-focus);
+}
+
 .#{$c}__option--selected {
   background-color: var(--listbox-option-background-selected, $listbox-option-background-selected);
   color: var(--listbox-option-text-selected, $listbox-option-text-selected);
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &.#{$c}__option--focused {
     background-color: var(--listbox-option-background-selected, $listbox-option-background-selected);
-    filter: brightness(0.95);
+    color: var(--listbox-option-text-selected, $listbox-option-text-selected);
+    filter: brightness(1.1);
   }
 }
 
@@ -105,10 +115,6 @@ $c: listbox;
   opacity: 0.5;
   cursor: not-allowed;
   color: var(--listbox-option-text-disabled, $listbox-option-text-disabled);
-}
-
-.#{$c}__option--focused {
-  background-color: var(--listbox-option-background-focus, $listbox-option-background-focus);
 }
 
 // Checkbox for multiple selection

@@ -18,7 +18,7 @@
 import type { ImageProps } from '../../types';
 import { computed, onMounted } from 'vue';
 
-defineOptions({ name: 'FtpImage' });
+defineOptions({ name: 'Image' });
 
 const props = withDefaults(defineProps<ImageProps>(), {
   alt: '',

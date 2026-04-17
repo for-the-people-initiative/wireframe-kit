@@ -37,7 +37,7 @@
 import type { PopOverProps, PopOverEmits } from '../../types';
 import { ref, computed, watch, nextTick, onMounted, onUnmounted } from "vue";
 
-defineOptions({ name: 'FtpPopOver' });
+defineOptions({ name: 'PopOver' });
 
 const props = withDefaults(defineProps<PopOverProps>(), {
   trigger: "hover",

@@ -142,7 +142,7 @@
     },
     "divider": {
       "primary": {
-        "value": "rgba(255, 255, 255, 0.2)",
+        "value": "{neutral.600}",
         "type": "color"
       },
       "secondary": {

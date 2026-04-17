@@ -21,7 +21,7 @@
 import type { LogoCloudProps } from '../../types';
 import { computed } from 'vue';
 
-defineOptions({ name: 'FtpLogoCloud' });
+defineOptions({ name: 'LogoCloud' });
 
 const props = withDefaults(defineProps<LogoCloudProps>(), {
   logos: () => [],

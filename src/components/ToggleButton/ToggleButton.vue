@@ -1,6 +1,6 @@
 <template>
   <button
-    v-rough
+    v-rough="{ severity: 2 }"
     type="button"
     class="toggle-button"
     :class="additionalClasses"
@@ -25,7 +25,7 @@
 import type { ToggleButtonProps, ToggleButtonEmits } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpToggleButton' });
+defineOptions({ name: 'ToggleButton' });
 
 const props = withDefaults(defineProps<ToggleButtonProps>(), {
   modelValue: false,

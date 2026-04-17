@@ -43,10 +43,10 @@
 import type { FormFieldProps } from '../../types';
 import { computed } from 'vue';
 
-defineOptions({ name: 'FtpFormField' });
+defineOptions({ name: 'FormField' });
 
 let idCounter = 0;
-const useId = () => 'ftp-ff-' + idCounter++;
+const useId = () => 'ff-' + idCounter++;
 
 const props = withDefaults(defineProps<FormFieldProps>(), {
   required: false,

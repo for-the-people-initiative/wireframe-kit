@@ -32,7 +32,7 @@
 import type { InlineMessageProps } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpInlineMessage' });
+defineOptions({ name: 'InlineMessage' });
 
 const props = withDefaults(defineProps<InlineMessageProps>(), {
   severity: "info",

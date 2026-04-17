@@ -218,7 +218,7 @@
 import type { MenuBarProps, MenuBarEmits } from '../../types';
 import { ref, computed } from "vue";
 
-defineOptions({ name: 'FtpMenuBar' });
+defineOptions({ name: 'MenuBar' });
 
 const props = withDefaults(defineProps<MenuBarProps>(), {
   model: () => [],

@@ -12,7 +12,7 @@
 import type { PricingTableProps } from '../../types';
 import PricingCard from './PricingCard.vue';
 
-defineOptions({ name: 'FtpPricingTable' });
+defineOptions({ name: 'PricingTable' });
 
 withDefaults(defineProps<PricingTableProps>(), {
   columns: 3,

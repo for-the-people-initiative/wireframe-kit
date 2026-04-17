@@ -47,7 +47,7 @@
 import type { DockProps, DockEmits } from '../../types';
 import { ref, computed } from "vue";
 
-defineOptions({ name: 'FtpDock' });
+defineOptions({ name: 'Dock' });
 
 const props = withDefaults(defineProps<DockProps>(), {
   model: () => [],

@@ -118,7 +118,7 @@
 import type { PickListProps, PickListEmits } from '../../types';
 import { ref, computed } from "vue";
 
-defineOptions({ name: 'FtpPickList' });
+defineOptions({ name: 'PickList' });
 
 const props = withDefaults(defineProps<PickListProps>(), {
   source: () => [],

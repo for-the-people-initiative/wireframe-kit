@@ -8,7 +8,7 @@
     <button
       v-for="(option, index) in options"
       :key="getOptionValue(option)"
-      v-rough
+      v-rough="{ severity: 2 }"
       type="button"
       class="select-button__option"
       :class="{
@@ -33,7 +33,7 @@
 import type { SelectButtonProps, SelectButtonEmits } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpSelectButton' });
+defineOptions({ name: 'SelectButton' });
 
 const props = withDefaults(defineProps<SelectButtonProps>(), {
   modelValue: null,

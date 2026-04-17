@@ -73,7 +73,7 @@
 import type { FileUploadProps, FileUploadEmits } from '../../types';
 import { computed, ref } from "vue";
 
-defineOptions({ name: 'FtpFileUpload' });
+defineOptions({ name: 'FileUpload' });
 
 const props = withDefaults(defineProps<FileUploadProps>(), {
   accept: undefined,

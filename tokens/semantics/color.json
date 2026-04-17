@@ -35,18 +35,18 @@
     }
   },
   "feedback": {
-    "success": { "value": "{neutral.900}", "type": "color", "description": "Wireframe: monochrome feedback (position/label conveys intent)" },
-    "successSubtle": { "value": "{neutral.100}", "type": "color", "description": "Success background" },
-    "successEmphasis": { "value": "{neutral.900}", "type": "color", "description": "Success text" },
-    "warning": { "value": "{neutral.900}", "type": "color", "description": "Wireframe: monochrome" },
-    "warningSubtle": { "value": "{neutral.100}", "type": "color", "description": "Warning background" },
-    "warningEmphasis": { "value": "{neutral.900}", "type": "color", "description": "Warning text" },
-    "error": { "value": "{neutral.900}", "type": "color", "description": "Wireframe: monochrome" },
-    "errorSubtle": { "value": "{neutral.100}", "type": "color", "description": "Error background" },
-    "errorEmphasis": { "value": "{neutral.900}", "type": "color", "description": "Error text" },
-    "info": { "value": "{neutral.900}", "type": "color", "description": "Wireframe: monochrome" },
-    "infoSubtle": { "value": "{neutral.100}", "type": "color", "description": "Info background" },
-    "infoEmphasis": { "value": "{neutral.900}", "type": "color", "description": "Info text" }
+    "success": { "value": "{green.700}", "type": "color", "description": "Success base (border/icon)" },
+    "successSubtle": { "value": "{green.50}", "type": "color", "description": "Success background (box)" },
+    "successEmphasis": { "value": "{green.800}", "type": "color", "description": "Success text" },
+    "warning": { "value": "{amber.700}", "type": "color", "description": "Warning base (border/icon)" },
+    "warningSubtle": { "value": "{amber.50}", "type": "color", "description": "Warning background (box)" },
+    "warningEmphasis": { "value": "{amber.800}", "type": "color", "description": "Warning text" },
+    "error": { "value": "{red.700}", "type": "color", "description": "Error base (border/icon)" },
+    "errorSubtle": { "value": "{red.50}", "type": "color", "description": "Error background (box)" },
+    "errorEmphasis": { "value": "{red.800}", "type": "color", "description": "Error text" },
+    "info": { "value": "{blue.700}", "type": "color", "description": "Info base (border/icon)" },
+    "infoSubtle": { "value": "{blue.50}", "type": "color", "description": "Info background (box)" },
+    "infoEmphasis": { "value": "{blue.800}", "type": "color", "description": "Info text" }
   },
   "accent": {
     "gradient": {

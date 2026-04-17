@@ -35,7 +35,7 @@
 import type { MeterGroupProps } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpMeterGroup' });
+defineOptions({ name: 'MeterGroup' });
 
 const props = withDefaults(defineProps<MeterGroupProps>(), {
   max: 100,

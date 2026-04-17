@@ -1,5 +1,5 @@
 {
-  "message": {
+  "alert": {
     "padding": {
       "x": {
         "value": "{space.m}",
@@ -15,136 +15,109 @@
     "gap": {
       "value": "{space.s}",
       "type": "dimension",
-      "description": "Gap between icon and text"
+      "description": "Gap between icon and content"
     },
     "radius": {
       "value": "{radius.default}",
       "type": "dimension",
       "description": "Border radius"
     },
-    "fontSize": {
-      "value": "14px",
+    "borderWidth": {
+      "value": "1px",
       "type": "dimension",
-      "description": "Message text font size"
-    },
-    "fontWeight": {
-      "value": "400",
-      "type": "fontWeight",
-      "description": "Message text font weight"
+      "description": "Border width"
     },
     "iconSize": {
       "value": "20px",
       "type": "dimension",
       "description": "Icon size"
     },
-    "closeButtonSize": {
-      "value": "24px",
-      "type": "dimension",
-      "description": "Close button size"
-    },
-    "borderWidth": {
-      "value": "1px",
-      "type": "dimension",
-      "description": "Border width"
-    },
     "background": {
       "success": {
         "value": "{feedback.successSubtle}",
         "type": "color",
-        "description": "Success message background"
+        "description": "Success alert background"
       },
       "info": {
         "value": "{feedback.infoSubtle}",
         "type": "color",
-        "description": "Info message background"
+        "description": "Info alert background"
       },
       "warn": {
         "value": "{feedback.warningSubtle}",
         "type": "color",
-        "description": "Warning message background"
+        "description": "Warning alert background"
       },
       "error": {
         "value": "{feedback.errorSubtle}",
         "type": "color",
-        "description": "Error message background"
+        "description": "Error alert background"
       }
     },
     "text": {
       "success": {
         "value": "{text.default}",
         "type": "color",
-        "description": "Message text color (black for wireframe legibility)"
+        "description": "Alert text color (black for wireframe legibility)"
       },
       "info": {
         "value": "{text.default}",
         "type": "color",
-        "description": "Message text color (black for wireframe legibility)"
+        "description": "Alert text color (black for wireframe legibility)"
       },
       "warn": {
         "value": "{text.default}",
         "type": "color",
-        "description": "Message text color (black for wireframe legibility)"
+        "description": "Alert text color (black for wireframe legibility)"
       },
       "error": {
         "value": "{text.default}",
         "type": "color",
-        "description": "Message text color (black for wireframe legibility)"
+        "description": "Alert text color (black for wireframe legibility)"
       }
     },
     "icon": {
       "success": {
         "value": "{text.default}",
         "type": "color",
-        "description": "Message icon color (black)"
+        "description": "Alert icon color (black)"
       },
       "info": {
         "value": "{text.default}",
         "type": "color",
-        "description": "Message icon color (black)"
+        "description": "Alert icon color (black)"
       },
       "warn": {
         "value": "{text.default}",
         "type": "color",
-        "description": "Message icon color (black)"
+        "description": "Alert icon color (black)"
       },
       "error": {
         "value": "{text.default}",
         "type": "color",
-        "description": "Message icon color (black)"
+        "description": "Alert icon color (black)"
       }
     },
     "border": {
       "success": {
         "value": "{text.default}",
         "type": "color",
-        "description": "Message border color (black; rendered sketchy via v-rough)"
+        "description": "Alert border color (black; rendered sketchy via v-rough)"
       },
       "info": {
         "value": "{text.default}",
         "type": "color",
-        "description": "Message border color (black; rendered sketchy via v-rough)"
+        "description": "Alert border color (black; rendered sketchy via v-rough)"
       },
       "warn": {
         "value": "{text.default}",
         "type": "color",
-        "description": "Message border color (black; rendered sketchy via v-rough)"
+        "description": "Alert border color (black; rendered sketchy via v-rough)"
       },
       "error": {
         "value": "{text.default}",
         "type": "color",
-        "description": "Message border color (black; rendered sketchy via v-rough)"
-      }
-    },
-    "closeButton": {
-      "color": {
-        "value": "{text.muted}",
-        "type": "color",
-        "description": "Close button icon color"
-      },
-      "hoverColor": {
-        "value": "{text.default}",
-        "type": "color",
-        "description": "Close button icon hover color"
+        "description": "Alert border color (black; rendered sketchy via v-rough)"
       }
     }
   }

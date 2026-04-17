@@ -1,6 +1,6 @@
 <template>
   <input
-    v-rough
+    v-rough="{ severity: 2 }"
     ref="inputRef"
     class="input-mask"
     :class="additionalClasses"
@@ -23,7 +23,7 @@
 import type { InputMaskProps, InputMaskEmits } from '../../types';
 import { computed, ref, watch, onMounted } from "vue";
 
-defineOptions({ name: 'FtpInputMask' });
+defineOptions({ name: 'InputMask' });
 
 const props = withDefaults(defineProps<InputMaskProps>(), {
   modelValue: "",

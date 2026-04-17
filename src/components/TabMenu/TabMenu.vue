@@ -54,7 +54,7 @@
 import type { TabMenuProps, TabMenuEmits } from '../../types';
 import { ref, computed, watch, onMounted, nextTick } from "vue";
 
-defineOptions({ name: 'FtpTabMenu' });
+defineOptions({ name: 'TabMenu' });
 
 const props = withDefaults(defineProps<TabMenuProps>(), {
   model: () => [],

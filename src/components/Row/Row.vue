@@ -10,7 +10,7 @@
 import type { RowProps } from '../../types';
 import { computed } from "vue";
 
-defineOptions({ name: 'FtpRow' });
+defineOptions({ name: 'Row' });
 
 const props = withDefaults(defineProps<RowProps>(), {
   isSelected: false,

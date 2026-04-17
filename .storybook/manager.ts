@@ -1,43 +1,42 @@
 import { addons } from '@storybook/manager-api';
 import { create } from '@storybook/theming/create';
 
-const ftpTheme = create({
-  base: 'dark',
-  brandTitle: 'For The People Design System',
-  brandUrl: 'https://forthepeople.nl',
+const wireframeTheme = create({
+  base: 'light',
+  brandTitle: 'Wireframe Design System',
 
-  // Colors
-  colorPrimary: '#f97316',
-  colorSecondary: '#f59e0b',
+  // Colors (wireframe aesthetic: monochrome ink)
+  colorPrimary: '#171717',
+  colorSecondary: '#525252',
 
   // UI
-  appBg: '#0a0e1f',
-  appContentBg: '#11162d',
-  appBorderColor: '#1a2244',
+  appBg: '#fafafa',
+  appContentBg: '#ffffff',
+  appBorderColor: '#e5e5e5',
   appBorderRadius: 8,
 
   // Text
-  textColor: '#ffffff',
-  textInverseColor: '#0a0e1f',
-  textMutedColor: '#9ea5c2',
+  textColor: '#171717',
+  textInverseColor: '#ffffff',
+  textMutedColor: '#737373',
 
   // Toolbar
-  barTextColor: '#9ea5c2',
-  barSelectedColor: '#f97316',
-  barBg: '#11162d',
-  barHoverColor: '#f59e0b',
+  barTextColor: '#737373',
+  barSelectedColor: '#171717',
+  barBg: '#ffffff',
+  barHoverColor: '#171717',
 
   // Form
-  inputBg: '#1a2244',
-  inputBorder: '#242e5c',
-  inputTextColor: '#ffffff',
+  inputBg: '#ffffff',
+  inputBorder: '#d4d4d4',
+  inputTextColor: '#171717',
   inputBorderRadius: 5,
 
-  // Font
-  fontBase: '"Manrope", sans-serif',
-  fontCode: 'monospace',
+  // Font (Storybook chrome uses neutral sans; handwriting is only for component previews)
+  fontBase: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+  fontCode: 'ui-monospace, SFMono-Regular, Menlo, monospace',
 });
 
 addons.setConfig({
-  theme: ftpTheme,
+  theme: wireframeTheme,
 });

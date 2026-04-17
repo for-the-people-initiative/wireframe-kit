@@ -89,7 +89,7 @@
 import type { ListBoxProps, ListBoxEmits } from '../../types';
 import { computed, ref } from "vue";
 
-defineOptions({ name: 'FtpListBox' });
+defineOptions({ name: 'ListBox' });
 
 const props = withDefaults(defineProps<ListBoxProps>(), {
   modelValue: null,

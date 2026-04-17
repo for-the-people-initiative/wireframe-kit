@@ -37,7 +37,7 @@
 import type { TreeProps, TreeEmits } from '../../types';
 import { computed, ref, watch, h } from "vue";
 
-defineOptions({ name: 'FtpTree' });
+defineOptions({ name: 'Tree' });
 
 // TreeNode subcomponent
 const TreeNode = {

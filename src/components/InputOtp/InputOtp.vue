@@ -9,7 +9,7 @@
         ></span>
 
         <input
-          v-rough
+          v-rough="{ severity: 2 }"
           ref="inputRefs"
           type="text"
           :inputmode="integerOnly ? 'numeric' : 'text'"
@@ -41,7 +41,7 @@
 import type { InputOtpProps, InputOtpEmits } from '../../types';
 import { computed, ref, watch, nextTick, onMounted } from "vue";
 
-defineOptions({ name: 'FtpInputOtp' });
+defineOptions({ name: 'InputOtp' });
 
 const props = withDefaults(defineProps<InputOtpProps>(), {
   modelValue: "",
