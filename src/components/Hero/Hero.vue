@@ -50,8 +50,7 @@ const additionalClasses = computed(() =>
     .join(' ')
 );
 
-const backgroundStyles = computed(() => {
-  if (!props.backgroundImage) return {};
-  return { backgroundImage: `url(${props.backgroundImage})` };
-});
+// Wireframe mode: never render real images. If a backgroundImage is supplied,
+// a hatched placeholder fill is used instead (see Hero.scss .hero--has-bg).
+const backgroundStyles = computed(() => ({}));
 </script>

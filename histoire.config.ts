@@ -19,9 +19,9 @@ export default defineConfig({
     ],
   },
   theme: {
-    title: 'For the People Design System',
+    title: 'Wireframe Kit',
     darkClass: 'dark',
-    defaultColorScheme: 'dark',
+    defaultColorScheme: 'light',
   },
   vite: {
     plugins: [vue()],

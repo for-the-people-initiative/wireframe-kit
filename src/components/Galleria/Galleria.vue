@@ -17,15 +17,17 @@
         </div>
 
         <Transition :name="transitionName" mode="out-in">
-          <img
+          <div
             v-if="activeItem"
             :key="activeIndex"
-            :src="activeItem.src || activeItem"
-            :alt="activeItem.alt || `Image ${activeIndex + 1}`"
-            class="galleria__preview-image"
-            @load="onImageLoad"
-            @error="onImageLoad"
-          />
+            class="galleria__preview-image galleria__placeholder"
+            role="img"
+            :aria-label="activeItem.alt || `Image ${activeIndex + 1}`"
+          >
+            <span class="galleria__placeholder-label">
+              [ {{ activeItem.alt || `Image ${activeIndex + 1}` }} ]
+            </span>
+          </div>
         </Transition>
 
         <!-- Navigation buttons -->
@@ -88,10 +90,9 @@
           :aria-label="`View image ${index + 1}`"
           @click="goTo(index)"
         >
-          <img
-            :src="item.thumbnail || item.src || item"
-            :alt="item.alt || `Thumbnail ${index + 1}`"
-          />
+          <span class="galleria__thumbnail-placeholder">
+            {{ (item.alt || `Thumb ${index + 1}`).slice(0, 12) }}
+          </span>
         </button>
       </div>
     </div>
@@ -145,19 +146,21 @@
           </div>
 
           <Transition :name="transitionName" mode="out-in">
-            <img
+            <div
               v-if="activeItem"
               :key="activeIndex"
-              :src="activeItem.src || activeItem"
-              :alt="activeItem.alt || `Image ${activeIndex + 1}`"
-              class="galleria__fullscreen-image"
+              class="galleria__fullscreen-image galleria__placeholder galleria__placeholder--fullscreen"
               :class="{ 'galleria__fullscreen-image--zoomed': isZoomed }"
               :style="zoomStyle"
+              role="img"
+              :aria-label="activeItem.alt || `Image ${activeIndex + 1}`"
               @click.stop="onImageClick"
               @dblclick.stop="toggleZoom"
-              @load="onImageLoad"
-              @error="onImageLoad"
-            />
+            >
+              <span class="galleria__placeholder-label">
+                [ {{ activeItem.alt || `Image ${activeIndex + 1}` }} ]
+              </span>
+            </div>
           </Transition>
 
           <button
@@ -189,10 +192,9 @@
                 :aria-label="`View image ${index + 1}`"
                 @click.stop="goTo(index)"
               >
-                <img
-                  :src="item.thumbnail || item.src || item"
-                  :alt="item.alt || `Thumbnail ${index + 1}`"
-                />
+                <span class="galleria__thumbnail-placeholder">
+                  {{ (item.alt || `Thumb ${index + 1}`).slice(0, 12) }}
+                </span>
               </button>
             </div>
           </div>
@@ -296,21 +298,8 @@ watch(() => activeIndex.value, () => {
   preloadAdjacent();
 }, { immediate: true });
 
-const preloadAdjacent = () => {
-  const preloadIndex = (i: number) => {
-    const item = props.items[i];
-    if (!item) return;
-    const img = new Image();
-    img.src = item.src || item;
-  };
-  if (activeIndex.value > 0) preloadIndex(activeIndex.value - 1);
-  if (activeIndex.value < props.items.length - 1) preloadIndex(activeIndex.value + 1);
-  // Also preload circular edges
-  if (props.circular && props.items.length > 1) {
-    if (activeIndex.value === 0) preloadIndex(props.items.length - 1);
-    if (activeIndex.value === props.items.length - 1) preloadIndex(0);
-  }
-};
+// Wireframe mode: nothing to preload — images are placeholders.
+const preloadAdjacent = () => {};
 
 const onImageLoad = () => {
   imageLoading.value = false;

@@ -1,93 +1,21 @@
 @use "../../../dist/scss/tokens" as *;
 
-// Navy palette values — not in semantic tokens, hardcoded from design palette
-// navy-950: #0a0e27 (deepest navy), navy-900: #0f1535 (deep navy)
-$navy-950: #0a0e27;
-$navy-900: #0f1535;
+// Wireframe mode: all atmospheric variants collapse to a flat paper surface.
+// Signatures preserved so existing call sites continue to compile.
 
-/// Atmospheric surface background with layered gradients and warm glow
-/// Creates a rich, deep space-like background with ambient lighting
-///
-/// @param {String} $glow-position - Position of warm glow: 'top', 'center', 'bottom'
-/// @param {Number} $glow-intensity - Intensity of the warm glow (0-1)
-/// @param {Boolean} $include-noise - Whether to include noise texture
 @mixin surface-atmospheric($glow-position: 'top', $glow-intensity: 0.15, $include-noise: true) {
-  // Calculate glow position
-  $glow-y: 30%;
-  @if $glow-position == 'center' {
-    $glow-y: 50%;
-  } @else if $glow-position == 'bottom' {
-    $glow-y: 70%;
-  }
-
-  // Base background with layered gradients
-  background:
-    // Warm ambient glow (orange/amber)
-    radial-gradient(
-      ellipse 80% 50% at 50% #{$glow-y},
-      rgba(255, 160, 60, $glow-intensity) 0%,
-      rgba(255, 120, 40, calc($glow-intensity * 0.5)) 30%,
-      transparent 70%
-    ),
-    // Secondary subtle glow for depth
-    radial-gradient(
-      ellipse 60% 40% at 30% calc(#{$glow-y} - 10%),
-      rgba(255, 180, 80, calc($glow-intensity * 0.3)) 0%,
-      transparent 50%
-    ),
-    // Vignette effect (darker edges)
-    radial-gradient(
-      ellipse 100% 100% at 50% 50%,
-      transparent 40%,
-      rgba(0, 0, 0, 0.3) 100%
-    ),
-    // Base gradient
-    linear-gradient(
-      180deg,
-      var(--navy-950, $navy-950) 0%,
-      var(--navy-900, $navy-900) 40%,
-      var(--navy-900, $navy-900) 60%,
-      var(--navy-950, $navy-950) 100%
-    );
-
-  background-color: var(--navy-950, $navy-950);
-
-  // Noise texture overlay
-  @if $include-noise {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      opacity: 0.4;
-      pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-      background-repeat: repeat;
-      background-size: 256px 256px;
-      mix-blend-mode: overlay;
-      z-index: 0;
-    }
-
-    // Ensure content stays above noise
-    > * {
-      position: relative;
-      z-index: 1;
-    }
-  }
+  background: var(--surface-canvas, $surface-canvas);
+  background-color: var(--surface-canvas, $surface-canvas);
 }
 
-/// Simplified atmospheric surface without noise (better performance)
 @mixin surface-atmospheric-simple($glow-position: 'top', $glow-intensity: 0.15) {
   @include surface-atmospheric($glow-position, $glow-intensity, false);
 }
 
-/// Dark atmospheric variant with minimal glow
 @mixin surface-atmospheric-dark() {
   @include surface-atmospheric('center', 0.08, true);
 }
 
-/// Vibrant atmospheric variant with stronger glow
 @mixin surface-atmospheric-vibrant() {
   @include surface-atmospheric('top', 0.25, true);
 }

@@ -1,0 +1,21 @@
+// Wireframe mode global styles.
+// Consumer must render <WireframeFilter /> once at app root for the filter id
+// referenced here to resolve.
+//
+// The `filter` property on body creates a containing block for position: fixed
+// descendants, but since body already spans the viewport, fixed-position
+// teleported elements (Dialog, Toast, etc.) continue to behave correctly.
+
+@use "../../dist/scss/tokens" as *;
+
+body {
+  filter: url(#wireframe-sketchy);
+  background: var(--surface-canvas, $surface-canvas);
+  color: var(--text-default, $text-default);
+}
+
+// Opt out of the wobble locally (icons, focus rings, tight pixel-level UI).
+.wf-crisp,
+.wf-crisp * {
+  filter: none !important;
+}

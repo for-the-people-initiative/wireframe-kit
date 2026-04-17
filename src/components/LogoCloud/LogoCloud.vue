@@ -9,7 +9,7 @@
         class="logo-cloud__item"
         v-bind="logo.href ? { href: logo.href, target: '_blank', rel: 'noopener noreferrer' } : {}"
       >
-        <img :src="logo.src" :alt="logo.alt" class="logo-cloud__img" />
+        <span class="logo-cloud__placeholder">{{ logo.alt || 'LOGO' }}</span>
       </component>
     </div>
   </div>

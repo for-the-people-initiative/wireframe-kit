@@ -146,20 +146,7 @@ export interface AccordionTabProps {
   isDisabled?: boolean
 }
 
-// ============================================================
-// AtmosphericBackground
-// ============================================================
-
-export interface AtmosphericBackgroundProps {
-  variant?: 'default' | 'vibrant' | 'dark' | 'subtle'
-  particles?: boolean
-  particleCount?: number
-  staticStarCount?: number
-  clusterCount?: number
-  starsPerCluster?: number
-  particleColor?: string
-  parallax?: boolean
-}
+// AtmosphericBackground removed in wireframe transform (v2). No replacement.
 
 // ============================================================
 // AutoComplete
@@ -1275,23 +1262,7 @@ export interface PanelMenuEmits {
   (e: 'item-click', payload: { originalEvent: Event; item: MenuItem }): void
 }
 
-// ============================================================
-// ParticleBackground
-// ============================================================
-
-export interface ParticleBackgroundProps {
-  particleCount?: number
-  staticStarCount?: number
-  clusterCount?: number
-  starsPerCluster?: number
-  particleColor?: string
-  minSize?: number
-  maxSize?: number
-  speed?: number
-  twinkle?: boolean
-  parallax?: boolean
-  fixed?: boolean
-}
+// ParticleBackground removed in wireframe transform (v2). No replacement.
 
 // ============================================================
 // PickList

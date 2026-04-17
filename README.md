@@ -1,80 +1,86 @@
-# PZH Style Library
+# wireframe-kit
 
-Deze laag van de is verantwoordelijk voor het loskoppelen van style/ambiance. De doelstelling is opstellen en onderhouden van style definities.
+A Vue 3 component library with a hand-drawn, sketchy aesthetic — for building low-fidelity mockups and wireframes of web apps.
 
-## Input
+Forked from the "For The People" design system and restyled: every component renders with wobbly borders, a handwritten font (Caveat), and a monochrome ink-on-paper palette. Images always become placeholder boxes labelled with their `alt` / intent text.
 
-- [Design system](https://www.figma.com/file/11ZuN25dSOqx3w1ie9Avbz/Design-System---Provincie-Zuid-Holland)
+## Install
 
-## Output
+```bash
+npm install @for-the-people-initiative/wireframe-kit
+```
 
-- Website [Website](https://n2dabaed4e91d4ca59f2a437.azurewebsites.net/) welke inzicht geeft in verschillende bouwblokken
-- SCSS variabelen, mixins en fucties gedeployed als Prive NPM Library te vinden op [documentatie](https://www.npmjs.com/package/@pzh-temporary/style-library)
-- Utility classes typografie, margins, paddings
-- ?? Utility classes grid
+## Setup
 
-## Techniek
+Two things need to happen in your app:
 
-### Technologieen
+1. **Import the tokens + wireframe global styles** (once, typically in your main entry):
 
-- Storybook
-- Vue 3 als template engine
-- Custom node workflow tools
-  -- Omzetten van variable source files naar bijvoorbeeld .scss bestanden
+   ```ts
+   import '@for-the-people-initiative/wireframe-kit/css';
+   import '@for-the-people-initiative/wireframe-kit/scss/fonts';
+   import '@for-the-people-initiative/wireframe-kit/scss/wireframe';
+   ```
 
-### Benodigdheden
+2. **Render `<WireframeFilter />` once** at your app root. This injects the SVG filter that provides the sketchy wobble — components reference it via `filter: url(#wireframe-sketchy)`.
 
-- Node 18.12.1
-- NPM 8.19.2
-- NPM account op basis van je PZH emailadres. Dit account dient gerechtigd te zijn om private packages (@pzh-temporary) te gebruiken van PZH.
+   ```vue
+   <script setup>
+   import WireframeFilter from '@for-the-people-initiative/wireframe-kit/components/WireframeFilter';
+   </script>
 
-### Installeren dependencies
+   <template>
+     <WireframeFilter />
+     <!-- your app -->
+   </template>
+   ```
+
+## Usage
+
+```vue
+<script setup>
+import Button from '@for-the-people-initiative/wireframe-kit/components/Button';
+import Card from '@for-the-people-initiative/wireframe-kit/components/Card';
+import Image from '@for-the-people-initiative/wireframe-kit/components/Image';
+</script>
+
+<template>
+  <Card>
+    <Image src="anything" alt="Hero banner" width="400" height="200" />
+    <Button>Click me</Button>
+  </Card>
+</template>
+```
+
+Regardless of what `src` you pass to `<Image>`, it renders a placeholder box labelled `[ Hero banner ]`. This is the design intent — wireframes should not leak real content.
+
+## Opting out of the wobble locally
+
+For pixel-sensitive elements (icons, focus rings, tight UI) apply `.wf-crisp`:
+
+```html
+<span class="wf-crisp"><!-- no displacement filter applied here --></span>
+```
+
+## What changed from v1.x
+
+- Single monochrome palette (grayscale ink on paper). No colored themes. No dark mode.
+- Single font: Caveat.
+- Flat offset "shadow" instead of layered drop shadows.
+- `ParticleBackground` and `AtmosphericBackground` removed.
+- `Chart` renders an SVG sketchy stub (axes + bars/line/pie outline). `chart.js` is no longer a dependency.
+- `ColorPicker` renders a labeled stub and emits `#000000`.
+- `Image`, `Avatar`, `Galleria`, `Lightbox`, `LogoCloud`, `Hero` render placeholder content in place of real images.
+
+## Development
 
 ```bash
 npm install
+npm run dev         # runs the histoire dev server (components playground)
+npm run build:lib   # builds tokens + components + types for publishing
+npm run story:dev   # histoire only
 ```
 
-### Ontwikkelen
+## License
 
-Dit start een storybook instantie in development mode
-
-```bash
-npm run dev
-```
-
-### Build
-
-Dit bouwt een storybook instantie zodat deze gepubliceerd kan worden.
-
-```bash
-npm run build
-```
-
-### Publiceren
-
-Publiceert nieuwe versie naar NPM en publiceert utility classes naar het CDN
-
-1. Verhoog attribuut 'version' in bestand package.json volgens [SemVer](https://semver.org/)
-1. Zorg dat je ingelogd bent bij NPM. Zo niet voer in command line commando 'npm login' uit
-1. Voer in command line commando 'npm run publish-all' uit
-
-#### Deploy library to CDN 
-
-npm publish all
-
-### Deploy utility classes to CDN (inclusief fonts)
-
-```bash
-npm run deploy-utility-classes
-```
-
-### Deploy static assets to CDN (inclusief fonts)
-
-```bash
-npm run deploy-assets
-```
-
-
-
-
-
+MIT

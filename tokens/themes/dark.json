@@ -1,7 +1,0 @@
-{
-  "color": {
-    "background": { "value": "{neutral.900}" },
-    "surface": { "value": "{neutral.800}" },
-    "text": { "value": "{neutral.0}" }
-  }
-}

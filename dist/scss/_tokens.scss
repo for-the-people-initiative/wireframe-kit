@@ -2,55 +2,55 @@
 // These SCSS variables reference CSS custom properties for runtime theming
 
 // Surface
-$surface-canvas: var(--surface-canvas); // Main page background
-$surface-panel: var(--surface-panel); // Card/panel background
+$surface-canvas: var(--surface-canvas); // Paper background
+$surface-panel: var(--surface-panel); // Panel/card background
 $surface-elevated: var(--surface-elevated); // Elevated surface (modals, dropdowns)
 $surface-overlay: var(--surface-overlay); // Modal overlay backdrop
 $surface-muted: var(--surface-muted); // Subtle/recessed background
-$surface-inverse: var(--surface-inverse); // Light surface for contrast (tooltips)
-$surface-accent: var(--surface-accent); // Warm accent surface for cards
-$surface-gradient-start: var(--surface-gradient-start); // Gradient background start (top)
-$surface-gradient-end: var(--surface-gradient-end); // Gradient background end (bottom)
+$surface-inverse: var(--surface-inverse); // Dark surface for contrast (tooltips)
+$surface-accent: var(--surface-accent); // Accent fill (flat, no gradients in wireframe)
+$surface-gradient-start: var(--surface-gradient-start); // No gradients in wireframe
+$surface-gradient-end: var(--surface-gradient-end); // No gradients in wireframe
 
 // Text
-$text-default: var(--text-default); // Primary text
-$text-primary: var(--text-primary); // Primary text (alias)
+$text-default: var(--text-default); // Ink
+$text-primary: var(--text-primary); // Ink
 $text-secondary: var(--text-secondary); // Secondary text
-$text-muted: var(--text-muted); // Helper/secondary text
+$text-muted: var(--text-muted); // Helper text
 $text-subtle: var(--text-subtle); // Placeholder text
-$text-inverse: var(--text-inverse); // Text on light backgrounds
-$text-link: var(--text-link); // Link text
+$text-inverse: var(--text-inverse); // Text on dark backgrounds
+$text-link: var(--text-link); // Link text (underlined in CSS)
 $text-linkHover: var(--text-linkHover); // Link hover
 $text-linkVisited: var(--text-linkVisited); // Visited link
 $text-heading: var(--text-heading); // Heading text
 
 // Border
 $border-subtle: var(--border-subtle); // Subtle borders
-$border-default: var(--border-default); // Default borders
+$border-default: var(--border-default); // Default borders (hand-drawn ink)
 $border-strong: var(--border-strong); // Emphasized borders
 $border-focus: var(--border-focus); // Focus ring color
-$border-vibrant-start: var(--border-vibrant-start); // Vibrant gradient border start
-$border-vibrant-end: var(--border-vibrant-end); // Vibrant gradient border end
+$border-vibrant-start: var(--border-vibrant-start); // Wireframe: solid ink, no gradient
+$border-vibrant-end: var(--border-vibrant-end); // Wireframe: solid ink, no gradient
 
 // Feedback
-$feedback-success: var(--feedback-success); // Success state
+$feedback-success: var(--feedback-success); // Wireframe: monochrome feedback (position/label conveys intent)
 $feedback-successSubtle: var(--feedback-successSubtle); // Success background
 $feedback-successEmphasis: var(--feedback-successEmphasis); // Success text
-$feedback-warning: var(--feedback-warning); // Warning state
+$feedback-warning: var(--feedback-warning); // Wireframe: monochrome
 $feedback-warningSubtle: var(--feedback-warningSubtle); // Warning background
 $feedback-warningEmphasis: var(--feedback-warningEmphasis); // Warning text
-$feedback-error: var(--feedback-error); // Error state
+$feedback-error: var(--feedback-error); // Wireframe: monochrome
 $feedback-errorSubtle: var(--feedback-errorSubtle); // Error background
 $feedback-errorEmphasis: var(--feedback-errorEmphasis); // Error text
-$feedback-info: var(--feedback-info); // Info state
+$feedback-info: var(--feedback-info); // Wireframe: monochrome
 $feedback-infoSubtle: var(--feedback-infoSubtle); // Info background
 $feedback-infoEmphasis: var(--feedback-infoEmphasis); // Info text
 
 // Accent
-$accent-gradient-start: var(--accent-gradient-start); // Accent gradient start
-$accent-gradient-end: var(--accent-gradient-end); // Accent gradient end
-$accent-gradient-hoverStart: var(--accent-gradient-hoverStart); // Accent gradient hover start
-$accent-gradient-hoverEnd: var(--accent-gradient-hoverEnd); // Accent gradient hover end
+$accent-gradient-start: var(--accent-gradient-start); // Wireframe: solid ink
+$accent-gradient-end: var(--accent-gradient-end); // Wireframe: solid ink
+$accent-gradient-hoverStart: var(--accent-gradient-hoverStart); // Wireframe hover
+$accent-gradient-hoverEnd: var(--accent-gradient-hoverEnd); // Wireframe hover
 
 // Intent
 $intent-action-default: var(--intent-action-default); // Primary CTA color
@@ -65,16 +65,16 @@ $intent-secondary-border: var(--intent-secondary-border); // Secondary action bo
 $focus-ring: var(--focus-ring); // Focus ring color
 
 // Brand
-$brand-primary: var(--brand-primary); // Primary brand color
-$brand-secondary: var(--brand-secondary); // Secondary brand color (CTA)
-$brand-accent: var(--brand-accent); // Accent brand color
+$brand-primary: var(--brand-primary); // Primary brand ink
+$brand-secondary: var(--brand-secondary); // Secondary brand ink
+$brand-accent: var(--brand-accent); // Accent brand
 $brand-subtle: var(--brand-subtle); // Subtle brand background
 
 // Gradient
-$gradient-success-start: var(--gradient-success-start); // Success gradient start
-$gradient-success-end: var(--gradient-success-end); // Success gradient end
-$gradient-streak-start: var(--gradient-streak-start); // Streak gradient start (success green)
-$gradient-streak-end: var(--gradient-streak-end); // Streak gradient end (warning yellow)
+$gradient-success-start: var(--gradient-success-start); // Wireframe: solid ink
+$gradient-success-end: var(--gradient-success-end); // Wireframe: solid ink
+$gradient-streak-start: var(--gradient-streak-start); // Wireframe: solid ink
+$gradient-streak-end: var(--gradient-streak-end); // Wireframe: solid ink
 
 // Radius
 $radius-none: var(--radius-none); // No rounding
@@ -85,11 +85,11 @@ $radius-large: var(--radius-large); // Large radius for cards
 $radius-pill: var(--radius-pill); // Fully rounded (pills, circles)
 
 // Shadow
-$shadow-xs: var(--shadow-xs); // Subtle depth - hover states
-$shadow-s: var(--shadow-s); // Low elevation - cards, buttons
-$shadow-m: var(--shadow-m); // Medium elevation - dropdowns
-$shadow-l: var(--shadow-l); // High elevation - modals
-$shadow-xl: var(--shadow-xl); // Highest elevation - toasts
+$shadow-xs: var(--shadow-xs); // Wireframe: no shadow
+$shadow-s: var(--shadow-s); // Wireframe: flat offset ink
+$shadow-m: var(--shadow-m); // Wireframe: flat offset ink
+$shadow-l: var(--shadow-l); // Wireframe: flat offset ink
+$shadow-xl: var(--shadow-xl); // Wireframe: flat offset ink
 
 // Space
 $space-3xs: var(--space-3xs); // 2px

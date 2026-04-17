@@ -1,60 +1,66 @@
-@use "../../dist/scss/tokens" as *;
+@use "../../../dist/scss/tokens" as *;
 @use "./breakpoint.scss" as *;
 
+// Wireframe typography: single handwritten family, size scale bumped ~1.25x
+// to compensate for Caveat's small x-height.
+
+$wireframe-font: "Caveat", "Comic Sans MS", cursive;
+
 @mixin heading($name) {
-  font-weight: 500;
-  line-height: 1.25;
-  color: $text-heading;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-heading, $text-heading);
+  font-family: $wireframe-font;
   @if ($name == "xs") {
-    font-size: 20px;
+    font-size: 26px;
   } @else if ($name == "s") {
-    font-size: 24px;
+    font-size: 30px;
   } @else if ($name == "m") {
-    font-size: 32px;
-  } @else if ($name == "l") {
     font-size: 40px;
+  } @else if ($name == "l") {
+    font-size: 50px;
   } @else if ($name == "xl") {
-    font-size: 48px;
+    font-size: 60px;
   } @else if ($name == "2xl") {
-    font-size: 64px;
-    line-height: 1.1;
+    font-size: 80px;
+    line-height: 1.05;
   }
 }
 
 @mixin text($name, $isStrong: false) {
-  line-height: 1.5;
+  line-height: 1.4;
+  font-family: $wireframe-font;
 
   @if ($isStrong) {
-    font-weight: 600;
+    font-weight: 700;
   }
 
   @if ($name == "3xs") {
-    font-size: 10px;
-  } @else if ($name == "2xs") {
-    font-size: 12px;
-  } @else if ($name == "xs") {
     font-size: 14px;
-  } @else if ($name == "s") {
+  } @else if ($name == "2xs") {
     font-size: 16px;
-  } @else if ($name == "m") {
+  } @else if ($name == "xs") {
     font-size: 18px;
-  } @else if ($name == "l") {
+  } @else if ($name == "s") {
     font-size: 20px;
+  } @else if ($name == "m") {
+    font-size: 22px;
+  } @else if ($name == "l") {
+    font-size: 26px;
   } @else if ($name == "xl") {
-    font-size: 24px;
-    line-height: 1.25;
+    font-size: 30px;
+    line-height: 1.2;
   } @else if ($name == "2xl") {
-    font-size: 28px;
-    line-height: 1.25;
+    font-size: 36px;
+    line-height: 1.2;
   }
 }
 
 @mixin static-typography($category: "heading", $type: "l", $isStrong: false) {
+  font-family: $wireframe-font;
   @if ($category == "heading") {
-    font-family: Manrope, sans-serif;
     @include heading($type);
   } @else {
-    font-family: "DM Sans", sans-serif;
     @include text($type, $isStrong);
   }
 }

@@ -1,18 +1,20 @@
 {
-  "name": "@for-the-people-initiative/design-system",
+  "name": "@for-the-people-initiative/wireframe-kit",
   "private": false,
-  "version": "1.4.4",
+  "version": "1.0.0",
   "type": "module",
-  "description": "Design system with design tokens, SCSS utilities, and Vue 3 components",
+  "description": "Hand-drawn wireframe component library — Vue 3 components with a sketchy aesthetic for low-fidelity mockups",
   "author": "For The People",
   "license": "MIT",
   "keywords": [
-    "design-system",
-    "design-tokens",
-    "scss",
+    "wireframe",
+    "low-fidelity",
+    "mockup",
+    "prototype",
     "vue",
     "vue3",
-    "components"
+    "components",
+    "design-system"
   ],
   "files": [
     "dist",
@@ -26,8 +28,9 @@
     },
     "./css": "./dist/css/tokens.css",
     "./css/tokens.css": "./dist/css/tokens.css",
-    "./css/theme-dark.css": "./dist/css/theme-dark.css",
     "./scss": "./dist/scss/_tokens.scss",
+    "./scss/wireframe": "./src/scss/wireframe.scss",
+    "./scss/fonts": "./src/scss/fonts.scss",
     "./scss/tokens": "./dist/scss/_tokens.scss",
     "./scss/mixins/*": "./src/scss/mixins/*",
     "./types": {
@@ -103,7 +106,5 @@
     "vue": "^3.5.0",
     "vue-tsc": "^3.2.4"
   },
-  "dependencies": {
-    "chart.js": "^4.5.1"
-  }
+  "dependencies": {}
 }

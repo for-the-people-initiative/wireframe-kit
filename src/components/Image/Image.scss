@@ -3,127 +3,37 @@
 $c: image;
 
 .#{$c} {
-  display: inline-block;
-  position: relative;
-  line-height: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 60px;
+  min-height: 40px;
+  padding: 8px;
+  border: 1.5px solid var(--border-default, $border-default);
+  background-color: var(--surface-muted, $surface-muted);
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0 10px,
+    rgba(23, 23, 23, 0.18) 10px 11px
+  );
+  color: var(--text-default, $text-default);
+  font-family: "Caveat", "Comic Sans MS", cursive;
+  font-size: 20px;
+  text-align: center;
+  user-select: none;
 }
 
-.#{$c}__img {
-  display: block;
+.#{$c}__label {
+  padding: 2px 8px;
+  background: var(--surface-canvas, $surface-canvas);
+  border: 1px dashed var(--border-default, $border-default);
   max-width: 100%;
-  height: auto;
-  border-radius: var(--image-radius, $image-radius);
-  transition: opacity var(--image-transition-duration, $image-transition-duration) ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-// Preview enabled state
 .#{$c}--preview {
   cursor: pointer;
-
-  .#{$c}__img {
-    transition: transform var(--image-transition-duration, $image-transition-duration) ease,
-                opacity var(--image-transition-duration, $image-transition-duration) ease;
-  }
-
-  &:hover {
-    .#{$c}__img {
-      transform: scale(1.02);
-    }
-
-    .#{$c}__preview-indicator {
-      opacity: 1;
-    }
-  }
-}
-
-.#{$c}__preview-indicator {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: calc(var(--image-preview-icon-size, $image-preview-icon-size) * 2);
-  height: calc(var(--image-preview-icon-size, $image-preview-icon-size) * 2);
-  background: var(--image-preview-icon-background, $image-preview-icon-background);
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity var(--image-transition-duration, $image-transition-duration) ease;
-  pointer-events: none;
-
-  svg {
-    width: var(--image-preview-icon-size, $image-preview-icon-size);
-    height: var(--image-preview-icon-size, $image-preview-icon-size);
-    color: var(--image-preview-icon-color, $image-preview-icon-color);
-  }
-}
-
-// Overlay for preview lightbox
-.#{$c}__overlay {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--image-preview-overlay-background, $image-preview-overlay-background);
-  z-index: var(--image-preview-overlay-zIndex, $image-preview-overlay-zIndex);
-  padding: 40px;
-}
-
-.#{$c}__preview-img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  border-radius: var(--image-radius, $image-radius);
-}
-
-.#{$c}__close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--image-preview-closeButton-size, $image-preview-closeButton-size);
-  height: var(--image-preview-closeButton-size, $image-preview-closeButton-size);
-  padding: 0;
-  border: none;
-  background: transparent;
-  border-radius: 50%;
-  color: var(--image-preview-closeButton-color, $image-preview-closeButton-color);
-  cursor: pointer;
-  transition: background-color 0.15s ease;
-
-  &:hover {
-    background: var(--image-preview-closeButton-hoverBackground, $image-preview-closeButton-hoverBackground);
-  }
-
-  &:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 2px;
-  }
-
-  svg {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-// Error state
-.#{$c}--error {
-  .#{$c}__img {
-    opacity: 0.5;
-  }
-}
-
-// Transition animations
-.image-preview-enter-active,
-.image-preview-leave-active {
-  transition: opacity 0.2s ease;
-}
-
-.image-preview-enter-from,
-.image-preview-leave-to {
-  opacity: 0;
 }

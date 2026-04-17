@@ -1,6 +1,6 @@
 {
   "color": {
-    "background": { "value": "{neutral.0}" },
+    "background": { "value": "{neutral.50}" },
     "surface": { "value": "{neutral.0}" },
     "text": { "value": "{neutral.900}" }
   }

@@ -1,91 +1,91 @@
 {
   "surface": {
-    "canvas": { "value": "{navy.900}", "type": "color", "description": "Main page background" },
-    "panel": { "value": "{navy.800}", "type": "color", "description": "Card/panel background" },
-    "elevated": { "value": "{navy.700}", "type": "color", "description": "Elevated surface (modals, dropdowns)" },
-    "overlay": { "value": "rgba(0, 0, 0, 0.6)", "type": "color", "description": "Modal overlay backdrop" },
-    "muted": { "value": "{navy.950}", "type": "color", "description": "Subtle/recessed background" },
-    "inverse": { "value": "{neutral.0}", "type": "color", "description": "Light surface for contrast (tooltips)" },
-    "accent": { "value": "{amber.900}", "type": "color", "description": "Warm accent surface for cards" },
+    "canvas": { "value": "{neutral.50}", "type": "color", "description": "Paper background" },
+    "panel": { "value": "{neutral.0}", "type": "color", "description": "Panel/card background" },
+    "elevated": { "value": "{neutral.0}", "type": "color", "description": "Elevated surface (modals, dropdowns)" },
+    "overlay": { "value": "rgba(23, 23, 23, 0.3)", "type": "color", "description": "Modal overlay backdrop" },
+    "muted": { "value": "{neutral.100}", "type": "color", "description": "Subtle/recessed background" },
+    "inverse": { "value": "{neutral.900}", "type": "color", "description": "Dark surface for contrast (tooltips)" },
+    "accent": { "value": "{neutral.100}", "type": "color", "description": "Accent fill (flat, no gradients in wireframe)" },
     "gradient": {
-      "start": { "value": "{navy.950}", "type": "color", "description": "Gradient background start (top)" },
-      "end": { "value": "{navy.800}", "type": "color", "description": "Gradient background end (bottom)" }
+      "start": { "value": "{neutral.50}", "type": "color", "description": "No gradients in wireframe" },
+      "end": { "value": "{neutral.50}", "type": "color", "description": "No gradients in wireframe" }
     }
   },
   "text": {
-    "default": { "value": "{neutral.0}", "type": "color", "description": "Primary text" },
-    "primary": { "value": "{neutral.0}", "type": "color", "description": "Primary text (alias)" },
-    "secondary": { "value": "{navy.200}", "type": "color", "description": "Secondary text" },
-    "muted": { "value": "{navy.300}", "type": "color", "description": "Helper/secondary text" },
-    "subtle": { "value": "{navy.400}", "type": "color", "description": "Placeholder text" },
-    "inverse": { "value": "{navy.900}", "type": "color", "description": "Text on light backgrounds" },
-    "link": { "value": "{orange.400}", "type": "color", "description": "Link text" },
-    "linkHover": { "value": "{orange.300}", "type": "color", "description": "Link hover" },
-    "linkVisited": { "value": "{purple.400}", "type": "color", "description": "Visited link" },
-    "heading": { "value": "{neutral.0}", "type": "color", "description": "Heading text" }
+    "default": { "value": "{neutral.900}", "type": "color", "description": "Ink" },
+    "primary": { "value": "{neutral.900}", "type": "color", "description": "Ink" },
+    "secondary": { "value": "{neutral.700}", "type": "color", "description": "Secondary text" },
+    "muted": { "value": "{neutral.500}", "type": "color", "description": "Helper text" },
+    "subtle": { "value": "{neutral.400}", "type": "color", "description": "Placeholder text" },
+    "inverse": { "value": "{neutral.0}", "type": "color", "description": "Text on dark backgrounds" },
+    "link": { "value": "{neutral.900}", "type": "color", "description": "Link text (underlined in CSS)" },
+    "linkHover": { "value": "{neutral.700}", "type": "color", "description": "Link hover" },
+    "linkVisited": { "value": "{neutral.700}", "type": "color", "description": "Visited link" },
+    "heading": { "value": "{neutral.900}", "type": "color", "description": "Heading text" }
   },
   "border": {
-    "subtle": { "value": "{navy.700}", "type": "color", "description": "Subtle borders" },
-    "default": { "value": "{navy.600}", "type": "color", "description": "Default borders" },
-    "strong": { "value": "{navy.500}", "type": "color", "description": "Emphasized borders" },
-    "focus": { "value": "{orange.500}", "type": "color", "description": "Focus ring color" },
+    "subtle": { "value": "{neutral.300}", "type": "color", "description": "Subtle borders" },
+    "default": { "value": "{neutral.900}", "type": "color", "description": "Default borders (hand-drawn ink)" },
+    "strong": { "value": "{neutral.900}", "type": "color", "description": "Emphasized borders" },
+    "focus": { "value": "{neutral.900}", "type": "color", "description": "Focus ring color" },
     "vibrant": {
-      "start": { "value": "{orange.500}", "type": "color", "description": "Vibrant gradient border start" },
-      "end": { "value": "{amber.600}", "type": "color", "description": "Vibrant gradient border end" }
+      "start": { "value": "{neutral.900}", "type": "color", "description": "Wireframe: solid ink, no gradient" },
+      "end": { "value": "{neutral.900}", "type": "color", "description": "Wireframe: solid ink, no gradient" }
     }
   },
   "feedback": {
-    "success": { "value": "{green.500}", "type": "color", "description": "Success state" },
-    "successSubtle": { "value": "rgba(34, 197, 94, 0.15)", "type": "color", "description": "Success background" },
-    "successEmphasis": { "value": "{green.400}", "type": "color", "description": "Success text" },
-    "warning": { "value": "{yellow.500}", "type": "color", "description": "Warning state" },
-    "warningSubtle": { "value": "rgba(234, 179, 8, 0.15)", "type": "color", "description": "Warning background" },
-    "warningEmphasis": { "value": "{yellow.400}", "type": "color", "description": "Warning text" },
-    "error": { "value": "{red.500}", "type": "color", "description": "Error state" },
-    "errorSubtle": { "value": "rgba(239, 68, 68, 0.15)", "type": "color", "description": "Error background" },
-    "errorEmphasis": { "value": "{red.400}", "type": "color", "description": "Error text" },
-    "info": { "value": "{blue.500}", "type": "color", "description": "Info state" },
-    "infoSubtle": { "value": "rgba(59, 130, 246, 0.15)", "type": "color", "description": "Info background" },
-    "infoEmphasis": { "value": "{blue.400}", "type": "color", "description": "Info text" }
+    "success": { "value": "{neutral.900}", "type": "color", "description": "Wireframe: monochrome feedback (position/label conveys intent)" },
+    "successSubtle": { "value": "{neutral.100}", "type": "color", "description": "Success background" },
+    "successEmphasis": { "value": "{neutral.900}", "type": "color", "description": "Success text" },
+    "warning": { "value": "{neutral.900}", "type": "color", "description": "Wireframe: monochrome" },
+    "warningSubtle": { "value": "{neutral.100}", "type": "color", "description": "Warning background" },
+    "warningEmphasis": { "value": "{neutral.900}", "type": "color", "description": "Warning text" },
+    "error": { "value": "{neutral.900}", "type": "color", "description": "Wireframe: monochrome" },
+    "errorSubtle": { "value": "{neutral.100}", "type": "color", "description": "Error background" },
+    "errorEmphasis": { "value": "{neutral.900}", "type": "color", "description": "Error text" },
+    "info": { "value": "{neutral.900}", "type": "color", "description": "Wireframe: monochrome" },
+    "infoSubtle": { "value": "{neutral.100}", "type": "color", "description": "Info background" },
+    "infoEmphasis": { "value": "{neutral.900}", "type": "color", "description": "Info text" }
   },
   "accent": {
     "gradient": {
-      "start": { "value": "{orange.500}", "type": "color", "description": "Accent gradient start" },
-      "end": { "value": "{amber.500}", "type": "color", "description": "Accent gradient end" },
-      "hoverStart": { "value": "{orange.400}", "type": "color", "description": "Accent gradient hover start" },
-      "hoverEnd": { "value": "{amber.400}", "type": "color", "description": "Accent gradient hover end" }
+      "start": { "value": "{neutral.900}", "type": "color", "description": "Wireframe: solid ink" },
+      "end": { "value": "{neutral.900}", "type": "color", "description": "Wireframe: solid ink" },
+      "hoverStart": { "value": "{neutral.700}", "type": "color", "description": "Wireframe hover" },
+      "hoverEnd": { "value": "{neutral.700}", "type": "color", "description": "Wireframe hover" }
     }
   },
   "intent": {
     "action": {
-      "default": { "value": "{orange.500}", "type": "color", "description": "Primary CTA color" },
-      "hover": { "value": "{orange.400}", "type": "color", "description": "Primary CTA hover" },
-      "active": { "value": "{orange.600}", "type": "color", "description": "Primary CTA pressed" },
-      "disabled": { "value": "{navy.600}", "type": "color", "description": "Disabled state" }
+      "default": { "value": "{neutral.900}", "type": "color", "description": "Primary CTA color" },
+      "hover": { "value": "{neutral.700}", "type": "color", "description": "Primary CTA hover" },
+      "active": { "value": "{neutral.900}", "type": "color", "description": "Primary CTA pressed" },
+      "disabled": { "value": "{neutral.400}", "type": "color", "description": "Disabled state" }
     },
     "secondary": {
       "default": { "value": "transparent", "type": "color", "description": "Secondary action bg" },
-      "hover": { "value": "{navy.700}", "type": "color", "description": "Secondary action hover" },
-      "border": { "value": "{navy.500}", "type": "color", "description": "Secondary action border" }
+      "hover": { "value": "{neutral.100}", "type": "color", "description": "Secondary action hover" },
+      "border": { "value": "{neutral.900}", "type": "color", "description": "Secondary action border" }
     }
   },
   "focus": {
-    "ring": { "value": "{orange.500}", "type": "color", "description": "Focus ring color" }
+    "ring": { "value": "{neutral.900}", "type": "color", "description": "Focus ring color" }
   },
   "brand": {
-    "primary": { "value": "{navy.800}", "type": "color", "description": "Primary brand color" },
-    "secondary": { "value": "{orange.500}", "type": "color", "description": "Secondary brand color (CTA)" },
-    "accent": { "value": "{amber.400}", "type": "color", "description": "Accent brand color" },
-    "subtle": { "value": "{navy.700}", "type": "color", "description": "Subtle brand background" }
+    "primary": { "value": "{neutral.900}", "type": "color", "description": "Primary brand ink" },
+    "secondary": { "value": "{neutral.900}", "type": "color", "description": "Secondary brand ink" },
+    "accent": { "value": "{neutral.700}", "type": "color", "description": "Accent brand" },
+    "subtle": { "value": "{neutral.100}", "type": "color", "description": "Subtle brand background" }
   },
   "gradient": {
     "success": {
-      "start": { "value": "{green.500}", "type": "color", "description": "Success gradient start" },
-      "end": { "value": "{green.400}", "type": "color", "description": "Success gradient end" }
+      "start": { "value": "{neutral.900}", "type": "color", "description": "Wireframe: solid ink" },
+      "end": { "value": "{neutral.900}", "type": "color", "description": "Wireframe: solid ink" }
     },
     "streak": {
-      "start": { "value": "{green.500}", "type": "color", "description": "Streak gradient start (success green)" },
-      "end": { "value": "{yellow.500}", "type": "color", "description": "Streak gradient end (warning yellow)" }
+      "start": { "value": "{neutral.900}", "type": "color", "description": "Wireframe: solid ink" },
+      "end": { "value": "{neutral.900}", "type": "color", "description": "Wireframe: solid ink" }
     }
   }
 }

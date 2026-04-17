@@ -18,15 +18,22 @@ $c: hero;
 }
 
 .#{$c}--has-bg {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0 12px,
+    rgba(23, 23, 23, 0.15) 12px 13px
+  );
+  border: 1.5px solid var(--border-default, $border-default);
 }
 
 .#{$c}__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%);
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent 0 14px,
+    rgba(23, 23, 23, 0.12) 14px 15px
+  );
   z-index: 1;
 }
 

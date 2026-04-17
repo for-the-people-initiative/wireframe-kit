@@ -3,41 +3,55 @@
     <div v-if="title" class="chart__title">{{ title }}</div>
 
     <div class="chart__wrapper" :style="wrapperStyle">
-      <!-- Loading state -->
-      <div v-if="isLoading" class="chart__loading">
-        <svg class="chart__spinner" viewBox="0 0 24 24" fill="none">
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-            stroke="currentColor"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-dasharray="31.4 31.4"
-          />
-        </svg>
-      </div>
+      <div v-if="isLoading" class="chart__loading">Loading…</div>
 
-      <!-- Empty state -->
       <div v-else-if="!hasData" class="chart__empty">
-        <svg class="chart__empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M3 3v18h18" />
-          <path d="M18 17V9" />
-          <path d="M13 17V5" />
-          <path d="M8 17v-3" />
-        </svg>
         <span class="chart__empty-text">
           <slot name="empty">No data available</slot>
         </span>
       </div>
 
-      <!-- Chart canvas -->
-      <canvas
+      <svg
         v-else
-        ref="canvasRef"
-        class="chart__canvas"
-        @click="onCanvasClick"
-      />
+        class="chart__stub"
+        viewBox="0 0 200 120"
+        preserveAspectRatio="none"
+        role="img"
+        :aria-label="`${type} chart placeholder`"
+      >
+        <!-- Axes -->
+        <polyline
+          class="chart__stub-axis"
+          points="20,10 20,100 190,100"
+          fill="none"
+        />
+
+        <!-- Content per type -->
+        <template v-if="type === 'line' || type === 'area'">
+          <polyline
+            class="chart__stub-line"
+            points="20,80 50,55 80,65 110,30 140,45 170,20 190,35"
+            fill="none"
+          />
+        </template>
+        <template v-else-if="type === 'pie' || type === 'doughnut'">
+          <circle class="chart__stub-pie" cx="105" cy="55" r="38" fill="none" />
+          <line class="chart__stub-pie" x1="105" y1="55" x2="143" y2="55" />
+          <line class="chart__stub-pie" x1="105" y1="55" x2="85" y2="20" />
+          <line class="chart__stub-pie" x1="105" y1="55" x2="75" y2="85" />
+        </template>
+        <template v-else>
+          <rect class="chart__stub-bar" x="35" y="60" width="18" height="40" />
+          <rect class="chart__stub-bar" x="65" y="40" width="18" height="60" />
+          <rect class="chart__stub-bar" x="95" y="25" width="18" height="75" />
+          <rect class="chart__stub-bar" x="125" y="55" width="18" height="45" />
+          <rect class="chart__stub-bar" x="155" y="35" width="18" height="65" />
+        </template>
+
+        <text x="105" y="116" class="chart__stub-label" text-anchor="middle">
+          [ {{ type }} chart ]
+        </text>
+      </svg>
     </div>
   </div>
 </template>
@@ -45,15 +59,15 @@
 <style src="./Chart.scss"></style>
 
 <script setup lang="ts">
-import type { ChartProps, ChartEmits } from '../../types';
-import { computed, ref, watch, onMounted, onUnmounted, nextTick } from "vue";
+import type { ChartProps } from '../../types';
+import { computed } from 'vue';
 
 defineOptions({ name: 'FtpChart' });
 
-const emit = defineEmits(["select", "loaded"]);
+const emit = defineEmits(['select', 'loaded']);
 
 const props = withDefaults(defineProps<ChartProps>(), {
-  type: "bar",
+  type: 'bar',
   data: null,
   options: null,
   plugins: () => [],
@@ -63,17 +77,13 @@ const props = withDefaults(defineProps<ChartProps>(), {
   height: null,
 });
 
-const canvasRef = ref(null);
-let chartInstance: any = null;
-let ChartJS: any = null;
-
 const additionalClasses = computed(() =>
   [
     `chart--type-${props.type}`,
-    props.isLoading && "chart--loading",
+    props.isLoading && 'chart--loading',
   ]
     .filter(Boolean)
-    .join(" ")
+    .join(' ')
 );
 
 const hasData = computed(() => {
@@ -87,119 +97,21 @@ const hasData = computed(() => {
 const wrapperStyle = computed(() => {
   const style: Record<string, string> = {};
   if (props.width) {
-    style.width = typeof props.width === "number" ? `${props.width}px` : props.width;
+    style.width = typeof props.width === 'number' ? `${props.width}px` : props.width;
   }
   if (props.height) {
-    style.height = typeof props.height === "number" ? `${props.height}px` : props.height;
+    style.height = typeof props.height === 'number' ? `${props.height}px` : props.height;
   }
   return style;
 });
 
-async function initChart() {
-  if (!canvasRef.value || !hasData.value) return;
+// Wireframe mode: Chart.js is not used. The stub emits no select events, and
+// loaded fires once on mount for API compatibility.
+const refresh = () => {};
+const reinit = () => {};
+const getChart = () => null;
+const getBase64Image = () => null;
 
-  // Dynamically import Chart.js
-  if (!ChartJS) {
-    try {
-      const module = await import("chart.js/auto");
-      ChartJS = module.default || module.Chart;
-    } catch (e) {
-      console.error("Chart.js is required. Install it with: npm install chart.js");
-      return;
-    }
-  }
-
-  // Destroy existing chart if any
-  destroyChart();
-
-  // Create new chart
-  chartInstance = new ChartJS(canvasRef.value, {
-    type: props.type,
-    data: props.data,
-    options: props.options || {},
-    plugins: props.plugins,
-  });
-
-  emit("loaded", chartInstance);
-}
-
-function destroyChart() {
-  if (chartInstance) {
-    chartInstance.destroy();
-    chartInstance = null;
-  }
-}
-
-function onCanvasClick(event: MouseEvent) {
-  if (!chartInstance) return;
-
-  const elements = chartInstance.getElementsAtEventForMode(
-    event,
-    "nearest",
-    { intersect: true },
-    false
-  );
-
-  if (elements.length > 0) {
-    const { datasetIndex, index } = elements[0];
-    emit("select", {
-      originalEvent: event,
-      element: elements[0],
-      dataset: chartInstance.data.datasets[datasetIndex],
-      datasetIndex,
-      index,
-      value: chartInstance.data.datasets[datasetIndex].data[index],
-    });
-  }
-}
-
-/**
- * Refresh chart data
- */
-function refresh() {
-  if (chartInstance) {
-    chartInstance.update();
-  }
-}
-
-/**
- * Reinitialize the chart
- */
-function reinit() {
-  destroyChart();
-  nextTick(() => initChart());
-}
-
-/**
- * Get the Chart.js instance
- */
-function getChart() {
-  return chartInstance;
-}
-
-/**
- * Get chart as base64 image
- */
-function getBase64Image() {
-  return chartInstance ? chartInstance.toBase64Image() : null;
-}
-
-// Watch for data/type/options changes
-watch(() => props.data, () => reinit(), { deep: true });
-watch(() => props.type, () => reinit());
-watch(() => props.options, () => reinit(), { deep: true });
-
-onMounted(() => {
-  if (hasData.value) {
-    initChart();
-  }
-});
-
-onUnmounted(() => {
-  destroyChart();
-});
-
-// Expose methods
 defineExpose({
   refresh,
   reinit,

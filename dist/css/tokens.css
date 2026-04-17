@@ -8,74 +8,74 @@
 }
 
 :root {
-  --surface-canvas: #0a0e1f; /* Main page background */
-  --surface-panel: #11162d; /* Card/panel background */
-  --surface-elevated: #1a2244; /* Elevated surface (modals, dropdowns) */
-  --surface-overlay: rgba(0, 0, 0, 0.6); /* Modal overlay backdrop */
-  --surface-muted: #060813; /* Subtle/recessed background */
-  --surface-inverse: #ffffff; /* Light surface for contrast (tooltips) */
-  --surface-accent: #78350f; /* Warm accent surface for cards */
-  --surface-gradient-start: #060813; /* Gradient background start (top) */
-  --surface-gradient-end: #11162d; /* Gradient background end (bottom) */
-  --text-default: #ffffff; /* Primary text */
-  --text-primary: #ffffff; /* Primary text (alias) */
-  --text-secondary: #9ea5c2; /* Secondary text */
-  --text-muted: #7680a9; /* Helper/secondary text */
-  --text-subtle: #525d8f; /* Placeholder text */
-  --text-inverse: #0a0e1f; /* Text on light backgrounds */
-  --text-link: #fb923c; /* Link text */
-  --text-linkHover: #fdba74; /* Link hover */
-  --text-linkVisited: #a78bfa; /* Visited link */
-  --text-heading: #ffffff; /* Heading text */
-  --border-subtle: #1a2244; /* Subtle borders */
-  --border-default: #242e5c; /* Default borders */
-  --border-strong: #2e3b75; /* Emphasized borders */
-  --border-focus: #f97316; /* Focus ring color */
-  --border-vibrant-start: #f97316; /* Vibrant gradient border start */
-  --border-vibrant-end: #d97706; /* Vibrant gradient border end */
-  --feedback-success: #22c55e; /* Success state */
-  --feedback-successSubtle: rgba(34, 197, 94, 0.15); /* Success background */
-  --feedback-successEmphasis: #4ade80; /* Success text */
-  --feedback-warning: #eab308; /* Warning state */
-  --feedback-warningSubtle: rgba(234, 179, 8, 0.15); /* Warning background */
-  --feedback-warningEmphasis: #facc15; /* Warning text */
-  --feedback-error: #ef4444; /* Error state */
-  --feedback-errorSubtle: rgba(239, 68, 68, 0.15); /* Error background */
-  --feedback-errorEmphasis: #f87171; /* Error text */
-  --feedback-info: #3b82f6; /* Info state */
-  --feedback-infoSubtle: rgba(59, 130, 246, 0.15); /* Info background */
-  --feedback-infoEmphasis: #60a5fa; /* Info text */
-  --accent-gradient-start: #f97316; /* Accent gradient start */
-  --accent-gradient-end: #f59e0b; /* Accent gradient end */
-  --accent-gradient-hoverStart: #fb923c; /* Accent gradient hover start */
-  --accent-gradient-hoverEnd: #fbbf24; /* Accent gradient hover end */
-  --intent-action-default: #f97316; /* Primary CTA color */
-  --intent-action-hover: #fb923c; /* Primary CTA hover */
-  --intent-action-active: #ea580c; /* Primary CTA pressed */
-  --intent-action-disabled: #242e5c; /* Disabled state */
+  --surface-canvas: #fafafa; /* Paper background */
+  --surface-panel: #ffffff; /* Panel/card background */
+  --surface-elevated: #ffffff; /* Elevated surface (modals, dropdowns) */
+  --surface-overlay: rgba(23, 23, 23, 0.3); /* Modal overlay backdrop */
+  --surface-muted: #f5f5f5; /* Subtle/recessed background */
+  --surface-inverse: #171717; /* Dark surface for contrast (tooltips) */
+  --surface-accent: #f5f5f5; /* Accent fill (flat, no gradients in wireframe) */
+  --surface-gradient-start: #fafafa; /* No gradients in wireframe */
+  --surface-gradient-end: #fafafa; /* No gradients in wireframe */
+  --text-default: #171717; /* Ink */
+  --text-primary: #171717; /* Ink */
+  --text-secondary: #404040; /* Secondary text */
+  --text-muted: #737373; /* Helper text */
+  --text-subtle: #a3a3a3; /* Placeholder text */
+  --text-inverse: #ffffff; /* Text on dark backgrounds */
+  --text-link: #171717; /* Link text (underlined in CSS) */
+  --text-linkHover: #404040; /* Link hover */
+  --text-linkVisited: #404040; /* Visited link */
+  --text-heading: #171717; /* Heading text */
+  --border-subtle: #d4d4d4; /* Subtle borders */
+  --border-default: #171717; /* Default borders (hand-drawn ink) */
+  --border-strong: #171717; /* Emphasized borders */
+  --border-focus: #171717; /* Focus ring color */
+  --border-vibrant-start: #171717; /* Wireframe: solid ink, no gradient */
+  --border-vibrant-end: #171717; /* Wireframe: solid ink, no gradient */
+  --feedback-success: #171717; /* Wireframe: monochrome feedback (position/label conveys intent) */
+  --feedback-successSubtle: #f5f5f5; /* Success background */
+  --feedback-successEmphasis: #171717; /* Success text */
+  --feedback-warning: #171717; /* Wireframe: monochrome */
+  --feedback-warningSubtle: #f5f5f5; /* Warning background */
+  --feedback-warningEmphasis: #171717; /* Warning text */
+  --feedback-error: #171717; /* Wireframe: monochrome */
+  --feedback-errorSubtle: #f5f5f5; /* Error background */
+  --feedback-errorEmphasis: #171717; /* Error text */
+  --feedback-info: #171717; /* Wireframe: monochrome */
+  --feedback-infoSubtle: #f5f5f5; /* Info background */
+  --feedback-infoEmphasis: #171717; /* Info text */
+  --accent-gradient-start: #171717; /* Wireframe: solid ink */
+  --accent-gradient-end: #171717; /* Wireframe: solid ink */
+  --accent-gradient-hoverStart: #404040; /* Wireframe hover */
+  --accent-gradient-hoverEnd: #404040; /* Wireframe hover */
+  --intent-action-default: #171717; /* Primary CTA color */
+  --intent-action-hover: #404040; /* Primary CTA hover */
+  --intent-action-active: #171717; /* Primary CTA pressed */
+  --intent-action-disabled: #a3a3a3; /* Disabled state */
   --intent-secondary-default: transparent; /* Secondary action bg */
-  --intent-secondary-hover: #1a2244; /* Secondary action hover */
-  --intent-secondary-border: #2e3b75; /* Secondary action border */
-  --focus-ring: #f97316; /* Focus ring color */
-  --brand-primary: #11162d; /* Primary brand color */
-  --brand-secondary: #f97316; /* Secondary brand color (CTA) */
-  --brand-accent: #fbbf24; /* Accent brand color */
-  --brand-subtle: #1a2244; /* Subtle brand background */
-  --gradient-success-start: #22c55e; /* Success gradient start */
-  --gradient-success-end: #4ade80; /* Success gradient end */
-  --gradient-streak-start: #22c55e; /* Streak gradient start (success green) */
-  --gradient-streak-end: #eab308; /* Streak gradient end (warning yellow) */
+  --intent-secondary-hover: #f5f5f5; /* Secondary action hover */
+  --intent-secondary-border: #171717; /* Secondary action border */
+  --focus-ring: #171717; /* Focus ring color */
+  --brand-primary: #171717; /* Primary brand ink */
+  --brand-secondary: #171717; /* Secondary brand ink */
+  --brand-accent: #404040; /* Accent brand */
+  --brand-subtle: #f5f5f5; /* Subtle brand background */
+  --gradient-success-start: #171717; /* Wireframe: solid ink */
+  --gradient-success-end: #171717; /* Wireframe: solid ink */
+  --gradient-streak-start: #171717; /* Wireframe: solid ink */
+  --gradient-streak-end: #171717; /* Wireframe: solid ink */
   --radius-none: 0; /* No rounding */
   --radius-subtle: 2px; /* Subtle rounding */
   --radius-default: 5px; /* Default border radius */
   --radius-rounded: 8px; /* More rounded corners */
   --radius-large: 13px; /* Large radius for cards */
   --radius-pill: 9999px; /* Fully rounded (pills, circles) */
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.08); /* Subtle depth - hover states */
-  --shadow-s: 0 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08); /* Low elevation - cards, buttons */
-  --shadow-m: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08); /* Medium elevation - dropdowns */
-  --shadow-l: 0 8px 16px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08); /* High elevation - modals */
-  --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.08); /* Highest elevation - toasts */
+  --shadow-xs: none; /* Wireframe: no shadow */
+  --shadow-s: 2px 2px 0 #171717; /* Wireframe: flat offset ink */
+  --shadow-m: 3px 3px 0 #171717; /* Wireframe: flat offset ink */
+  --shadow-l: 4px 4px 0 #171717; /* Wireframe: flat offset ink */
+  --shadow-xl: 5px 5px 0 #171717; /* Wireframe: flat offset ink */
   --space-3xs: 2px; /* 2px */
   --space-2xs: 4px; /* 4px */
   --space-xs: 6px; /* 6px */
@@ -93,21 +93,21 @@
   --inline-xs: 4px; /* Inline (horizontal) gap 4px */
   --inline-s: 6px; /* Inline (horizontal) gap 6px */
   --accordion-header-padding: 16px; /* Header padding */
-  --accordion-header-background-default: #11162d; /* Header background */
+  --accordion-header-background-default: #ffffff; /* Header background */
   --accordion-header-background-hover: rgba(255, 255, 255, 0.05); /* Header hover background - semi-transparent for dark mode */
-  --accordion-header-background-active: #060813; /* Header active/expanded background */
-  --accordion-header-color-default: #ffffff; /* Header text color */
-  --accordion-header-color-hover: #ffffff; /* Header text color on hover */
-  --accordion-header-color-disabled: #7680a9; /* Header text color when disabled */
+  --accordion-header-background-active: #f5f5f5; /* Header active/expanded background */
+  --accordion-header-color-default: #171717; /* Header text color */
+  --accordion-header-color-hover: #171717; /* Header text color on hover */
+  --accordion-header-color-disabled: #737373; /* Header text color when disabled */
   --accordion-content-padding: 16px; /* Content padding */
-  --accordion-content-background: #0a0e1f; /* Content background */
-  --accordion-content-color: #ffffff; /* Content text color */
+  --accordion-content-background: #fafafa; /* Content background */
+  --accordion-content-color: #171717; /* Content text color */
   --accordion-border-width: 1px; /* Border width */
-  --accordion-border-color: #1a2244; /* Border color */
+  --accordion-border-color: #d4d4d4; /* Border color */
   --accordion-border-radius: 5px; /* Border radius */
   --accordion-icon-size: 16px; /* Toggle icon size */
-  --accordion-icon-color-default: #7680a9; /* Icon color */
-  --accordion-icon-color-hover: #ffffff; /* Icon color on hover */
+  --accordion-icon-color-default: #737373; /* Icon color */
+  --accordion-icon-color-hover: #171717; /* Icon color on hover */
   --accordion-icon-color-disabled: rgba(255, 255, 255, 0.25); /* Icon color when disabled */
   --accordion-icon-rotation-collapsed: 0deg; /* Icon rotation when collapsed */
   --accordion-icon-rotation-expanded: 180deg; /* Icon rotation when expanded */
@@ -123,49 +123,49 @@
   --autocomplete-border-width: 1px;
   --autocomplete-border-color-default: #d4d4d4;
   --autocomplete-border-color-hover: #a3a3a3;
-  --autocomplete-border-color-focus: #11162d;
+  --autocomplete-border-color-focus: #171717;
   --autocomplete-border-color-disabled: #e5e5e5;
-  --autocomplete-border-color-error: #ef4444;
-  --autocomplete-background-default: #0a0e1f;
+  --autocomplete-border-color-error: #171717;
+  --autocomplete-background-default: #fafafa;
   --autocomplete-background-disabled: #f5f5f5;
-  --autocomplete-text-default: #ffffff;
-  --autocomplete-text-placeholder: #7680a9;
-  --autocomplete-text-disabled: #7680a9;
+  --autocomplete-text-default: #171717;
+  --autocomplete-text-placeholder: #737373;
+  --autocomplete-text-disabled: #737373;
   --autocomplete-fontSize-sm: 14px;
   --autocomplete-fontSize-md: 15px;
   --autocomplete-fontSize-lg: 16px;
-  --autocomplete-dropdown-background: #0a0e1f;
+  --autocomplete-dropdown-background: #fafafa;
   --autocomplete-dropdown-border: #e5e5e5;
-  --autocomplete-dropdown-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+  --autocomplete-dropdown-shadow: 3px 3px 0 #171717;
   --autocomplete-dropdown-radius: 5px;
   --autocomplete-dropdown-maxHeight: 280px;
   --autocomplete-option-padding-x: 16px;
   --autocomplete-option-padding-y: 10px;
   --autocomplete-option-background-default: transparent;
   --autocomplete-option-background-hover: #f5f5f5;
-  --autocomplete-option-background-selected: #11162d;
-  --autocomplete-option-text-default: #ffffff;
+  --autocomplete-option-background-selected: #171717;
+  --autocomplete-option-text-default: #171717;
   --autocomplete-option-text-selected: #ffffff;
   --autocomplete-chip-padding-x: 10px;
   --autocomplete-chip-padding-y: 4px;
   --autocomplete-chip-gap: 4px;
   --autocomplete-chip-radius: 9999px;
-  --autocomplete-chip-background-default: #060813;
+  --autocomplete-chip-background-default: #f5f5f5;
   --autocomplete-chip-background-hover: #e5e5e5;
-  --autocomplete-chip-text: #ffffff;
+  --autocomplete-chip-text: #171717;
   --autocomplete-chip-fontSize: 13px;
   --autocomplete-remove-size: 14px;
-  --autocomplete-remove-color-default: #7680a9;
-  --autocomplete-remove-color-hover: #ffffff;
+  --autocomplete-remove-color-default: #737373;
+  --autocomplete-remove-color-hover: #171717;
   --autocomplete-focus-ringWidth: 2px;
-  --autocomplete-focus-ringColor: #11162d;
+  --autocomplete-focus-ringColor: #171717;
   --autocomplete-focus-ringOffset: 1px;
   --autocomplete-loader-size: 16px;
   --autocomplete-loader-color: #a3a3a3;
   --avatar-background-default: #e5e5e5; /* Default avatar background */
   --avatar-background-muted: #f5f5f5; /* Subtle avatar background */
   --avatar-background-brand: #242e5c; /* Brand-colored avatar */
-  --avatar-background-accent: #0a0e1f; /* Warm accent avatar */
+  --avatar-background-accent: #fafafa; /* Warm accent avatar */
   --avatar-background-success: #22c55e; /* Success state avatar */
   --avatar-background-warning: #f59e0b; /* Warning state avatar */
   --avatar-background-error: #ef4444; /* Error state avatar */
@@ -204,17 +204,17 @@
   --avatar-status-away: #f59e0b;
   --avatar-group-overlap: -8px; /* Overlap amount for avatar groups */
   --avatar-group-ringWidth: 2px; /* Ring width in groups */
-  --avatar-group-ringColor: #0a0e1f; /* Ring color matches canvas */
+  --avatar-group-ringColor: #fafafa; /* Ring color matches canvas */
   --badge-background-primary: #f97316; /* Primary badge background - visible accent color */
-  --badge-background-success: #22c55e; /* Success badge background */
-  --badge-background-warning: #eab308; /* Warning badge background */
-  --badge-background-danger: #ef4444; /* Danger badge background */
-  --badge-background-info: #3b82f6; /* Info badge background */
+  --badge-background-success: #171717; /* Success badge background */
+  --badge-background-warning: #171717; /* Warning badge background */
+  --badge-background-danger: #171717; /* Danger badge background */
+  --badge-background-info: #171717; /* Info badge background */
   --badge-text-primary: #ffffff; /* Text on primary badge - white */
-  --badge-text-success: #0a0e1f; /* Text on success badge */
+  --badge-text-success: #ffffff; /* Text on success badge */
   --badge-text-warning: #171717; /* Text on warning badge (dark for contrast) */
-  --badge-text-danger: #0a0e1f; /* Text on danger badge */
-  --badge-text-info: #0a0e1f; /* Text on info badge */
+  --badge-text-danger: #ffffff; /* Text on danger badge */
+  --badge-text-info: #ffffff; /* Text on info badge */
   --badge-size-sm: 16px; /* Small badge min height */
   --badge-size-md: 20px; /* Medium badge min height */
   --badge-size-lg: 24px; /* Large badge min height */
@@ -226,24 +226,24 @@
   --badge-padding-lg: 10px; /* Large badge horizontal padding */
   --badge-radius: 9999px; /* Badge border radius (pill shape) */
   --badge-fontWeight: 600; /* Badge font weight */
-  --block-ui-overlay-background: rgba(0, 0, 0, 0.6); /* Blocking overlay background */
+  --block-ui-overlay-background: rgba(23, 23, 23, 0.3); /* Blocking overlay background */
   --block-ui-overlay-zIndex: 1000; /* Overlay z-index */
   --block-ui-spinner-size: 48px; /* Loading spinner size */
-  --block-ui-spinner-color: #11162d; /* Spinner color */
+  --block-ui-spinner-color: #171717; /* Spinner color */
   --block-ui-spinner-borderWidth: 4px; /* Spinner border width */
   --block-ui-transition-duration: 200ms; /* Overlay fade transition */
   --breadcrumb-gap: 6px; /* Gap between breadcrumb items and separators */
-  --breadcrumb-separator-color: #7680a9; /* Separator icon/text color */
+  --breadcrumb-separator-color: #737373; /* Separator icon/text color */
   --breadcrumb-separator-size: 12px; /* Separator icon size */
-  --breadcrumb-link-color-default: #7680a9; /* Default link color */
-  --breadcrumb-link-color-hover: #fb923c; /* Link hover color */
-  --breadcrumb-link-color-current: #ffffff; /* Current/active item color */
+  --breadcrumb-link-color-default: #737373; /* Default link color */
+  --breadcrumb-link-color-hover: #171717; /* Link hover color */
+  --breadcrumb-link-color-current: #171717; /* Current/active item color */
   --breadcrumb-icon-size: 16px; /* Icon size in breadcrumb items */
   --breadcrumb-icon-gap: 4px; /* Gap between icon and label */
   --breadcrumb-fontSize: 14px; /* Breadcrumb text size */
-  --button-background-primary-default: #f97316; /* Primary button background */
-  --button-background-primary-hover: #fb923c; /* Primary button hover background */
-  --button-background-primary-active: #ea580c; /* Primary button active/pressed background */
+  --button-background-primary-default: #171717; /* Primary button background */
+  --button-background-primary-hover: #404040; /* Primary button hover background */
+  --button-background-primary-active: #171717; /* Primary button active/pressed background */
   --button-background-primary-disabled: #1a2244; /* Primary button disabled background */
   --button-background-secondary-default: #11162d; /* Secondary button background */
   --button-background-secondary-hover: #1a2244; /* Secondary button hover background */
@@ -262,23 +262,23 @@
   --button-text-primary-default: #ffffff; /* Primary button text color - white */
   --button-text-primary-shadow: 0 0 2px rgba(0, 0, 0, 0.3); /* Primary button text shadow glow */
   --button-text-primary-disabled: #a3a3a3; /* Primary button disabled text color */
-  --button-text-secondary-default: #ffffff; /* Secondary button text color */
+  --button-text-secondary-default: #171717; /* Secondary button text color */
   --button-text-secondary-disabled: #2e3b75; /* Secondary button disabled text color */
-  --button-text-outlined-default: #ffffff; /* Outlined button text color */
+  --button-text-outlined-default: #171717; /* Outlined button text color */
   --button-text-outlined-disabled: #2e3b75; /* Outlined button disabled text color */
-  --button-text-text-default: #ffffff; /* Text button text color */
+  --button-text-text-default: #171717; /* Text button text color */
   --button-text-text-disabled: #2e3b75; /* Text button disabled text color */
-  --button-border-primary-default: #f97316; /* Primary button border */
-  --button-border-primary-hover: #fb923c; /* Primary button hover border */
-  --button-border-primary-active: #ea580c; /* Primary button active border */
+  --button-border-primary-default: #171717; /* Primary button border */
+  --button-border-primary-hover: #404040; /* Primary button hover border */
+  --button-border-primary-active: #171717; /* Primary button active border */
   --button-border-primary-disabled: #e5e5e5; /* Primary button disabled border */
   --button-border-secondary-default: transparent; /* Secondary button border (gradient via pseudo-element) */
   --button-border-secondary-hover: transparent; /* Secondary button hover border */
   --button-border-secondary-active: transparent; /* Secondary button active border */
   --button-border-secondary-disabled: #242e5c; /* Secondary button disabled border */
-  --button-border-outlined-default: #11162d; /* Outlined button border */
-  --button-border-outlined-hover: #11162d; /* Outlined button hover border */
-  --button-border-outlined-active: #11162d; /* Outlined button active border */
+  --button-border-outlined-default: #171717; /* Outlined button border */
+  --button-border-outlined-hover: #171717; /* Outlined button hover border */
+  --button-border-outlined-active: #171717; /* Outlined button active border */
   --button-border-outlined-disabled: #d4d4d4; /* Outlined button disabled border */
   --button-border-text-default: transparent; /* Text button border */
   --button-border-text-hover: transparent; /* Text button hover border */
@@ -306,44 +306,44 @@
   --button-size-lg-iconSize: 20px; /* Large button icon size */
   --button-size-lg-gap: 10px; /* Large button gap between icon and label */
   --button-fontWeight: 600; /* Button font weight */
-  --button-focus-ringColor: #f97316; /* Button focus ring color */
+  --button-focus-ringColor: #171717; /* Button focus ring color */
   --button-focus-ringWidth: 2px; /* Button focus ring width */
   --button-focus-ringOffset: 2px; /* Button focus ring offset */
   --button-transition-duration: 150ms; /* Button transition duration */
   --calendar-width: 280px;
   --calendar-padding: 16px;
   --calendar-radius: 5px;
-  --calendar-background: #0a0e1f;
+  --calendar-background: #fafafa;
   --calendar-border-width: 1px;
   --calendar-border-color: #e5e5e5;
-  --calendar-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+  --calendar-shadow: 3px 3px 0 #171717;
   --calendar-header-padding: 10px;
   --calendar-header-gap: 10px;
-  --calendar-header-text: #ffffff;
+  --calendar-header-text: #171717;
   --calendar-header-fontSize: 16px;
   --calendar-header-fontWeight: 600;
   --calendar-nav-size: 32px;
   --calendar-nav-radius: 5px;
   --calendar-nav-background-default: transparent;
   --calendar-nav-background-hover: #f5f5f5;
-  --calendar-nav-color-default: #7680a9;
-  --calendar-nav-color-hover: #ffffff;
+  --calendar-nav-color-default: #737373;
+  --calendar-nav-color-hover: #171717;
   --calendar-weekday-padding: 6px;
-  --calendar-weekday-text: #7680a9;
+  --calendar-weekday-text: #737373;
   --calendar-weekday-fontSize: 12px;
   --calendar-weekday-fontWeight: 500;
   --calendar-day-size: 36px;
   --calendar-day-radius: 5px;
   --calendar-day-fontSize: 14px;
-  --calendar-day-text-default: #ffffff;
-  --calendar-day-text-muted: #7680a9;
+  --calendar-day-text-default: #171717;
+  --calendar-day-text-muted: #737373;
   --calendar-day-text-selected: #ffffff;
-  --calendar-day-text-today: #11162d;
+  --calendar-day-text-today: #171717;
   --calendar-day-background-default: transparent;
   --calendar-day-background-hover: #f5f5f5;
-  --calendar-day-background-selected: #11162d;
+  --calendar-day-background-selected: #171717;
   --calendar-day-background-today: transparent;
-  --calendar-day-background-range: #78350f;
+  --calendar-day-background-range: #f5f5f5;
   --calendar-input-height-sm: 32px;
   --calendar-input-height-md: 40px;
   --calendar-input-height-lg: 48px;
@@ -354,91 +354,91 @@
   --calendar-input-radius: 5px;
   --calendar-input-border-color-default: #d4d4d4;
   --calendar-input-border-color-hover: #a3a3a3;
-  --calendar-input-border-color-focus: #11162d;
+  --calendar-input-border-color-focus: #171717;
   --calendar-input-border-color-disabled: #e5e5e5;
-  --calendar-input-border-color-error: #ef4444;
-  --calendar-input-background-default: #0a0e1f;
+  --calendar-input-border-color-error: #171717;
+  --calendar-input-background-default: #fafafa;
   --calendar-input-background-disabled: #f5f5f5;
-  --calendar-input-text-default: #ffffff;
-  --calendar-input-text-placeholder: #7680a9;
-  --calendar-input-text-disabled: #7680a9;
+  --calendar-input-text-default: #171717;
+  --calendar-input-text-placeholder: #737373;
+  --calendar-input-text-disabled: #737373;
   --calendar-focus-ringWidth: 2px;
-  --calendar-focus-ringColor: #11162d;
+  --calendar-focus-ringColor: #171717;
   --calendar-focus-ringOffset: 1px;
-  --card-background: #11162d; /* Card background color */
-  --card-border-color: #1a2244; /* Card border color */
+  --card-background: #ffffff; /* Card background color */
+  --card-border-color: #d4d4d4; /* Card border color */
   --card-border-width: 1px; /* Card border width */
   --card-highlighted-border-start: #f97316; /* Highlighted card border - vibrant orange */
   --card-highlighted-border-end: #fb923c; /* Highlighted card border end - bright orange */
   --card-highlighted-border-width: 2px; /* Highlighted card border width */
   --card-highlighted-glow: 0 0 15px rgba(249, 115, 22, 0.5), 0 0 30px rgba(249, 115, 22, 0.3), 0 0 45px rgba(249, 115, 22, 0.15); /* Highlighted card glow effect - vibrant orange */
   --card-radius: 13px; /* Card border radius */
-  --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08); /* Card shadow */
+  --card-shadow: 2px 2px 0 #171717; /* Card shadow */
   --card-padding: 26px; /* Card inner padding */
   --card-header-padding: 16px; /* Header section padding */
-  --card-header-borderColor: #1a2244; /* Header bottom border color */
+  --card-header-borderColor: #d4d4d4; /* Header bottom border color */
   --card-header-borderWidth: 1px; /* Header bottom border width */
   --card-body-padding: 26px; /* Body section padding */
   --card-body-gap: 10px; /* Gap between caption and content */
-  --card-title-color: #ffffff; /* Title text color */
+  --card-title-color: #171717; /* Title text color */
   --card-title-fontSize: 18px; /* Title font size */
   --card-title-fontWeight: 600; /* Title font weight */
   --card-title-lineHeight: 1.4; /* Title line height */
-  --card-subtitle-color: #7680a9; /* Subtitle text color */
+  --card-subtitle-color: #737373; /* Subtitle text color */
   --card-subtitle-fontSize: 14px; /* Subtitle font size */
   --card-subtitle-fontWeight: 400; /* Subtitle font weight */
   --card-subtitle-marginTop: 4px; /* Space between title and subtitle */
-  --card-content-color: #ffffff; /* Content text color */
+  --card-content-color: #171717; /* Content text color */
   --card-footer-padding: 16px; /* Footer section padding */
-  --card-footer-borderColor: #1a2244; /* Footer top border color */
+  --card-footer-borderColor: #d4d4d4; /* Footer top border color */
   --card-footer-borderWidth: 1px; /* Footer top border width */
-  --carousel-container-background: #11162d; /* Carousel container background */
+  --carousel-container-background: #ffffff; /* Carousel container background */
   --carousel-container-radius: 5px; /* Carousel container border radius */
   --carousel-content-gap: 16px; /* Gap between carousel items */
   --carousel-content-padding: 16px; /* Content area padding */
-  --carousel-item-background: #0a0e1f; /* Carousel item background */
+  --carousel-item-background: #fafafa; /* Carousel item background */
   --carousel-item-radius: 5px; /* Carousel item border radius */
   --carousel-item-padding: 10px; /* Carousel item padding */
   --carousel-navigator-size: 40px; /* Navigator button size */
   --carousel-navigator-iconSize: 20px; /* Navigator icon size */
-  --carousel-navigator-background-default: #11162d; /* Navigator button background */
-  --carousel-navigator-background-hover: #060813; /* Navigator button hover background */
-  --carousel-navigator-background-disabled: #060813; /* Navigator button disabled background */
-  --carousel-navigator-color-default: #ffffff; /* Navigator icon color */
-  --carousel-navigator-color-hover: #11162d; /* Navigator icon hover color */
-  --carousel-navigator-color-disabled: #525d8f; /* Navigator icon disabled color */
-  --carousel-navigator-border-color: #1a2244; /* Navigator button border color */
+  --carousel-navigator-background-default: #ffffff; /* Navigator button background */
+  --carousel-navigator-background-hover: #f5f5f5; /* Navigator button hover background */
+  --carousel-navigator-background-disabled: #f5f5f5; /* Navigator button disabled background */
+  --carousel-navigator-color-default: #171717; /* Navigator icon color */
+  --carousel-navigator-color-hover: #171717; /* Navigator icon hover color */
+  --carousel-navigator-color-disabled: #a3a3a3; /* Navigator icon disabled color */
+  --carousel-navigator-border-color: #d4d4d4; /* Navigator button border color */
   --carousel-navigator-border-width: 1px; /* Navigator button border width */
   --carousel-navigator-radius: 50%; /* Navigator button border radius */
-  --carousel-navigator-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08); /* Navigator button shadow */
+  --carousel-navigator-shadow: 2px 2px 0 #171717; /* Navigator button shadow */
   --carousel-indicator-size: 10px; /* Indicator dot size */
   --carousel-indicator-gap: 6px; /* Gap between indicators */
   --carousel-indicator-marginTop: 16px; /* Space above indicators */
   --carousel-indicator-background-default: #d4d4d4; /* Indicator background */
-  --carousel-indicator-background-active: #11162d; /* Active indicator background */
+  --carousel-indicator-background-active: #171717; /* Active indicator background */
   --carousel-indicator-background-hover: #a3a3a3; /* Indicator hover background */
   --carousel-transition-duration: 300ms; /* Slide transition duration */
-  --chart-container-background: #11162d; /* Chart container background */
+  --chart-container-background: #ffffff; /* Chart container background */
   --chart-container-padding: 16px; /* Chart container padding */
   --chart-container-radius: 5px; /* Chart container border radius */
-  --chart-container-border-color: #1a2244; /* Chart container border color */
+  --chart-container-border-color: #d4d4d4; /* Chart container border color */
   --chart-container-border-width: 1px; /* Chart container border width */
-  --chart-title-color: #ffffff; /* Chart title color */
+  --chart-title-color: #171717; /* Chart title color */
   --chart-title-size: 16px; /* Chart title font size */
   --chart-title-weight: 600; /* Chart title font weight */
   --chart-title-marginBottom: 16px; /* Space below chart title */
   --chart-canvas-minHeight: 300px; /* Minimum chart canvas height */
   --chart-legend-gap: 16px; /* Gap between legend items */
   --chart-legend-item-gap: 6px; /* Gap between legend marker and text */
-  --chart-legend-item-color: #7680a9; /* Legend text color */
+  --chart-legend-item-color: #737373; /* Legend text color */
   --chart-legend-item-size: 13px; /* Legend text font size */
   --chart-legend-marker-size: 12px; /* Legend marker size */
   --chart-legend-marker-radius: 2px; /* Legend marker border radius */
-  --chart-loading-background: rgba(0, 0, 0, 0.6); /* Loading overlay background */
-  --chart-loading-spinnerColor: #11162d; /* Loading spinner color */
+  --chart-loading-background: rgba(23, 23, 23, 0.3); /* Loading overlay background */
+  --chart-loading-spinnerColor: #171717; /* Loading spinner color */
   --chart-loading-spinnerSize: 32px; /* Loading spinner size */
-  --chart-empty-textColor: #7680a9; /* Empty state text color */
-  --chart-empty-iconColor: #525d8f; /* Empty state icon color */
+  --chart-empty-textColor: #737373; /* Empty state text color */
+  --chart-empty-iconColor: #a3a3a3; /* Empty state icon color */
   --chart-empty-iconSize: 48px; /* Empty state icon size */
   --checkbox-size-sm: 16px; /* Small checkbox */
   --checkbox-size-md: 20px; /* Medium checkbox (default) */
@@ -453,15 +453,15 @@
   --checkbox-border-color-checked: #f97316; /* Accent color when checked */
   --checkbox-border-color-focus: #f97316;
   --checkbox-border-color-disabled: #1a2244;
-  --checkbox-border-color-error: #ef4444;
+  --checkbox-border-color-error: #171717;
   --checkbox-background-default: transparent; /* Transparent to show dark page background */
   --checkbox-background-checked: #f97316; /* Bright accent for visibility on dark backgrounds */
   --checkbox-background-disabled: #11162d;
   --checkbox-background-hover: #11162d;
   --checkbox-checkmark-color: #ffffff;
   --checkbox-label-gap: 10px;
-  --checkbox-label-color-default: #ffffff;
-  --checkbox-label-color-disabled: #7680a9;
+  --checkbox-label-color-default: #171717;
+  --checkbox-label-color-disabled: #737373;
   --checkbox-focus-ringWidth: 2px;
   --checkbox-focus-ringColor: #f97316;
   --checkbox-focus-ringOffset: 2px;
@@ -469,26 +469,26 @@
   --chip-padding-y: 4px; /* Vertical padding */
   --chip-gap: 4px; /* Gap between chip elements */
   --chip-radius: 9999px; /* Border radius (pill shape) */
-  --chip-background-default: #060813; /* Default chip background */
+  --chip-background-default: #f5f5f5; /* Default chip background */
   --chip-background-hover: #e5e5e5; /* Hover background for removable chips */
-  --chip-text-color: #ffffff; /* Chip text color */
+  --chip-text-color: #171717; /* Chip text color */
   --chip-text-fontSize: 14px; /* Chip text size */
   --chip-icon-size: 16px; /* Icon size */
-  --chip-icon-color: #7680a9; /* Icon color */
+  --chip-icon-color: #737373; /* Icon color */
   --chip-image-size: 24px; /* Avatar/image size */
   --chip-remove-size: 16px; /* Remove button size */
-  --chip-remove-color-default: #7680a9; /* Remove icon default color */
-  --chip-remove-color-hover: #ffffff; /* Remove icon hover color */
+  --chip-remove-color-default: #737373; /* Remove icon default color */
+  --chip-remove-color-hover: #171717; /* Remove icon hover color */
   --chip-remove-background-hover: #d4d4d4; /* Remove button hover background */
   --chip-remove-radius: 9999px; /* Remove button border radius */
   --color-picker-width: 240px;
   --color-picker-padding: 16px;
   --color-picker-gap: 16px;
   --color-picker-radius: 5px;
-  --color-picker-background: #0a0e1f;
+  --color-picker-background: #fafafa;
   --color-picker-border-width: 1px;
   --color-picker-border-color: #e5e5e5;
-  --color-picker-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+  --color-picker-shadow: 3px 3px 0 #171717;
   --color-picker-trigger-size-sm: 24px;
   --color-picker-trigger-size-md: 32px;
   --color-picker-trigger-size-lg: 40px;
@@ -496,7 +496,7 @@
   --color-picker-trigger-border-width: 1px;
   --color-picker-trigger-border-color-default: #d4d4d4;
   --color-picker-trigger-border-color-hover: #a3a3a3;
-  --color-picker-trigger-border-color-focus: #11162d;
+  --color-picker-trigger-border-color-focus: #171717;
   --color-picker-gradient-height: 150px;
   --color-picker-gradient-radius: 2px;
   --color-picker-hue-height: 12px;
@@ -504,67 +504,67 @@
   --color-picker-slider-size: 16px;
   --color-picker-slider-border-width: 2px;
   --color-picker-slider-border-color: #ffffff;
-  --color-picker-slider-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
+  --color-picker-slider-shadow: 2px 2px 0 #171717;
   --color-picker-input-height: 32px;
   --color-picker-input-padding-x: 10px;
   --color-picker-input-radius: 2px;
   --color-picker-input-fontSize: 13px;
-  --color-picker-input-background: #0a0e1f;
+  --color-picker-input-background: #fafafa;
   --color-picker-input-border-color: #d4d4d4;
-  --color-picker-input-text: #ffffff;
+  --color-picker-input-text: #171717;
   --color-picker-preset-size: 24px;
   --color-picker-preset-gap: 6px;
   --color-picker-preset-radius: 2px;
   --color-picker-preset-border-width: 2px;
   --color-picker-preset-border-color-default: transparent;
-  --color-picker-preset-border-color-selected: #11162d;
+  --color-picker-preset-border-color-selected: #171717;
   --color-picker-focus-ringWidth: 2px;
-  --color-picker-focus-ringColor: #11162d;
+  --color-picker-focus-ringColor: #171717;
   --color-picker-focus-ringOffset: 1px;
-  --column-group-header-background: #060813; /* Column group header background */
-  --column-group-header-borderColor: #1a2244; /* Column group header border color */
+  --column-group-header-background: #f5f5f5; /* Column group header background */
+  --column-group-header-borderColor: #d4d4d4; /* Column group header border color */
   --column-group-header-borderWidth: 1px; /* Column group header border width */
-  --column-group-footer-background: #060813; /* Column group footer background */
-  --column-group-footer-borderColor: #1a2244; /* Column group footer border color */
+  --column-group-footer-background: #f5f5f5; /* Column group footer background */
+  --column-group-footer-borderColor: #d4d4d4; /* Column group footer border color */
   --column-group-footer-borderWidth: 1px; /* Column group footer border width */
-  --column-group-row-borderColor: #1a2244; /* Row border color within group */
-  --column-header-background: #060813; /* Column header background color */
-  --column-header-color: #ffffff; /* Column header text color */
+  --column-group-row-borderColor: #d4d4d4; /* Row border color within group */
+  --column-header-background: #f5f5f5; /* Column header background color */
+  --column-header-color: #171717; /* Column header text color */
   --column-header-padding: 10px; /* Column header padding */
   --column-header-fontWeight: 600; /* Column header font weight */
   --column-header-fontSize: 13px; /* Column header font size */
-  --column-header-borderColor: #1a2244; /* Column header border color */
-  --column-body-background: #11162d; /* Column body background color */
-  --column-body-color: #ffffff; /* Column body text color */
+  --column-header-borderColor: #d4d4d4; /* Column header border color */
+  --column-body-background: #ffffff; /* Column body background color */
+  --column-body-color: #171717; /* Column body text color */
   --column-body-padding: 10px; /* Column body padding */
   --column-body-fontSize: 14px; /* Column body font size */
-  --column-body-borderColor: #1a2244; /* Column body border color */
-  --column-footer-background: #060813; /* Column footer background color */
-  --column-footer-color: #ffffff; /* Column footer text color */
+  --column-body-borderColor: #d4d4d4; /* Column body border color */
+  --column-footer-background: #f5f5f5; /* Column footer background color */
+  --column-footer-color: #171717; /* Column footer text color */
   --column-footer-padding: 10px; /* Column footer padding */
   --column-footer-fontWeight: 600; /* Column footer font weight */
-  --column-footer-borderColor: #1a2244; /* Column footer border color */
+  --column-footer-borderColor: #d4d4d4; /* Column footer border color */
   --column-sortIcon-color-default: #a3a3a3; /* Sort icon default color */
-  --column-sortIcon-color-active: #11162d; /* Sort icon active color */
+  --column-sortIcon-color-active: #171717; /* Sort icon active color */
   --column-sortIcon-size: 14px; /* Sort icon size */
   --confirmDialog-padding-header: 26px; /* Header section padding */
   --confirmDialog-padding-content: 26px; /* Content area padding */
   --confirmDialog-padding-footer: 26px; /* Footer section padding */
-  --confirmDialog-background-default: #0a0e1f; /* Dialog background color */
+  --confirmDialog-background-default: #fafafa; /* Dialog background color */
   --confirmDialog-radius: 13px; /* Dialog border radius */
-  --confirmDialog-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08); /* Dialog elevation shadow */
-  --confirmDialog-border-color: #1a2244; /* Dialog border color */
+  --confirmDialog-shadow: 4px 4px 0 #171717; /* Dialog elevation shadow */
+  --confirmDialog-border-color: #d4d4d4; /* Dialog border color */
   --confirmDialog-border-width: 1px; /* Dialog border width */
-  --confirmDialog-header-background: #0a0e1f; /* Header background */
-  --confirmDialog-header-borderColor: #1a2244; /* Header bottom border color */
-  --confirmDialog-header-title-color: #ffffff; /* Header title text color */
+  --confirmDialog-header-background: #fafafa; /* Header background */
+  --confirmDialog-header-borderColor: #d4d4d4; /* Header bottom border color */
+  --confirmDialog-header-title-color: #171717; /* Header title text color */
   --confirmDialog-icon-size: 48px; /* Icon size */
-  --confirmDialog-icon-color-warning: #eab308; /* Warning icon color */
-  --confirmDialog-icon-color-danger: #ef4444; /* Danger icon color */
-  --confirmDialog-icon-color-info: #3b82f6; /* Info icon color */
-  --confirmDialog-message-color: #ffffff; /* Message text color */
+  --confirmDialog-icon-color-warning: #171717; /* Warning icon color */
+  --confirmDialog-icon-color-danger: #171717; /* Danger icon color */
+  --confirmDialog-icon-color-info: #171717; /* Info icon color */
+  --confirmDialog-message-color: #171717; /* Message text color */
   --confirmDialog-message-fontSize: 16px; /* Message font size */
-  --confirmDialog-overlay-background: rgba(0, 0, 0, 0.6); /* Modal overlay backdrop color */
+  --confirmDialog-overlay-background: rgba(23, 23, 23, 0.3); /* Modal overlay backdrop color */
   --confirmDialog-width: 450px; /* Dialog width */
   --confirmDialog-zIndex-overlay: 1000; /* Overlay z-index */
   --confirmDialog-zIndex-dialog: 1001; /* Dialog z-index */
@@ -572,122 +572,122 @@
   --confirmDialog-gap-buttons: 10px; /* Gap between footer buttons */
   --confirmPopup-padding-x: 16px; /* Horizontal padding */
   --confirmPopup-padding-y: 10px; /* Vertical padding */
-  --confirmPopup-background: #0a0e1f; /* Popup background color */
+  --confirmPopup-background: #fafafa; /* Popup background color */
   --confirmPopup-radius: 5px; /* Popup border radius */
-  --confirmPopup-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08); /* Popup elevation shadow */
-  --confirmPopup-border-color: #1a2244; /* Popup border color */
+  --confirmPopup-shadow: 3px 3px 0 #171717; /* Popup elevation shadow */
+  --confirmPopup-border-color: #d4d4d4; /* Popup border color */
   --confirmPopup-border-width: 1px; /* Popup border width */
-  --confirmPopup-message-color: #ffffff; /* Message text color */
+  --confirmPopup-message-color: #171717; /* Message text color */
   --confirmPopup-message-fontSize: 14px; /* Message font size */
   --confirmPopup-icon-size: 20px; /* Icon size */
-  --confirmPopup-icon-color: #eab308; /* Icon color */
+  --confirmPopup-icon-color: #171717; /* Icon color */
   --confirmPopup-arrow-size: 8px; /* Arrow/pointer size */
   --confirmPopup-offset: 10px; /* Distance from target element */
   --confirmPopup-maxWidth: 300px; /* Maximum width */
   --confirmPopup-zIndex: 1100; /* Z-index for stacking */
   --confirmPopup-gap-content: 10px; /* Gap between icon/message and buttons */
   --confirmPopup-gap-buttons: 6px; /* Gap between buttons */
-  --context-menu-background: #1a2244; /* Context menu background */
-  --context-menu-border-color: #1a2244; /* Context menu border color */
+  --context-menu-background: #ffffff; /* Context menu background */
+  --context-menu-border-color: #d4d4d4; /* Context menu border color */
   --context-menu-border-width: 1px; /* Context menu border width */
   --context-menu-radius: 5px; /* Context menu border radius */
-  --context-menu-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08); /* Context menu elevation shadow */
+  --context-menu-shadow: 3px 3px 0 #171717; /* Context menu elevation shadow */
   --context-menu-padding-y: 4px; /* Vertical padding */
   --context-menu-minWidth: 180px; /* Minimum menu width */
   --context-menu-maxWidth: 320px; /* Maximum menu width */
   --context-menu-zIndex: 1100; /* Z-index for stacking */
   --context-menu-item-padding-x: 16px; /* Item horizontal padding */
   --context-menu-item-padding-y: 6px; /* Item vertical padding */
-  --context-menu-item-text-color-default: #ffffff; /* Item text color */
-  --context-menu-item-text-color-hover: #ffffff; /* Item hover text color */
-  --context-menu-item-text-color-disabled: #525d8f; /* Disabled item text color */
+  --context-menu-item-text-color-default: #171717; /* Item text color */
+  --context-menu-item-text-color-hover: #171717; /* Item hover text color */
+  --context-menu-item-text-color-disabled: #a3a3a3; /* Disabled item text color */
   --context-menu-item-text-fontSize: 14px; /* Item font size */
   --context-menu-item-background-default: transparent; /* Item background */
-  --context-menu-item-background-hover: #060813; /* Item hover background */
-  --context-menu-item-background-active: #060813; /* Active item background */
+  --context-menu-item-background-hover: #f5f5f5; /* Item hover background */
+  --context-menu-item-background-active: #f5f5f5; /* Active item background */
   --context-menu-item-icon-size: 16px; /* Item icon size */
-  --context-menu-item-icon-color: #7680a9; /* Item icon color */
+  --context-menu-item-icon-color: #737373; /* Item icon color */
   --context-menu-item-icon-gap: 10px; /* Space between icon and label */
-  --context-menu-item-shortcut-color: #7680a9; /* Keyboard shortcut color */
+  --context-menu-item-shortcut-color: #737373; /* Keyboard shortcut color */
   --context-menu-item-shortcut-fontSize: 12px; /* Shortcut font size */
-  --context-menu-separator-color: #1a2244; /* Separator line color */
+  --context-menu-separator-color: #d4d4d4; /* Separator line color */
   --context-menu-separator-margin: 4px; /* Separator vertical margin */
   --context-menu-submenu-arrow-size: 10px; /* Submenu arrow size */
-  --context-menu-submenu-arrow-color: #7680a9; /* Submenu arrow color */
+  --context-menu-submenu-arrow-color: #737373; /* Submenu arrow color */
   --context-menu-submenu-offset: -4px; /* Submenu position offset */
-  --dataTable-background: #11162d; /* Table background color */
-  --dataTable-border-color: #1a2244; /* Table border color */
+  --dataTable-background: #ffffff; /* Table background color */
+  --dataTable-border-color: #d4d4d4; /* Table border color */
   --dataTable-border-width: 1px; /* Table border width */
   --dataTable-radius: 5px; /* Table border radius */
-  --dataTable-header-background: #060813; /* Header background color */
-  --dataTable-header-color: #ffffff; /* Header text color */
+  --dataTable-header-background: #f5f5f5; /* Header background color */
+  --dataTable-header-color: #171717; /* Header text color */
   --dataTable-header-padding: 16px; /* Header cell padding */
   --dataTable-header-fontSize: 14px; /* Header font size */
   --dataTable-header-fontWeight: 600; /* Header font weight */
-  --dataTable-header-borderColor: #1a2244; /* Header border color */
-  --dataTable-body-background-default: #11162d; /* Row background color */
-  --dataTable-body-background-hover: #060813; /* Row hover background */
+  --dataTable-header-borderColor: #d4d4d4; /* Header border color */
+  --dataTable-body-background-default: #ffffff; /* Row background color */
+  --dataTable-body-background-hover: #f5f5f5; /* Row hover background */
   --dataTable-body-background-striped: #fafafa; /* Alternate row background */
-  --dataTable-body-color: #ffffff; /* Body text color */
+  --dataTable-body-color: #171717; /* Body text color */
   --dataTable-body-padding: 16px; /* Body cell padding */
   --dataTable-body-fontSize: 14px; /* Body font size */
-  --dataTable-body-borderColor: #1a2244; /* Row border color */
+  --dataTable-body-borderColor: #d4d4d4; /* Row border color */
   --dataTable-sortIcon-size: 14px; /* Sort icon size */
-  --dataTable-sortIcon-color-default: #7680a9; /* Sort icon default color */
-  --dataTable-sortIcon-color-active: #ffffff; /* Sort icon active color */
+  --dataTable-sortIcon-color-default: #737373; /* Sort icon default color */
+  --dataTable-sortIcon-color-active: #171717; /* Sort icon active color */
   --dataTable-pagination-padding: 16px; /* Pagination area padding */
   --dataTable-pagination-gap: 6px; /* Gap between pagination elements */
-  --dataTable-pagination-background: #060813; /* Pagination background */
-  --dataTable-pagination-borderColor: #1a2244; /* Pagination border color */
+  --dataTable-pagination-background: #f5f5f5; /* Pagination background */
+  --dataTable-pagination-borderColor: #d4d4d4; /* Pagination border color */
   --dataTable-empty-padding: 42px; /* Empty state padding */
-  --dataTable-empty-color: #7680a9; /* Empty state text color */
+  --dataTable-empty-color: #737373; /* Empty state text color */
   --dataTable-transition-duration: 150ms; /* Animation duration */
-  --dataView-background: #11162d; /* DataView container background */
-  --dataView-border-color: #1a2244; /* Container border color */
+  --dataView-background: #ffffff; /* DataView container background */
+  --dataView-border-color: #d4d4d4; /* Container border color */
   --dataView-border-width: 1px; /* Container border width */
   --dataView-radius: 5px; /* Container border radius */
-  --dataView-header-background: #060813; /* Header background color */
+  --dataView-header-background: #f5f5f5; /* Header background color */
   --dataView-header-padding: 16px; /* Header padding */
-  --dataView-header-borderColor: #1a2244; /* Header border color */
+  --dataView-header-borderColor: #d4d4d4; /* Header border color */
   --dataView-content-padding: 16px; /* Content area padding */
   --dataView-grid-gap: 16px; /* Gap between grid items */
   --dataView-list-gap: 10px; /* Gap between list items */
   --dataView-list-item-padding: 16px; /* List item padding */
   --dataView-list-item-background-default: transparent; /* List item background */
-  --dataView-list-item-background-hover: #060813; /* List item hover background */
-  --dataView-list-item-borderColor: #1a2244; /* List item border color */
+  --dataView-list-item-background-hover: #f5f5f5; /* List item hover background */
+  --dataView-list-item-borderColor: #d4d4d4; /* List item border color */
   --dataView-list-item-radius: 2px; /* List item border radius */
   --dataView-layoutSwitcher-gap: 4px; /* Gap between layout buttons */
   --dataView-layoutSwitcher-button-size: 32px; /* Layout button size */
   --dataView-layoutSwitcher-button-background-default: transparent; /* Button default background */
-  --dataView-layoutSwitcher-button-background-active: #060813; /* Button active background */
+  --dataView-layoutSwitcher-button-background-active: #f5f5f5; /* Button active background */
   --dataView-layoutSwitcher-button-background-hover: #f5f5f5; /* Button hover background */
-  --dataView-layoutSwitcher-button-color-default: #7680a9; /* Button icon default color */
-  --dataView-layoutSwitcher-button-color-active: #ffffff; /* Button icon active color */
+  --dataView-layoutSwitcher-button-color-default: #737373; /* Button icon default color */
+  --dataView-layoutSwitcher-button-color-active: #171717; /* Button icon active color */
   --dataView-layoutSwitcher-button-radius: 2px; /* Button border radius */
   --dataView-pagination-padding: 16px; /* Pagination padding */
-  --dataView-pagination-borderColor: #1a2244; /* Pagination border color */
+  --dataView-pagination-borderColor: #d4d4d4; /* Pagination border color */
   --dataView-empty-padding: 42px; /* Empty state padding */
-  --dataView-empty-color: #7680a9; /* Empty state text color */
+  --dataView-empty-color: #737373; /* Empty state text color */
   --dataView-transition-duration: 150ms; /* Animation duration */
   --dialog-padding-header: 26px; /* Header section padding */
   --dialog-padding-content: 26px; /* Content area padding */
   --dialog-padding-footer: 26px; /* Footer section padding */
-  --dialog-background-default: #0a0e1f; /* Dialog background color */
+  --dialog-background-default: #fafafa; /* Dialog background color */
   --dialog-radius: 13px; /* Dialog border radius */
-  --dialog-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08); /* Dialog elevation shadow */
-  --dialog-border-color: #1a2244; /* Dialog border color */
+  --dialog-shadow: 4px 4px 0 #171717; /* Dialog elevation shadow */
+  --dialog-border-color: #d4d4d4; /* Dialog border color */
   --dialog-border-width: 1px; /* Dialog border width */
-  --dialog-header-background: #0a0e1f; /* Header background */
-  --dialog-header-borderColor: #1a2244; /* Header bottom border color */
-  --dialog-header-title-color: #ffffff; /* Header title text color */
+  --dialog-header-background: #fafafa; /* Header background */
+  --dialog-header-borderColor: #d4d4d4; /* Header bottom border color */
+  --dialog-header-title-color: #171717; /* Header title text color */
   --dialog-closeButton-size: 32px; /* Close button size */
   --dialog-closeButton-iconSize: 16px; /* Close icon size */
-  --dialog-closeButton-color-default: #7680a9; /* Close button icon color */
-  --dialog-closeButton-color-hover: #ffffff; /* Close button hover color */
-  --dialog-closeButton-background-hover: #060813; /* Close button hover background */
+  --dialog-closeButton-color-default: #737373; /* Close button icon color */
+  --dialog-closeButton-color-hover: #171717; /* Close button hover color */
+  --dialog-closeButton-background-hover: #f5f5f5; /* Close button hover background */
   --dialog-closeButton-radius: 5px; /* Close button border radius */
-  --dialog-overlay-background: rgba(0, 0, 0, 0.6); /* Modal overlay backdrop color */
+  --dialog-overlay-background: rgba(23, 23, 23, 0.3); /* Modal overlay backdrop color */
   --dialog-width-sm: 400px; /* Small dialog width */
   --dialog-width-md: 560px; /* Medium dialog width (default) */
   --dialog-width-lg: 720px; /* Large dialog width */
@@ -702,11 +702,11 @@
   --divider-content-gap: 16px; /* Gap between divider line and content */
   --divider-content-color: #737373; /* Color of content text within divider */
   --divider-content-background: #ffffff; /* Background behind content to cover the line */
-  --dock-background: #1a2244; /* Dock background */
-  --dock-border-color: #1a2244; /* Dock border color */
+  --dock-background: #ffffff; /* Dock background */
+  --dock-border-color: #d4d4d4; /* Dock border color */
   --dock-border-width: 1px; /* Dock border width */
   --dock-radius: 13px; /* Dock border radius */
-  --dock-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08); /* Dock elevation shadow */
+  --dock-shadow: 4px 4px 0 #171717; /* Dock elevation shadow */
   --dock-padding: 10px; /* Dock inner padding */
   --dock-gap: 4px; /* Gap between dock items */
   --dock-zIndex: 1000; /* Z-index for stacking */
@@ -715,42 +715,42 @@
   --dock-item-size-magnified: 72px; /* Magnified item size on hover */
   --dock-item-radius: 8px; /* Item border radius */
   --dock-item-background-default: transparent; /* Item background */
-  --dock-item-background-hover: #060813; /* Item hover background */
-  --dock-item-background-active: #060813; /* Active item background */
+  --dock-item-background-hover: #f5f5f5; /* Item hover background */
+  --dock-item-background-active: #f5f5f5; /* Active item background */
   --dock-item-icon-size-default: 28px; /* Default icon size */
   --dock-item-icon-size-magnified: 42px; /* Magnified icon size */
-  --dock-item-icon-color-default: #ffffff; /* Icon color */
-  --dock-item-icon-color-hover: #11162d; /* Icon hover color */
+  --dock-item-icon-color-default: #171717; /* Icon color */
+  --dock-item-icon-color-hover: #171717; /* Icon hover color */
   --dock-tooltip-offset: 6px; /* Tooltip distance from dock */
-  --dock-tooltip-background: #ffffff; /* Tooltip background */
-  --dock-tooltip-text-color: #0a0e1f; /* Tooltip text color */
+  --dock-tooltip-background: #171717; /* Tooltip background */
+  --dock-tooltip-text-color: #ffffff; /* Tooltip text color */
   --dock-tooltip-text-fontSize: 12px; /* Tooltip font size */
   --dock-tooltip-padding-x: 10px; /* Tooltip horizontal padding */
   --dock-tooltip-padding-y: 4px; /* Tooltip vertical padding */
   --dock-tooltip-radius: 2px; /* Tooltip border radius */
   --dock-indicator-size: 4px; /* Active indicator dot size */
-  --dock-indicator-color: #11162d; /* Active indicator color */
+  --dock-indicator-color: #171717; /* Active indicator color */
   --dock-indicator-gap: 4px; /* Gap between item and indicator */
-  --drawer-background: #0a0e1f; /* Drawer background color */
-  --drawer-border-color: #1a2244; /* Drawer border color */
+  --drawer-background: #fafafa; /* Drawer background color */
+  --drawer-border-color: #d4d4d4; /* Drawer border color */
   --drawer-border-width: 1px; /* Drawer border width */
-  --drawer-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08); /* Drawer shadow */
+  --drawer-shadow: 4px 4px 0 #171717; /* Drawer shadow */
   --drawer-header-padding: 26px; /* Header section padding */
-  --drawer-header-background: #0a0e1f; /* Header background */
-  --drawer-header-borderColor: #1a2244; /* Header bottom border color */
-  --drawer-header-title-color: #ffffff; /* Header title text color */
+  --drawer-header-background: #fafafa; /* Header background */
+  --drawer-header-borderColor: #d4d4d4; /* Header bottom border color */
+  --drawer-header-title-color: #171717; /* Header title text color */
   --drawer-header-title-fontSize: 18px; /* Header title font size */
   --drawer-header-title-fontWeight: 600; /* Header title font weight */
   --drawer-content-padding: 26px; /* Content area padding */
   --drawer-footer-padding: 26px; /* Footer section padding */
-  --drawer-footer-borderColor: #1a2244; /* Footer top border color */
+  --drawer-footer-borderColor: #d4d4d4; /* Footer top border color */
   --drawer-closeButton-size: 32px; /* Close button size */
   --drawer-closeButton-iconSize: 16px; /* Close icon size */
-  --drawer-closeButton-color-default: #7680a9; /* Close button icon color */
-  --drawer-closeButton-color-hover: #ffffff; /* Close button hover color */
-  --drawer-closeButton-background-hover: #060813; /* Close button hover background */
+  --drawer-closeButton-color-default: #737373; /* Close button icon color */
+  --drawer-closeButton-color-hover: #171717; /* Close button hover color */
+  --drawer-closeButton-background-hover: #f5f5f5; /* Close button hover background */
   --drawer-closeButton-radius: 5px; /* Close button border radius */
-  --drawer-overlay-background: rgba(0, 0, 0, 0.6); /* Overlay backdrop color */
+  --drawer-overlay-background: rgba(23, 23, 23, 0.3); /* Overlay backdrop color */
   --drawer-size-sm: 280px; /* Small drawer size */
   --drawer-size-md: 400px; /* Medium drawer size (default) */
   --drawer-size-lg: 560px; /* Large drawer size */
@@ -770,27 +770,27 @@
   --dropdown-border-width: 1px;
   --dropdown-border-color-default: #d4d4d4;
   --dropdown-border-color-hover: #a3a3a3;
-  --dropdown-border-color-focus: #11162d;
+  --dropdown-border-color-focus: #171717;
   --dropdown-border-color-disabled: #e5e5e5;
-  --dropdown-border-color-error: #ef4444;
-  --dropdown-background-default: #0a0e1f;
+  --dropdown-border-color-error: #171717;
+  --dropdown-background-default: #fafafa;
   --dropdown-background-disabled: #f5f5f5;
-  --dropdown-background-hover: #0a0e1f;
-  --dropdown-text-default: #ffffff;
-  --dropdown-text-placeholder: #7680a9;
-  --dropdown-text-disabled: #7680a9;
+  --dropdown-background-hover: #fafafa;
+  --dropdown-text-default: #171717;
+  --dropdown-text-placeholder: #737373;
+  --dropdown-text-disabled: #737373;
   --dropdown-icon-size: 16px;
   --dropdown-icon-color-default: #737373;
   --dropdown-icon-color-disabled: #d4d4d4;
-  --dropdown-panel-background: #0a0e1f;
+  --dropdown-panel-background: #fafafa;
   --dropdown-panel-border: #e5e5e5;
-  --dropdown-panel-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+  --dropdown-panel-shadow: 3px 3px 0 #171717;
   --dropdown-panel-radius: 5px;
   --dropdown-panel-maxHeight: 280px;
   --dropdown-panel-padding: 6px;
   --dropdown-filter-height: 36px;
   --dropdown-filter-padding-x: 10px;
-  --dropdown-filter-background: #0a0e1f;
+  --dropdown-filter-background: #fafafa;
   --dropdown-filter-border: #e5e5e5;
   --dropdown-filter-radius: 5px;
   --dropdown-filter-marginBottom: 6px;
@@ -799,103 +799,103 @@
   --dropdown-option-radius: 2px;
   --dropdown-option-background-default: transparent;
   --dropdown-option-background-hover: #f5f5f5;
-  --dropdown-option-background-selected: #11162d;
+  --dropdown-option-background-selected: #171717;
   --dropdown-option-background-focus: #f5f5f5;
-  --dropdown-option-text-default: #ffffff;
+  --dropdown-option-text-default: #171717;
   --dropdown-option-text-selected: #ffffff;
   --dropdown-focus-ringWidth: 2px;
-  --dropdown-focus-ringColor: #11162d;
+  --dropdown-focus-ringColor: #171717;
   --dropdown-focus-ringOffset: 1px;
   --editor-minHeight: 200px;
   --editor-radius: 5px;
   --editor-border-width: 1px;
   --editor-border-color-default: #d4d4d4;
   --editor-border-color-hover: #a3a3a3;
-  --editor-border-color-focus: #11162d;
+  --editor-border-color-focus: #171717;
   --editor-border-color-disabled: #e5e5e5;
-  --editor-border-color-error: #ef4444;
-  --editor-background-default: #0a0e1f;
+  --editor-border-color-error: #171717;
+  --editor-background-default: #fafafa;
   --editor-background-disabled: #f5f5f5;
   --editor-toolbar-padding-x: 10px;
   --editor-toolbar-padding-y: 6px;
   --editor-toolbar-gap: 6px;
-  --editor-toolbar-background: #060813;
+  --editor-toolbar-background: #f5f5f5;
   --editor-toolbar-border-color: #e5e5e5;
   --editor-button-size: 32px;
   --editor-button-radius: 2px;
   --editor-button-background-default: transparent;
   --editor-button-background-hover: #e5e5e5;
   --editor-button-background-active: #d4d4d4;
-  --editor-button-color-default: #ffffff;
-  --editor-button-color-active: #11162d;
-  --editor-button-color-disabled: #7680a9;
+  --editor-button-color-default: #171717;
+  --editor-button-color-active: #171717;
+  --editor-button-color-disabled: #737373;
   --editor-separator-width: 1px;
   --editor-separator-color: #d4d4d4;
   --editor-separator-margin: 6px;
   --editor-content-padding: 16px;
-  --editor-content-text-default: #ffffff;
-  --editor-content-text-placeholder: #7680a9;
-  --editor-content-text-disabled: #7680a9;
+  --editor-content-text-default: #171717;
+  --editor-content-text-placeholder: #737373;
+  --editor-content-text-disabled: #737373;
   --editor-content-fontSize: 15px;
   --editor-content-lineHeight: 1.6;
   --editor-focus-ringWidth: 2px;
-  --editor-focus-ringColor: #11162d;
+  --editor-focus-ringColor: #171717;
   --editor-focus-ringOffset: 1px;
   --field-set-padding: 26px; /* Content padding */
-  --field-set-background: #0a0e1f; /* FieldSet background color */
-  --field-set-border-color: #1a2244; /* Border color */
+  --field-set-background: #fafafa; /* FieldSet background color */
+  --field-set-border-color: #d4d4d4; /* Border color */
   --field-set-border-width: 1px; /* Border width */
   --field-set-border-radius: 5px; /* Border radius */
   --field-set-legend-padding-x: 16px; /* Legend horizontal padding */
   --field-set-legend-padding-y: 10px; /* Legend vertical padding */
-  --field-set-legend-background: #11162d; /* Legend background */
-  --field-set-legend-color: #ffffff; /* Legend text color */
+  --field-set-legend-background: #ffffff; /* Legend background */
+  --field-set-legend-color: #171717; /* Legend text color */
   --field-set-legend-fontSize: 14px; /* Legend font size */
   --field-set-legend-fontWeight: 600; /* Legend font weight */
-  --field-set-legend-border-color: #1a2244; /* Legend border color */
+  --field-set-legend-border-color: #d4d4d4; /* Legend border color */
   --field-set-legend-border-width: 1px; /* Legend border width */
   --field-set-legend-border-radius: 5px; /* Legend border radius */
   --field-set-toggle-icon-size: 16px; /* Toggle icon size */
-  --field-set-toggle-icon-color-default: #7680a9; /* Toggle icon color */
-  --field-set-toggle-icon-color-hover: #ffffff; /* Toggle icon hover color */
+  --field-set-toggle-icon-color-default: #737373; /* Toggle icon color */
+  --field-set-toggle-icon-color-hover: #171717; /* Toggle icon hover color */
   --field-set-toggle-gap: 10px; /* Gap between legend text and toggle icon */
   --field-set-transition-duration: 200ms; /* Collapse/expand transition duration */
-  --fileUpload-dropzone-background-default: #11162d; /* Dropzone background color */
-  --fileUpload-dropzone-background-hover: #060813; /* Dropzone hover background */
-  --fileUpload-dropzone-background-active: #78350f; /* Dropzone active/dragging background */
-  --fileUpload-dropzone-border-color-default: #1a2244; /* Dropzone border color */
-  --fileUpload-dropzone-border-color-hover: #242e5c; /* Dropzone hover border color */
-  --fileUpload-dropzone-border-color-active: #11162d; /* Dropzone active border color */
+  --fileUpload-dropzone-background-default: #ffffff; /* Dropzone background color */
+  --fileUpload-dropzone-background-hover: #f5f5f5; /* Dropzone hover background */
+  --fileUpload-dropzone-background-active: #f5f5f5; /* Dropzone active/dragging background */
+  --fileUpload-dropzone-border-color-default: #d4d4d4; /* Dropzone border color */
+  --fileUpload-dropzone-border-color-hover: #171717; /* Dropzone hover border color */
+  --fileUpload-dropzone-border-color-active: #171717; /* Dropzone active border color */
   --fileUpload-dropzone-border-width: 2px; /* Dropzone border width */
   --fileUpload-dropzone-border-style: dashed; /* Dropzone border style */
   --fileUpload-dropzone-radius: 5px; /* Dropzone border radius */
   --fileUpload-dropzone-padding: 42px; /* Dropzone padding */
   --fileUpload-icon-size: 48px; /* Upload icon size */
-  --fileUpload-icon-color-default: #7680a9; /* Upload icon color */
-  --fileUpload-icon-color-active: #11162d; /* Upload icon color when dragging */
-  --fileUpload-text-primary-color: #ffffff; /* Primary text color */
+  --fileUpload-icon-color-default: #737373; /* Upload icon color */
+  --fileUpload-icon-color-active: #171717; /* Upload icon color when dragging */
+  --fileUpload-text-primary-color: #171717; /* Primary text color */
   --fileUpload-text-primary-size: 16px; /* Primary text font size */
-  --fileUpload-text-secondary-color: #7680a9; /* Secondary text color */
+  --fileUpload-text-secondary-color: #737373; /* Secondary text color */
   --fileUpload-text-secondary-size: 14px; /* Secondary text font size */
   --fileUpload-fileList-gap: 10px; /* Gap between file items */
-  --fileUpload-fileList-item-background: #060813; /* File item background */
+  --fileUpload-fileList-item-background: #f5f5f5; /* File item background */
   --fileUpload-fileList-item-padding: 10px; /* File item padding */
   --fileUpload-fileList-item-radius: 5px; /* File item border radius */
-  --fileUpload-fileList-item-border-color: #1a2244; /* File item border color */
+  --fileUpload-fileList-item-border-color: #d4d4d4; /* File item border color */
   --fileUpload-fileList-item-border-width: 1px; /* File item border width */
-  --fileUpload-fileList-fileName-color: #ffffff; /* File name color */
+  --fileUpload-fileList-fileName-color: #171717; /* File name color */
   --fileUpload-fileList-fileName-size: 14px; /* File name font size */
-  --fileUpload-fileList-fileSize-color: #7680a9; /* File size color */
+  --fileUpload-fileList-fileSize-color: #737373; /* File size color */
   --fileUpload-fileList-fileSize-size: 12px; /* File size font size */
-  --fileUpload-fileList-removeButton-color-default: #7680a9; /* Remove button color */
-  --fileUpload-fileList-removeButton-color-hover: #ef4444; /* Remove button hover color */
+  --fileUpload-fileList-removeButton-color-default: #737373; /* Remove button color */
+  --fileUpload-fileList-removeButton-color-hover: #171717; /* Remove button hover color */
   --fileUpload-fileList-removeButton-size: 20px; /* Remove button icon size */
   --fileUpload-transition-duration: 200ms; /* Transition duration */
-  --galleria-container-background: #11162d; /* Galleria container background */
+  --galleria-container-background: #ffffff; /* Galleria container background */
   --galleria-container-radius: 5px; /* Galleria container border radius */
-  --galleria-container-border-color: #1a2244; /* Container border color */
+  --galleria-container-border-color: #d4d4d4; /* Container border color */
   --galleria-container-border-width: 1px; /* Container border width */
-  --galleria-preview-background: #0a0e1f; /* Preview area background */
+  --galleria-preview-background: #fafafa; /* Preview area background */
   --galleria-preview-padding: 10px; /* Preview area padding */
   --galleria-preview-radius: 5px; /* Preview image border radius */
   --galleria-thumbnail-container-gap: 6px; /* Gap between thumbnails */
@@ -907,65 +907,65 @@
   --galleria-thumbnail-item-opacity-hover: 0.8; /* Thumbnail hover opacity */
   --galleria-thumbnail-item-opacity-active: 1; /* Active thumbnail opacity */
   --galleria-thumbnail-item-border-color-default: transparent; /* Thumbnail border color */
-  --galleria-thumbnail-item-border-color-active: #11162d; /* Active thumbnail border color */
+  --galleria-thumbnail-item-border-color-active: #171717; /* Active thumbnail border color */
   --galleria-thumbnail-item-border-width: 2px; /* Thumbnail border width */
   --galleria-navigator-size: 40px; /* Navigator button size */
   --galleria-navigator-iconSize: 20px; /* Navigator icon size */
   --galleria-navigator-background-default: rgba(0, 0, 0, 0.3); /* Navigator background */
   --galleria-navigator-background-hover: rgba(0, 0, 0, 0.5); /* Navigator hover background */
-  --galleria-navigator-color: #0a0e1f; /* Navigator icon color */
+  --galleria-navigator-color: #ffffff; /* Navigator icon color */
   --galleria-navigator-radius: 50%; /* Navigator border radius */
   --galleria-indicator-size: 10px; /* Indicator dot size */
   --galleria-indicator-gap: 6px; /* Gap between indicators */
   --galleria-indicator-background-default: rgba(255, 255, 255, 0.5); /* Indicator background */
-  --galleria-indicator-background-active: #0a0e1f; /* Active indicator background */
-  --galleria-fullscreen-background: rgba(0, 0, 0, 0.6); /* Fullscreen overlay background */
+  --galleria-indicator-background-active: #ffffff; /* Active indicator background */
+  --galleria-fullscreen-background: rgba(23, 23, 23, 0.3); /* Fullscreen overlay background */
   --galleria-fullscreen-zIndex: 1100; /* Fullscreen z-index */
   --galleria-fullscreen-closeButton-size: 40px; /* Close button size */
-  --galleria-fullscreen-closeButton-color: #0a0e1f; /* Close button color */
+  --galleria-fullscreen-closeButton-color: #ffffff; /* Close button color */
   --galleria-fullscreen-closeButton-background-default: rgba(0, 0, 0, 0.3); /* Close button background */
   --galleria-fullscreen-closeButton-background-hover: rgba(0, 0, 0, 0.5); /* Close button hover background */
   --galleria-caption-background: rgba(0, 0, 0, 0.5); /* Caption background */
-  --galleria-caption-color: #0a0e1f; /* Caption text color */
+  --galleria-caption-color: #ffffff; /* Caption text color */
   --galleria-caption-padding: 10px; /* Caption padding */
   --galleria-caption-fontSize: 14px; /* Caption font size */
   --galleria-transition-duration: 300ms; /* Transition duration */
-  --image-compare-background: #11162d; /* Container background color */
-  --image-compare-border-color: #1a2244; /* Border color */
+  --image-compare-background: #ffffff; /* Container background color */
+  --image-compare-border-color: #d4d4d4; /* Border color */
   --image-compare-border-width: 1px; /* Border width */
   --image-compare-border-radius: 5px; /* Border radius */
   --image-compare-handle-width: 4px; /* Handle divider width */
   --image-compare-handle-color-default: #ffffff; /* Handle color */
-  --image-compare-handle-color-hover: #11162d; /* Handle hover color */
-  --image-compare-handle-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08); /* Handle shadow */
+  --image-compare-handle-color-hover: #171717; /* Handle hover color */
+  --image-compare-handle-shadow: 3px 3px 0 #171717; /* Handle shadow */
   --image-compare-icon-size: 32px; /* Handle icon container size */
   --image-compare-icon-color: #404040; /* Handle icon color */
   --image-compare-icon-background: #ffffff; /* Handle icon background */
   --image-compare-transition-duration: 150ms; /* Handle state transition duration */
   --image-radius: 5px; /* Image border radius */
-  --image-placeholder-background: #060813; /* Placeholder background color while loading */
+  --image-placeholder-background: #f5f5f5; /* Placeholder background color while loading */
   --image-preview-icon-size: 24px; /* Preview indicator icon size */
-  --image-preview-icon-color: #0a0e1f; /* Preview indicator icon color */
+  --image-preview-icon-color: #ffffff; /* Preview indicator icon color */
   --image-preview-icon-background: rgba(0, 0, 0, 0.5); /* Preview indicator background */
-  --image-preview-overlay-background: rgba(0, 0, 0, 0.6); /* Preview overlay background */
+  --image-preview-overlay-background: rgba(23, 23, 23, 0.3); /* Preview overlay background */
   --image-preview-overlay-zIndex: 1100; /* Preview overlay z-index */
   --image-preview-closeButton-size: 40px; /* Close button size in preview */
-  --image-preview-closeButton-color: #0a0e1f; /* Close button color */
+  --image-preview-closeButton-color: #ffffff; /* Close button color */
   --image-preview-closeButton-hoverBackground: rgba(255, 255, 255, 0.1); /* Close button hover background */
   --image-transition-duration: 200ms; /* Transition duration for hover effects */
   --in-place-display-paddingX: 16px; /* Display element horizontal padding */
   --in-place-display-paddingY: 10px; /* Display element vertical padding */
   --in-place-display-background-default: transparent; /* Display background */
-  --in-place-display-background-hover: #060813; /* Display hover background */
-  --in-place-display-color-default: #ffffff; /* Display text color */
-  --in-place-display-color-hover: #ffffff; /* Display hover text color */
-  --in-place-display-color-disabled: #7680a9; /* Display disabled text color */
+  --in-place-display-background-hover: #f5f5f5; /* Display hover background */
+  --in-place-display-color-default: #171717; /* Display text color */
+  --in-place-display-color-hover: #171717; /* Display hover text color */
+  --in-place-display-color-disabled: #737373; /* Display disabled text color */
   --in-place-display-border-radius: 5px; /* Display border radius */
   --in-place-closeButton-size: 28px; /* Close button size */
   --in-place-closeButton-iconSize: 14px; /* Close icon size */
-  --in-place-closeButton-color-default: #7680a9; /* Close button color */
-  --in-place-closeButton-color-hover: #ffffff; /* Close button hover color */
-  --in-place-closeButton-background-hover: #060813; /* Close button hover background */
+  --in-place-closeButton-color-default: #737373; /* Close button color */
+  --in-place-closeButton-color-hover: #171717; /* Close button hover color */
+  --in-place-closeButton-background-hover: #f5f5f5; /* Close button hover background */
   --in-place-closeButton-radius: 5px; /* Close button border radius */
   --in-place-closeButton-gap: 10px; /* Gap between content and close button */
   --in-place-transition-duration: 150ms; /* State transition duration */
@@ -976,18 +976,18 @@
   --inline-message-fontSize: 14px; /* Text font size */
   --inline-message-fontWeight: 500; /* Text font weight */
   --inline-message-iconSize: 16px; /* Icon size */
-  --inline-message-background-success: rgba(34, 197, 94, 0.15); /* Success background */
-  --inline-message-background-info: rgba(59, 130, 246, 0.15); /* Info background */
-  --inline-message-background-warn: rgba(234, 179, 8, 0.15); /* Warning background */
-  --inline-message-background-error: rgba(239, 68, 68, 0.15); /* Error background */
-  --inline-message-text-success: #4ade80; /* Success text color */
-  --inline-message-text-info: #60a5fa; /* Info text color */
-  --inline-message-text-warn: #facc15; /* Warning text color */
-  --inline-message-text-error: #f87171; /* Error text color */
-  --inline-message-icon-success: #22c55e; /* Success icon color */
-  --inline-message-icon-info: #3b82f6; /* Info icon color */
-  --inline-message-icon-warn: #eab308; /* Warning icon color */
-  --inline-message-icon-error: #ef4444; /* Error icon color */
+  --inline-message-background-success: #f5f5f5; /* Success background */
+  --inline-message-background-info: #f5f5f5; /* Info background */
+  --inline-message-background-warn: #f5f5f5; /* Warning background */
+  --inline-message-background-error: #f5f5f5; /* Error background */
+  --inline-message-text-success: #171717; /* Success text color */
+  --inline-message-text-info: #171717; /* Info text color */
+  --inline-message-text-warn: #171717; /* Warning text color */
+  --inline-message-text-error: #171717; /* Error text color */
+  --inline-message-icon-success: #171717; /* Success icon color */
+  --inline-message-icon-info: #171717; /* Info icon color */
+  --inline-message-icon-warn: #171717; /* Warning icon color */
+  --inline-message-icon-error: #171717; /* Error icon color */
   --input-chips-height-sm: 32px; /* Small container min-height */
   --input-chips-height-md: 40px; /* Medium container min-height (default) */
   --input-chips-height-lg: 48px; /* Large container min-height */
@@ -998,14 +998,14 @@
   --input-chips-border-width: 1px;
   --input-chips-border-color-default: #d4d4d4; /* Default border color */
   --input-chips-border-color-hover: #a3a3a3; /* Hover border color */
-  --input-chips-border-color-focus: #11162d; /* Focus border color */
+  --input-chips-border-color-focus: #171717; /* Focus border color */
   --input-chips-border-color-disabled: #e5e5e5; /* Disabled border color */
-  --input-chips-border-color-error: #ef4444; /* Error/invalid border color */
-  --input-chips-background-default: #0a0e1f; /* Default background */
+  --input-chips-border-color-error: #171717; /* Error/invalid border color */
+  --input-chips-background-default: #fafafa; /* Default background */
   --input-chips-background-disabled: #f5f5f5; /* Disabled background */
-  --input-chips-text-default: #ffffff; /* Default text color */
-  --input-chips-text-placeholder: #7680a9; /* Placeholder text color */
-  --input-chips-text-disabled: #7680a9; /* Disabled text color */
+  --input-chips-text-default: #171717; /* Default text color */
+  --input-chips-text-placeholder: #737373; /* Placeholder text color */
+  --input-chips-text-disabled: #737373; /* Disabled text color */
   --input-chips-fontSize-sm: 14px;
   --input-chips-fontSize-md: 15px;
   --input-chips-fontSize-lg: 16px;
@@ -1013,19 +1013,19 @@
   --input-chips-chip-padding-y: 4px;
   --input-chips-chip-gap: 4px;
   --input-chips-chip-radius: 9999px;
-  --input-chips-chip-background-default: #060813;
+  --input-chips-chip-background-default: #f5f5f5;
   --input-chips-chip-background-hover: #e5e5e5;
-  --input-chips-chip-text: #ffffff;
+  --input-chips-chip-text: #171717;
   --input-chips-chip-fontSize: 13px;
   --input-chips-remove-size: 14px;
-  --input-chips-remove-color-default: #7680a9;
-  --input-chips-remove-color-hover: #ffffff;
+  --input-chips-remove-color-default: #737373;
+  --input-chips-remove-color-hover: #171717;
   --input-chips-focus-ringWidth: 2px;
-  --input-chips-focus-ringColor: #11162d;
+  --input-chips-focus-ringColor: #171717;
   --input-chips-focus-ringOffset: 1px;
-  --input-group-addon-background-default: #11162d; /* Addon background color */
-  --input-group-addon-text-default: #7680a9; /* Addon text color */
-  --input-group-addon-border-color: #242e5c; /* Addon border color */
+  --input-group-addon-background-default: #ffffff; /* Addon background color */
+  --input-group-addon-text-default: #737373; /* Addon text color */
+  --input-group-addon-border-color: #171717; /* Addon border color */
   --input-group-addon-border-width: 1px; /* Addon border width */
   --input-group-addon-padding-x: 16px; /* Horizontal padding */
   --input-group-addon-padding-y: 10px; /* Vertical padding */
@@ -1033,8 +1033,8 @@
   --input-group-display: flex; /* Display type for input group container */
   --input-group-border-radius: 5px; /* Border radius for grouped elements */
   --input-group-gap: 0; /* Gap between input group items (none for seamless grouping) */
-  --input-icon-color-default: #7680a9; /* Default icon color */
-  --input-icon-color-focus: #ffffff; /* Icon color when input is focused */
+  --input-icon-color-default: #737373; /* Default icon color */
+  --input-icon-color-focus: #171717; /* Icon color when input is focused */
   --input-icon-size-sm: 16px; /* Small icon size */
   --input-icon-size-md: 18px; /* Medium icon size */
   --input-icon-size-lg: 20px; /* Large icon size */
@@ -1051,17 +1051,17 @@
   --input-mask-border-width: 1px;
   --input-mask-border-color-default: #d4d4d4; /* Default border color */
   --input-mask-border-color-hover: #a3a3a3; /* Hover border color */
-  --input-mask-border-color-focus: #11162d; /* Focus border color */
+  --input-mask-border-color-focus: #171717; /* Focus border color */
   --input-mask-border-color-disabled: #e5e5e5; /* Disabled border color */
-  --input-mask-border-color-error: #ef4444; /* Error/invalid border color */
-  --input-mask-background-default: #0a0e1f; /* Default background */
+  --input-mask-border-color-error: #171717; /* Error/invalid border color */
+  --input-mask-background-default: #fafafa; /* Default background */
   --input-mask-background-disabled: #f5f5f5; /* Disabled background */
-  --input-mask-background-hover: #0a0e1f; /* Hover background */
-  --input-mask-text-default: #ffffff; /* Default text color */
-  --input-mask-text-placeholder: #7680a9; /* Placeholder/slot character color */
-  --input-mask-text-disabled: #7680a9; /* Disabled text color */
+  --input-mask-background-hover: #fafafa; /* Hover background */
+  --input-mask-text-default: #171717; /* Default text color */
+  --input-mask-text-placeholder: #737373; /* Placeholder/slot character color */
+  --input-mask-text-disabled: #737373; /* Disabled text color */
   --input-mask-focus-ringWidth: 2px; /* Focus ring width */
-  --input-mask-focus-ringColor: #11162d; /* Focus ring color */
+  --input-mask-focus-ringColor: #171717; /* Focus ring color */
   --input-mask-focus-ringOffset: 1px; /* Focus ring offset */
   --inputNumber-height-sm: 32px;
   --inputNumber-height-md: 40px;
@@ -1074,14 +1074,14 @@
   --inputNumber-border-width: 1px;
   --inputNumber-border-color-default: #d4d4d4;
   --inputNumber-border-color-hover: #a3a3a3;
-  --inputNumber-border-color-focus: #11162d;
+  --inputNumber-border-color-focus: #171717;
   --inputNumber-border-color-disabled: #e5e5e5;
-  --inputNumber-border-color-error: #ef4444;
-  --inputNumber-background-default: #0a0e1f;
+  --inputNumber-border-color-error: #171717;
+  --inputNumber-background-default: #fafafa;
   --inputNumber-background-disabled: #f5f5f5;
-  --inputNumber-text-default: #ffffff;
-  --inputNumber-text-placeholder: #7680a9;
-  --inputNumber-text-disabled: #7680a9;
+  --inputNumber-text-default: #171717;
+  --inputNumber-text-placeholder: #737373;
+  --inputNumber-text-disabled: #737373;
   --inputNumber-button-width: 32px;
   --inputNumber-button-background-default: #f5f5f5;
   --inputNumber-button-background-hover: #e5e5e5;
@@ -1090,29 +1090,29 @@
   --inputNumber-button-icon-color-default: #525252;
   --inputNumber-button-icon-color-disabled: #d4d4d4;
   --inputNumber-focus-ringWidth: 2px;
-  --inputNumber-focus-ringColor: #11162d;
+  --inputNumber-focus-ringColor: #171717;
   --inputNumber-focus-ringOffset: 1px;
   --input-otp-gap: 10px; /* Gap between input cells */
   --input-otp-cell-size: 48px; /* Cell width and height */
   --input-otp-cell-fontSize: 20px; /* Cell character font size */
   --input-otp-cell-fontWeight: 600; /* Cell character font weight */
   --input-otp-cell-radius: 5px; /* Cell border radius */
-  --input-otp-cell-background-default: #0a0e1f; /* Default cell background */
-  --input-otp-cell-background-focus: #0a0e1f; /* Focused cell background */
+  --input-otp-cell-background-default: #fafafa; /* Default cell background */
+  --input-otp-cell-background-focus: #fafafa; /* Focused cell background */
   --input-otp-cell-background-filled: #fafafa; /* Filled cell background */
   --input-otp-cell-background-disabled: #f5f5f5; /* Disabled cell background */
   --input-otp-cell-border-width: 1px; /* Cell border width */
   --input-otp-cell-border-color-default: #d4d4d4; /* Default cell border color */
   --input-otp-cell-border-color-hover: #a3a3a3; /* Hover cell border color */
-  --input-otp-cell-border-color-focus: #11162d; /* Focused cell border color */
+  --input-otp-cell-border-color-focus: #171717; /* Focused cell border color */
   --input-otp-cell-border-color-filled: #a3a3a3; /* Filled cell border color */
   --input-otp-cell-border-color-disabled: #e5e5e5; /* Disabled cell border color */
-  --input-otp-cell-border-color-error: #ef4444; /* Error cell border color */
-  --input-otp-cell-text-default: #ffffff; /* Default text color */
-  --input-otp-cell-text-disabled: #7680a9; /* Disabled text color */
-  --input-otp-cell-text-mask: #ffffff; /* Masked character color */
+  --input-otp-cell-border-color-error: #171717; /* Error cell border color */
+  --input-otp-cell-text-default: #171717; /* Default text color */
+  --input-otp-cell-text-disabled: #737373; /* Disabled text color */
+  --input-otp-cell-text-mask: #171717; /* Masked character color */
   --input-otp-focus-ringWidth: 2px; /* Focus ring width */
-  --input-otp-focus-ringColor: #f97316; /* Focus ring color */
+  --input-otp-focus-ringColor: #171717; /* Focus ring color */
   --input-otp-focus-ringOffset: 1px; /* Focus ring offset */
   --input-otp-separator-width: 8px; /* Separator dash width */
   --input-otp-separator-color: #a3a3a3; /* Separator color */
@@ -1129,13 +1129,13 @@
   --inputSwitch-thumb-color-default: #ffffff;
   --inputSwitch-thumb-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   --inputSwitch-track-background-off: #d4d4d4;
-  --inputSwitch-track-background-on: #11162d;
+  --inputSwitch-track-background-on: #171717;
   --inputSwitch-track-background-disabled: #e5e5e5;
   --inputSwitch-label-gap: 10px;
-  --inputSwitch-label-color-default: #ffffff;
-  --inputSwitch-label-color-disabled: #7680a9;
+  --inputSwitch-label-color-default: #171717;
+  --inputSwitch-label-color-disabled: #737373;
   --inputSwitch-focus-ringWidth: 2px;
-  --inputSwitch-focus-ringColor: #11162d;
+  --inputSwitch-focus-ringColor: #171717;
   --inputSwitch-focus-ringOffset: 2px;
   --input-text-height-sm: 32px; /* Small input height */
   --input-text-height-md: 40px; /* Medium input height (default) */
@@ -1151,13 +1151,13 @@
   --input-text-border-color-hover: #a3a3a3; /* Hover border color */
   --input-text-border-color-focus: #a3a3a3; /* Focus border color (same as hover) */
   --input-text-border-color-disabled: #e5e5e5; /* Disabled border color */
-  --input-text-border-color-error: #ef4444; /* Error/invalid border color */
-  --input-text-background-default: #0a0e1f; /* Default background */
+  --input-text-border-color-error: #171717; /* Error/invalid border color */
+  --input-text-background-default: #fafafa; /* Default background */
   --input-text-background-disabled: #f5f5f5; /* Disabled background */
-  --input-text-background-hover: #0a0e1f; /* Hover background */
-  --input-text-text-default: #ffffff; /* Default text color */
-  --input-text-text-placeholder: #7680a9; /* Placeholder text color */
-  --input-text-text-disabled: #7680a9; /* Disabled text color */
+  --input-text-background-hover: #fafafa; /* Hover background */
+  --input-text-text-default: #171717; /* Default text color */
+  --input-text-text-placeholder: #737373; /* Placeholder text color */
+  --input-text-text-disabled: #737373; /* Disabled text color */
   --input-text-focus-ringWidth: 0; /* Focus ring width */
   --input-text-focus-ringColor: transparent; /* Focus ring color */
   --input-text-focus-ringOffset: 0; /* Focus ring offset */
@@ -1168,16 +1168,16 @@
   --knob-strokeWidth-md: 8px; /* Medium stroke width */
   --knob-strokeWidth-lg: 10px; /* Large stroke width */
   --knob-track-color: #e5e5e5; /* Background track color */
-  --knob-fill-color-default: #11162d; /* Default fill color */
+  --knob-fill-color-default: #171717; /* Default fill color */
   --knob-fill-color-disabled: #d4d4d4; /* Disabled fill color */
   --knob-valueText-fontSize-sm: 16px; /* Small value font size */
   --knob-valueText-fontSize-md: 20px; /* Medium value font size */
   --knob-valueText-fontSize-lg: 28px; /* Large value font size */
   --knob-valueText-fontWeight: 600; /* Value font weight */
-  --knob-valueText-color-default: #ffffff; /* Default value color */
-  --knob-valueText-color-disabled: #7680a9; /* Disabled value color */
+  --knob-valueText-color-default: #171717; /* Default value color */
+  --knob-valueText-color-disabled: #737373; /* Disabled value color */
   --knob-focus-ringWidth: 2px; /* Focus ring width */
-  --knob-focus-ringColor: #f97316; /* Focus ring color */
+  --knob-focus-ringColor: #171717; /* Focus ring color */
   --knob-focus-ringOffset: 2px; /* Focus ring offset */
   --knob-transition-duration: 100ms; /* Value change transition */
   --lightbox-overlay-background: rgba(0, 0, 0, 0.92); /* Lightbox overlay backdrop color */
@@ -1203,65 +1203,65 @@
   --listbox-radius: 5px; /* Container border radius */
   --listbox-border-width: 1px;
   --listbox-border-color-default: #d4d4d4; /* Default border color */
-  --listbox-border-color-focus: #11162d; /* Focus border color */
+  --listbox-border-color-focus: #171717; /* Focus border color */
   --listbox-border-color-disabled: #e5e5e5; /* Disabled border color */
-  --listbox-background-default: #0a0e1f; /* Default background */
+  --listbox-background-default: #fafafa; /* Default background */
   --listbox-background-disabled: #f5f5f5; /* Disabled background */
   --listbox-maxHeight: 280px; /* Max height before scrolling */
   --listbox-filter-height: 36px;
   --listbox-filter-padding-x: 10px;
-  --listbox-filter-background: #0a0e1f;
+  --listbox-filter-background: #fafafa;
   --listbox-filter-border: #e5e5e5;
   --listbox-filter-radius: 5px;
-  --listbox-filter-text: #ffffff;
-  --listbox-filter-placeholder: #7680a9;
+  --listbox-filter-text: #171717;
+  --listbox-filter-placeholder: #737373;
   --listbox-filter-marginBottom: 6px;
   --listbox-option-padding-x: 16px;
   --listbox-option-padding-y: 10px;
   --listbox-option-radius: 2px;
   --listbox-option-background-default: transparent;
   --listbox-option-background-hover: #f5f5f5;
-  --listbox-option-background-selected: #11162d;
+  --listbox-option-background-selected: #171717;
   --listbox-option-background-focus: #f5f5f5;
-  --listbox-option-text-default: #ffffff;
+  --listbox-option-text-default: #171717;
   --listbox-option-text-selected: #ffffff;
-  --listbox-option-text-disabled: #7680a9;
+  --listbox-option-text-disabled: #737373;
   --listbox-option-fontSize: 15px;
   --listbox-focus-ringWidth: 2px;
-  --listbox-focus-ringColor: #11162d;
+  --listbox-focus-ringColor: #171717;
   --listbox-focus-ringOffset: 1px;
   --listbox-checkbox-size: 16px;
   --listbox-checkbox-marginRight: 10px;
-  --mega-menu-root-background: #0a0e1f; /* Menu bar background */
+  --mega-menu-root-background: #fafafa; /* Menu bar background */
   --mega-menu-root-padding-x: 16px; /* Menu bar horizontal padding */
   --mega-menu-root-padding-y: 6px; /* Menu bar vertical padding */
   --mega-menu-root-gap: 4px; /* Gap between root items */
   --mega-menu-rootItem-padding-x: 16px; /* Root item horizontal padding */
   --mega-menu-rootItem-padding-y: 10px; /* Root item vertical padding */
-  --mega-menu-rootItem-text-color-default: #ffffff; /* Root item text color */
-  --mega-menu-rootItem-text-color-hover: #11162d; /* Root item hover text color */
-  --mega-menu-rootItem-text-color-active: #11162d; /* Active root item text color */
+  --mega-menu-rootItem-text-color-default: #171717; /* Root item text color */
+  --mega-menu-rootItem-text-color-hover: #171717; /* Root item hover text color */
+  --mega-menu-rootItem-text-color-active: #171717; /* Active root item text color */
   --mega-menu-rootItem-text-fontSize: 14px; /* Root item font size */
   --mega-menu-rootItem-text-fontWeight-default: 500; /* Root item font weight */
   --mega-menu-rootItem-text-fontWeight-active: 600; /* Active root item font weight */
   --mega-menu-rootItem-background-default: transparent; /* Root item background */
-  --mega-menu-rootItem-background-hover: #060813; /* Root item hover background */
-  --mega-menu-rootItem-background-active: #060813; /* Active root item background */
+  --mega-menu-rootItem-background-hover: #f5f5f5; /* Root item hover background */
+  --mega-menu-rootItem-background-active: #f5f5f5; /* Active root item background */
   --mega-menu-rootItem-radius: 2px; /* Root item border radius */
   --mega-menu-rootItem-indicator-height: 2px; /* Active indicator height */
-  --mega-menu-rootItem-indicator-color: #11162d; /* Active indicator color */
-  --mega-menu-panel-background: #1a2244; /* Dropdown panel background */
-  --mega-menu-panel-border-color: #1a2244; /* Panel border color */
+  --mega-menu-rootItem-indicator-color: #171717; /* Active indicator color */
+  --mega-menu-panel-background: #ffffff; /* Dropdown panel background */
+  --mega-menu-panel-border-color: #d4d4d4; /* Panel border color */
   --mega-menu-panel-border-width: 1px; /* Panel border width */
   --mega-menu-panel-radius: 5px; /* Panel border radius */
-  --mega-menu-panel-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08); /* Panel shadow */
+  --mega-menu-panel-shadow: 3px 3px 0 #171717; /* Panel shadow */
   --mega-menu-panel-padding: 26px; /* Panel padding */
   --mega-menu-panel-gap: 26px; /* Gap between columns */
   --mega-menu-panel-maxWidth: 960px; /* Maximum panel width */
   --mega-menu-panel-zIndex: 1050; /* Panel z-index */
   --mega-menu-column-minWidth: 200px; /* Minimum column width */
   --mega-menu-column-gap: 6px; /* Gap between column items */
-  --mega-menu-category-text-color: #ffffff; /* Category heading color */
+  --mega-menu-category-text-color: #171717; /* Category heading color */
   --mega-menu-category-text-fontSize: 12px; /* Category heading font size */
   --mega-menu-category-text-fontWeight: 600; /* Category heading font weight */
   --mega-menu-category-text-textTransform: uppercase; /* Category text transform */
@@ -1269,21 +1269,21 @@
   --mega-menu-category-margin-bottom: 10px; /* Space below category heading */
   --mega-menu-item-padding-x: 10px; /* Item horizontal padding */
   --mega-menu-item-padding-y: 6px; /* Item vertical padding */
-  --mega-menu-item-text-color-default: #ffffff; /* Item text color */
-  --mega-menu-item-text-color-hover: #11162d; /* Item hover text color */
+  --mega-menu-item-text-color-default: #171717; /* Item text color */
+  --mega-menu-item-text-color-hover: #171717; /* Item hover text color */
   --mega-menu-item-text-fontSize: 14px; /* Item font size */
-  --mega-menu-item-background-hover: #060813; /* Item hover background */
+  --mega-menu-item-background-hover: #f5f5f5; /* Item hover background */
   --mega-menu-item-radius: 2px; /* Item border radius */
   --mega-menu-item-icon-size: 16px; /* Item icon size */
-  --mega-menu-item-icon-color: #7680a9; /* Item icon color */
+  --mega-menu-item-icon-color: #737373; /* Item icon color */
   --mega-menu-item-icon-gap: 10px; /* Gap between icon and text */
-  --mega-menu-item-description-color: #7680a9; /* Item description color */
+  --mega-menu-item-description-color: #737373; /* Item description color */
   --mega-menu-item-description-fontSize: 12px; /* Item description font size */
-  --menu-background: #1a2244; /* Menu popup background */
+  --menu-background: #ffffff; /* Menu popup background */
   --menu-border-width: 1px; /* Menu border width */
   --menu-border-color: #e5e5e5; /* Menu border color */
   --menu-radius: 5px; /* Menu border radius */
-  --menu-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08); /* Menu popup shadow */
+  --menu-shadow: 3px 3px 0 #171717; /* Menu popup shadow */
   --menu-padding: 6px; /* Menu content padding */
   --menu-minWidth: 180px; /* Minimum menu width */
   --menu-maxHeight: 320px; /* Maximum menu height before scrolling */
@@ -1296,38 +1296,38 @@
   --menu-item-background-hover: #f5f5f5; /* Item hover background */
   --menu-item-background-active: #e5e5e5; /* Item active/pressed background */
   --menu-item-background-disabled: transparent; /* Disabled item background */
-  --menu-item-text-default: #ffffff; /* Default item text color */
-  --menu-item-text-disabled: #7680a9; /* Disabled item text color */
+  --menu-item-text-default: #171717; /* Default item text color */
+  --menu-item-text-disabled: #737373; /* Disabled item text color */
   --menu-item-icon-size: 18px; /* Item icon size */
-  --menu-item-icon-color-default: #7680a9; /* Default icon color */
+  --menu-item-icon-color-default: #737373; /* Default icon color */
   --menu-item-icon-color-disabled: #d4d4d4; /* Disabled icon color */
   --menu-item-fontSize: 14px; /* Item font size */
   --menu-separator-color: #e5e5e5; /* Separator line color */
   --menu-separator-margin: 6px; /* Separator vertical margin */
-  --menubar-background: #11162d; /* Menubar background color */
+  --menubar-background: #ffffff; /* Menubar background color */
   --menubar-padding: 10px; /* Menubar container padding */
   --menubar-border-width: 1px; /* Border width */
-  --menubar-border-color: #1a2244; /* Border color */
+  --menubar-border-color: #d4d4d4; /* Border color */
   --menubar-border-radius: 5px; /* Border radius */
   --menubar-item-padding: 6px 10px; /* Menu item padding */
   --menubar-item-gap: 4px; /* Gap between icon and label */
-  --menubar-item-color-default: #ffffff; /* Item text color */
-  --menubar-item-color-hover: #ffffff; /* Item text color on hover */
-  --menubar-item-color-active: #11162d; /* Item text color when active */
-  --menubar-item-color-disabled: #7680a9; /* Item text color when disabled */
+  --menubar-item-color-default: #171717; /* Item text color */
+  --menubar-item-color-hover: #171717; /* Item text color on hover */
+  --menubar-item-color-active: #171717; /* Item text color when active */
+  --menubar-item-color-disabled: #737373; /* Item text color when disabled */
   --menubar-item-background-default: transparent; /* Item background */
-  --menubar-item-background-hover: #060813; /* Item background on hover */
-  --menubar-item-background-active: #78350f; /* Item background when active */
+  --menubar-item-background-hover: #f5f5f5; /* Item background on hover */
+  --menubar-item-background-active: #f5f5f5; /* Item background when active */
   --menubar-item-borderRadius: 5px; /* Item border radius */
   --menubar-icon-size: 16px; /* Icon size */
-  --menubar-icon-color-default: #7680a9; /* Icon color */
-  --menubar-icon-color-hover: #ffffff; /* Icon color on hover */
-  --menubar-submenu-background: #11162d; /* Submenu background */
+  --menubar-icon-color-default: #737373; /* Icon color */
+  --menubar-icon-color-hover: #171717; /* Icon color on hover */
+  --menubar-submenu-background: #ffffff; /* Submenu background */
   --menubar-submenu-minWidth: 200px; /* Submenu minimum width */
   --menubar-submenu-padding: 4px; /* Submenu container padding */
   --menubar-submenu-borderRadius: 5px; /* Submenu border radius */
-  --menubar-submenu-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08); /* Submenu shadow */
-  --menubar-separator-color: #1a2244; /* Separator color */
+  --menubar-submenu-shadow: 3px 3px 0 #171717; /* Submenu shadow */
+  --menubar-separator-color: #d4d4d4; /* Separator color */
   --menubar-separator-margin: 4px; /* Separator vertical margin */
   --menubar-transition-duration: 150ms; /* Animation duration */
   --message-padding-x: 16px; /* Horizontal padding */
@@ -1339,42 +1339,42 @@
   --message-iconSize: 20px; /* Icon size */
   --message-closeButtonSize: 24px; /* Close button size */
   --message-borderWidth: 1px; /* Border width */
-  --message-background-success: rgba(34, 197, 94, 0.15); /* Success message background */
-  --message-background-info: rgba(59, 130, 246, 0.15); /* Info message background */
-  --message-background-warn: rgba(234, 179, 8, 0.15); /* Warning message background */
-  --message-background-error: rgba(239, 68, 68, 0.15); /* Error message background */
-  --message-text-success: #4ade80; /* Success message text color */
-  --message-text-info: #60a5fa; /* Info message text color */
-  --message-text-warn: #facc15; /* Warning message text color */
-  --message-text-error: #f87171; /* Error message text color */
-  --message-icon-success: #22c55e; /* Success icon color */
-  --message-icon-info: #3b82f6; /* Info icon color */
-  --message-icon-warn: #eab308; /* Warning icon color */
-  --message-icon-error: #ef4444; /* Error icon color */
-  --message-border-success: #22c55e; /* Success message border color */
-  --message-border-info: #3b82f6; /* Info message border color */
-  --message-border-warn: #eab308; /* Warning message border color */
-  --message-border-error: #ef4444; /* Error message border color */
-  --message-closeButton-color: #7680a9; /* Close button icon color */
-  --message-closeButton-hoverColor: #ffffff; /* Close button icon hover color */
+  --message-background-success: #f5f5f5; /* Success message background */
+  --message-background-info: #f5f5f5; /* Info message background */
+  --message-background-warn: #f5f5f5; /* Warning message background */
+  --message-background-error: #f5f5f5; /* Error message background */
+  --message-text-success: #171717; /* Success message text color */
+  --message-text-info: #171717; /* Info message text color */
+  --message-text-warn: #171717; /* Warning message text color */
+  --message-text-error: #171717; /* Error message text color */
+  --message-icon-success: #171717; /* Success icon color */
+  --message-icon-info: #171717; /* Info icon color */
+  --message-icon-warn: #171717; /* Warning icon color */
+  --message-icon-error: #171717; /* Error icon color */
+  --message-border-success: #171717; /* Success message border color */
+  --message-border-info: #171717; /* Info message border color */
+  --message-border-warn: #171717; /* Warning message border color */
+  --message-border-error: #171717; /* Error message border color */
+  --message-closeButton-color: #737373; /* Close button icon color */
+  --message-closeButton-hoverColor: #171717; /* Close button icon hover color */
   --meter-group-track-height: 8px; /* Height of the meter track */
   --meter-group-track-background: #e5e5e5; /* Background color of the meter track */
   --meter-group-track-radius: 9999px; /* Border radius of the meter track */
   --meter-group-meter-gap: 1px; /* Gap between meters in the group */
   --meter-group-meter-radius: 9999px; /* Border radius of individual meters */
-  --meter-group-label-color: #ffffff; /* Label text color */
+  --meter-group-label-color: #171717; /* Label text color */
   --meter-group-label-fontSize: 14px; /* Label font size */
   --meter-group-label-fontWeight: 500; /* Label font weight */
   --meter-group-label-gap: 6px; /* Gap between label and meter */
-  --meter-group-valueText-color: #7680a9; /* Value text color */
+  --meter-group-valueText-color: #737373; /* Value text color */
   --meter-group-valueText-fontSize: 12px; /* Value font size */
   --meter-group-legend-gap: 16px; /* Gap between legend items */
   --meter-group-legend-marker-size: 8px; /* Size of the legend color marker */
   --meter-group-legend-marker-radius: 9999px; /* Border radius of the legend marker */
-  --meter-group-colors-primary: #11162d; /* Primary meter color */
-  --meter-group-colors-success: #22c55e; /* Success meter color */
-  --meter-group-colors-warning: #eab308; /* Warning meter color */
-  --meter-group-colors-danger: #ef4444; /* Danger meter color */
+  --meter-group-colors-primary: #171717; /* Primary meter color */
+  --meter-group-colors-success: #171717; /* Success meter color */
+  --meter-group-colors-warning: #171717; /* Warning meter color */
+  --meter-group-colors-danger: #171717; /* Danger meter color */
   --multi-select-height-sm: 32px;
   --multi-select-height-md: 40px;
   --multi-select-height-lg: 48px;
@@ -1388,30 +1388,30 @@
   --multi-select-border-width: 1px;
   --multi-select-border-color-default: #d4d4d4;
   --multi-select-border-color-hover: #a3a3a3;
-  --multi-select-border-color-focus: #11162d;
+  --multi-select-border-color-focus: #171717;
   --multi-select-border-color-disabled: #e5e5e5;
-  --multi-select-border-color-error: #ef4444;
-  --multi-select-background-default: #0a0e1f;
+  --multi-select-border-color-error: #171717;
+  --multi-select-background-default: #fafafa;
   --multi-select-background-disabled: #f5f5f5;
-  --multi-select-background-hover: #0a0e1f;
-  --multi-select-text-default: #ffffff;
-  --multi-select-text-placeholder: #7680a9;
-  --multi-select-text-disabled: #7680a9;
+  --multi-select-background-hover: #fafafa;
+  --multi-select-text-default: #171717;
+  --multi-select-text-placeholder: #737373;
+  --multi-select-text-disabled: #737373;
   --multi-select-icon-size: 16px;
   --multi-select-icon-color-default: #737373;
   --multi-select-icon-color-disabled: #d4d4d4;
   --multi-select-chip-gap: 4px;
   --multi-select-chip-padding-x: 6px;
   --multi-select-chip-padding-y: 2px;
-  --multi-select-chip-background: #060813;
+  --multi-select-chip-background: #f5f5f5;
   --multi-select-chip-radius: 2px;
   --multi-select-chip-fontSize: 13px;
   --multi-select-chip-remove-size: 14px;
-  --multi-select-chip-remove-color-default: #7680a9;
-  --multi-select-chip-remove-color-hover: #ffffff;
-  --multi-select-dropdown-background: #0a0e1f;
+  --multi-select-chip-remove-color-default: #737373;
+  --multi-select-chip-remove-color-hover: #171717;
+  --multi-select-dropdown-background: #fafafa;
   --multi-select-dropdown-border: #e5e5e5;
-  --multi-select-dropdown-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+  --multi-select-dropdown-shadow: 3px 3px 0 #171717;
   --multi-select-dropdown-radius: 5px;
   --multi-select-dropdown-maxHeight: 280px;
   --multi-select-option-padding-x: 16px;
@@ -1419,94 +1419,94 @@
   --multi-select-option-gap: 10px;
   --multi-select-option-background-default: transparent;
   --multi-select-option-background-hover: #f5f5f5;
-  --multi-select-option-text-default: #ffffff;
+  --multi-select-option-text-default: #171717;
   --multi-select-filter-padding: 10px;
   --multi-select-filter-borderColor: #e5e5e5;
   --multi-select-focus-ringWidth: 2px;
-  --multi-select-focus-ringColor: #11162d;
+  --multi-select-focus-ringColor: #171717;
   --multi-select-focus-ringOffset: 1px;
-  --orderList-background: #11162d; /* OrderList container background */
-  --orderList-border-color: #1a2244; /* Container border color */
+  --orderList-background: #ffffff; /* OrderList container background */
+  --orderList-border-color: #d4d4d4; /* Container border color */
   --orderList-border-width: 1px; /* Container border width */
   --orderList-radius: 5px; /* Container border radius */
-  --orderList-header-background: #060813; /* Header background color */
+  --orderList-header-background: #f5f5f5; /* Header background color */
   --orderList-header-padding: 16px; /* Header padding */
-  --orderList-header-color: #ffffff; /* Header text color */
+  --orderList-header-color: #171717; /* Header text color */
   --orderList-header-fontSize: 16px; /* Header font size */
   --orderList-header-fontWeight: 600; /* Header font weight */
-  --orderList-header-borderColor: #1a2244; /* Header border color */
+  --orderList-header-borderColor: #d4d4d4; /* Header border color */
   --orderList-list-padding: 10px; /* List container padding */
   --orderList-list-gap: 4px; /* Gap between list items */
   --orderList-item-padding: 10px; /* Item padding */
   --orderList-item-background-default: transparent; /* Item default background */
-  --orderList-item-background-hover: #060813; /* Item hover background */
-  --orderList-item-background-selected: #78350f; /* Item selected background */
-  --orderList-item-background-dragging: #1a2244; /* Item dragging background */
-  --orderList-item-color: #ffffff; /* Item text color */
+  --orderList-item-background-hover: #f5f5f5; /* Item hover background */
+  --orderList-item-background-selected: #f5f5f5; /* Item selected background */
+  --orderList-item-background-dragging: #ffffff; /* Item dragging background */
+  --orderList-item-color: #171717; /* Item text color */
   --orderList-item-radius: 2px; /* Item border radius */
   --orderList-item-borderColor-default: transparent; /* Item default border */
-  --orderList-item-borderColor-selected: #11162d; /* Item selected border */
+  --orderList-item-borderColor-selected: #171717; /* Item selected border */
   --orderList-controls-gap: 4px; /* Gap between control buttons */
   --orderList-controls-padding: 16px; /* Controls area padding */
   --orderList-button-size: 32px; /* Button size */
-  --orderList-button-background-default: #060813; /* Button default background */
+  --orderList-button-background-default: #f5f5f5; /* Button default background */
   --orderList-button-background-hover: #e5e5e5; /* Button hover background */
   --orderList-button-background-disabled: #f5f5f5; /* Button disabled background */
-  --orderList-button-color-default: #ffffff; /* Button icon color */
-  --orderList-button-color-disabled: #7680a9; /* Button disabled icon color */
+  --orderList-button-color-default: #171717; /* Button icon color */
+  --orderList-button-color-disabled: #737373; /* Button disabled icon color */
   --orderList-button-radius: 2px; /* Button border radius */
-  --orderList-dragHandle-color: #7680a9; /* Drag handle color */
+  --orderList-dragHandle-color: #737373; /* Drag handle color */
   --orderList-dragHandle-size: 16px; /* Drag handle icon size */
   --orderList-transition-duration: 150ms; /* Animation duration */
   --organizationChart-background: transparent; /* Chart container background */
   --organizationChart-padding: 26px; /* Chart container padding */
-  --organizationChart-node-background-default: #11162d; /* Node default background */
-  --organizationChart-node-background-hover: #1a2244; /* Node hover background */
-  --organizationChart-node-background-selected: #78350f; /* Node selected background */
+  --organizationChart-node-background-default: #ffffff; /* Node default background */
+  --organizationChart-node-background-hover: #ffffff; /* Node hover background */
+  --organizationChart-node-background-selected: #f5f5f5; /* Node selected background */
   --organizationChart-node-border-width: 1px; /* Node border width */
-  --organizationChart-node-border-color-default: #1a2244; /* Node default border color */
-  --organizationChart-node-border-color-hover: #242e5c; /* Node hover border color */
-  --organizationChart-node-border-color-selected: #11162d; /* Node selected border color */
+  --organizationChart-node-border-color-default: #d4d4d4; /* Node default border color */
+  --organizationChart-node-border-color-hover: #171717; /* Node hover border color */
+  --organizationChart-node-border-color-selected: #171717; /* Node selected border color */
   --organizationChart-node-radius: 5px; /* Node border radius */
   --organizationChart-node-padding: 16px; /* Node content padding */
-  --organizationChart-node-shadow-default: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.08); /* Node default shadow */
-  --organizationChart-node-shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08); /* Node hover shadow */
+  --organizationChart-node-shadow-default: none; /* Node default shadow */
+  --organizationChart-node-shadow-hover: 2px 2px 0 #171717; /* Node hover shadow */
   --organizationChart-node-minWidth: 160px; /* Node minimum width */
   --organizationChart-nodeContent-gap: 4px; /* Gap between node content elements */
-  --organizationChart-nodeContent-title-color: #ffffff; /* Node title color */
+  --organizationChart-nodeContent-title-color: #171717; /* Node title color */
   --organizationChart-nodeContent-title-fontSize: 14px; /* Node title font size */
   --organizationChart-nodeContent-title-fontWeight: 600; /* Node title font weight */
-  --organizationChart-nodeContent-subtitle-color: #7680a9; /* Node subtitle color */
+  --organizationChart-nodeContent-subtitle-color: #737373; /* Node subtitle color */
   --organizationChart-nodeContent-subtitle-fontSize: 12px; /* Node subtitle font size */
   --organizationChart-nodeContent-subtitle-fontWeight: 400; /* Node subtitle font weight */
-  --organizationChart-connector-color: #242e5c; /* Connector line color */
+  --organizationChart-connector-color: #171717; /* Connector line color */
   --organizationChart-connector-width: 1px; /* Connector line width */
   --organizationChart-connector-style: solid; /* Connector line style */
   --organizationChart-spacing-horizontal: 42px; /* Horizontal spacing between nodes */
   --organizationChart-spacing-vertical: 26px; /* Vertical spacing between levels */
   --organizationChart-toggleButton-size: 20px; /* Toggle button size */
-  --organizationChart-toggleButton-background: #11162d; /* Toggle button background */
-  --organizationChart-toggleButton-borderColor: #1a2244; /* Toggle button border color */
-  --organizationChart-toggleButton-color: #7680a9; /* Toggle button icon color */
+  --organizationChart-toggleButton-background: #ffffff; /* Toggle button background */
+  --organizationChart-toggleButton-borderColor: #d4d4d4; /* Toggle button border color */
+  --organizationChart-toggleButton-color: #737373; /* Toggle button icon color */
   --organizationChart-toggleButton-radius: 9999px; /* Toggle button border radius */
   --organizationChart-transition-duration: 200ms; /* Animation duration */
   --overlayPanel-padding-x: 26px; /* Horizontal padding */
   --overlayPanel-padding-y: 16px; /* Vertical padding */
-  --overlayPanel-background: #0a0e1f; /* Panel background color */
+  --overlayPanel-background: #fafafa; /* Panel background color */
   --overlayPanel-radius: 5px; /* Panel border radius */
-  --overlayPanel-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08); /* Panel elevation shadow */
-  --overlayPanel-border-color: #1a2244; /* Panel border color */
+  --overlayPanel-shadow: 4px 4px 0 #171717; /* Panel elevation shadow */
+  --overlayPanel-border-color: #d4d4d4; /* Panel border color */
   --overlayPanel-border-width: 1px; /* Panel border width */
   --overlayPanel-closeButton-size: 28px; /* Close button size */
   --overlayPanel-closeButton-iconSize: 14px; /* Close icon size */
-  --overlayPanel-closeButton-color-default: #7680a9; /* Close button icon color */
-  --overlayPanel-closeButton-color-hover: #ffffff; /* Close button hover color */
-  --overlayPanel-closeButton-background-hover: #060813; /* Close button hover background */
+  --overlayPanel-closeButton-color-default: #737373; /* Close button icon color */
+  --overlayPanel-closeButton-color-hover: #171717; /* Close button hover color */
+  --overlayPanel-closeButton-background-hover: #f5f5f5; /* Close button hover background */
   --overlayPanel-closeButton-radius: 2px; /* Close button border radius */
   --overlayPanel-offset: 10px; /* Distance from trigger element */
   --overlayPanel-maxWidth: 400px; /* Maximum width */
   --overlayPanel-zIndex: 1100; /* Z-index for stacking */
-  --paginator-background: #0a0e1f; /* Paginator container background */
+  --paginator-background: #fafafa; /* Paginator container background */
   --paginator-padding: 10px; /* Paginator container padding */
   --paginator-gap: 6px; /* Gap between paginator elements */
   --paginator-border-width: 1px; /* Border width */
@@ -1515,10 +1515,10 @@
   --paginator-page-size: 36px; /* Page button size */
   --paginator-page-background-default: transparent; /* Page button default background */
   --paginator-page-background-hover: #f5f5f5; /* Page button hover background */
-  --paginator-page-background-active: #11162d; /* Active page button background */
-  --paginator-page-text-default: #ffffff; /* Page button default text color */
-  --paginator-page-text-hover: #ffffff; /* Page button hover text color */
-  --paginator-page-text-active: #0a0e1f; /* Active page button text color */
+  --paginator-page-background-active: #171717; /* Active page button background */
+  --paginator-page-text-default: #171717; /* Page button default text color */
+  --paginator-page-text-hover: #171717; /* Page button hover text color */
+  --paginator-page-text-active: #ffffff; /* Active page button text color */
   --paginator-page-text-disabled: #a3a3a3; /* Disabled page button text color */
   --paginator-page-fontSize: 14px; /* Page button font size */
   --paginator-page-fontWeight: 500; /* Page button font weight */
@@ -1527,67 +1527,67 @@
   --paginator-nav-background-default: transparent; /* Nav button default background */
   --paginator-nav-background-hover: #f5f5f5; /* Nav button hover background */
   --paginator-nav-background-disabled: transparent; /* Nav button disabled background */
-  --paginator-nav-icon-color-default: #7680a9; /* Nav icon default color */
-  --paginator-nav-icon-color-hover: #ffffff; /* Nav icon hover color */
+  --paginator-nav-icon-color-default: #737373; /* Nav icon default color */
+  --paginator-nav-icon-color-hover: #171717; /* Nav icon hover color */
   --paginator-nav-icon-color-disabled: #a3a3a3; /* Nav icon disabled color */
   --paginator-nav-icon-size: 18px; /* Nav icon size */
   --paginator-nav-radius: 5px; /* Nav button border radius */
-  --paginator-info-color: #7680a9; /* Info text color */
+  --paginator-info-color: #737373; /* Info text color */
   --paginator-info-fontSize: 14px; /* Info text font size */
-  --paginator-focus-ringColor: #f97316; /* Focus ring color */
+  --paginator-focus-ringColor: #171717; /* Focus ring color */
   --paginator-focus-ringWidth: 2px; /* Focus ring width */
   --paginator-focus-ringOffset: 2px; /* Focus ring offset */
   --paginator-transition-duration: 150ms; /* Transition duration */
-  --panel-background: #11162d; /* Panel background color */
-  --panel-border-color: #1a2244; /* Panel border color */
+  --panel-background: #ffffff; /* Panel background color */
+  --panel-border-color: #d4d4d4; /* Panel border color */
   --panel-border-width: 1px; /* Panel border width */
   --panel-radius: 5px; /* Panel border radius */
   --panel-header-padding: 16px; /* Header section padding */
   --panel-header-background-default: #11162d; /* Header background */
   --panel-header-background-hover: #1a2244; /* Header hover background when toggleable */
-  --panel-header-color: #ffffff; /* Header text color */
-  --panel-header-borderColor: #1a2244; /* Header bottom border color */
+  --panel-header-color: #171717; /* Header text color */
+  --panel-header-borderColor: #d4d4d4; /* Header bottom border color */
   --panel-header-fontSize: 16px; /* Header font size */
   --panel-header-fontWeight: 600; /* Header font weight */
   --panel-content-padding: 26px; /* Content area padding */
-  --panel-content-background: #0a0e1f; /* Content background */
-  --panel-content-color: #ffffff; /* Content text color */
+  --panel-content-background: #fafafa; /* Content background */
+  --panel-content-color: #171717; /* Content text color */
   --panel-icon-size: 16px; /* Toggle icon size */
-  --panel-icon-color-default: #7680a9; /* Icon color */
-  --panel-icon-color-hover: #ffffff; /* Icon color on hover */
+  --panel-icon-color-default: #737373; /* Icon color */
+  --panel-icon-color-hover: #171717; /* Icon color on hover */
   --panel-icon-rotation-collapsed: -90deg; /* Icon rotation when collapsed */
   --panel-icon-rotation-expanded: 0deg; /* Icon rotation when expanded */
   --panel-transition-duration: 200ms; /* Animation duration */
-  --panelmenu-background: #11162d; /* PanelMenu background */
+  --panelmenu-background: #ffffff; /* PanelMenu background */
   --panelmenu-border-width: 1px; /* Border width */
-  --panelmenu-border-color: #1a2244; /* Border color */
+  --panelmenu-border-color: #d4d4d4; /* Border color */
   --panelmenu-border-radius: 5px; /* Border radius */
   --panelmenu-gap: 0px; /* Gap between panels */
   --panelmenu-header-padding: 16px; /* Panel header padding */
-  --panelmenu-header-background-default: #11162d; /* Header background */
-  --panelmenu-header-background-hover: #060813; /* Header background on hover */
-  --panelmenu-header-background-active: #060813; /* Header background when expanded */
-  --panelmenu-header-color-default: #ffffff; /* Header text color */
-  --panelmenu-header-color-hover: #ffffff; /* Header text color on hover */
-  --panelmenu-header-color-disabled: #7680a9; /* Header text color when disabled */
+  --panelmenu-header-background-default: #ffffff; /* Header background */
+  --panelmenu-header-background-hover: #f5f5f5; /* Header background on hover */
+  --panelmenu-header-background-active: #f5f5f5; /* Header background when expanded */
+  --panelmenu-header-color-default: #171717; /* Header text color */
+  --panelmenu-header-color-hover: #171717; /* Header text color on hover */
+  --panelmenu-header-color-disabled: #737373; /* Header text color when disabled */
   --panelmenu-content-padding: 0; /* Content area padding */
-  --panelmenu-content-background: #0a0e1f; /* Content background */
+  --panelmenu-content-background: #fafafa; /* Content background */
   --panelmenu-item-padding: 6px 16px; /* Menu item padding */
   --panelmenu-item-gap: 4px; /* Gap between icon and label */
-  --panelmenu-item-color-default: #ffffff; /* Item text color */
-  --panelmenu-item-color-hover: #11162d; /* Item text color on hover */
-  --panelmenu-item-color-active: #11162d; /* Active item text color */
-  --panelmenu-item-color-disabled: #7680a9; /* Disabled item text color */
+  --panelmenu-item-color-default: #171717; /* Item text color */
+  --panelmenu-item-color-hover: #171717; /* Item text color on hover */
+  --panelmenu-item-color-active: #171717; /* Active item text color */
+  --panelmenu-item-color-disabled: #737373; /* Disabled item text color */
   --panelmenu-item-background-default: transparent; /* Item background */
-  --panelmenu-item-background-hover: #060813; /* Item background on hover */
-  --panelmenu-item-background-active: #78350f; /* Active item background */
+  --panelmenu-item-background-hover: #f5f5f5; /* Item background on hover */
+  --panelmenu-item-background-active: #f5f5f5; /* Active item background */
   --panelmenu-item-indent: 16px; /* Indent for nested items */
   --panelmenu-icon-size: 16px; /* Icon size */
-  --panelmenu-icon-color-default: #7680a9; /* Icon color */
-  --panelmenu-icon-color-hover: #ffffff; /* Icon color on hover */
+  --panelmenu-icon-color-default: #737373; /* Icon color */
+  --panelmenu-icon-color-hover: #171717; /* Icon color on hover */
   --panelmenu-icon-rotation-collapsed: 0deg; /* Chevron rotation when collapsed */
   --panelmenu-icon-rotation-expanded: 90deg; /* Chevron rotation when expanded */
-  --panelmenu-separator-color: #1a2244; /* Separator color */
+  --panelmenu-separator-color: #d4d4d4; /* Separator color */
   --panelmenu-separator-margin: 4px; /* Separator margin */
   --panelmenu-transition-duration: 200ms; /* Animation duration */
   --picklist-padding: 16px; /* Container padding */
@@ -1596,7 +1596,7 @@
   --picklist-border-width: 1px;
   --picklist-border-color-default: #d4d4d4; /* Default border color */
   --picklist-border-color-disabled: #e5e5e5; /* Disabled border color */
-  --picklist-background-default: #0a0e1f; /* Default background */
+  --picklist-background-default: #fafafa; /* Default background */
   --picklist-background-disabled: #f5f5f5; /* Disabled background */
   --picklist-list-minHeight: 200px; /* Minimum height of list panels */
   --picklist-list-maxHeight: 320px; /* Maximum height before scrolling */
@@ -1604,19 +1604,19 @@
   --picklist-header-padding-x: 16px;
   --picklist-header-padding-y: 10px;
   --picklist-header-background: #fafafa;
-  --picklist-header-text: #ffffff;
+  --picklist-header-text: #171717;
   --picklist-header-borderColor: #e5e5e5;
   --picklist-item-padding-x: 16px;
   --picklist-item-padding-y: 10px;
   --picklist-item-radius: 2px;
   --picklist-item-background-default: transparent;
   --picklist-item-background-hover: #f5f5f5;
-  --picklist-item-background-selected: #11162d;
-  --picklist-item-text-default: #ffffff;
+  --picklist-item-background-selected: #171717;
+  --picklist-item-text-default: #171717;
   --picklist-item-text-selected: #ffffff;
   --picklist-controls-gap: 6px;
   --picklist-controls-button-size: 32px;
-  --picklist-controls-button-background-default: #0a0e1f;
+  --picklist-controls-button-background-default: #fafafa;
   --picklist-controls-button-background-hover: #f5f5f5;
   --picklist-controls-button-background-disabled: #fafafa;
   --picklist-controls-button-border: #d4d4d4;
@@ -1624,14 +1624,14 @@
   --picklist-controls-button-icon-disabled: #d4d4d4;
   --picklist-controls-button-radius: 5px;
   --picklist-focus-ringWidth: 2px;
-  --picklist-focus-ringColor: #11162d;
+  --picklist-focus-ringColor: #171717;
   --picklist-focus-ringOffset: 1px;
   --popover-padding-x: 16px; /* Horizontal padding */
   --popover-padding-y: 10px; /* Vertical padding */
-  --popover-background: #0a0e1f; /* Popover background color */
+  --popover-background: #fafafa; /* Popover background color */
   --popover-radius: 5px; /* Popover border radius */
-  --popover-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08); /* Popover elevation shadow */
-  --popover-border-color: #1a2244; /* Popover border color */
+  --popover-shadow: 3px 3px 0 #171717; /* Popover elevation shadow */
+  --popover-border-color: #d4d4d4; /* Popover border color */
   --popover-border-width: 1px; /* Popover border width */
   --popover-arrow-size: 8px; /* Arrow/pointer size */
   --popover-offset: 10px; /* Distance from trigger element */
@@ -1644,7 +1644,7 @@
   --progress-bar-label-color: #ffffff; /* Label text on fill */
   --progress-spinner-size: 48px; /* Default spinner size (width and height) */
   --progress-spinner-strokeWidth: 4px; /* Stroke width of the spinner circle */
-  --progress-spinner-color: #11162d; /* Spinner stroke color */
+  --progress-spinner-color: #171717; /* Spinner stroke color */
   --progress-spinner-fill: transparent; /* Spinner fill color (typically transparent) */
   --progress-spinner-animation-duration: 2s; /* Duration of the spinner animation */
   --progress-spinner-track-color: #e5e5e5; /* Background track circle color */
@@ -1660,15 +1660,15 @@
   --radio-border-color-checked: #f97316; /* Accent color when checked */
   --radio-border-color-focus: #f97316;
   --radio-border-color-disabled: #1a2244;
-  --radio-border-color-error: #ef4444;
+  --radio-border-color-error: #171717;
   --radio-background-default: transparent; /* Transparent to show dark page background */
   --radio-background-checked: #f97316; /* Bright accent for visibility on dark backgrounds */
   --radio-background-disabled: #11162d;
   --radio-background-hover: #11162d;
   --radio-dot-color: #ffffff;
   --radio-label-gap: 10px;
-  --radio-label-color-default: #ffffff;
-  --radio-label-color-disabled: #7680a9;
+  --radio-label-color-default: #171717;
+  --radio-label-color-disabled: #737373;
   --radio-focus-ringWidth: 2px;
   --radio-focus-ringColor: #f97316;
   --radio-focus-ringOffset: 2px;
@@ -1683,14 +1683,14 @@
   --rating-cancel-color-default: #a3a3a3; /* Cancel button default color */
   --rating-cancel-color-hover: #ef4444; /* Cancel button hover color */
   --rating-focus-ringWidth: 2px;
-  --rating-focus-ringColor: #11162d;
+  --rating-focus-ringColor: #171717;
   --rating-focus-ringOffset: 2px;
-  --row-background-default: #0a0e1f; /* Default row background */
-  --row-background-hover: #060813; /* Row background on hover */
-  --row-background-selected: #1a2244; /* Selected row background */
-  --row-background-striped: #11162d; /* Striped row background (alternate) */
-  --row-text-default: #ffffff; /* Row text color */
-  --row-border-color: #1a2244; /* Row border color */
+  --row-background-default: #fafafa; /* Default row background */
+  --row-background-hover: #f5f5f5; /* Row background on hover */
+  --row-background-selected: #f5f5f5; /* Selected row background */
+  --row-background-striped: #ffffff; /* Striped row background (alternate) */
+  --row-text-default: #171717; /* Row text color */
+  --row-border-color: #d4d4d4; /* Row border color */
   --row-border-width: 1px; /* Row border width */
   --row-padding-x: 16px; /* Horizontal cell padding */
   --row-padding-y: 10px; /* Vertical cell padding */
@@ -1698,7 +1698,7 @@
   --scroll-panel-background: transparent; /* Scroll panel container background */
   --scroll-panel-scrollbar-size: 6px; /* Scrollbar track width/height */
   --scroll-panel-scrollbar-padding: 2px; /* Padding around scrollbar */
-  --scroll-panel-scrollbar-track-background: #060813; /* Scrollbar track background */
+  --scroll-panel-scrollbar-track-background: #f5f5f5; /* Scrollbar track background */
   --scroll-panel-scrollbar-track-radius: 9999px; /* Scrollbar track border radius */
   --scroll-panel-scrollbar-thumb-background-default: #d4d4d4; /* Scrollbar thumb background */
   --scroll-panel-scrollbar-thumb-background-hover: #a3a3a3; /* Scrollbar thumb hover background */
@@ -1707,17 +1707,17 @@
   --scroll-panel-scrollbar-thumb-minSize: 24px; /* Minimum scrollbar thumb size */
   --scroll-panel-transition-duration: 150ms; /* Scrollbar visibility transition */
   --scroll-top-size: 40px; /* Size of the scroll top button */
-  --scroll-top-background-default: #11162d; /* Default background color */
-  --scroll-top-background-hover: #fb923c; /* Hover background color */
-  --scroll-top-background-active: #ea580c; /* Active background color */
-  --scroll-top-icon-color: #0a0e1f; /* Icon color */
+  --scroll-top-background-default: #171717; /* Default background color */
+  --scroll-top-background-hover: #404040; /* Hover background color */
+  --scroll-top-background-active: #171717; /* Active background color */
+  --scroll-top-icon-color: #ffffff; /* Icon color */
   --scroll-top-icon-size: 20px; /* Icon size */
   --scroll-top-radius: 9999px; /* Border radius (circular by default) */
-  --scroll-top-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08); /* Box shadow for elevation */
+  --scroll-top-shadow: 3px 3px 0 #171717; /* Box shadow for elevation */
   --scroll-top-position-bottom: 26px; /* Distance from bottom of viewport */
   --scroll-top-position-right: 26px; /* Distance from right of viewport */
   --scroll-top-transition-duration: 200ms; /* Transition duration for visibility */
-  --scroll-top-focus-ringColor: #f97316; /* Focus ring color */
+  --scroll-top-focus-ringColor: #171717; /* Focus ring color */
   --scroll-top-focus-ringWidth: 2px; /* Focus ring width */
   --scroll-top-focus-ringOffset: 2px; /* Focus ring offset */
   --selectButton-gap: 4px; /* Gap between option buttons */
@@ -1727,18 +1727,18 @@
   --selectButton-border-width: 1px; /* Border width for option buttons */
   --selectButton-border-color-default: #d4d4d4; /* Default border color */
   --selectButton-border-color-hover: #a3a3a3; /* Hover border color */
-  --selectButton-border-color-selected: #11162d; /* Selected border color */
+  --selectButton-border-color-selected: #171717; /* Selected border color */
   --selectButton-border-color-disabled: #e5e5e5; /* Disabled border color */
-  --selectButton-background-default: #0a0e1f; /* Default background color */
+  --selectButton-background-default: #fafafa; /* Default background color */
   --selectButton-background-hover: #fafafa; /* Hover background color */
-  --selectButton-background-selected: #11162d; /* Selected background color */
+  --selectButton-background-selected: #171717; /* Selected background color */
   --selectButton-background-disabled: #f5f5f5; /* Disabled background color */
-  --selectButton-text-default: #ffffff; /* Default text color */
-  --selectButton-text-hover: #ffffff; /* Hover text color */
-  --selectButton-text-selected: #0a0e1f; /* Selected text color */
-  --selectButton-text-disabled: #7680a9; /* Disabled text color */
+  --selectButton-text-default: #171717; /* Default text color */
+  --selectButton-text-hover: #171717; /* Hover text color */
+  --selectButton-text-selected: #ffffff; /* Selected text color */
+  --selectButton-text-disabled: #737373; /* Disabled text color */
   --selectButton-focus-ringWidth: 2px; /* Focus ring width */
-  --selectButton-focus-ringColor: #f97316; /* Focus ring color */
+  --selectButton-focus-ringColor: #171717; /* Focus ring color */
   --selectButton-focus-ringOffset: 2px; /* Focus ring offset */
   --selectButton-fontSize: 14px; /* Font size for option text */
   --selectButton-fontWeight-default: 500; /* Default font weight */
@@ -1757,52 +1757,52 @@
   --select-border-width: 1px;
   --select-border-color-default: #d4d4d4;
   --select-border-color-hover: #a3a3a3;
-  --select-border-color-focus: #11162d;
+  --select-border-color-focus: #171717;
   --select-border-color-disabled: #e5e5e5;
-  --select-border-color-error: #ef4444;
-  --select-background-default: #0a0e1f;
+  --select-border-color-error: #171717;
+  --select-background-default: #fafafa;
   --select-background-disabled: #f5f5f5;
-  --select-background-hover: #0a0e1f;
-  --select-text-default: #ffffff;
-  --select-text-placeholder: #7680a9;
-  --select-text-disabled: #7680a9;
+  --select-background-hover: #fafafa;
+  --select-text-default: #171717;
+  --select-text-placeholder: #737373;
+  --select-text-disabled: #737373;
   --select-icon-size: 16px;
   --select-icon-color-default: #737373;
   --select-icon-color-disabled: #d4d4d4;
-  --select-dropdown-background: #0a0e1f;
+  --select-dropdown-background: #fafafa;
   --select-dropdown-border: #e5e5e5;
-  --select-dropdown-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+  --select-dropdown-shadow: 3px 3px 0 #171717;
   --select-dropdown-radius: 5px;
   --select-dropdown-maxHeight: 280px;
   --select-option-padding-x: 16px;
   --select-option-padding-y: 10px;
   --select-option-background-default: transparent;
   --select-option-background-hover: #f5f5f5;
-  --select-option-background-selected: #11162d;
-  --select-option-text-default: #ffffff;
+  --select-option-background-selected: #171717;
+  --select-option-text-default: #171717;
   --select-option-text-selected: #ffffff;
   --select-focus-ringWidth: 2px;
-  --select-focus-ringColor: #11162d;
+  --select-focus-ringColor: #171717;
   --select-focus-ringOffset: 1px;
   --sidebar-background: #11162d; /* Sidebar background color */
   --sidebar-border-color: #242e5c; /* Sidebar border color */
   --sidebar-border-width: 1px; /* Sidebar border width */
-  --sidebar-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08); /* Sidebar shadow */
+  --sidebar-shadow: 4px 4px 0 #171717; /* Sidebar shadow */
   --sidebar-header-padding: 26px; /* Header section padding */
   --sidebar-header-background: #11162d; /* Header background */
   --sidebar-header-borderColor: #242e5c; /* Header bottom border color */
-  --sidebar-header-title-color: #0a0e1f; /* Header title text color */
+  --sidebar-header-title-color: #ffffff; /* Header title text color */
   --sidebar-header-title-fontSize: 18px; /* Header title font size */
   --sidebar-header-title-fontWeight: 600; /* Header title font weight */
   --sidebar-content-padding: 26px; /* Content area padding */
-  --sidebar-content-color: #0a0e1f; /* Content text color */
+  --sidebar-content-color: #ffffff; /* Content text color */
   --sidebar-closeButton-size: 32px; /* Close button size */
   --sidebar-closeButton-iconSize: 16px; /* Close icon size */
   --sidebar-closeButton-color-default: #7680a9; /* Close button icon color */
-  --sidebar-closeButton-color-hover: #0a0e1f; /* Close button hover color */
+  --sidebar-closeButton-color-hover: #ffffff; /* Close button hover color */
   --sidebar-closeButton-background-hover: #1a2244; /* Close button hover background */
   --sidebar-closeButton-radius: 5px; /* Close button border radius */
-  --sidebar-overlay-background: rgba(0, 0, 0, 0.6); /* Overlay backdrop color */
+  --sidebar-overlay-background: rgba(23, 23, 23, 0.3); /* Overlay backdrop color */
   --sidebar-width-default: 320px; /* Default sidebar width */
   --sidebar-width-fullScreen: 100%; /* Full screen width */
   --sidebar-zIndex-overlay: 1000; /* Overlay z-index */
@@ -1828,22 +1828,22 @@
   --slider-focus-ringColor: #f97316;
   --slider-focus-ringOffset: 2px;
   --speed-dial-button-size: 56px;
-  --speed-dial-button-background-default: #f97316;
-  --speed-dial-button-background-hover: #fb923c;
-  --speed-dial-button-background-active: #ea580c;
-  --speed-dial-button-color: #0a0e1f;
+  --speed-dial-button-background-default: #171717;
+  --speed-dial-button-background-hover: #404040;
+  --speed-dial-button-background-active: #171717;
+  --speed-dial-button-color: #ffffff;
   --speed-dial-button-radius: 9999px;
-  --speed-dial-button-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+  --speed-dial-button-shadow: 3px 3px 0 #171717;
   --speed-dial-button-iconSize: 24px;
   --speed-dial-action-size: 48px;
-  --speed-dial-action-background-default: #0a0e1f;
+  --speed-dial-action-background-default: #fafafa;
   --speed-dial-action-background-hover: #f5f5f5;
-  --speed-dial-action-color-default: #ffffff;
-  --speed-dial-action-color-hover: #11162d;
+  --speed-dial-action-color-default: #171717;
+  --speed-dial-action-color-hover: #171717;
   --speed-dial-action-border-width: 1px;
   --speed-dial-action-border-color: #e5e5e5;
   --speed-dial-action-radius: 9999px;
-  --speed-dial-action-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
+  --speed-dial-action-shadow: 2px 2px 0 #171717;
   --speed-dial-action-iconSize: 20px;
   --speed-dial-action-gap: 10px;
   --speed-dial-label-background: #262626;
@@ -1853,42 +1853,42 @@
   --speed-dial-label-radius: 2px;
   --speed-dial-label-fontSize: 13px;
   --speed-dial-label-offset: 10px;
-  --speed-dial-focus-ringColor: #f97316;
+  --speed-dial-focus-ringColor: #171717;
   --speed-dial-focus-ringWidth: 2px;
   --speed-dial-focus-ringOffset: 2px;
   --speed-dial-transition-duration: 200ms;
-  --split-button-background-primary-default: #f97316;
-  --split-button-background-primary-hover: #fb923c;
-  --split-button-background-primary-active: #ea580c;
+  --split-button-background-primary-default: #171717;
+  --split-button-background-primary-hover: #404040;
+  --split-button-background-primary-active: #171717;
   --split-button-background-primary-disabled: #e5e5e5;
   --split-button-background-secondary-default: transparent;
-  --split-button-background-secondary-hover: #1a2244;
+  --split-button-background-secondary-hover: #f5f5f5;
   --split-button-background-secondary-active: #f5f5f5;
   --split-button-background-secondary-disabled: #f5f5f5;
   --split-button-background-outlined-default: transparent;
   --split-button-background-outlined-hover: #fafafa;
   --split-button-background-outlined-active: #f5f5f5;
   --split-button-background-outlined-disabled: transparent;
-  --split-button-text-primary-default: #0a0e1f;
+  --split-button-text-primary-default: #ffffff;
   --split-button-text-primary-disabled: #a3a3a3;
-  --split-button-text-secondary-default: #11162d;
+  --split-button-text-secondary-default: #171717;
   --split-button-text-secondary-disabled: #a3a3a3;
-  --split-button-text-outlined-default: #11162d;
+  --split-button-text-outlined-default: #171717;
   --split-button-text-outlined-disabled: #a3a3a3;
-  --split-button-border-primary-default: #f97316;
-  --split-button-border-primary-hover: #fb923c;
+  --split-button-border-primary-default: #171717;
+  --split-button-border-primary-hover: #404040;
   --split-button-border-primary-disabled: #e5e5e5;
-  --split-button-border-secondary-default: #2e3b75;
-  --split-button-border-secondary-hover: #2e3b75;
+  --split-button-border-secondary-default: #171717;
+  --split-button-border-secondary-hover: #171717;
   --split-button-border-secondary-disabled: #d4d4d4;
-  --split-button-border-outlined-default: #11162d;
-  --split-button-border-outlined-hover: #11162d;
+  --split-button-border-outlined-default: #171717;
+  --split-button-border-outlined-hover: #171717;
   --split-button-border-outlined-disabled: #d4d4d4;
   --split-button-border-width: 1px;
   --split-button-radius: 5px;
   --split-button-divider-primary: rgba(255, 255, 255, 0.2);
   --split-button-divider-secondary: #d4d4d4;
-  --split-button-divider-outlined: #11162d;
+  --split-button-divider-outlined: #171717;
   --split-button-divider-width: 1px;
   --split-button-size-sm-height: 32px;
   --split-button-size-sm-paddingX: 10px;
@@ -1905,31 +1905,31 @@
   --split-button-size-lg-fontSize: 18px;
   --split-button-size-lg-iconSize: 20px;
   --split-button-size-lg-gap: 10px;
-  --split-button-dropdown-background: #0a0e1f;
+  --split-button-dropdown-background: #fafafa;
   --split-button-dropdown-border: #e5e5e5;
-  --split-button-dropdown-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+  --split-button-dropdown-shadow: 3px 3px 0 #171717;
   --split-button-dropdown-radius: 5px;
   --split-button-menu-item-padding-x: 16px;
   --split-button-menu-item-padding-y: 10px;
   --split-button-menu-item-gap: 10px;
   --split-button-menu-item-background-default: transparent;
   --split-button-menu-item-background-hover: #f5f5f5;
-  --split-button-menu-item-text-default: #ffffff;
-  --split-button-menu-item-icon-color: #7680a9;
+  --split-button-menu-item-text-default: #171717;
+  --split-button-menu-item-icon-color: #737373;
   --split-button-menu-item-icon-size: 16px;
   --split-button-fontWeight: 600;
-  --split-button-focus-ringColor: #f97316;
+  --split-button-focus-ringColor: #171717;
   --split-button-focus-ringWidth: 2px;
   --split-button-focus-ringOffset: 2px;
   --split-button-transition-duration: 150ms;
-  --splitter-background: #0a0e1f; /* Splitter container background */
-  --splitter-border-color: #1a2244; /* Splitter border color */
+  --splitter-background: #fafafa; /* Splitter container background */
+  --splitter-border-color: #d4d4d4; /* Splitter border color */
   --splitter-border-width: 1px; /* Splitter border width */
   --splitter-border-radius: 5px; /* Splitter border radius */
   --splitter-gutter-size: 10px; /* Default gutter width/height */
-  --splitter-gutter-background-default: #060813; /* Gutter background color */
+  --splitter-gutter-background-default: #f5f5f5; /* Gutter background color */
   --splitter-gutter-background-hover: #e5e5e5; /* Gutter hover background */
-  --splitter-gutter-background-active: #11162d; /* Gutter active/dragging background */
+  --splitter-gutter-background-active: #171717; /* Gutter active/dragging background */
   --splitter-gutter-handle-size: 24px; /* Gutter handle indicator size */
   --splitter-gutter-handle-color-default: #a3a3a3; /* Gutter handle color */
   --splitter-gutter-handle-color-hover: #737373; /* Gutter handle hover color */
@@ -1956,35 +1956,35 @@
   --steps-label-fontSize: 14px; /* Step label font size */
   --steps-label-fontWeight: 500; /* Step label font weight */
   --steps-label-color-incomplete: #525d8f; /* Incomplete step label color */
-  --steps-label-color-active: #ffffff; /* Active step label color */
-  --steps-label-color-complete: #ffffff; /* Completed step label color */
+  --steps-label-color-active: #171717; /* Active step label color */
+  --steps-label-color-complete: #171717; /* Completed step label color */
   --steps-label-gap: 6px; /* Gap between marker and label */
   --steps-focus-ringWidth: 2px; /* Focus ring width */
   --steps-focus-ringColor: #f97316; /* Focus ring color */
   --steps-focus-ringOffset: 2px; /* Focus ring offset */
   --tabmenu-background: transparent; /* TabMenu container background */
   --tabmenu-border-width: 1px; /* Bottom border width */
-  --tabmenu-border-color: #1a2244; /* Bottom border color */
+  --tabmenu-border-color: #d4d4d4; /* Bottom border color */
   --tabmenu-item-padding: 10px 16px; /* Tab item padding */
   --tabmenu-item-gap: 4px; /* Gap between icon and label */
-  --tabmenu-item-color-default: #7680a9; /* Tab text color */
-  --tabmenu-item-color-hover: #ffffff; /* Tab text color on hover */
-  --tabmenu-item-color-active: #11162d; /* Active tab text color */
+  --tabmenu-item-color-default: #737373; /* Tab text color */
+  --tabmenu-item-color-hover: #171717; /* Tab text color on hover */
+  --tabmenu-item-color-active: #171717; /* Active tab text color */
   --tabmenu-item-color-disabled: #a3a3a3; /* Disabled tab text color */
   --tabmenu-item-background-default: transparent; /* Tab background */
-  --tabmenu-item-background-hover: #060813; /* Tab background on hover */
+  --tabmenu-item-background-hover: #f5f5f5; /* Tab background on hover */
   --tabmenu-item-background-active: transparent; /* Active tab background */
   --tabmenu-icon-size: 16px; /* Icon size */
   --tabmenu-inkbar-height: 2px; /* Active indicator height */
-  --tabmenu-inkbar-color: #11162d; /* Active indicator color */
+  --tabmenu-inkbar-color: #171717; /* Active indicator color */
   --tabmenu-inkbar-borderRadius: 2px; /* Active indicator border radius */
   --tabmenu-transition-duration: 200ms; /* Animation duration */
-  --tabs-nav-borderColor: #1a2244; /* Border color for tab navigation */
+  --tabs-nav-borderColor: #d4d4d4; /* Border color for tab navigation */
   --tabs-nav-borderWidth: 1px;
   --tabs-tab-padding-x: 16px; /* Horizontal tab padding */
   --tabs-tab-padding-y: 10px; /* Vertical tab padding */
-  --tabs-tab-text-default: #9ea5c2; /* Inactive tab text */
-  --tabs-tab-text-hover: #ffffff; /* Tab text on hover */
+  --tabs-tab-text-default: #404040; /* Inactive tab text */
+  --tabs-tab-text-hover: #171717; /* Tab text on hover */
   --tabs-tab-text-active: #f97316; /* Active tab text - visible accent */
   --tabs-tab-text-disabled: rgba(255, 255, 255, 0.38);
   --tabs-tab-background-default: transparent;
@@ -2007,13 +2007,13 @@
   --tag-background-brand: #f97316; /* Brand color tag */
   --tag-background-accent: #f59e0b; /* Accent color tag */
   --tag-background-neutral: rgba(255, 255, 255, 0.12); /* Neutral/muted tag */
-  --tag-background-success: #22c55e; /* Success status tag */
-  --tag-background-warning: #eab308; /* Warning status tag */
-  --tag-background-danger: #ef4444; /* Danger/error status tag */
-  --tag-background-info: #3b82f6; /* Info status tag */
+  --tag-background-success: #171717; /* Success status tag */
+  --tag-background-warning: #171717; /* Warning status tag */
+  --tag-background-danger: #171717; /* Danger/error status tag */
+  --tag-background-info: #171717; /* Info status tag */
   --tag-text-brand: #ffffff; /* Text on brand background */
   --tag-text-accent: #171717; /* Text on accent background (dark for contrast) */
-  --tag-text-neutral: #ffffff; /* Text on neutral background */
+  --tag-text-neutral: #171717; /* Text on neutral background */
   --tag-text-success: #ffffff; /* Text on success background */
   --tag-text-warning: #171717; /* Text on warning background (dark for contrast) */
   --tag-text-danger: #ffffff; /* Text on danger background */
@@ -2027,13 +2027,13 @@
   --terminal-font-size: 14px; /* Terminal font size */
   --terminal-font-lineHeight: 1.5; /* Terminal line height */
   --terminal-text-color: #f5f5f5; /* Terminal text color */
-  --terminal-prompt-color: #11162d; /* Prompt text color */
+  --terminal-prompt-color: #171717; /* Prompt text color */
   --terminal-prompt-gap: 10px; /* Gap between prompt and input */
   --terminal-response-color: #d4d4d4; /* Response text color */
   --terminal-welcome-color: #a3a3a3; /* Welcome message color */
   --terminal-welcome-marginBottom: 16px; /* Space below welcome message */
   --terminal-command-gap: 6px; /* Gap between commands */
-  --terminal-input-caretColor: #11162d; /* Input caret color */
+  --terminal-input-caretColor: #171717; /* Input caret color */
   --textarea-padding-x: 16px;
   --textarea-padding-y: 10px;
   --textarea-minHeight: 80px;
@@ -2043,111 +2043,111 @@
   --textarea-border-width: 1px;
   --textarea-border-color-default: #d4d4d4;
   --textarea-border-color-hover: #a3a3a3;
-  --textarea-border-color-focus: #11162d;
+  --textarea-border-color-focus: #171717;
   --textarea-border-color-disabled: #e5e5e5;
-  --textarea-border-color-error: #ef4444;
-  --textarea-background-default: #0a0e1f;
+  --textarea-border-color-error: #171717;
+  --textarea-background-default: #fafafa;
   --textarea-background-disabled: #f5f5f5;
-  --textarea-text-default: #ffffff;
-  --textarea-text-placeholder: #7680a9;
-  --textarea-text-disabled: #7680a9;
+  --textarea-text-default: #171717;
+  --textarea-text-placeholder: #737373;
+  --textarea-text-disabled: #737373;
   --textarea-focus-ringWidth: 2px;
-  --textarea-focus-ringColor: #11162d;
+  --textarea-focus-ringColor: #171717;
   --textarea-focus-ringOffset: 1px;
-  --tieredmenu-background: #11162d; /* Menu background */
+  --tieredmenu-background: #ffffff; /* Menu background */
   --tieredmenu-padding: 4px; /* Menu container padding */
   --tieredmenu-border-width: 1px; /* Border width */
-  --tieredmenu-border-color: #1a2244; /* Border color */
+  --tieredmenu-border-color: #d4d4d4; /* Border color */
   --tieredmenu-border-radius: 5px; /* Border radius */
-  --tieredmenu-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08); /* Menu shadow (popup mode) */
+  --tieredmenu-shadow: 3px 3px 0 #171717; /* Menu shadow (popup mode) */
   --tieredmenu-minWidth: 200px; /* Minimum menu width */
   --tieredmenu-item-padding: 6px 10px; /* Item padding */
   --tieredmenu-item-gap: 4px; /* Gap between icon and label */
-  --tieredmenu-item-color-default: #ffffff; /* Item text color */
-  --tieredmenu-item-color-hover: #ffffff; /* Item text color on hover */
-  --tieredmenu-item-color-active: #11162d; /* Active item text color */
-  --tieredmenu-item-color-disabled: #7680a9; /* Disabled item text color */
+  --tieredmenu-item-color-default: #171717; /* Item text color */
+  --tieredmenu-item-color-hover: #171717; /* Item text color on hover */
+  --tieredmenu-item-color-active: #171717; /* Active item text color */
+  --tieredmenu-item-color-disabled: #737373; /* Disabled item text color */
   --tieredmenu-item-background-default: transparent; /* Item background */
-  --tieredmenu-item-background-hover: #060813; /* Item background on hover */
-  --tieredmenu-item-background-active: #78350f; /* Active item background */
+  --tieredmenu-item-background-hover: #f5f5f5; /* Item background on hover */
+  --tieredmenu-item-background-active: #f5f5f5; /* Active item background */
   --tieredmenu-item-borderRadius: 5px; /* Item border radius */
   --tieredmenu-icon-size: 16px; /* Icon size */
-  --tieredmenu-icon-color-default: #7680a9; /* Icon color */
-  --tieredmenu-icon-color-hover: #ffffff; /* Icon color on hover */
+  --tieredmenu-icon-color-default: #737373; /* Icon color */
+  --tieredmenu-icon-color-hover: #171717; /* Icon color on hover */
   --tieredmenu-submenu-offset: 2px; /* Submenu offset from parent */
-  --tieredmenu-separator-color: #1a2244; /* Separator color */
+  --tieredmenu-separator-color: #d4d4d4; /* Separator color */
   --tieredmenu-separator-margin: 4px; /* Separator margin */
   --tieredmenu-transition-duration: 150ms; /* Animation duration */
   --timeline-line-width: 2px; /* Width of the vertical timeline line */
   --timeline-line-color: #d4d4d4; /* Color of the timeline line */
   --timeline-marker-size: 12px; /* Size of the timeline marker dot */
-  --timeline-marker-background: #11162d; /* Background color of the marker */
+  --timeline-marker-background: #171717; /* Background color of the marker */
   --timeline-marker-border-width: 2px; /* Border width of the marker */
-  --timeline-marker-border-color: #0a0e1f; /* Border color of the marker */
+  --timeline-marker-border-color: #fafafa; /* Border color of the marker */
   --timeline-marker-ring-size: 24px; /* Size of the outer ring around the marker */
   --timeline-marker-ring-color: #f5f5f5; /* Color of the outer ring */
   --timeline-content-gap: 16px; /* Gap between timeline items */
   --timeline-content-padding: 16px; /* Padding around content area */
-  --timeline-event-title-color: #ffffff; /* Event title color */
+  --timeline-event-title-color: #171717; /* Event title color */
   --timeline-event-title-fontSize: 16px; /* Event title font size */
   --timeline-event-title-fontWeight: 600; /* Event title font weight */
-  --timeline-event-date-color: #7680a9; /* Event date color */
+  --timeline-event-date-color: #737373; /* Event date color */
   --timeline-event-date-fontSize: 12px; /* Event date font size */
-  --timeline-event-description-color: #7680a9; /* Event description color */
+  --timeline-event-description-color: #737373; /* Event description color */
   --timeline-event-description-fontSize: 14px; /* Event description font size */
-  --timeline-colors-primary: #11162d; /* Primary marker color */
-  --timeline-colors-success: #22c55e; /* Success marker color */
-  --timeline-colors-warning: #eab308; /* Warning marker color */
-  --timeline-colors-danger: #ef4444; /* Danger marker color */
+  --timeline-colors-primary: #171717; /* Primary marker color */
+  --timeline-colors-success: #171717; /* Success marker color */
+  --timeline-colors-warning: #171717; /* Warning marker color */
+  --timeline-colors-danger: #171717; /* Danger marker color */
   --toast-container-gap: 10px; /* Gap between stacked toasts */
   --toast-container-padding: 16px; /* Container padding from screen edge */
   --toast-container-zIndex: 1200; /* Toast container z-index */
   --toast-container-maxWidth: 400px; /* Maximum toast width */
-  --toast-background-default: #1a2244; /* Default toast background */
-  --toast-background-success: rgba(34, 197, 94, 0.15); /* Success toast background */
-  --toast-background-info: rgba(59, 130, 246, 0.15); /* Info toast background */
-  --toast-background-warning: rgba(234, 179, 8, 0.15); /* Warning toast background */
-  --toast-background-error: rgba(239, 68, 68, 0.15); /* Error toast background */
+  --toast-background-default: #ffffff; /* Default toast background */
+  --toast-background-success: #f5f5f5; /* Success toast background */
+  --toast-background-info: #f5f5f5; /* Info toast background */
+  --toast-background-warning: #f5f5f5; /* Warning toast background */
+  --toast-background-error: #f5f5f5; /* Error toast background */
   --toast-border-width: 1px; /* Toast border width */
-  --toast-border-color-default: #1a2244; /* Default border color */
-  --toast-border-color-success: #22c55e; /* Success border color */
-  --toast-border-color-info: #3b82f6; /* Info border color */
-  --toast-border-color-warning: #eab308; /* Warning border color */
-  --toast-border-color-error: #ef4444; /* Error border color */
+  --toast-border-color-default: #d4d4d4; /* Default border color */
+  --toast-border-color-success: #171717; /* Success border color */
+  --toast-border-color-info: #171717; /* Info border color */
+  --toast-border-color-warning: #171717; /* Warning border color */
+  --toast-border-color-error: #171717; /* Error border color */
   --toast-radius: 5px; /* Toast border radius */
-  --toast-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08); /* Toast elevation shadow */
+  --toast-shadow: 4px 4px 0 #171717; /* Toast elevation shadow */
   --toast-padding-x: 16px; /* Horizontal padding */
   --toast-padding-y: 16px; /* Vertical padding */
   --toast-icon-size: 20px; /* Icon size */
-  --toast-icon-color-default: #7680a9; /* Default icon color */
-  --toast-icon-color-success: #22c55e; /* Success icon color */
-  --toast-icon-color-info: #3b82f6; /* Info icon color */
-  --toast-icon-color-warning: #eab308; /* Warning icon color */
-  --toast-icon-color-error: #ef4444; /* Error icon color */
+  --toast-icon-color-default: #737373; /* Default icon color */
+  --toast-icon-color-success: #171717; /* Success icon color */
+  --toast-icon-color-info: #171717; /* Info icon color */
+  --toast-icon-color-warning: #171717; /* Warning icon color */
+  --toast-icon-color-error: #171717; /* Error icon color */
   --toast-icon-gap: 10px; /* Gap between icon and content */
   --toast-content-gap: 4px; /* Gap between summary and detail */
-  --toast-summary-color-default: #ffffff; /* Summary text color */
-  --toast-summary-color-success: #4ade80; /* Success summary color */
-  --toast-summary-color-info: #60a5fa; /* Info summary color */
-  --toast-summary-color-warning: #facc15; /* Warning summary color */
-  --toast-summary-color-error: #f87171; /* Error summary color */
+  --toast-summary-color-default: #171717; /* Summary text color */
+  --toast-summary-color-success: #171717; /* Success summary color */
+  --toast-summary-color-info: #171717; /* Info summary color */
+  --toast-summary-color-warning: #171717; /* Warning summary color */
+  --toast-summary-color-error: #171717; /* Error summary color */
   --toast-summary-fontSize: 14px; /* Summary font size */
   --toast-summary-fontWeight: 600; /* Summary font weight */
-  --toast-detail-color: #7680a9; /* Detail text color */
+  --toast-detail-color: #737373; /* Detail text color */
   --toast-detail-fontSize: 13px; /* Detail font size */
   --toast-closeButton-size: 28px; /* Close button size */
   --toast-closeButton-iconSize: 14px; /* Close icon size */
-  --toast-closeButton-color-default: #7680a9; /* Close button color */
-  --toast-closeButton-color-hover: #ffffff; /* Close button hover color */
-  --toast-closeButton-background-hover: #060813; /* Close button hover background */
+  --toast-closeButton-color-default: #737373; /* Close button color */
+  --toast-closeButton-color-hover: #171717; /* Close button hover color */
+  --toast-closeButton-background-hover: #f5f5f5; /* Close button hover background */
   --toast-closeButton-radius: 2px; /* Close button border radius */
   --toast-progress-height: 3px; /* Progress bar height */
-  --toast-progress-background: #060813; /* Progress bar track background */
-  --toast-progress-fill-default: #11162d; /* Default progress fill */
-  --toast-progress-fill-success: #22c55e; /* Success progress fill */
-  --toast-progress-fill-info: #3b82f6; /* Info progress fill */
-  --toast-progress-fill-warning: #eab308; /* Warning progress fill */
-  --toast-progress-fill-error: #ef4444; /* Error progress fill */
+  --toast-progress-background: #f5f5f5; /* Progress bar track background */
+  --toast-progress-fill-default: #171717; /* Default progress fill */
+  --toast-progress-fill-success: #171717; /* Success progress fill */
+  --toast-progress-fill-info: #171717; /* Info progress fill */
+  --toast-progress-fill-warning: #171717; /* Warning progress fill */
+  --toast-progress-fill-error: #171717; /* Error progress fill */
   --toggleButton-height-sm: 32px; /* Small toggle button height */
   --toggleButton-height-md: 40px; /* Medium toggle button height */
   --toggleButton-height-lg: 48px; /* Large toggle button height */
@@ -2160,16 +2160,16 @@
   --toggleButton-gap: 6px; /* Gap between icon and label */
   --toggleButton-background-off-default: #e5e5e5; /* Toggle button off state background */
   --toggleButton-background-off-hover: #d4d4d4; /* Toggle button off state hover background */
-  --toggleButton-background-on-default: #11162d; /* Toggle button on state background */
+  --toggleButton-background-on-default: #171717; /* Toggle button on state background */
   --toggleButton-background-on-hover: #11162d; /* Toggle button on state hover background */
   --toggleButton-background-disabled: #f5f5f5; /* Toggle button disabled background */
-  --toggleButton-text-off-default: #ffffff; /* Toggle button off state text color */
-  --toggleButton-text-on-default: #0a0e1f; /* Toggle button on state text color */
+  --toggleButton-text-off-default: #171717; /* Toggle button off state text color */
+  --toggleButton-text-on-default: #ffffff; /* Toggle button on state text color */
   --toggleButton-text-disabled: #a3a3a3; /* Toggle button disabled text color */
   --toggleButton-border-width: 1px; /* Toggle button border width */
   --toggleButton-border-off-default: #d4d4d4; /* Toggle button off state border color */
   --toggleButton-border-off-hover: #a3a3a3; /* Toggle button off state hover border color */
-  --toggleButton-border-on-default: #11162d; /* Toggle button on state border color */
+  --toggleButton-border-on-default: #171717; /* Toggle button on state border color */
   --toggleButton-border-on-hover: #11162d; /* Toggle button on state hover border color */
   --toggleButton-border-disabled: #e5e5e5; /* Toggle button disabled border color */
   --toggleButton-radius: 5px; /* Toggle button border radius */
@@ -2180,7 +2180,7 @@
   --toggleButton-iconSize-md: 18px; /* Medium toggle button icon size */
   --toggleButton-iconSize-lg: 20px; /* Large toggle button icon size */
   --toggleButton-fontWeight: 500; /* Toggle button font weight */
-  --toggleButton-focus-ringColor: #f97316; /* Toggle button focus ring color */
+  --toggleButton-focus-ringColor: #171717; /* Toggle button focus ring color */
   --toggleButton-focus-ringWidth: 2px; /* Toggle button focus ring width */
   --toggleButton-focus-ringOffset: 2px; /* Toggle button focus ring offset */
   --toggleButton-transition-duration: 150ms; /* Toggle button transition duration */
@@ -2202,8 +2202,8 @@
   --toggleSwitch-focus-ringWidth: 2px;
   --toggleSwitch-focus-ringColor: #f97316;
   --toggleSwitch-focus-ringOffset: 2px;
-  --toolbar-background: #11162d; /* Toolbar background color */
-  --toolbar-border-color: #1a2244; /* Toolbar border color */
+  --toolbar-background: #ffffff; /* Toolbar background color */
+  --toolbar-border-color: #d4d4d4; /* Toolbar border color */
   --toolbar-border-width: 1px; /* Toolbar border width */
   --toolbar-radius: 5px; /* Toolbar border radius */
   --toolbar-padding: 16px; /* Toolbar inner padding */
@@ -2211,8 +2211,8 @@
   --toolbar-minHeight: 48px; /* Minimum toolbar height */
   --tooltip-padding-x: 10px; /* Horizontal padding */
   --tooltip-padding-y: 6px; /* Vertical padding */
-  --tooltip-background: #ffffff; /* Tooltip background color (dark) */
-  --tooltip-text-color: #0a0e1f; /* Tooltip text color (light on dark) */
+  --tooltip-background: #171717; /* Tooltip background color (dark) */
+  --tooltip-text-color: #ffffff; /* Tooltip text color (light on dark) */
   --tooltip-text-fontSize: 13px; /* Tooltip font size */
   --tooltip-radius: 2px; /* Border radius */
   --tooltip-arrow-size: 6px; /* Arrow/pointer size */
@@ -2231,21 +2231,21 @@
   --tree-select-border-width: 1px;
   --tree-select-border-color-default: #d4d4d4;
   --tree-select-border-color-hover: #a3a3a3;
-  --tree-select-border-color-focus: #11162d;
+  --tree-select-border-color-focus: #171717;
   --tree-select-border-color-disabled: #e5e5e5;
-  --tree-select-border-color-error: #ef4444;
-  --tree-select-background-default: #0a0e1f;
+  --tree-select-border-color-error: #171717;
+  --tree-select-background-default: #fafafa;
   --tree-select-background-disabled: #f5f5f5;
-  --tree-select-background-hover: #0a0e1f;
-  --tree-select-text-default: #ffffff;
-  --tree-select-text-placeholder: #7680a9;
-  --tree-select-text-disabled: #7680a9;
+  --tree-select-background-hover: #fafafa;
+  --tree-select-text-default: #171717;
+  --tree-select-text-placeholder: #737373;
+  --tree-select-text-disabled: #737373;
   --tree-select-icon-size: 16px;
   --tree-select-icon-color-default: #737373;
   --tree-select-icon-color-disabled: #d4d4d4;
-  --tree-select-dropdown-background: #0a0e1f;
+  --tree-select-dropdown-background: #fafafa;
   --tree-select-dropdown-border: #e5e5e5;
-  --tree-select-dropdown-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+  --tree-select-dropdown-shadow: 3px 3px 0 #171717;
   --tree-select-dropdown-radius: 5px;
   --tree-select-dropdown-maxHeight: 320px;
   --tree-select-node-padding-x: 16px;
@@ -2254,8 +2254,8 @@
   --tree-select-node-indent: 26px;
   --tree-select-node-background-default: transparent;
   --tree-select-node-background-hover: #f5f5f5;
-  --tree-select-node-background-selected: #11162d;
-  --tree-select-node-text-default: #ffffff;
+  --tree-select-node-background-selected: #171717;
+  --tree-select-node-text-default: #171717;
   --tree-select-node-text-selected: #ffffff;
   --tree-select-toggler-size: 20px;
   --tree-select-toggler-color-default: #737373;
@@ -2263,14 +2263,14 @@
   --tree-select-filter-padding: 10px;
   --tree-select-filter-borderColor: #e5e5e5;
   --tree-select-focus-ringWidth: 2px;
-  --tree-select-focus-ringColor: #11162d;
+  --tree-select-focus-ringColor: #171717;
   --tree-select-focus-ringOffset: 1px;
   --tree-padding: 10px; /* Container padding */
   --tree-radius: 5px; /* Container border radius */
   --tree-border-width: 1px;
   --tree-border-color-default: #d4d4d4; /* Default border color */
   --tree-border-color-disabled: #e5e5e5; /* Disabled border color */
-  --tree-background-default: #0a0e1f; /* Default background */
+  --tree-background-default: #fafafa; /* Default background */
   --tree-background-disabled: #f5f5f5; /* Disabled background */
   --tree-maxHeight: 400px; /* Maximum height before scrolling */
   --tree-node-padding-x: 16px;
@@ -2280,37 +2280,37 @@
   --tree-node-radius: 2px;
   --tree-node-background-default: transparent;
   --tree-node-background-hover: #f5f5f5;
-  --tree-node-background-selected: #11162d;
-  --tree-node-text-default: #ffffff;
+  --tree-node-background-selected: #171717;
+  --tree-node-text-default: #171717;
   --tree-node-text-selected: #ffffff;
   --tree-toggler-size: 20px;
   --tree-toggler-color-default: #737373;
   --tree-toggler-color-hover: #404040;
   --tree-checkbox-size: 18px;
   --tree-checkbox-border: #d4d4d4;
-  --tree-checkbox-background-checked: #11162d;
+  --tree-checkbox-background-checked: #171717;
   --tree-filter-padding: 10px;
   --tree-filter-marginBottom: 10px;
   --tree-focus-ringWidth: 2px;
-  --tree-focus-ringColor: #11162d;
+  --tree-focus-ringColor: #171717;
   --tree-focus-ringOffset: 1px;
   --treetable-radius: 5px; /* Container border radius */
   --treetable-border-width: 1px;
   --treetable-border-color-default: #d4d4d4;
-  --treetable-background-default: #0a0e1f;
+  --treetable-background-default: #fafafa;
   --treetable-header-padding-x: 16px;
   --treetable-header-padding-y: 10px;
   --treetable-header-background: #fafafa;
-  --treetable-header-text: #ffffff;
+  --treetable-header-text: #171717;
   --treetable-header-fontWeight: 600;
   --treetable-header-borderColor: #e5e5e5;
   --treetable-row-padding-x: 16px;
   --treetable-row-padding-y: 10px;
-  --treetable-row-background-default: #0a0e1f;
+  --treetable-row-background-default: #fafafa;
   --treetable-row-background-hover: #fafafa;
-  --treetable-row-background-selected: #11162d;
-  --treetable-row-background-stripe: #060813;
-  --treetable-row-text-default: #ffffff;
+  --treetable-row-background-selected: #171717;
+  --treetable-row-background-stripe: #f5f5f5;
+  --treetable-row-text-default: #171717;
   --treetable-row-text-selected: #ffffff;
   --treetable-row-borderColor: #e5e5e5;
   --treetable-cell-padding-x: 16px;
@@ -2323,8 +2323,8 @@
   --treetable-checkbox-size: 18px;
   --treetable-checkbox-marginRight: 10px;
   --treetable-focus-ringWidth: 2px;
-  --treetable-focus-ringColor: #11162d;
-  --virtualscroller-background-default: #0a0e1f; /* Default background */
+  --treetable-focus-ringColor: #171717;
+  --virtualscroller-background-default: #fafafa; /* Default background */
   --virtualscroller-border-width: 1px;
   --virtualscroller-border-color-default: #d4d4d4;
   --virtualscroller-border-radius: 5px;
@@ -2332,11 +2332,11 @@
   --virtualscroller-item-padding-y: 10px;
   --virtualscroller-item-background-default: transparent;
   --virtualscroller-item-background-hover: #f5f5f5;
-  --virtualscroller-item-background-stripe: #060813;
-  --virtualscroller-item-text-default: #ffffff;
+  --virtualscroller-item-background-stripe: #f5f5f5;
+  --virtualscroller-item-text-default: #171717;
   --virtualscroller-item-borderColor: #e5e5e5;
   --virtualscroller-loader-padding: 16px;
-  --virtualscroller-loader-text: #7680a9;
+  --virtualscroller-loader-text: #737373;
   --virtualscroller-loader-background: #fafafa;
   --virtualscroller-scrollbar-width: 8px;
   --virtualscroller-scrollbar-track: #f5f5f5;

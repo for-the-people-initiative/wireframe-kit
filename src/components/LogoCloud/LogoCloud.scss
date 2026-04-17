@@ -46,19 +46,17 @@ $c: logo-cloud;
   &:hover { opacity: 1; }
 }
 
-.#{$c}__img {
-  max-height: 2.5rem;
-  max-width: 100%;
-  object-fit: contain;
-}
-
-.#{$c}--grayscale .#{$c}__img {
-  filter: grayscale(1) brightness(0.7);
-  opacity: 0.6;
-  transition: filter 0.2s ease, opacity 0.2s ease;
-}
-
-.#{$c}--grayscale .#{$c}__item:hover .#{$c}__img {
-  filter: grayscale(0) brightness(1);
-  opacity: 1;
+.#{$c}__placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+  padding: 8px 16px;
+  border: 1.5px dashed var(--border-default, $border-default);
+  background: var(--surface-muted, $surface-muted);
+  color: var(--text-default, $text-default);
+  font-family: "Caveat", "Comic Sans MS", cursive;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }

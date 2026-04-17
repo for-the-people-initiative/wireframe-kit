@@ -1,43 +1,26 @@
 @use "../../../dist/scss/tokens" as *;
 
-/// Accent gradient mixin for consistent gradient backgrounds across components
-/// Used for checked states, active indicators, filled tracks, etc.
-/// @param {string} $state - Gradient state: default or hover
-/// @param {number} $angle - Gradient angle in degrees (default: 135deg)
+// Wireframe mode: no gradients. Collapse to a flat ink fill (background mixin)
+// and an ink-colored text fill (text mixin). Signatures preserved.
+
 @mixin accent-gradient($state: "default", $angle: 135deg) {
   @if $state == "default" {
-    background: linear-gradient(
-      #{$angle},
-      var(--accent-gradient-start, $accent-gradient-start),
-      var(--accent-gradient-end, $accent-gradient-end)
-    );
+    background: var(--accent-gradient-start, $accent-gradient-start);
   } @else if $state == "hover" {
-    background: linear-gradient(
-      #{$angle},
-      var(--accent-gradient-hoverStart, $accent-gradient-hoverStart),
-      var(--accent-gradient-hoverEnd, $accent-gradient-hoverEnd)
-    );
+    background: var(--accent-gradient-hoverStart, $accent-gradient-hoverStart);
   }
 }
 
-/// Accent gradient text for vibrant text elements
-/// @param {string} $state - Gradient state: default or hover
 @mixin accent-gradient-text($state: "default") {
   @if $state == "default" {
-    background: linear-gradient(
-      135deg,
-      var(--accent-gradient-start, $accent-gradient-start),
-      var(--accent-gradient-end, $accent-gradient-end)
-    );
+    color: var(--accent-gradient-start, $accent-gradient-start);
   } @else if $state == "hover" {
-    background: linear-gradient(
-      135deg,
-      var(--accent-gradient-hoverStart, $accent-gradient-hoverStart),
-      var(--accent-gradient-hoverEnd, $accent-gradient-hoverEnd)
-    );
+    color: var(--accent-gradient-hoverStart, $accent-gradient-hoverStart);
   }
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  // Reset any prior gradient-text plumbing if it leaked through.
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: currentColor;
+  text-shadow: none;
 }

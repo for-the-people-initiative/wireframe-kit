@@ -1,28 +1,12 @@
 @use "../../../dist/scss/tokens" as *;
 
-/// Border mixin for consistent border treatments
-/// @param {string} $tier - Border tier: subtle, default, strong, or vibrant
-/// @param {color} $bg - Background color for gradient border (required for vibrant with border-radius)
+// Wireframe mode: all border tiers collapse to a solid ink stroke.
+// The sketchy SVG filter applied globally provides the hand-drawn wobble.
+
 @mixin border($tier: "default", $bg: null) {
   @if $tier == "subtle" {
-    border: 1px solid $border-subtle;
-  } @else if $tier == "default" {
-    border: 1px solid $border-default;
-  } @else if $tier == "strong" {
-    border: 1px solid $border-strong;
-  } @else if $tier == "vibrant" {
-    // Gradient border that works with border-radius
-    // Uses double background trick: solid bg on padding-box, gradient on border-box
-    border: 2px solid transparent;
-    @if $bg {
-      background:
-        linear-gradient($bg, $bg) padding-box,
-        linear-gradient(45deg, $border-vibrant-start, $border-vibrant-end) border-box;
-    } @else {
-      // Default to white background
-      background:
-        linear-gradient(#fff, #fff) padding-box,
-        linear-gradient(45deg, $border-vibrant-start, $border-vibrant-end) border-box;
-    }
+    border: 1px solid var(--border-subtle, $border-subtle);
+  } @else {
+    border: 1.5px solid var(--border-default, $border-default);
   }
 }

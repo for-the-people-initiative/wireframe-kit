@@ -3,242 +3,34 @@
 $c: color-picker;
 
 .#{$c} {
-  position: relative;
   display: inline-flex;
-}
-
-// Trigger button
-.#{$c}__trigger {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  width: var(--color-picker-trigger-size-md, $color-picker-trigger-size-md);
-  height: var(--color-picker-trigger-size-md, $color-picker-trigger-size-md);
-  padding: 2px;
-  background: transparent;
-  border: var(--color-picker-trigger-border-width, $color-picker-trigger-border-width) solid var(--color-picker-trigger-border-color-default, $color-picker-trigger-border-color-default);
-  border-radius: var(--color-picker-trigger-radius, $color-picker-trigger-radius);
-  cursor: pointer;
-  transition: border-color 0.15s ease;
-
-  &:hover:not(:disabled) {
-    border-color: var(--color-picker-trigger-border-color-hover, $color-picker-trigger-border-color-hover);
-  }
-
-  &:focus {
-    outline: var(--color-picker-focus-ringWidth, $color-picker-focus-ringWidth) solid var(--color-picker-focus-ringColor, $color-picker-focus-ringColor);
-    outline-offset: var(--color-picker-focus-ringOffset, $color-picker-focus-ringOffset);
-    border-color: var(--color-picker-trigger-border-color-focus, $color-picker-trigger-border-color-focus);
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-  }
+  gap: 8px;
 }
 
-.#{$c}__preview {
-  width: 100%;
-  height: 100%;
-  border-radius: calc(var(--color-picker-trigger-radius, $color-picker-trigger-radius) - 2px);
-  background-image: linear-gradient(45deg, #ccc 25%, transparent 25%),
-    linear-gradient(-45deg, #ccc 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #ccc 75%),
-    linear-gradient(-45deg, transparent 75%, #ccc 75%);
-  background-size: 8px 8px;
-  background-position: 0 0, 0 4px, 4px -4px, -4px 0px;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: inherit;
-    border-radius: inherit;
-  }
+.#{$c}--stub {
+  padding: 6px 10px;
+  border: 1.5px dashed var(--border-default, $border-default);
+  background: var(--surface-muted, $surface-muted);
+  color: var(--text-default, $text-default);
+  font-family: "Caveat", "Comic Sans MS", cursive;
+  font-size: 20px;
+  line-height: 1;
 }
 
-// Panel
-.#{$c}__panel {
-  width: var(--color-picker-width, $color-picker-width);
-  padding: var(--color-picker-padding, $color-picker-padding);
-  background-color: var(--color-picker-background, $color-picker-background);
-  border: var(--color-picker-border-width, $color-picker-border-width) solid var(--color-picker-border-color, $color-picker-border-color);
-  border-radius: var(--color-picker-radius, $color-picker-radius);
-  box-shadow: var(--color-picker-shadow, $color-picker-shadow);
-  display: flex;
-  flex-direction: column;
-  gap: var(--color-picker-gap, $color-picker-gap);
-}
-
-.#{$c}__panel--inline {
-  position: relative;
-  box-shadow: none;
-}
-
-// Gradient (Saturation/Brightness)
-.#{$c}__gradient {
-  position: relative;
-  width: 100%;
-  height: var(--color-picker-gradient-height, $color-picker-gradient-height);
-  border-radius: var(--color-picker-gradient-radius, $color-picker-gradient-radius);
-  cursor: crosshair;
-  overflow: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, #fff, transparent);
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, #000, transparent);
-  }
-}
-
-.#{$c}__gradient-pointer {
-  position: absolute;
-  width: var(--color-picker-slider-size, $color-picker-slider-size);
-  height: var(--color-picker-slider-size, $color-picker-slider-size);
-  border: var(--color-picker-slider-border-width, $color-picker-slider-border-width) solid var(--color-picker-slider-border-color, $color-picker-slider-border-color);
-  border-radius: 50%;
-  box-shadow: var(--color-picker-slider-shadow, $color-picker-slider-shadow);
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  pointer-events: none;
-}
-
-// Hue slider
-.#{$c}__hue {
-  position: relative;
-  width: 100%;
-  height: var(--color-picker-hue-height, $color-picker-hue-height);
-  border-radius: var(--color-picker-hue-radius, $color-picker-hue-radius);
-  background: linear-gradient(
-    to right,
-    #f00 0%,
-    #ff0 17%,
-    #0f0 33%,
-    #0ff 50%,
-    #00f 67%,
-    #f0f 83%,
-    #f00 100%
-  );
-  cursor: pointer;
-}
-
-.#{$c}__hue-pointer {
-  position: absolute;
-  top: 50%;
-  width: var(--color-picker-slider-size, $color-picker-slider-size);
-  height: var(--color-picker-slider-size, $color-picker-slider-size);
-  border: var(--color-picker-slider-border-width, $color-picker-slider-border-width) solid var(--color-picker-slider-border-color, $color-picker-slider-border-color);
-  border-radius: 50%;
-  box-shadow: var(--color-picker-slider-shadow, $color-picker-slider-shadow);
-  background: currentColor;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-// Hex input
-.#{$c}__input-wrapper {
-  display: flex;
-  align-items: center;
-  height: var(--color-picker-input-height, $color-picker-input-height);
-  padding: 0 var(--color-picker-input-padding-x, $color-picker-input-padding-x);
-  background-color: var(--color-picker-input-background, $color-picker-input-background);
-  border: 1px solid var(--color-picker-input-border-color, $color-picker-input-border-color);
-  border-radius: var(--color-picker-input-radius, $color-picker-input-radius);
-  transition: border-color 0.15s ease;
-
-  &:focus-within {
-    border-color: var(--color-picker-focus-ringColor, $color-picker-focus-ringColor);
-  }
-}
-
-.#{$c}__input-prefix {
-  color: var(--color-picker-input-text, $color-picker-input-text);
-  font-size: var(--color-picker-input-fontSize, $color-picker-input-fontSize);
-  font-family: monospace;
-  opacity: 0.5;
-}
-
-.#{$c}__input {
-  flex: 1;
-  border: none;
-  background: transparent;
-  padding: 0;
-  color: var(--color-picker-input-text, $color-picker-input-text);
-  font-size: var(--color-picker-input-fontSize, $color-picker-input-fontSize);
-  font-family: monospace;
-  text-transform: uppercase;
-
-  &:focus {
-    outline: none;
-  }
-}
-
-// Preset colors
-.#{$c}__presets {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--color-picker-preset-gap, $color-picker-preset-gap);
-}
-
-.#{$c}__preset {
-  width: var(--color-picker-preset-size, $color-picker-preset-size);
-  height: var(--color-picker-preset-size, $color-picker-preset-size);
-  padding: 0;
-  background: transparent;
-  border: var(--color-picker-preset-border-width, $color-picker-preset-border-width) solid var(--color-picker-preset-border-color-default, $color-picker-preset-border-color-default);
-  border-radius: var(--color-picker-preset-radius, $color-picker-preset-radius);
-  cursor: pointer;
-  transition: all 0.15s ease;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-
-  &:focus {
-    outline: var(--color-picker-focus-ringWidth, $color-picker-focus-ringWidth) solid var(--color-picker-focus-ringColor, $color-picker-focus-ringColor);
-    outline-offset: var(--color-picker-focus-ringOffset, $color-picker-focus-ringOffset);
-  }
-}
-
-.#{$c}__preset--selected {
-  border-color: var(--color-picker-preset-border-color-selected, $color-picker-preset-border-color-selected);
-}
-
-// Sizes
-.#{$c}--size-sm {
-  .#{$c}__trigger {
-    width: var(--color-picker-trigger-size-sm, $color-picker-trigger-size-sm);
-    height: var(--color-picker-trigger-size-sm, $color-picker-trigger-size-sm);
-  }
-}
-
-.#{$c}--size-md {
-  .#{$c}__trigger {
-    width: var(--color-picker-trigger-size-md, $color-picker-trigger-size-md);
-    height: var(--color-picker-trigger-size-md, $color-picker-trigger-size-md);
-  }
-}
-
-.#{$c}--size-lg {
-  .#{$c}__trigger {
-    width: var(--color-picker-trigger-size-lg, $color-picker-trigger-size-lg);
-    height: var(--color-picker-trigger-size-lg, $color-picker-trigger-size-lg);
-  }
-}
-
-// Disabled state
 .#{$c}--disabled {
-  .#{$c}__trigger {
-    cursor: not-allowed;
-    opacity: 0.5;
-  }
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.#{$c}__swatch {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: var(--text-default, $text-default);
+  border: 1px solid var(--border-default, $border-default);
+}
+
+.#{$c}__label {
+  letter-spacing: 0.02em;
 }

@@ -53,17 +53,17 @@
           @touchend="onTouchEnd"
         >
           <Transition :name="slideDirection">
-            <img
+            <div
               :key="currentIndex"
-              :src="currentImage"
-              :alt="`Image ${currentIndex + 1} of ${images.length}`"
-              class="lightbox__image"
+              class="lightbox__image lightbox__placeholder"
               :class="{ 'lightbox__image--zoomed': isZoomed }"
               :style="zoomStyle"
-              draggable="false"
+              role="img"
+              :aria-label="currentAlt"
               @click.stop="toggleZoom"
-              @load="onImageLoad"
-            />
+            >
+              <span class="lightbox__placeholder-label">[ {{ currentAlt }} ]</span>
+            </div>
           </Transition>
         </div>
 
@@ -91,7 +91,9 @@
             :aria-label="`View image ${index + 1}`"
             @click="goTo(index)"
           >
-            <img :src="typeof image === 'string' ? image : image.src || image.thumbnail" :alt="`Thumbnail ${index + 1}`" />
+            <span class="lightbox__thumbnail-placeholder">
+              {{ (typeof image === 'string' ? `#${index + 1}` : (image.alt || `#${index + 1}`)).slice(0, 10) }}
+            </span>
           </button>
         </div>
       </div>
@@ -146,6 +148,13 @@ const currentImage = computed(() => {
   const img = props.images[currentIndex.value];
   if (!img) return '';
   return typeof img === 'string' ? img : (img as any).src || '';
+});
+
+const currentAlt = computed(() => {
+  const img = props.images[currentIndex.value];
+  if (!img) return `Image ${currentIndex.value + 1}`;
+  const alt = typeof img === 'string' ? '' : ((img as any).alt || '');
+  return alt || `Image ${currentIndex.value + 1} of ${props.images.length}`;
 });
 
 const zoomStyle = computed(() => {

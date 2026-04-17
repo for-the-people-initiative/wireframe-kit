@@ -10,8 +10,57 @@ $c: lightbox;
   align-items: center;
   justify-content: center;
   z-index: var(--lightbox-zIndex-overlay, 2000);
-  background-color: var(--lightbox-overlay-background, rgba(0, 0, 0, 0.92));
+  background-color: var(--surface-overlay, $surface-overlay);
   outline: none;
+}
+
+.#{$c}__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(80vw, 900px);
+  height: min(70vh, 600px);
+  background-color: var(--surface-muted, $surface-muted);
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0 14px,
+    rgba(23, 23, 23, 0.18) 14px 15px
+  );
+  border: 1.5px solid var(--border-default, $border-default);
+  color: var(--text-default, $text-default);
+  font-family: "Caveat", "Comic Sans MS", cursive;
+  font-size: 28px;
+  text-align: center;
+  cursor: zoom-in;
+  box-sizing: border-box;
+}
+
+.#{$c}__placeholder-label {
+  padding: 6px 14px;
+  background: var(--surface-canvas, $surface-canvas);
+  border: 1px dashed var(--border-default, $border-default);
+}
+
+.#{$c}__thumbnail-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  background: var(--surface-muted, $surface-muted);
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0 6px,
+    rgba(23, 23, 23, 0.15) 6px 7px
+  );
+  color: var(--text-default, $text-default);
+  font-family: "Caveat", "Comic Sans MS", cursive;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 
 // Close button
