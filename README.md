@@ -76,9 +76,8 @@ For pixel-sensitive elements (icons, focus rings, tight UI) apply `.wf-crisp`:
 
 ```bash
 npm install
-npm run dev         # runs the histoire dev server (components playground)
-npm run build:lib   # builds tokens + components + types for publishing
-npm run story:dev   # histoire only
+npm run story:dev   # histoire dev server (components playground)
+npm run build       # builds tokens + components + types for publishing
 ```
 
 ## License
