@@ -1,0 +1,60 @@
+$c: phone-frame;
+
+.#{$c} {
+  --phone-frame-bezel: #141414;
+  --phone-frame-screen: #fdfbf5;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+}
+
+.#{$c}__shell {
+  width: var(--phone-frame-width, 390px);
+  max-width: 100%;
+  height: var(--phone-frame-height, 800px);
+  border: 3px solid currentColor;
+  border-radius: 44px;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--phone-frame-bezel);
+}
+
+.#{$c}__notch {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 26px;
+  border-radius: 14px;
+  background: currentColor;
+  opacity: 0.85;
+  z-index: 5;
+}
+
+.#{$c}__screen {
+  flex: 1;
+  overflow-y: auto;
+  border-radius: 32px;
+  padding-top: 44px;
+  background: var(--phone-frame-screen);
+  position: relative;
+}
+
+.#{$c}--sm {
+  --phone-frame-width: 360px;
+  --phone-frame-height: 740px;
+}
+
+.#{$c}--md {
+  --phone-frame-width: 390px;
+  --phone-frame-height: 800px;
+}
+
+.#{$c}--lg {
+  --phone-frame-width: 430px;
+  --phone-frame-height: 900px;
+}

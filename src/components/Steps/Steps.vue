@@ -1,5 +1,5 @@
 <template>
-  <nav v-rough class="steps" :class="additionalClasses" aria-label="Progress steps">
+  <nav class="steps" :class="additionalClasses" aria-label="Progress steps">
     <ol class="steps__list">
       <li
         v-for="(step, index) in model"
@@ -10,7 +10,6 @@
         <!-- Connector (before step, except first) -->
         <div
           v-if="index > 0"
-          v-rough="{ shape: 'hline', severity: 1 }"
           class="steps__connector"
           :class="{ 'steps__connector--complete': index <= activeIndex }"
         ></div>

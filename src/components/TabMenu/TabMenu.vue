@@ -1,5 +1,5 @@
 <template>
-  <nav v-rough class="tabmenu" role="navigation">
+  <nav v-rough="{ edges: ['bottom'] }" class="tabmenu" role="navigation">
     <ul class="tabmenu__list" role="menubar">
       <li
         v-for="(item, index) in model"

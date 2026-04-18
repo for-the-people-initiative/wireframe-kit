@@ -2050,3 +2050,36 @@ export interface PasswordInputEmits {
   (e: 'focus', payload: { originalEvent: FocusEvent }): void
   (e: 'blur', payload: { originalEvent: FocusEvent }): void
 }
+
+// ============================================================
+// Device Frames (PhoneFrame, TabletFrame, DesktopFrame)
+// ============================================================
+
+export type DeviceFrameSize = 'sm' | 'md' | 'lg'
+
+export interface PhoneFrameProps {
+  /** Device size preset. Defaults to 'md' (390x800 portrait). */
+  size?: DeviceFrameSize
+  /** Override bezel (device body) color. Defaults to #141414. */
+  bezelColor?: string
+  /** Override screen (viewport) background color. Defaults to #fdfbf5. */
+  screenColor?: string
+}
+
+export interface TabletFrameProps {
+  /** Device size preset. Defaults to 'md' (720x1000 portrait). */
+  size?: DeviceFrameSize
+  /** Override bezel (device body) color. Defaults to #141414. */
+  bezelColor?: string
+  /** Override screen (viewport) background color. Defaults to #fdfbf5. */
+  screenColor?: string
+}
+
+export interface DesktopFrameProps {
+  /** Window size preset. Defaults to 'md' (1280x800). */
+  size?: DeviceFrameSize
+  /** Override bezel (window body) color. Defaults to #141414. */
+  bezelColor?: string
+  /** Override screen (viewport) background color. Defaults to #fdfbf5. */
+  screenColor?: string
+}

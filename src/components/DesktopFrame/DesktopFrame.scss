@@ -1,0 +1,125 @@
+$c: desktop-frame;
+
+.#{$c} {
+  --desktop-frame-bezel: #141414;
+  --desktop-frame-screen: #fdfbf5;
+  --desktop-frame-chrome: #2a2a2a;
+  --desktop-frame-chrome-text: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+}
+
+.#{$c}__shell {
+  width: var(--desktop-frame-width, 1280px);
+  max-width: 100%;
+  height: var(--desktop-frame-height, 800px);
+  border: 3px solid currentColor;
+  border-radius: 10px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--desktop-frame-bezel);
+  overflow: hidden;
+}
+
+.#{$c}__chrome {
+  background: var(--desktop-frame-chrome);
+  color: var(--desktop-frame-chrome-text);
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.#{$c}__traffic {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px 0 14px;
+  height: 24px;
+  box-sizing: border-box;
+}
+
+.#{$c}__traffic-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.#{$c}__traffic-dot--close {
+  background: #ff5f57;
+}
+
+.#{$c}__traffic-dot--min {
+  background: #febc2e;
+}
+
+.#{$c}__traffic-dot--max {
+  background: #28c840;
+}
+
+.#{$c}__tab-strip {
+  display: flex;
+  align-items: flex-end;
+  padding: 6px 14px 0 14px;
+}
+
+.#{$c}__tab-placeholder {
+  width: 160px;
+  height: 26px;
+  background: var(--desktop-frame-screen);
+  border-radius: 6px 6px 0 0;
+}
+
+.#{$c}__urlbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 8px 14px;
+  background: var(--desktop-frame-chrome);
+}
+
+.#{$c}__nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--desktop-frame-chrome-text);
+}
+
+.#{$c}__nav-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.8;
+}
+
+.#{$c}__url {
+  flex: 1;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
+.#{$c}__screen {
+  flex: 1;
+  overflow-y: auto;
+  background: var(--desktop-frame-screen);
+  position: relative;
+}
+
+.#{$c}--sm {
+  --desktop-frame-width: 1024px;
+  --desktop-frame-height: 700px;
+}
+
+.#{$c}--md {
+  --desktop-frame-width: 1280px;
+  --desktop-frame-height: 800px;
+}
+
+.#{$c}--lg {
+  --desktop-frame-width: 1440px;
+  --desktop-frame-height: 900px;
+}
