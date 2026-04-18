@@ -1,7 +1,7 @@
 {
   "name": "@for-the-people-initiative/wireframe-kit",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Hand-drawn wireframe component library — Vue 3 components with a sketchy aesthetic for low-fidelity mockups",
   "author": "For The People",
